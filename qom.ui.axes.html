@@ -1,0 +1,366 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>qom.ui.axes package &#8212; Quantum Optomechanics Toolbox  documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.1.2/es5/tex-mml-chtml.min.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="qom.ui.plotters package" href="qom.ui.plotters.html" />
+    <link rel="prev" title="qom.ui package" href="qom.ui.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="qom.ui.plotters.html" title="qom.ui.plotters package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="qom.ui.html" title="qom.ui package"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Quantum Optomechanics Toolbox  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >qom</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="qom.html" >qom package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="qom.ui.html" accesskey="U">qom.ui package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">qom.ui.axes package</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="qom-ui-axes-package">
+<h1>qom.ui.axes package<a class="headerlink" href="#qom-ui-axes-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-qom.ui.axes.BaseAxis">
+<span id="qom-ui-axes-baseaxis-module"></span><h2>qom.ui.axes.BaseAxis module<a class="headerlink" href="#module-qom.ui.axes.BaseAxis" title="Permalink to this headline">¶</a></h2>
+<p>Class to interface axes.</p>
+<dl class="py class">
+<dt id="qom.ui.axes.BaseAxis.BaseAxis">
+<em class="property">class </em><code class="sig-prename descclassname">qom.ui.axes.BaseAxis.</code><code class="sig-name descname">BaseAxis</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">params</span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.axes.BaseAxis.BaseAxis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class to interface axes.</p>
+<p>Initializes <cite>val</cite>, <cite>dim</cite>, <cite>bound</cite>, <cite>ticks</cite> and <cite>tick_labels</cite> properties. Inherited objects need to set the other properties individually.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>params</strong> (<em>dict</em>) – Data for the axis.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="qom.ui.axes.BaseAxis.BaseAxis.bound">
+<em class="property">property </em><code class="sig-name descname">bound</code><a class="headerlink" href="#qom.ui.axes.BaseAxis.BaseAxis.bound" title="Permalink to this definition">¶</a></dt>
+<dd><p>Option to check user-defined bounds:
+* ‘none’ : Not bounded.
+* ‘lower’ : Lower bound.
+* ‘upper’ : Upper bound.
+* ‘both’ : Both lower and upper bound.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="qom.ui.axes.BaseAxis.BaseAxis.colors">
+<em class="property">property </em><code class="sig-name descname">colors</code><a class="headerlink" href="#qom.ui.axes.BaseAxis.BaseAxis.colors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Colors for plots.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="qom.ui.axes.BaseAxis.BaseAxis.dim">
+<em class="property">property </em><code class="sig-name descname">dim</code><a class="headerlink" href="#qom.ui.axes.BaseAxis.BaseAxis.dim" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dimension of the axis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="qom.ui.axes.BaseAxis.BaseAxis.init_array">
+<code class="sig-name descname">init_array</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mini</span></em>, <em class="sig-param"><span class="n">maxi</span></em>, <em class="sig-param"><span class="n">num</span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.axes.BaseAxis.BaseAxis.init_array" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to initialize an array given a range and number of elements.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mini</strong> (<em>int</em>) – Minimum value of the range.</p></li>
+<li><p><strong>maxi</strong> (<em>int</em>) – Maximum value of the range.</p></li>
+<li><p><strong>num</strong> (<em>int</em>) – Number of elements to consider.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="qom.ui.axes.BaseAxis.BaseAxis.label">
+<em class="property">property </em><code class="sig-name descname">label</code><a class="headerlink" href="#qom.ui.axes.BaseAxis.BaseAxis.label" title="Permalink to this definition">¶</a></dt>
+<dd><p>Label of the axis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="qom.ui.axes.BaseAxis.BaseAxis.legends">
+<em class="property">property </em><code class="sig-name descname">legends</code><a class="headerlink" href="#qom.ui.axes.BaseAxis.BaseAxis.legends" title="Permalink to this definition">¶</a></dt>
+<dd><p>Legends of the axis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="qom.ui.axes.BaseAxis.BaseAxis.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#qom.ui.axes.BaseAxis.BaseAxis.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display name of the axis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="qom.ui.axes.BaseAxis.BaseAxis.sizes">
+<em class="property">property </em><code class="sig-name descname">sizes</code><a class="headerlink" href="#qom.ui.axes.BaseAxis.BaseAxis.sizes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sizes of the plots.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="qom.ui.axes.BaseAxis.BaseAxis.styles">
+<em class="property">property </em><code class="sig-name descname">styles</code><a class="headerlink" href="#qom.ui.axes.BaseAxis.BaseAxis.styles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Styles of the plots.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="qom.ui.axes.BaseAxis.BaseAxis.tick_labels">
+<em class="property">property </em><code class="sig-name descname">tick_labels</code><a class="headerlink" href="#qom.ui.axes.BaseAxis.BaseAxis.tick_labels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tick labels of the axis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="qom.ui.axes.BaseAxis.BaseAxis.ticks">
+<em class="property">property </em><code class="sig-name descname">ticks</code><a class="headerlink" href="#qom.ui.axes.BaseAxis.BaseAxis.ticks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ticks of the axis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="qom.ui.axes.BaseAxis.BaseAxis.unit">
+<em class="property">property </em><code class="sig-name descname">unit</code><a class="headerlink" href="#qom.ui.axes.BaseAxis.BaseAxis.unit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unit of the axis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="qom.ui.axes.BaseAxis.BaseAxis.val">
+<em class="property">property </em><code class="sig-name descname">val</code><a class="headerlink" href="#qom.ui.axes.BaseAxis.BaseAxis.val" title="Permalink to this definition">¶</a></dt>
+<dd><p>Values of the axis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="qom.ui.axes.BaseAxis.BaseAxis.var">
+<em class="property">property </em><code class="sig-name descname">var</code><a class="headerlink" href="#qom.ui.axes.BaseAxis.BaseAxis.var" title="Permalink to this definition">¶</a></dt>
+<dd><p>Variable of the axis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-qom.ui.axes.DynamicAxis">
+<span id="qom-ui-axes-dynamicaxis-module"></span><h2>qom.ui.axes.DynamicAxis module<a class="headerlink" href="#module-qom.ui.axes.DynamicAxis" title="Permalink to this headline">¶</a></h2>
+<p>Class to handle a dynamic axis.</p>
+<dl class="py class">
+<dt id="qom.ui.axes.DynamicAxis.DynamicAxis">
+<em class="property">class </em><code class="sig-prename descclassname">qom.ui.axes.DynamicAxis.</code><code class="sig-name descname">DynamicAxis</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">axis_data</span><span class="o">=</span><span class="default_value">{}</span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.axes.DynamicAxis.DynamicAxis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#qom.ui.axes.BaseAxis.BaseAxis" title="qom.ui.axes.BaseAxis.BaseAxis"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.ui.axes.BaseAxis.BaseAxis</span></code></a></p>
+<p>Class to handle a dynamic axis.</p>
+<p>Inherits <a class="reference internal" href="#module-qom.ui.axes.BaseAxis" title="qom.ui.axes.BaseAxis"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.ui.axes.BaseAxis</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>axis_data</strong> (<em>int</em><em> or </em><em>list</em><em> or </em><em>dict</em>) – Data for the axis.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-qom.ui.axes.MultiAxis">
+<span id="qom-ui-axes-multiaxis-module"></span><h2>qom.ui.axes.MultiAxis module<a class="headerlink" href="#module-qom.ui.axes.MultiAxis" title="Permalink to this headline">¶</a></h2>
+<p>Class to handle a multi-value axis.</p>
+<dl class="py class">
+<dt id="qom.ui.axes.MultiAxis.MultiAxis">
+<em class="property">class </em><code class="sig-prename descclassname">qom.ui.axes.MultiAxis.</code><code class="sig-name descname">MultiAxis</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">axis_data</span><span class="o">=</span><span class="default_value">{}</span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.axes.MultiAxis.MultiAxis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#qom.ui.axes.BaseAxis.BaseAxis" title="qom.ui.axes.BaseAxis.BaseAxis"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.ui.axes.BaseAxis.BaseAxis</span></code></a></p>
+<p>Class to handle a multi-value axis.</p>
+<p>Inherits <a class="reference internal" href="#module-qom.ui.axes.BaseAxis" title="qom.ui.axes.BaseAxis"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.ui.axes.BaseAxis</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>axis_data</strong> (<em>int</em><em> or </em><em>list</em><em> or </em><em>dict</em>) – Data for the axis.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-qom.ui.axes.StaticAxis">
+<span id="qom-ui-axes-staticaxis-module"></span><h2>qom.ui.axes.StaticAxis module<a class="headerlink" href="#module-qom.ui.axes.StaticAxis" title="Permalink to this headline">¶</a></h2>
+<p>Class to handle a static axis.</p>
+<dl class="py class">
+<dt id="qom.ui.axes.StaticAxis.StaticAxis">
+<em class="property">class </em><code class="sig-prename descclassname">qom.ui.axes.StaticAxis.</code><code class="sig-name descname">StaticAxis</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">axis_data</span><span class="o">=</span><span class="default_value">{}</span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.axes.StaticAxis.StaticAxis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#qom.ui.axes.BaseAxis.BaseAxis" title="qom.ui.axes.BaseAxis.BaseAxis"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.ui.axes.BaseAxis.BaseAxis</span></code></a></p>
+<p>Class to handle a static axis.</p>
+<p>Inherits <code class="xref py py-class docutils literal notranslate"><span class="pre">qom.utils.axes.BaseAxis</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>axis_data</strong> (<em>int</em><em> or </em><em>list</em><em> or </em><em>dict</em>) – Data for the axis.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-qom.ui.axes">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-qom.ui.axes" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">qom.ui.axes package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-qom.ui.axes.BaseAxis">qom.ui.axes.BaseAxis module</a></li>
+<li><a class="reference internal" href="#module-qom.ui.axes.DynamicAxis">qom.ui.axes.DynamicAxis module</a></li>
+<li><a class="reference internal" href="#module-qom.ui.axes.MultiAxis">qom.ui.axes.MultiAxis module</a></li>
+<li><a class="reference internal" href="#module-qom.ui.axes.StaticAxis">qom.ui.axes.StaticAxis module</a></li>
+<li><a class="reference internal" href="#module-qom.ui.axes">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="qom.ui.html"
+                        title="previous chapter">qom.ui package</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="qom.ui.plotters.html"
+                        title="next chapter">qom.ui.plotters package</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/qom.ui.axes.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="qom.ui.plotters.html" title="qom.ui.plotters package"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="qom.ui.html" title="qom.ui package"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Quantum Optomechanics Toolbox  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >qom</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="qom.html" >qom package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="qom.ui.html" >qom.ui package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">qom.ui.axes package</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, Sampreet Kalita.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+  </body>
+</html>

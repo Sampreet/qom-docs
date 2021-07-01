@@ -1,0 +1,670 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>qom.solvers package &#8212; Quantum Optomechanics Toolbox  documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.1.2/es5/tex-mml-chtml.min.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="qom.systems package" href="qom.systems.html" />
+    <link rel="prev" title="qom.loopers package" href="qom.loopers.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="qom.systems.html" title="qom.systems package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="qom.loopers.html" title="qom.loopers package"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Quantum Optomechanics Toolbox  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >qom</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="qom.html" accesskey="U">qom package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">qom.solvers package</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="qom-solvers-package">
+<h1>qom.solvers package<a class="headerlink" href="#qom-solvers-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-qom.solvers.HLESolver">
+<span id="qom-solvers-hlesolver-module"></span><h2>qom.solvers.HLESolver module<a class="headerlink" href="#module-qom.solvers.HLESolver" title="Permalink to this headline">¶</a></h2>
+<p>Class to solve Heisenberg-Langevin equations for classical mode amplitudes and quantum correlations.</p>
+<dl class="py class">
+<dt id="qom.solvers.HLESolver.HLESolver">
+<em class="property">class </em><code class="sig-prename descclassname">qom.solvers.HLESolver.</code><code class="sig-name descname">HLESolver</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">params</span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.HLESolver.HLESolver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class to solve Heisenberg-Langevin equations for classical mode amplitudes and quantum correlations.</p>
+<p>Initializes <cite>T</cite> property.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>params</strong> (<em>dict</em>) – Parameters for the solver.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="qom.solvers.HLESolver.HLESolver.Corrs">
+<em class="property">property </em><code class="sig-name descname">Corrs</code><a class="headerlink" href="#qom.solvers.HLESolver.HLESolver.Corrs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists of quantum correlations at all times.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="qom.solvers.HLESolver.HLESolver.Modes">
+<em class="property">property </em><code class="sig-name descname">Modes</code><a class="headerlink" href="#qom.solvers.HLESolver.HLESolver.Modes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists of mode amplitudes at all times.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="qom.solvers.HLESolver.HLESolver.T">
+<em class="property">property </em><code class="sig-name descname">T</code><a class="headerlink" href="#qom.solvers.HLESolver.HLESolver.T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Times at which values are calculated.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="qom.solvers.HLESolver.HLESolver.code">
+<code class="sig-name descname">code</code><em class="property"> = 'hle'</em><a class="headerlink" href="#qom.solvers.HLESolver.HLESolver.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="qom.solvers.HLESolver.HLESolver.get_Corrs">
+<code class="sig-name descname">get_Corrs</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">num_modes</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.HLESolver.HLESolver.get_Corrs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to obtain the quantum correlations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>num_modes</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of classical modes.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>Corrs</strong> – All the correlations calculated at all times.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="qom.solvers.HLESolver.HLESolver.get_Modes">
+<code class="sig-name descname">get_Modes</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">num_modes</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.HLESolver.HLESolver.get_Modes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to obtain the classical mode amplitudes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>num_modes</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of classical modes.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>Modes</strong> – All the modes calculated at all times.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="qom.solvers.HLESolver.HLESolver.methods">
+<code class="sig-name descname">methods</code><em class="property"> = ['BDF', 'DOP853', 'LSODA', 'Radau', 'RK23', 'RK45', 'ode']</em><a class="headerlink" href="#qom.solvers.HLESolver.HLESolver.methods" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="qom.solvers.HLESolver.HLESolver.name">
+<code class="sig-name descname">name</code><em class="property"> = 'Heisenberg-Langevin Equations Solver'</em><a class="headerlink" href="#qom.solvers.HLESolver.HLESolver.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="qom.solvers.HLESolver.HLESolver.results">
+<em class="property">property </em><code class="sig-name descname">results</code><a class="headerlink" href="#qom.solvers.HLESolver.HLESolver.results" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists of times and values as keys “T” and “V”, respectively.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="qom.solvers.HLESolver.HLESolver.solve">
+<code class="sig-name descname">solve</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ode_func</span></em>, <em class="sig-param"><span class="n">iv</span></em>, <em class="sig-param"><span class="n">c</span><span class="o">=</span><span class="default_value">[]</span></em>, <em class="sig-param"><span class="n">ode_func_corrs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">num_modes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">method</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cache</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">cache_dir</span><span class="o">=</span><span class="default_value">'data'</span></em>, <em class="sig-param"><span class="n">cache_file</span><span class="o">=</span><span class="default_value">'V'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.HLESolver.HLESolver.solve" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to obtain the solutions of the ODEs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ode_func</strong> (<em>function</em>) – Set of ODEs returning rate equations of the classical mode amplitudes and quantum correlations. If <cite>ode_func_corrs</cite> parameter is given, this function is treated as the function for the modes only.</p></li>
+<li><p><strong>iv</strong> (<em>list</em>) – Initial values for the function.</p></li>
+<li><p><strong>c</strong> (<em>list</em><em>, </em><em>optional</em>) – Constants for the function.</p></li>
+<li><p><strong>ode_func_corrs</strong> (<em>function</em><em>, </em><em>optional</em>) – Set of ODEs returning rate equations of the quantum correlations. Requires <cite>num_modes</cite> parameter.</p></li>
+<li><p><strong>num_modes</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of modes of the system.</p></li>
+<li><p><strong>method</strong> (<em>str</em><em>, </em><em>optional</em>) – <dl class="simple">
+<dt>Method used to solve the ODEs:</dt><dd><p>’BDF’: <code class="xref py py-class docutils literal notranslate"><span class="pre">scipy.integrate.BDF</span></code>.
+‘DOP853’: <code class="xref py py-class docutils literal notranslate"><span class="pre">scipy.integrate.DOP853</span></code>.
+‘LSODA’: <code class="xref py py-class docutils literal notranslate"><span class="pre">scipy.integrate.LSODA</span></code>.
+‘ode’: <code class="xref py py-class docutils literal notranslate"><span class="pre">scipy.integrate.ode</span></code>.
+‘Radau’: <code class="xref py py-class docutils literal notranslate"><span class="pre">scipy.integrate.Radau</span></code>.
+‘RK23’: <code class="xref py py-class docutils literal notranslate"><span class="pre">scipy.integrate.RK23</span></code>.
+‘RK45’: <code class="xref py py-class docutils literal notranslate"><span class="pre">scipy.integrate.RK45</span></code> (default).</p>
+</dd>
+</dl>
+</p></li>
+<li><p><strong>cache</strong> (<em>bool</em><em>, </em><em>optional</em>) – Option to cache the dynamics.</p></li>
+<li><p><strong>cache_dir</strong> (<em>str</em><em>, </em><em>optional</em>) – Directory where the results are cached.</p></li>
+<li><p><strong>cache_file</strong> (<em>str</em><em>, </em><em>optional</em>) – File where the results are cached.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>results</strong> – Times and calculated values.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-qom.solvers.ODESolver">
+<span id="qom-solvers-odesolver-module"></span><h2>qom.solvers.ODESolver module<a class="headerlink" href="#module-qom.solvers.ODESolver" title="Permalink to this headline">¶</a></h2>
+<p>Class to solve ordinary differential equations.</p>
+<dl class="py class">
+<dt id="qom.solvers.ODESolver.ODESolver">
+<em class="property">class </em><code class="sig-prename descclassname">qom.solvers.ODESolver.</code><code class="sig-name descname">ODESolver</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">params</span></em>, <em class="sig-param"><span class="n">func</span></em>, <em class="sig-param"><span class="n">iv</span></em>, <em class="sig-param"><span class="n">c</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">method</span><span class="o">=</span><span class="default_value">'RK45'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.ODESolver.ODESolver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class to solve ordinary differential equations.</p>
+<p>Initializes <cite>func</cite>, <cite>iv</cite>, and <cite>c</cite> properties.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>params</strong> (<em>dict</em>) – Parameters for the solver.</p></li>
+<li><p><strong>func</strong> (<em>function</em>) – Set of ODEs returning rate equations of the input variables.</p></li>
+<li><p><strong>v</strong> (<em>list</em><em> or </em><em>np.matrix</em><em> or </em><em>np.ndarray</em>) – Values of the last iteration.</p></li>
+<li><p><strong>c</strong> (<em>list</em><em> or </em><em>np.matrix</em><em> or </em><em>np.ndarray</em><em>, </em><em>optional</em>) – Constants for the function.</p></li>
+<li><p><strong>method</strong> (<em>str</em><em>, </em><em>optional</em>) – <dl class="simple">
+<dt>Method used to solve the ODEs:</dt><dd><p>’BDF’: <code class="xref py py-class docutils literal notranslate"><span class="pre">scipy.integrate.BDF</span></code>.
+‘DOP853’: <code class="xref py py-class docutils literal notranslate"><span class="pre">scipy.integrate.DOP853</span></code>.
+‘LSODA’: <code class="xref py py-class docutils literal notranslate"><span class="pre">scipy.integrate.LSODA</span></code>.
+‘ode’: <code class="xref py py-class docutils literal notranslate"><span class="pre">scipy.integrate.ode</span></code>.
+‘Radau’: <code class="xref py py-class docutils literal notranslate"><span class="pre">scipy.integrate.Radau</span></code>.
+‘RK23’: <code class="xref py py-class docutils literal notranslate"><span class="pre">scipy.integrate.RK23</span></code>.
+‘RK45’: <code class="xref py py-class docutils literal notranslate"><span class="pre">scipy.integrate.RK45</span></code> (default).</p>
+</dd>
+</dl>
+</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="qom.solvers.ODESolver.ODESolver.c">
+<em class="property">property </em><code class="sig-name descname">c</code><a class="headerlink" href="#qom.solvers.ODESolver.ODESolver.c" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constants for the function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list or np.matrix or np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="qom.solvers.ODESolver.ODESolver.code">
+<code class="sig-name descname">code</code><em class="property"> = 'ode'</em><a class="headerlink" href="#qom.solvers.ODESolver.ODESolver.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="qom.solvers.ODESolver.ODESolver.func">
+<em class="property">property </em><code class="sig-name descname">func</code><a class="headerlink" href="#qom.solvers.ODESolver.ODESolver.func" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set of ODEs returning rate equations of the input variables.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>function</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="qom.solvers.ODESolver.ODESolver.integrator">
+<em class="property">property </em><code class="sig-name descname">integrator</code><a class="headerlink" href="#qom.solvers.ODESolver.ODESolver.integrator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Integrator object to solve the ODE.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="qom.solvers.ODESolver.ODESolver.name">
+<code class="sig-name descname">name</code><em class="property"> = 'Ordinary Differential Equations Solver'</em><a class="headerlink" href="#qom.solvers.ODESolver.ODESolver.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="qom.solvers.ODESolver.ODESolver.new_APIs">
+<code class="sig-name descname">new_APIs</code><em class="property"> = ['BDF', 'DOP853', 'LSODA', 'Radau', 'RK23', 'RK45']</em><a class="headerlink" href="#qom.solvers.ODESolver.ODESolver.new_APIs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="qom.solvers.ODESolver.ODESolver.old_APIs">
+<code class="sig-name descname">old_APIs</code><em class="property"> = ['ode']</em><a class="headerlink" href="#qom.solvers.ODESolver.ODESolver.old_APIs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="qom.solvers.ODESolver.ODESolver.set_func_params">
+<code class="sig-name descname">set_func_params</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">c</span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.ODESolver.ODESolver.set_func_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to update the parameters for the function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>c</strong> (<em>list</em><em> or </em><em>np.matrix</em><em> or </em><em>np.ndarray</em>) – Constants for the function.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="qom.solvers.ODESolver.ODESolver.set_integrator_params">
+<code class="sig-name descname">set_integrator_params</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T</span></em>, <em class="sig-param"><span class="n">value_type</span><span class="o">=</span><span class="default_value">'complex'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.ODESolver.ODESolver.set_integrator_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to set the parameters for the integrator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>T</strong> (<em>list</em>) – Times at which values are calculated.</p></li>
+<li><p><strong>value_type</strong> (<em>str</em><em>, </em><em>optional</em>) – <dl class="simple">
+<dt>Type of values of the function variables. Required for method “ode” method. Options are:</dt><dd><p>’real’: Real-valued variables.
+‘complex’: Complex-valued variables.</p>
+</dd>
+</dl>
+</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="qom.solvers.ODESolver.ODESolver.solve">
+<code class="sig-name descname">solve</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T</span></em>, <em class="sig-param"><span class="n">c_func</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.ODESolver.ODESolver.solve" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to solve a complete integration.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>T</strong> (<em>list</em>) – Times at which the values are calculated.</p></li>
+<li><p><strong>c_func</strong> (<em>function</em>) – Function to obtain the time-dependent constants of the integration.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>vs</strong> – Lists of values of the variable for all times.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="qom.solvers.ODESolver.ODESolver.step">
+<code class="sig-name descname">step</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t_e</span></em>, <em class="sig-param"><span class="n">t_s</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.ODESolver.ODESolver.step" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to perform one step of the integration.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>t_e</strong> (<em>float</em>) – Ending point of the integration.</p></li>
+<li><p><strong>t_s</strong> (<em>float</em><em>, </em><em>optional</em>) – Starting point of the integration.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>v</strong> – Values of the integrated variables at the end time.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="qom.solvers.ODESolver.ODESolver.v">
+<em class="property">property </em><code class="sig-name descname">v</code><a class="headerlink" href="#qom.solvers.ODESolver.ODESolver.v" title="Permalink to this definition">¶</a></dt>
+<dd><p>Values of the last iteration.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list or np.matrix or np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-qom.solvers.QCMSolver">
+<span id="qom-solvers-qcmsolver-module"></span><h2>qom.solvers.QCMSolver module<a class="headerlink" href="#module-qom.solvers.QCMSolver" title="Permalink to this headline">¶</a></h2>
+<p>Class to handle quantum correlation measure solver.</p>
+<dl class="py class">
+<dt id="qom.solvers.QCMSolver.QCMSolver">
+<em class="property">class </em><code class="sig-prename descclassname">qom.solvers.QCMSolver.</code><code class="sig-name descname">QCMSolver</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">modes</span></em>, <em class="sig-param"><span class="n">corrs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.QCMSolver.QCMSolver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class to handle quantum correlation measure solver.</p>
+<p>Initializes <cite>corrs</cite> and <cite>modes</cite> properties.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>modes</strong> (<em>list</em>) – Classical mode amplitudes of the system.</p></li>
+<li><p><strong>corrs</strong> (<em>list</em>) – Quantum correlations of the quadratures.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="qom.solvers.QCMSolver.QCMSolver.code">
+<code class="sig-name descname">code</code><em class="property"> = 'qcm'</em><a class="headerlink" href="#qom.solvers.QCMSolver.QCMSolver.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="qom.solvers.QCMSolver.QCMSolver.corrs">
+<em class="property">property </em><code class="sig-name descname">corrs</code><a class="headerlink" href="#qom.solvers.QCMSolver.QCMSolver.corrs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Quantum correlations of the quadratures.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="qom.solvers.QCMSolver.QCMSolver.get_discord">
+<code class="sig-name descname">get_discord</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">idx_mode_i</span></em>, <em class="sig-param"><span class="n">idx_mode_j</span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.QCMSolver.QCMSolver.get_discord" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to obtain Gaussian quantum discord between two modes given the correlation matrix of their quadratures.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>idx_mode_i</strong> (<em>int</em>) – Index of ith mode.</p></li>
+<li><p><strong>idx_mode_j</strong> (<em>int</em>) – Index of jth mode.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>D_G</strong> – Gaussian quantum discord.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="qom.solvers.QCMSolver.QCMSolver.get_entan">
+<code class="sig-name descname">get_entan</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">idx_mode_i</span></em>, <em class="sig-param"><span class="n">idx_mode_j</span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.QCMSolver.QCMSolver.get_entan" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to calculate quantum entanglement via logarithmic negativity between two modes given the correlation matrix of their quadratures.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>idx_mode_i</strong> (<em>int</em>) – Index of ith mode.</p></li>
+<li><p><strong>idx_mode_j</strong> (<em>int</em>) – Index of jth mode.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>E_n</strong> – Quantum entanglement value using logarithmic negativity.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="qom.solvers.QCMSolver.QCMSolver.get_sync_complete">
+<code class="sig-name descname">get_sync_complete</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">idx_mode_i</span></em>, <em class="sig-param"><span class="n">idx_mode_j</span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.QCMSolver.QCMSolver.get_sync_complete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to obtain the quantum complete synchronization measure between two modes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>idx_mode_i</strong> (<em>int</em>) – Index of ith mode.</p></li>
+<li><p><strong>idx_mode_j</strong> (<em>int</em>) – Index of jth mode.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>S_complete</strong> – Quantum complete synchronization measure.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="qom.solvers.QCMSolver.QCMSolver.get_sync_phase">
+<code class="sig-name descname">get_sync_phase</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">idx_mode_i</span></em>, <em class="sig-param"><span class="n">idx_mode_j</span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.QCMSolver.QCMSolver.get_sync_phase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to obtain the quantum phase synchronization measure between two modes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>idx_mode_i</strong> (<em>int</em>) – Index of ith mode.</p></li>
+<li><p><strong>idx_mode_j</strong> (<em>int</em>) – Index of jth mode.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>S_phase</strong> – Quantum phase synchronization measure.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="qom.solvers.QCMSolver.QCMSolver.modes">
+<em class="property">property </em><code class="sig-name descname">modes</code><a class="headerlink" href="#qom.solvers.QCMSolver.QCMSolver.modes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Classical modes of the system.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="qom.solvers.QCMSolver.QCMSolver.name">
+<code class="sig-name descname">name</code><em class="property"> = 'Quantum Correlations Measure Solver'</em><a class="headerlink" href="#qom.solvers.QCMSolver.QCMSolver.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-qom.solvers.RHCSolver">
+<span id="qom-solvers-rhcsolver-module"></span><h2>qom.solvers.RHCSolver module<a class="headerlink" href="#module-qom.solvers.RHCSolver" title="Permalink to this headline">¶</a></h2>
+<p>Class to handle Routh-Hurwitz criterion solver.</p>
+<dl class="py class">
+<dt id="qom.solvers.RHCSolver.RHCSolver">
+<em class="property">class </em><code class="sig-prename descclassname">qom.solvers.RHCSolver.</code><code class="sig-name descname">RHCSolver</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">A</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>list<span class="p">, </span>numpy.matrix<span class="p">, </span>numpy.ndarray<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">coeffs</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>list<span class="p">, </span>numpy.matrix<span class="p">, </span>numpy.ndarray<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.RHCSolver.RHCSolver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class to handle Routh-Hurwitz criterion solver.</p>
+<p>Initializes <cite>coeffs</cite>, <cite>n</cite> and <cite>seq</cite> properties. At least one of the parameters, preferably “coeffs”, should be non-None.</p>
+<p>An eigenvalue equation in <span class="math notranslate nohighlight">\(\lambda\)</span> is obtained by equating <span class="math notranslate nohighlight">\(\det(\lambda I_{n} - A_{n \times n})\)</span> to zero.</p>
+<p>References:</p>
+<p>[1] E. X. DeJesus and C. Kaufman, <em>Routh-Hurwitz Criterion in the Examination of Eigenvalues of a System of Nonlinear Ordinary Differential Equations</em>, Phys. Rev. A <strong>35</strong> (12), 5288 (1987).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>A</strong> (<em>list</em><em> or </em><em>numpy.matrix</em><em> or </em><em>numpy.ndarray</em><em>, </em><em>optional</em>) – Drift matrix.</p></li>
+<li><p><strong>coeffs</strong> (<em>list</em><em> or </em><em>numpy.ndarray</em><em>, </em><em>optional</em>) – Coefficients of the characteristic equation.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="qom.solvers.RHCSolver.RHCSolver.code">
+<code class="sig-name descname">code</code><em class="property"> = 'rhc'</em><a class="headerlink" href="#qom.solvers.RHCSolver.RHCSolver.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="qom.solvers.RHCSolver.RHCSolver.coeffs">
+<em class="property">property </em><code class="sig-name descname">coeffs</code><a class="headerlink" href="#qom.solvers.RHCSolver.RHCSolver.coeffs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Coefficients of the characteristic equation given by,</p>
+<div class="math notranslate nohighlight">
+\[a_{0} \lambda^{n} + a_{1} \lambda^{n - 1} + ... + a_{n} = 0\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list or numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="qom.solvers.RHCSolver.RHCSolver.get_indices">
+<code class="sig-name descname">get_indices</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.RHCSolver.RHCSolver.get_indices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to obtain the indices where the sequence, <span class="math notranslate nohighlight">\(\{T_{0}, T_{1}, ..., T_{n}\}\)</span> changes sign.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>idxs</strong> – Indices where the sequence changes sign.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="qom.solvers.RHCSolver.RHCSolver.n">
+<em class="property">property </em><code class="sig-name descname">n</code><a class="headerlink" href="#qom.solvers.RHCSolver.RHCSolver.n" title="Permalink to this definition">¶</a></dt>
+<dd><p>Order of the characteristic equation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="qom.solvers.RHCSolver.RHCSolver.name">
+<code class="sig-name descname">name</code><em class="property"> = 'Routh Hurwitz Criterion Solver'</em><a class="headerlink" href="#qom.solvers.RHCSolver.RHCSolver.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="qom.solvers.RHCSolver.RHCSolver.seq">
+<em class="property">property </em><code class="sig-name descname">seq</code><a class="headerlink" href="#qom.solvers.RHCSolver.RHCSolver.seq" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sequence of terms <span class="math notranslate nohighlight">\(T_{k} = \det(M_{k})\)</span>, where <span class="math notranslate nohighlight">\(M_{k}\)</span> is the square sub-matrix of <span class="math notranslate nohighlight">\(M\)</span> comprising of its first <span class="math notranslate nohighlight">\(k\)</span> rows and columns, with <span class="math notranslate nohighlight">\(T_{0} = a_{0}\)</span>.</p>
+<p>The matrix <span class="math notranslate nohighlight">\(M\)</span> is defined as [1],</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}M_{ij} =
+\begin{cases}
+a_{2i - j}, ~ \mathrm{if} ~ 0 \le 2 i - j \le n \\
+0, ~ \mathrm{otherwise}
+\end{cases}\end{split}\]</div>
+<p>where the indices of <span class="math notranslate nohighlight">\(M\)</span> are 1-based.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list or numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-qom.solvers">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-qom.solvers" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">qom.solvers package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-qom.solvers.HLESolver">qom.solvers.HLESolver module</a></li>
+<li><a class="reference internal" href="#module-qom.solvers.ODESolver">qom.solvers.ODESolver module</a></li>
+<li><a class="reference internal" href="#module-qom.solvers.QCMSolver">qom.solvers.QCMSolver module</a></li>
+<li><a class="reference internal" href="#module-qom.solvers.RHCSolver">qom.solvers.RHCSolver module</a></li>
+<li><a class="reference internal" href="#module-qom.solvers">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="qom.loopers.html"
+                        title="previous chapter">qom.loopers package</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="qom.systems.html"
+                        title="next chapter">qom.systems package</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/qom.solvers.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="qom.systems.html" title="qom.systems package"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="qom.loopers.html" title="qom.loopers package"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Quantum Optomechanics Toolbox  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >qom</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="qom.html" >qom package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">qom.solvers package</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, Sampreet Kalita.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,585 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>qom.ui.widgets package &#8212; Quantum Optomechanics Toolbox  documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.1.2/es5/tex-mml-chtml.min.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="qom.utils package" href="qom.utils.html" />
+    <link rel="prev" title="qom.ui.plotters package" href="qom.ui.plotters.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="qom.utils.html" title="qom.utils package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="qom.ui.plotters.html" title="qom.ui.plotters package"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Quantum Optomechanics Toolbox  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >qom</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="qom.html" >qom package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="qom.ui.html" accesskey="U">qom.ui package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">qom.ui.widgets package</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="qom-ui-widgets-package">
+<h1>qom.ui.widgets package<a class="headerlink" href="#qom-ui-widgets-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-qom.ui.widgets.BaseWidget">
+<span id="qom-ui-widgets-basewidget-module"></span><h2>qom.ui.widgets.BaseWidget module<a class="headerlink" href="#module-qom.ui.widgets.BaseWidget" title="Permalink to this headline">¶</a></h2>
+<p>Class to interface PyQt widgets.</p>
+<dl class="py class">
+<dt id="qom.ui.widgets.BaseWidget.BaseWidget">
+<em class="property">class </em><code class="sig-prename descclassname">qom.ui.widgets.BaseWidget.</code><code class="sig-name descname">BaseWidget</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parent</span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.widgets.BaseWidget.BaseWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PyQt5.QtWidgets.QWidget</span></code></p>
+<p>Class to interface PyQt widgets.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>parent</strong> (<em>QtWidget.*</em>) – Parent class for the widget.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="qom.ui.widgets.BaseWidget.BaseWidget.get_icon">
+<code class="sig-name descname">get_icon</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filename</span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.widgets.BaseWidget.BaseWidget.get_icon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to obtain icon from resource file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>filename</strong> (<em>str</em>) – Name of the resource file (without the extension).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>icon</strong> – PyQt-compatible icon.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">QtGui.QIcon</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="qom.ui.widgets.BaseWidget.BaseWidget.get_stylesheet">
+<code class="sig-name descname">get_stylesheet</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filename</span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.widgets.BaseWidget.BaseWidget.get_stylesheet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to obtain a stylesheet from resource file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>filename</strong> (<em>str</em>) – Name of the resource file without the extension.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>ss</strong> – Decoded stylesheet.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-qom.ui.widgets.FooterWidget">
+<span id="qom-ui-widgets-footerwidget-module"></span><h2>qom.ui.widgets.FooterWidget module<a class="headerlink" href="#module-qom.ui.widgets.FooterWidget" title="Permalink to this headline">¶</a></h2>
+<p>Class to create a custom footer.</p>
+<dl class="py class">
+<dt id="qom.ui.widgets.FooterWidget.FooterWidget">
+<em class="property">class </em><code class="sig-prename descclassname">qom.ui.widgets.FooterWidget.</code><code class="sig-name descname">FooterWidget</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parent</span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.widgets.FooterWidget.FooterWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#qom.ui.widgets.BaseWidget.BaseWidget" title="qom.ui.widgets.BaseWidget.BaseWidget"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.ui.widgets.BaseWidget.BaseWidget</span></code></a></p>
+<p>Class to create a custom footer.</p>
+<p>Inherits <a class="reference internal" href="#module-qom.ui.widgets.BaseWidget" title="qom.ui.widgets.BaseWidget"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.ui.widgets.BaseWidget</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>parent</strong> (<em>QtWidget.*</em>) – Parent class for the sidebar.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="qom.ui.widgets.FooterWidget.FooterWidget.reset_progress">
+<code class="sig-name descname">reset_progress</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.widgets.FooterWidget.FooterWidget.reset_progress" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to reset progress.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="qom.ui.widgets.FooterWidget.FooterWidget.set_theme">
+<code class="sig-name descname">set_theme</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">theme</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.widgets.FooterWidget.FooterWidget.set_theme" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to update the theme.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>theme</strong> (<em>str</em><em>, </em><em>optional</em>) – <dl class="simple">
+<dt>Display theme:</dt><dd><p>’dark’: Dark mode.
+‘light’: Light mode.</p>
+</dd>
+</dl>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="qom.ui.widgets.FooterWidget.FooterWidget.update_progress">
+<code class="sig-name descname">update_progress</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">progress</span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.widgets.FooterWidget.FooterWidget.update_progress" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to update progress.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>progress</strong> (<em>int</em><em> or </em><em>float</em>) – Progress percentage.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="qom.ui.widgets.FooterWidget.FooterWidget.update_status">
+<code class="sig-name descname">update_status</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">status</span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.widgets.FooterWidget.FooterWidget.update_status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to update status.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>status</strong> (<em>str</em>) – Status message.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-qom.ui.widgets.HeaderWidget">
+<span id="qom-ui-widgets-headerwidget-module"></span><h2>qom.ui.widgets.HeaderWidget module<a class="headerlink" href="#module-qom.ui.widgets.HeaderWidget" title="Permalink to this headline">¶</a></h2>
+<p>Class to create a custom header.</p>
+<dl class="py class">
+<dt id="qom.ui.widgets.HeaderWidget.HeaderWidget">
+<em class="property">class </em><code class="sig-prename descclassname">qom.ui.widgets.HeaderWidget.</code><code class="sig-name descname">HeaderWidget</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parent</span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.widgets.HeaderWidget.HeaderWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#qom.ui.widgets.BaseWidget.BaseWidget" title="qom.ui.widgets.BaseWidget.BaseWidget"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.ui.widgets.BaseWidget.BaseWidget</span></code></a></p>
+<p>Class to create a custom header.</p>
+<p>Inherits <a class="reference internal" href="#module-qom.ui.widgets.BaseWidget" title="qom.ui.widgets.BaseWidget"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.ui.widgets.BaseWidget</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>parent</strong> (<em>QtWidget.*</em>) – Parent class for the header.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="qom.ui.widgets.HeaderWidget.HeaderWidget.mouseMoveEvent">
+<code class="sig-name descname">mouseMoveEvent</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">event</span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.widgets.HeaderWidget.HeaderWidget.mouseMoveEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to override mouse move events.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="qom.ui.widgets.HeaderWidget.HeaderWidget.mousePressEvent">
+<code class="sig-name descname">mousePressEvent</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">event</span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.widgets.HeaderWidget.HeaderWidget.mousePressEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to override mouse press events.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="qom.ui.widgets.HeaderWidget.HeaderWidget.mouseReleaseEvent">
+<code class="sig-name descname">mouseReleaseEvent</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">event</span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.widgets.HeaderWidget.HeaderWidget.mouseReleaseEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to override mouse release events.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="qom.ui.widgets.HeaderWidget.HeaderWidget.set_theme">
+<code class="sig-name descname">set_theme</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">theme</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.widgets.HeaderWidget.HeaderWidget.set_theme" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to update the theme.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>theme</strong> (<em>str</em><em>, </em><em>optional</em>) – <dl class="simple">
+<dt>Display theme:</dt><dd><p>’dark’: Dark mode.
+‘light’: Light mode.</p>
+</dd>
+</dl>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-qom.ui.widgets.ParamWidget">
+<span id="qom-ui-widgets-paramwidget-module"></span><h2>qom.ui.widgets.ParamWidget module<a class="headerlink" href="#module-qom.ui.widgets.ParamWidget" title="Permalink to this headline">¶</a></h2>
+<p>Class to create a widget for each parameter.</p>
+<dl class="py class">
+<dt id="qom.ui.widgets.ParamWidget.ParamWidget">
+<em class="property">class </em><code class="sig-prename descclassname">qom.ui.widgets.ParamWidget.</code><code class="sig-name descname">ParamWidget</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parent</span></em>, <em class="sig-param"><span class="n">wide</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.widgets.ParamWidget.ParamWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#qom.ui.widgets.BaseWidget.BaseWidget" title="qom.ui.widgets.BaseWidget.BaseWidget"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.ui.widgets.BaseWidget.BaseWidget</span></code></a></p>
+<p>Class to create a widget for each parameter.</p>
+<p>Inherits <a class="reference internal" href="#module-qom.ui.widgets.BaseWidget" title="qom.ui.widgets.BaseWidget"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.ui.widgets.BaseWidget</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>parent</strong> (<em>QtWidget.*</em>) – Parent class for the widget.</p></li>
+<li><p><strong>wide</strong> (<em>bool</em><em>, </em><em>optional</em>) – Option for a wide value-placeholder.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="qom.ui.widgets.ParamWidget.ParamWidget.get_key">
+<code class="sig-name descname">get_key</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.widgets.ParamWidget.ParamWidget.get_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to get the name of the key.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>key</strong> – Name of the key.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="qom.ui.widgets.ParamWidget.ParamWidget.get_val">
+<code class="sig-name descname">get_val</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.widgets.ParamWidget.ParamWidget.get_val" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to get text or options for the value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>val</strong> – Text or options to set.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str or list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="qom.ui.widgets.ParamWidget.ParamWidget.set_key">
+<code class="sig-name descname">set_key</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.widgets.ParamWidget.ParamWidget.set_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to set the name of the key.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>key</strong> (<em>str</em>) – Name of the key.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="qom.ui.widgets.ParamWidget.ParamWidget.set_theme">
+<code class="sig-name descname">set_theme</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">theme</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.widgets.ParamWidget.ParamWidget.set_theme" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to update the theme.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>theme</strong> (<em>str</em><em>, </em><em>optional</em>) – <dl class="simple">
+<dt>Display theme:</dt><dd><p>’dark’: Dark mode.
+‘light’: Light mode.</p>
+</dd>
+</dl>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="qom.ui.widgets.ParamWidget.ParamWidget.set_val">
+<code class="sig-name descname">set_val</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.widgets.ParamWidget.ParamWidget.set_val" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to set text or options for the value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>val</strong> (<em>str</em><em> or </em><em>list</em>) – Text or options to set.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-qom.ui.widgets.SidebarWidget">
+<span id="qom-ui-widgets-sidebarwidget-module"></span><h2>qom.ui.widgets.SidebarWidget module<a class="headerlink" href="#module-qom.ui.widgets.SidebarWidget" title="Permalink to this headline">¶</a></h2>
+<p>Class to create a custom sidebar.</p>
+<dl class="py class">
+<dt id="qom.ui.widgets.SidebarWidget.RotatedLabel">
+<em class="property">class </em><code class="sig-prename descclassname">qom.ui.widgets.SidebarWidget.</code><code class="sig-name descname">RotatedLabel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">text</span><span class="o">=</span><span class="default_value">'List'</span></em>, <em class="sig-param"><span class="n">pos</span><span class="o">=</span><span class="default_value">'left'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.widgets.SidebarWidget.RotatedLabel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PyQt5.QtWidgets.QLabel</span></code></p>
+<dl class="py method">
+<dt id="qom.ui.widgets.SidebarWidget.RotatedLabel.paintEvent">
+<code class="sig-name descname">paintEvent</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">QPaintEvent</span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.widgets.SidebarWidget.RotatedLabel.paintEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="qom.ui.widgets.SidebarWidget.SidebarWidget">
+<em class="property">class </em><code class="sig-prename descclassname">qom.ui.widgets.SidebarWidget.</code><code class="sig-name descname">SidebarWidget</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parent</span></em>, <em class="sig-param"><span class="n">widget</span></em>, <em class="sig-param"><span class="n">pos</span><span class="o">=</span><span class="default_value">'left'</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'List'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.widgets.SidebarWidget.SidebarWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#qom.ui.widgets.BaseWidget.BaseWidget" title="qom.ui.widgets.BaseWidget.BaseWidget"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.ui.widgets.BaseWidget.BaseWidget</span></code></a></p>
+<p>Class to create a custom sidebar.</p>
+<p>Inherits <a class="reference internal" href="#module-qom.ui.widgets.BaseWidget" title="qom.ui.widgets.BaseWidget"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.ui.widgets.BaseWidget</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>parent</strong> (<em>QtWidget.*</em>) – Parent class for the sidebar.</p></li>
+<li><p><strong>widget</strong> (<em>QtWidget.*</em>) – Widget connected to the sidebar list.</p></li>
+<li><p><strong>pos</strong> (<em>str</em><em>, </em><em>optional</em>) – <dl class="simple">
+<dt>Position of the sidebar:</dt><dd><p>’bottom-left’: Bottom-left side.
+‘bottom-right’: Bottom-right side.
+‘left’: Left side.
+‘right’: Right side.
+‘top-left’: Top-left side.
+‘top-right’: Top-right side.</p>
+</dd>
+</dl>
+</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="qom.ui.widgets.SidebarWidget.SidebarWidget.set_list">
+<code class="sig-name descname">set_list</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">items</span></em>, <em class="sig-param"><span class="n">callback_func</span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.widgets.SidebarWidget.SidebarWidget.set_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to set the list of items and the callback on item selection.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>items</strong> (<em>list</em>) – List of items to populate.</p></li>
+<li><p><strong>callback_func</strong> (<em>function</em>) – Function to call on item selection.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="qom.ui.widgets.SidebarWidget.SidebarWidget.set_theme">
+<code class="sig-name descname">set_theme</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">theme</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.widgets.SidebarWidget.SidebarWidget.set_theme" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to update the theme.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>theme</strong> (<em>str</em><em>, </em><em>optional</em>) – <dl class="simple">
+<dt>Display theme:</dt><dd><p>’dark’: Dark mode.
+‘light’: Light mode.</p>
+</dd>
+</dl>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="qom.ui.widgets.SidebarWidget.SidebarWidget.toggle_list">
+<code class="sig-name descname">toggle_list</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.widgets.SidebarWidget.SidebarWidget.toggle_list" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-qom.ui.widgets.SolverWidget">
+<span id="qom-ui-widgets-solverwidget-module"></span><h2>qom.ui.widgets.SolverWidget module<a class="headerlink" href="#module-qom.ui.widgets.SolverWidget" title="Permalink to this headline">¶</a></h2>
+<p>Class to create a widget for the solvers.</p>
+<dl class="py class">
+<dt id="qom.ui.widgets.SolverWidget.SolverWidget">
+<em class="property">class </em><code class="sig-prename descclassname">qom.ui.widgets.SolverWidget.</code><code class="sig-name descname">SolverWidget</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parent</span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.widgets.SolverWidget.SolverWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#qom.ui.widgets.BaseWidget.BaseWidget" title="qom.ui.widgets.BaseWidget.BaseWidget"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.ui.widgets.BaseWidget.BaseWidget</span></code></a></p>
+<p>Class to create a widget for the solvers.</p>
+<p>Inherits <a class="reference internal" href="#module-qom.ui.widgets.BaseWidget" title="qom.ui.widgets.BaseWidget"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.ui.widgets.BaseWidget</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>parent</strong> (<em>QtWidget.*</em>) – Parent class for the widget.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="qom.ui.widgets.SolverWidget.SolverWidget.get_list_items">
+<code class="sig-name descname">get_list_items</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.widgets.SolverWidget.SolverWidget.get_list_items" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to obtain the names of available solvers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>names</strong> – Names of the solvers.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="qom.ui.widgets.SolverWidget.SolverWidget.set_curr_item">
+<code class="sig-name descname">set_curr_item</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pos</span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.widgets.SolverWidget.SolverWidget.set_curr_item" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to set the current solver.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>pos</strong> (<em>int</em>) – Position of the current solver.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="qom.ui.widgets.SolverWidget.SolverWidget.set_theme">
+<code class="sig-name descname">set_theme</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">theme</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.widgets.SolverWidget.SolverWidget.set_theme" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to update the theme.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>theme</strong> (<em>str</em><em>, </em><em>optional</em>) – <dl class="simple">
+<dt>Display theme:</dt><dd><p>’dark’: Dark mode.
+‘light’: Light mode.</p>
+</dd>
+</dl>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-qom.ui.widgets.SystemWidget">
+<span id="qom-ui-widgets-systemwidget-module"></span><h2>qom.ui.widgets.SystemWidget module<a class="headerlink" href="#module-qom.ui.widgets.SystemWidget" title="Permalink to this headline">¶</a></h2>
+<p>Class to create a widget for the systems.</p>
+<dl class="py class">
+<dt id="qom.ui.widgets.SystemWidget.SystemWidget">
+<em class="property">class </em><code class="sig-prename descclassname">qom.ui.widgets.SystemWidget.</code><code class="sig-name descname">SystemWidget</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parent</span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.widgets.SystemWidget.SystemWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#qom.ui.widgets.BaseWidget.BaseWidget" title="qom.ui.widgets.BaseWidget.BaseWidget"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.ui.widgets.BaseWidget.BaseWidget</span></code></a></p>
+<p>Class to create a widget for the systems.</p>
+<p>Inherits <a class="reference internal" href="#module-qom.ui.widgets.BaseWidget" title="qom.ui.widgets.BaseWidget"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.ui.widgets.BaseWidget</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>parent</strong> (<em>QtWidget.*</em>) – Parent class for the widget.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="qom.ui.widgets.SystemWidget.SystemWidget.calculate_property">
+<code class="sig-name descname">calculate_property</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.widgets.SystemWidget.SystemWidget.calculate_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to calcualte a system property.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="qom.ui.widgets.SystemWidget.SystemWidget.get_list_items">
+<code class="sig-name descname">get_list_items</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.widgets.SystemWidget.SystemWidget.get_list_items" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to obtain the codenames of available systems.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>codes</strong> – Codenames of the systems.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="qom.ui.widgets.SystemWidget.SystemWidget.set_curr_item">
+<code class="sig-name descname">set_curr_item</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pos</span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.widgets.SystemWidget.SystemWidget.set_curr_item" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to set the system.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>pos</strong> (<em>int</em>) – Position of the available system.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="qom.ui.widgets.SystemWidget.SystemWidget.set_theme">
+<code class="sig-name descname">set_theme</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">theme</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.widgets.SystemWidget.SystemWidget.set_theme" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to update the theme.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>theme</strong> (<em>str</em><em>, </em><em>optional</em>) – <dl class="simple">
+<dt>Display theme:</dt><dd><p>’dark’: Dark mode.
+‘light’: Light mode.</p>
+</dd>
+</dl>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-qom.ui.widgets">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-qom.ui.widgets" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">qom.ui.widgets package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-qom.ui.widgets.BaseWidget">qom.ui.widgets.BaseWidget module</a></li>
+<li><a class="reference internal" href="#module-qom.ui.widgets.FooterWidget">qom.ui.widgets.FooterWidget module</a></li>
+<li><a class="reference internal" href="#module-qom.ui.widgets.HeaderWidget">qom.ui.widgets.HeaderWidget module</a></li>
+<li><a class="reference internal" href="#module-qom.ui.widgets.ParamWidget">qom.ui.widgets.ParamWidget module</a></li>
+<li><a class="reference internal" href="#module-qom.ui.widgets.SidebarWidget">qom.ui.widgets.SidebarWidget module</a></li>
+<li><a class="reference internal" href="#module-qom.ui.widgets.SolverWidget">qom.ui.widgets.SolverWidget module</a></li>
+<li><a class="reference internal" href="#module-qom.ui.widgets.SystemWidget">qom.ui.widgets.SystemWidget module</a></li>
+<li><a class="reference internal" href="#module-qom.ui.widgets">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="qom.ui.plotters.html"
+                        title="previous chapter">qom.ui.plotters package</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="qom.utils.html"
+                        title="next chapter">qom.utils package</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/qom.ui.widgets.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="qom.utils.html" title="qom.utils package"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="qom.ui.plotters.html" title="qom.ui.plotters package"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Quantum Optomechanics Toolbox  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >qom</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="qom.html" >qom package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="qom.ui.html" >qom.ui package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">qom.ui.widgets package</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, Sampreet Kalita.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.3.1.
+    </div>
+  </body>
+</html>
