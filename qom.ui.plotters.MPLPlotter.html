@@ -1,0 +1,356 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>qom.ui.plotters.MPLPlotter module &#8212; Quantum Optomechanics Toolbox  documentation</title>
+    <link rel="stylesheet" type="text/css" href="pygments.css" />
+    <link rel="stylesheet" type="text/css" href="nature.css" />
+    <script data-url_root="./" id="documentation_options" src="documentation_options.js"></script>
+    <script src="jquery.js"></script>
+    <script src="underscore.js"></script>
+    <script src="doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="qom.ui.log module" href="qom.ui.log.html" />
+    <link rel="prev" title="qom.ui.plotters.BasePlotter module" href="qom.ui.plotters.BasePlotter.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="qom.ui.log.html" title="qom.ui.log module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="qom.ui.plotters.BasePlotter.html" title="qom.ui.plotters.BasePlotter module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Quantum Optomechanics Toolbox  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="qom.ui.html" >qom.ui package</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="qom.ui.plotters.html" accesskey="U">qom.ui.plotters subpackage</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">qom.ui.plotters.MPLPlotter module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-qom.ui.plotters.MPLPlotter">
+<span id="qom-ui-plotters-mplplotter-module"></span><h1>qom.ui.plotters.MPLPlotter module<a class="headerlink" href="#module-qom.ui.plotters.MPLPlotter" title="Permalink to this headline">¶</a></h1>
+<p>Module to handle matplotlib plots.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="qom.ui.plotters.MPLPlotter.MPLPlotter">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">qom.ui.plotters.MPLPlotter.</span></span><span class="sig-name descname"><span class="pre">MPLPlotter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axes</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.plotters.MPLPlotter.MPLPlotter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="qom.ui.plotters.BasePlotter.html#qom.ui.plotters.BasePlotter.BasePlotter" title="qom.ui.plotters.BasePlotter.BasePlotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.ui.plotters.BasePlotter.BasePlotter</span></code></a></p>
+<p>Class to handle matplotlib plots.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>axes</strong> (<em>dict</em>) – Axes for the plot containing one or more keys for the axes (“X”, “Y” or “Z”), each either a list of values, or dictionary containing “min”, “max” and “dim” keys or a single “val” key with a non-empty list. Refer <a class="reference internal" href="qom.ui.axes.BaseAxis.html#module-qom.ui.axes.BaseAxis" title="qom.ui.axes.BaseAxis"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.ui.axes.BaseAxis</span></code></a> for all currently supported keys.</p></li>
+<li><p><strong>params</strong> (<em>dict</em>) – Parameters of the plot. Refer <a class="reference internal" href="qom.ui.plotters.BasePlotter.html#module-qom.ui.plotters.BasePlotter" title="qom.ui.plotters.BasePlotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.ui.plotters.BasePlotter</span></code></a> for all currently supported keys.</p></li>
+<li><p><strong>mpl_spec</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.gridspec.GridSpec</span></code>) – Grid for the plot.</p></li>
+<li><p><strong>note:</strong> (<em>.</em>) – All the options defined in <code class="docutils literal notranslate"><span class="pre">params</span></code> supersede individual function arguments. Refer <a class="reference internal" href="qom.ui.plotters.BasePlotter.html#module-qom.ui.plotters.BasePlotter" title="qom.ui.plotters.BasePlotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.ui.plotters.BasePlotter</span></code></a> for a complete list of supported options.:</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.ui.plotters.MPLPlotter.MPLPlotter.__get_font_props">
+<span class="sig-name descname"><span class="pre">__get_font_props</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">font_dict</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.plotters.MPLPlotter.MPLPlotter.__get_font_props" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to convert font dictionary to FontProperties.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>font_dict</strong> (<em>dict</em>) – Dictionary of font properties.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>font_props</strong> – Font properties.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.font_manager.FontProperties</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.ui.plotters.MPLPlotter.MPLPlotter.__init_1D">
+<span class="sig-name descname"><span class="pre">__init_1D</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.plotters.MPLPlotter.MPLPlotter.__init_1D" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to initialize 1D plots.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.ui.plotters.MPLPlotter.MPLPlotter.__init_2D">
+<span class="sig-name descname"><span class="pre">__init_2D</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.plotters.MPLPlotter.MPLPlotter.__init_2D" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to initialize 2D plots.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.ui.plotters.MPLPlotter.MPLPlotter.__init_3D">
+<span class="sig-name descname"><span class="pre">__init_3D</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.plotters.MPLPlotter.MPLPlotter.__init_3D" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to initialize 3D plots.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.ui.plotters.MPLPlotter.MPLPlotter.__resize_plot">
+<span class="sig-name descname"><span class="pre">__resize_plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">5.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">5.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.plotters.MPLPlotter.MPLPlotter.__resize_plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to resize the plot.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>width</strong> (<em>float</em>) – Width of the figure.</p></li>
+<li><p><strong>height</strong> (<em>float</em>) – Height of the figure.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.ui.plotters.MPLPlotter.MPLPlotter.__update_1D">
+<span class="sig-name descname"><span class="pre">__update_1D</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">head</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.plotters.MPLPlotter.MPLPlotter.__update_1D" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to udpate 1D plots.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xs</strong> (<em>list</em><em> or </em><em>numpy.ndarray</em>) – X-axis values.</p></li>
+<li><p><strong>vs</strong> (<em>list</em><em> or </em><em>numpy.ndarray</em>) – Y-axis values.</p></li>
+<li><p><strong>head</strong> (<em>boolean</em>) – Option to display the head for line-type plots.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.ui.plotters.MPLPlotter.MPLPlotter.__update_2D">
+<span class="sig-name descname"><span class="pre">__update_2D</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.plotters.MPLPlotter.MPLPlotter.__update_2D" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to udpate 2D plots.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>vs</strong> (<em>list</em><em> or </em><em>numpy.ndarray</em>) – V-axis values.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.ui.plotters.MPLPlotter.MPLPlotter.__update_3D">
+<span class="sig-name descname"><span class="pre">__update_3D</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.plotters.MPLPlotter.MPLPlotter.__update_3D" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to udpate 3D plots.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>vs</strong> (<em>list</em><em> or </em><em>numpy.ndarray</em>) – Z-axis or V-axis values.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.ui.plotters.MPLPlotter.MPLPlotter.__update_axis">
+<span class="sig-name descname"><span class="pre">__update_axis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax_data</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.plotters.MPLPlotter.MPLPlotter.__update_axis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to update an axis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ax</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.axes.Axes</span></code>) – Axis of the plot.</p></li>
+<li><p><strong>ax_name</strong> (<em>str</em>) – Name of the axis.</p></li>
+<li><p><strong>ax_data</strong> (<em>dict</em>) – Data for the axis.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qom.ui.plotters.MPLPlotter.MPLPlotter.cbar_positions">
+<span class="sig-name descname"><span class="pre">cbar_positions</span></span><em class="property"> <span class="pre">=</span> <span class="pre">{'bottom':</span> <span class="pre">&lt;function</span> <span class="pre">MPLPlotter.&lt;lambda&gt;&gt;,</span> <span class="pre">'left':</span> <span class="pre">&lt;function</span> <span class="pre">MPLPlotter.&lt;lambda&gt;&gt;,</span> <span class="pre">'right':</span> <span class="pre">&lt;function</span> <span class="pre">MPLPlotter.&lt;lambda&gt;&gt;,</span> <span class="pre">'top':</span> <span class="pre">&lt;function</span> <span class="pre">MPLPlotter.&lt;lambda&gt;&gt;}</span></em><a class="headerlink" href="#qom.ui.plotters.MPLPlotter.MPLPlotter.cbar_positions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qom.ui.plotters.MPLPlotter.MPLPlotter.cbar_positions_toggled">
+<span class="sig-name descname"><span class="pre">cbar_positions_toggled</span></span><em class="property"> <span class="pre">=</span> <span class="pre">{'bottom':</span> <span class="pre">&lt;function</span> <span class="pre">MPLPlotter.&lt;lambda&gt;&gt;,</span> <span class="pre">'left':</span> <span class="pre">&lt;function</span> <span class="pre">MPLPlotter.&lt;lambda&gt;&gt;,</span> <span class="pre">'right':</span> <span class="pre">&lt;function</span> <span class="pre">MPLPlotter.&lt;lambda&gt;&gt;,</span> <span class="pre">'top':</span> <span class="pre">&lt;function</span> <span class="pre">MPLPlotter.&lt;lambda&gt;&gt;}</span></em><a class="headerlink" href="#qom.ui.plotters.MPLPlotter.MPLPlotter.cbar_positions_toggled" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.ui.plotters.MPLPlotter.MPLPlotter.get_current_axis">
+<span class="sig-name descname"><span class="pre">get_current_axis</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.plotters.MPLPlotter.MPLPlotter.get_current_axis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to obtain the axes of the figure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>axes</strong> – Axes of the figure.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.axes.Axes</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.ui.plotters.MPLPlotter.MPLPlotter.get_current_figure">
+<span class="sig-name descname"><span class="pre">get_current_figure</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.plotters.MPLPlotter.MPLPlotter.get_current_figure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to obtain the current figure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>fig</strong> – Current figure.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.pyplot.figure</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.ui.plotters.MPLPlotter.MPLPlotter.get_twin_axis">
+<span class="sig-name descname"><span class="pre">get_twin_axis</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.plotters.MPLPlotter.MPLPlotter.get_twin_axis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to obtain a twin axes of the figure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>ax_twin</strong> – The twin axis.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.axes.Axes</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="qom.ui.plotters.MPLPlotter.MPLPlotter.mpl_spec">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">mpl_spec</span></span><a class="headerlink" href="#qom.ui.plotters.MPLPlotter.MPLPlotter.mpl_spec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Grid for the plot.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.gridspec.GridSpec</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.ui.plotters.MPLPlotter.MPLPlotter.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">5.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">5.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.plotters.MPLPlotter.MPLPlotter.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to save the figure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> (<em>str</em>) – Name of the saved file.</p></li>
+<li><p><strong>width</strong> (<em>float</em>) – Width of the figure.</p></li>
+<li><p><strong>height</strong> (<em>float</em>) – Height of the figure.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.ui.plotters.MPLPlotter.MPLPlotter.set_cbar">
+<span class="sig-name descname"><span class="pre">set_cbar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mini</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxi</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.plotters.MPLPlotter.MPLPlotter.set_cbar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to set the colorbar for the figure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mini</strong> (<em>float</em>) – Minimum value displayed. Default is 0.</p></li>
+<li><p><strong>maxi</strong> (<em>float</em>) – Maximum value displayed. Default is 0.</p></li>
+<li><p><strong>prec</strong> (<em>int</em>) – Precision upto which the values are displayed. Default is 2.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.ui.plotters.MPLPlotter.MPLPlotter.show">
+<span class="sig-name descname"><span class="pre">show</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hold</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">5.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">5.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.plotters.MPLPlotter.MPLPlotter.show" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to display the figure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>hold</strong> (<em>bool</em><em>, </em><em>optional</em>) – Option to hold the plot.</p></li>
+<li><p><strong>width</strong> (<em>float</em>) – Width of the figure.</p></li>
+<li><p><strong>height</strong> (<em>float</em>) – Height of the figure.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.ui.plotters.MPLPlotter.MPLPlotter.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">head</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.plotters.MPLPlotter.MPLPlotter.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to update the figure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xs</strong> (<em>list</em><em> or </em><em>numpy.ndarray</em><em>, </em><em>optional</em>) – X-axis data.</p></li>
+<li><p><strong>ys</strong> (<em>list</em><em> or </em><em>numpy.ndarray</em><em>, </em><em>optional</em>) – Y-axis data.</p></li>
+<li><p><strong>zs</strong> (<em>list</em><em> or </em><em>numpy.ndarray</em><em>, </em><em>optional</em>) – Z-axis data.</p></li>
+<li><p><strong>vs</strong> (<em>list</em><em> or </em><em>numpy.ndarray</em><em>, </em><em>optional</em>) – V-axis data.</p></li>
+<li><p><strong>head</strong> (<em>bool</em><em>, </em><em>optional</em>) – Option to display the head for line-type plots. Default is False.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="qom.ui.plotters.BasePlotter.html"
+                        title="previous chapter">qom.ui.plotters.BasePlotter module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="qom.ui.log.html"
+                        title="next chapter">qom.ui.log module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/qom.ui.plotters.MPLPlotter.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="qom.ui.log.html" title="qom.ui.log module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="qom.ui.plotters.BasePlotter.html" title="qom.ui.plotters.BasePlotter module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Quantum Optomechanics Toolbox  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="qom.ui.html" >qom.ui package</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="qom.ui.plotters.html" >qom.ui.plotters subpackage</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">qom.ui.plotters.MPLPlotter module</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, Sampreet Kalita.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
+    </div>
+  </body>
+</html>

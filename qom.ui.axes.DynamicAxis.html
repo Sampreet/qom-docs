@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>qom.ui.axes subpackage &#8212; Quantum Optomechanics Toolbox  documentation</title>
+    <title>qom.ui.axes.DynamicAxis module &#8212; Quantum Optomechanics Toolbox  documentation</title>
     <link rel="stylesheet" type="text/css" href="pygments.css" />
     <link rel="stylesheet" type="text/css" href="nature.css" />
     <script data-url_root="./" id="documentation_options" src="documentation_options.js"></script>
@@ -15,8 +15,8 @@
     <script src="doctools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="qom.ui.axes.BaseAxis module" href="qom.ui.axes.BaseAxis.html" />
-    <link rel="prev" title="qom.ui package" href="qom.ui.html" /> 
+    <link rel="next" title="qom.ui.axes.MultiAxis module" href="qom.ui.axes.MultiAxis.html" />
+    <link rel="prev" title="qom.ui.axes.BaseAxis module" href="qom.ui.axes.BaseAxis.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
@@ -28,14 +28,15 @@
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="qom.ui.axes.BaseAxis.html" title="qom.ui.axes.BaseAxis module"
+          <a href="qom.ui.axes.MultiAxis.html" title="qom.ui.axes.MultiAxis module"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="qom.ui.html" title="qom.ui package"
+          <a href="qom.ui.axes.BaseAxis.html" title="qom.ui.axes.BaseAxis module"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">Quantum Optomechanics Toolbox  documentation</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="qom.ui.html" accesskey="U">qom.ui package</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">qom.ui.axes subpackage</a></li> 
+          <li class="nav-item nav-item-1"><a href="qom.ui.html" >qom.ui package</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="qom.ui.axes.html" accesskey="U">qom.ui.axes subpackage</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">qom.ui.axes.DynamicAxis module</a></li> 
       </ul>
     </div>  
 
@@ -44,17 +45,21 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="qom-ui-axes-subpackage">
-<h1>qom.ui.axes subpackage<a class="headerlink" href="#qom-ui-axes-subpackage" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Modules:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="qom.ui.axes.BaseAxis.html">qom.ui.axes.BaseAxis module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="qom.ui.axes.DynamicAxis.html">qom.ui.axes.DynamicAxis module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="qom.ui.axes.MultiAxis.html">qom.ui.axes.MultiAxis module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="qom.ui.axes.StaticAxis.html">qom.ui.axes.StaticAxis module</a></li>
-</ul>
-</div>
+  <section id="module-qom.ui.axes.DynamicAxis">
+<span id="qom-ui-axes-dynamicaxis-module"></span><h1>qom.ui.axes.DynamicAxis module<a class="headerlink" href="#module-qom.ui.axes.DynamicAxis" title="Permalink to this headline">¶</a></h1>
+<p>Module to handle a dynamic axis.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="qom.ui.axes.DynamicAxis.DynamicAxis">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">qom.ui.axes.DynamicAxis.</span></span><span class="sig-name descname"><span class="pre">DynamicAxis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.axes.DynamicAxis.DynamicAxis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="qom.ui.axes.BaseAxis.html#qom.ui.axes.BaseAxis.BaseAxis" title="qom.ui.axes.BaseAxis.BaseAxis"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.ui.axes.BaseAxis.BaseAxis</span></code></a></p>
+<p>Class to handle a dynamic axis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>params</strong> (<em>dict</em><em> or </em><em>list</em>) – Parameters for the axis supporting a list of values or a dictionary of parameters. Refer <a class="reference internal" href="qom.ui.axes.BaseAxis.html#module-qom.ui.axes.BaseAxis" title="qom.ui.axes.BaseAxis"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.ui.axes.BaseAxis</span></code></a> for currently supported keys.</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 
 
@@ -65,15 +70,15 @@
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
-  <p class="topless"><a href="qom.ui.html"
-                        title="previous chapter">qom.ui package</a></p>
-  <h4>Next topic</h4>
   <p class="topless"><a href="qom.ui.axes.BaseAxis.html"
-                        title="next chapter">qom.ui.axes.BaseAxis module</a></p>
+                        title="previous chapter">qom.ui.axes.BaseAxis module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="qom.ui.axes.MultiAxis.html"
+                        title="next chapter">qom.ui.axes.MultiAxis module</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/qom.ui.axes.rst.txt"
+      <li><a href="_sources/qom.ui.axes.DynamicAxis.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
@@ -101,14 +106,15 @@
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="qom.ui.axes.BaseAxis.html" title="qom.ui.axes.BaseAxis module"
+          <a href="qom.ui.axes.MultiAxis.html" title="qom.ui.axes.MultiAxis module"
              >next</a> |</li>
         <li class="right" >
-          <a href="qom.ui.html" title="qom.ui package"
+          <a href="qom.ui.axes.BaseAxis.html" title="qom.ui.axes.BaseAxis module"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">Quantum Optomechanics Toolbox  documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="qom.ui.html" >qom.ui package</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">qom.ui.axes subpackage</a></li> 
+          <li class="nav-item nav-item-2"><a href="qom.ui.axes.html" >qom.ui.axes subpackage</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">qom.ui.axes.DynamicAxis module</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
