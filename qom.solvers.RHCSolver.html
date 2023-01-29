@@ -1,17 +1,18 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>qom.solvers.RHCSolver module &#8212; Quantum Optomechanics Toolbox  documentation</title>
+    <title>qom.solvers.RHCSolver module &#8212; The Quantum Optomechanics Toolbox  documentation</title>
     <link rel="stylesheet" type="text/css" href="pygments.css" />
     <link rel="stylesheet" type="text/css" href="nature.css" />
     <script data-url_root="./" id="documentation_options" src="documentation_options.js"></script>
     <script src="jquery.js"></script>
     <script src="underscore.js"></script>
+    <script src="_sphinx_javascript_frameworks_compat.js"></script>
     <script src="doctools.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.1.2/es5/tex-mml-chtml.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -34,7 +35,7 @@
         <li class="right" >
           <a href="qom.solvers.QCMSolver.html" title="qom.solvers.QCMSolver module"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">Quantum Optomechanics Toolbox  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">The Quantum Optomechanics Toolbox  documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="qom.solvers.html" accesskey="U">qom.solvers package</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">qom.solvers.RHCSolver module</a></li> 
       </ul>
@@ -46,17 +47,17 @@
           <div class="body" role="main">
             
   <section id="module-qom.solvers.RHCSolver">
-<span id="qom-solvers-rhcsolver-module"></span><h1>qom.solvers.RHCSolver module<a class="headerlink" href="#module-qom.solvers.RHCSolver" title="Permalink to this headline">¶</a></h1>
+<span id="qom-solvers-rhcsolver-module"></span><h1>qom.solvers.RHCSolver module<a class="headerlink" href="#module-qom.solvers.RHCSolver" title="Permalink to this heading">¶</a></h1>
 <p>Module to handle Routh-Hurwitz criterion solver.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="qom.solvers.RHCSolver.RHCSolver">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">qom.solvers.RHCSolver.</span></span><span class="sig-name descname"><span class="pre">RHCSolver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">,</span> </span><span class="pre">numpy.matrix</span><span class="p"><span class="pre">,</span> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coeffs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">,</span> </span><span class="pre">numpy.matrix</span><span class="p"><span class="pre">,</span> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.RHCSolver.RHCSolver" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qom.solvers.RHCSolver.</span></span><span class="sig-name descname"><span class="pre">RHCSolver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">matrix</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coeffs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">matrix</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.RHCSolver.RHCSolver" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Class to handle Routh-Hurwitz criterion solver.</p>
-<p>Initializes <code class="docutils literal notranslate"><span class="pre">coeffs</span></code>, <code class="docutils literal notranslate"><span class="pre">n</span></code> and <code class="docutils literal notranslate"><span class="pre">seq</span></code> properties.</p>
+<p>Initializes <code class="docutils literal notranslate"><span class="pre">coeffs</span></code>, <code class="docutils literal notranslate"><span class="pre">n</span></code> and <code class="docutils literal notranslate"><span class="pre">seq</span></code>.</p>
 <p>An eigenvalue equation in <span class="math notranslate nohighlight">\(\lambda\)</span> is obtained by equating <span class="math notranslate nohighlight">\(\det(\lambda I_{n} - A_{n \times n})\)</span> to zero.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>A</strong> (<em>list</em><em> or </em><em>numpy.matrix</em><em> or </em><em>numpy.ndarray</em><em>, </em><em>optional</em>) – Drift matrix.</p></li>
 <li><p><strong>coeffs</strong> (<em>list</em><em> or </em><em>numpy.ndarray</em><em>, </em><em>optional</em>) – Coefficients of the characteristic equation.</p></li>
@@ -64,45 +65,44 @@
 </dd>
 </dl>
 <p class="rubric">References</p>
-<dl class="footnote brackets">
-<dt class="label" id="id1"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
-<dd><ol class="upperalpha simple" start="5">
+<aside class="footnote brackets" id="id1" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
+<ol class="upperalpha simple" start="5">
 <li><ol class="upperalpha simple" start="24">
 <li><p>DeJesus and C. Kaufman, <em>Routh-Hurwitz Criterion in the Examination of Eigenvalues of a System of Nonlinear Ordinary Differential Equations</em>, Phys. Rev. A <strong>35</strong>, 5288 (1987).</p></li>
 </ol>
 </li>
 </ol>
-</dd>
-</dl>
+</aside>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>At least one of the parameters, preferably <code class="docutils literal notranslate"><span class="pre">coeffs</span></code>, should be non-None.</p>
 </div>
-<dl class="py method">
-<dt class="sig sig-object py" id="qom.solvers.RHCSolver.RHCSolver._set_Ts">
-<span class="sig-name descname"><span class="pre">_set_Ts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.RHCSolver.RHCSolver._set_Ts" title="Permalink to this definition">¶</a></dt>
-<dd><p>Method to set the determinants of the sub-matrices.</p>
-</dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="qom.solvers.RHCSolver.RHCSolver._set_coeffs">
 <span class="sig-name descname"><span class="pre">_set_coeffs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.RHCSolver.RHCSolver._set_coeffs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Method to set the coefficients of the characteristic equation.</p>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.solvers.RHCSolver.RHCSolver._set_seq">
+<span class="sig-name descname"><span class="pre">_set_seq</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.RHCSolver.RHCSolver._set_seq" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to set the determinants of the sub-matrices.</p>
+</dd></dl>
+
 <dl class="py attribute">
 <dt class="sig sig-object py" id="qom.solvers.RHCSolver.RHCSolver.code">
-<span class="sig-name descname"><span class="pre">code</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'rhc_solver'</span></em><a class="headerlink" href="#qom.solvers.RHCSolver.RHCSolver.code" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">code</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'RHCSolver'</span></em><a class="headerlink" href="#qom.solvers.RHCSolver.RHCSolver.code" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="qom.solvers.RHCSolver.RHCSolver.coeffs">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">coeffs</span></span><a class="headerlink" href="#qom.solvers.RHCSolver.RHCSolver.coeffs" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">coeffs</span></span><a class="headerlink" href="#qom.solvers.RHCSolver.RHCSolver.coeffs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Coefficients of the characteristic equation given by,</p>
 <div class="math notranslate nohighlight">
 \[a_{0} \lambda^{n} + a_{1} \lambda^{n - 1} + ... + a_{n} = 0\]</div>
 <dl class="field-list simple">
-<dt class="field-odd">Type</dt>
+<dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>list or numpy.ndarray</p>
 </dd>
 </dl>
@@ -111,12 +111,12 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="qom.solvers.RHCSolver.RHCSolver.get_indices">
 <span class="sig-name descname"><span class="pre">get_indices</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.RHCSolver.RHCSolver.get_indices" title="Permalink to this definition">¶</a></dt>
-<dd><p>Method to obtain the indices where the sequence, <span class="math notranslate nohighlight">\(\{T_{0}, T_{1}, ..., T_{n}\}\)</span> changes sign <a class="footnote-reference brackets" href="#id1" id="id2">1</a>.</p>
+<dd><p>Method to obtain the indices where the sequence, <span class="math notranslate nohighlight">\(\{T_{0}, T_{1}, ..., T_{n}\}\)</span> changes sign <a class="footnote-reference brackets" href="#id1" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>idxs</strong> – Indices where the sequence changes sign.</p>
 </dd>
-<dt class="field-even">Return type</dt>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>list</p>
 </dd>
 </dl>
@@ -124,10 +124,10 @@
 
 <dl class="py property">
 <dt class="sig sig-object py" id="qom.solvers.RHCSolver.RHCSolver.n">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">n</span></span><a class="headerlink" href="#qom.solvers.RHCSolver.RHCSolver.n" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">n</span></span><a class="headerlink" href="#qom.solvers.RHCSolver.RHCSolver.n" title="Permalink to this definition">¶</a></dt>
 <dd><p>Order of the characteristic equation.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type</dt>
+<dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>int</p>
 </dd>
 </dl>
@@ -135,12 +135,12 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="qom.solvers.RHCSolver.RHCSolver.name">
-<span class="sig-name descname"><span class="pre">name</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'Routh</span> <span class="pre">Hurwitz</span> <span class="pre">Criterion</span> <span class="pre">Solver'</span></em><a class="headerlink" href="#qom.solvers.RHCSolver.RHCSolver.name" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Routh</span> <span class="pre">Hurwitz</span> <span class="pre">Criterion</span> <span class="pre">Solver'</span></em><a class="headerlink" href="#qom.solvers.RHCSolver.RHCSolver.name" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="qom.solvers.RHCSolver.RHCSolver.seq">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">seq</span></span><a class="headerlink" href="#qom.solvers.RHCSolver.RHCSolver.seq" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">seq</span></span><a class="headerlink" href="#qom.solvers.RHCSolver.RHCSolver.seq" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sequence of terms <span class="math notranslate nohighlight">\(T_{k} = \det(M_{k})\)</span>, where <span class="math notranslate nohighlight">\(M_{k}\)</span> is the square sub-matrix of <span class="math notranslate nohighlight">\(M\)</span> comprising of its first <span class="math notranslate nohighlight">\(k\)</span> rows and columns, with <span class="math notranslate nohighlight">\(T_{0} = a_{0}\)</span>.</p>
 <p>The matrix <span class="math notranslate nohighlight">\(M\)</span> is defined as [1],</p>
 <div class="math notranslate nohighlight">
@@ -151,7 +151,7 @@ a_{2i - j}, ~ \mathrm{if} ~ 0 \le 2 i - j \le n \\
 \end{cases}\end{split}\]</div>
 <p>where the indices of <span class="math notranslate nohighlight">\(M\)</span> are 1-based.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type</dt>
+<dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>list or numpy.ndarray</p>
 </dd>
 </dl>
@@ -168,12 +168,16 @@ a_{2i - j}, ~ \mathrm{if} ~ 0 \le 2 i - j \le n \\
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="qom.solvers.QCMSolver.html"
-                        title="previous chapter">qom.solvers.QCMSolver module</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="qom.systems.html"
-                        title="next chapter">qom.systems package</a></p>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="qom.solvers.QCMSolver.html"
+                          title="previous chapter">qom.solvers.QCMSolver module</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="qom.systems.html"
+                          title="next chapter">qom.systems package</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -185,12 +189,12 @@ a_{2i - j}, ~ \mathrm{if} ~ 0 \le 2 i - j \le n \\
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -210,14 +214,14 @@ a_{2i - j}, ~ \mathrm{if} ~ 0 \le 2 i - j \le n \\
         <li class="right" >
           <a href="qom.solvers.QCMSolver.html" title="qom.solvers.QCMSolver module"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">Quantum Optomechanics Toolbox  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">The Quantum Optomechanics Toolbox  documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="qom.solvers.html" >qom.solvers package</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">qom.solvers.RHCSolver module</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2020, Sampreet Kalita.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.1.
+        &#169; Copyright 2023, Sampreet Kalita.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
     </div>
   </body>
 </html>
