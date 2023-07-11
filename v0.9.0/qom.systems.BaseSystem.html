@@ -1,0 +1,944 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>qom.systems.BaseSystem module &#8212; The Quantum Optomechanics Toolbox  documentation</title>
+    <link rel="stylesheet" type="text/css" href="pygments.css" />
+    <link rel="stylesheet" type="text/css" href="nature.css" />
+    <script data-url_root="./" id="documentation_options" src="documentation_options.js"></script>
+    <script src="jquery.js"></script>
+    <script src="underscore.js"></script>
+    <script src="_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="doctools.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.1.2/es5/tex-mml-chtml.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="qom.systems.DODMSystem module" href="qom.systems.DODMSystem.html" />
+    <link rel="prev" title="qom.systems package" href="qom.systems.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="qom.systems.DODMSystem.html" title="qom.systems.DODMSystem module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="qom.systems.html" title="qom.systems package"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">The Quantum Optomechanics Toolbox  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="qom.systems.html" accesskey="U">qom.systems package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">qom.systems.BaseSystem module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-qom.systems.BaseSystem">
+<span id="qom-systems-basesystem-module"></span><h1>qom.systems.BaseSystem module<a class="headerlink" href="#module-qom.systems.BaseSystem" title="Permalink to this heading">¶</a></h1>
+<p>Module to interface QOM systems.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="qom.systems.BaseSystem.BaseSystem">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qom.systems.BaseSystem.</span></span><span class="sig-name descname"><span class="pre">BaseSystem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">code</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'sys_00'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Base</span> <span class="pre">System'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_modes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cb_update</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.systems.BaseSystem.BaseSystem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class to interface QOM systems.</p>
+<p>Initializes <code class="docutils literal notranslate"><span class="pre">code</span></code>, <code class="docutils literal notranslate"><span class="pre">cb_update</span></code>, <code class="docutils literal notranslate"><span class="pre">name</span></code>, <code class="docutils literal notranslate"><span class="pre">num_modes</span></code> and <code class="docutils literal notranslate"><span class="pre">params</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>params</strong> (<em>dict</em><em>, </em><em>optional</em>) – Parameters for the system.</p></li>
+<li><p><strong>code</strong> (<em>str</em><em>, </em><em>optional</em>) – Codename for the interfaced system.</p></li>
+<li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – Full name of the interfaced system.</p></li>
+<li><p><strong>num_modes</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of modes of the interfaced system.</p></li>
+<li><p><strong>cb_update</strong> (<em>callable</em><em>, </em><em>optional</em>) – Callback function to update status and progress, formatted as <code class="docutils literal notranslate"><span class="pre">cb_update(status,</span> <span class="pre">progress,</span> <span class="pre">reset)</span></code>, where <code class="docutils literal notranslate"><span class="pre">status</span></code> is a string, <code class="docutils literal notranslate"><span class="pre">progress</span></code> is an integer and <code class="docutils literal notranslate"><span class="pre">reset</span></code> is a boolean.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">References</p>
+<aside class="footnote brackets" id="id1" role="note">
+<span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id10">1</a>,<a role="doc-backlink" href="#id11">2</a>)</span>
+<ol class="upperalpha simple" start="13">
+<li><p>Aspelmeyer, T. J. Kippenberg, and F. Marquardt, <em>Cavity Optomechanics</em>, Review of Modern Physics <strong>86</strong>, 1931 (2014).</p></li>
+</ol>
+</aside>
+<aside class="footnote brackets" id="id2" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id12">2</a><span class="fn-bracket">]</span></span>
+<ol class="upperalpha simple" start="6">
+<li><p>Galve, G. L. Giorgi and R. Zambrini, <em>Quantum Correlations and Synchronization Measures</em>, Lectures on General Quantum Correlations and their Applications, Quantum Science and Technology, Springer (2017).</p></li>
+</ol>
+</aside>
+<aside class="footnote brackets" id="id3" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id9">3</a><span class="fn-bracket">]</span></span>
+<ol class="upperalpha simple" start="20">
+<li><ol class="upperalpha simple" start="6">
+<li><p>Roque, F. Marquardt and O. M. Yevtushenko, <em>Nonlinear Dynamics of Weakly Dissipative Optomechanical Systems</em>, New J. Phys. <strong>22</strong>, 013049 (2020).</p></li>
+</ol>
+</li>
+</ol>
+</aside>
+<aside class="footnote brackets" id="id4" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id7">4</a><span class="fn-bracket">]</span></span>
+<ol class="upperalpha simple" start="13">
+<li><p>Ludwig and F. Marquardt, <em>Quantum Many-body Dynamics in Optomechanical Arrays</em>, Phys. Rev. Lett. <strong>111</strong>, 073603 (2013).</p></li>
+</ol>
+</aside>
+<aside class="footnote brackets" id="id5" role="note">
+<span class="label"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id6">1</a>,<a role="doc-backlink" href="#id8">2</a>)</span>
+<ol class="upperalpha simple" start="14">
+<li><p>Yang, A. Miranowicz, Y.-C. Liu, K. Xia and F. Nori, <em>Chaotic Synchronization of Two Optical Cavity Modes in Optomechanical Systems</em>, Sci. Rep. <strong>*9*</strong>, 15874 (2019).</p></li>
+</ol>
+</aside>
+<p class="rubric">Notes</p>
+<dl>
+<dt>The <code class="docutils literal notranslate"><span class="pre">params</span></code> dictionary currently supports the following keys:</dt><dd><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>key</p></th>
+<th class="head"><p>value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>“cache”</p></td>
+<td><p>(<em>bool</em>) option to cache the time series.</p></td>
+</tr>
+<tr class="row-odd"><td><p>“cache_dir”</p></td>
+<td><p>(<em>str</em>) directory where the time series is cached.</p></td>
+</tr>
+<tr class="row-even"><td><p>“cache_file”</p></td>
+<td><p>(<em>str</em>) filename of the cached time series.</p></td>
+</tr>
+<tr class="row-odd"><td><p>“idx_e”</p></td>
+<td><p>(<em>int</em> or <em>tuple</em> or <em>list</em>) index or indices of the elements in a list. This value should be an integer or a list of integers when the type of measure is “mode_amp” or “eigen_dm”. Otherwise, it is a tuple of dimension <em>2</em> or a list of such tuples. Refer notes for all currently supported values.</p></td>
+</tr>
+<tr class="row-even"><td><p>“measure_type”</p></td>
+<td><p>(<em>str</em>) type of measure to calculate. Currently supported types of measures are described in the next table.</p></td>
+</tr>
+<tr class="row-odd"><td><p>“method_le”</p></td>
+<td><p>(<em>str</em>) method used to calculate the unit vectors and eigenvalues for Lyapunov exponents. Currently supported methods are “gso” for Gram-Schmidt orthonormalization and “svd” for singular value decomposition (fallback).</p></td>
+</tr>
+<tr class="row-even"><td><p>“method_sz”</p></td>
+<td><p>(<em>str</em>) method used to calculate the stability zone. Currently supported method is “oss” for optical steady state based calculation.</p></td>
+</tr>
+<tr class="row-odd"><td><p>“num_iters”</p></td>
+<td><p>(<em>int</em>) number of iterations to calculate the deviations for Lyapunov exponents.</p></td>
+</tr>
+<tr class="row-even"><td><p>“range_min”</p></td>
+<td><p>(<em>float</em>) minimum index of time at which the measure is calculated.</p></td>
+</tr>
+<tr class="row-odd"><td><p>“range_max”</p></td>
+<td><p>(<em>float</em>) maximum index of time at which the measure is calculated.</p></td>
+</tr>
+<tr class="row-even"><td><p>“show_progress”</p></td>
+<td><p>(<em>bool</em>) option to display the progress of the solver.</p></td>
+</tr>
+<tr class="row-odd"><td><p>“t_min”</p></td>
+<td><p>(<em>float</em>) minimum time at which integration starts.</p></td>
+</tr>
+<tr class="row-even"><td><p>“t_max”</p></td>
+<td><p>(<em>float</em>) maximum time at which integration stops.</p></td>
+</tr>
+<tr class="row-odd"><td><p>“t_dim”</p></td>
+<td><p>(<em>int</em>) number of values from “t_max” to “t_min”, both inclusive.</p></td>
+</tr>
+<tr class="row-even"><td><p>“type_func”</p></td>
+<td><p>(<em>str</em>) type of the function used, “complex” (fallback) or “real”</p></td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>The key “measure_type” currently supports the following options (refer <a class="reference internal" href="qom.solvers.QCMSolver.html#module-qom.solvers.QCMSolver" title="qom.solvers.QCMSolver"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.solvers.QCMSolver</span></code></a> for quantum correlation measures):</dt><dd><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>value</p></th>
+<th class="head"><p>meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>“corr_ele”</p></td>
+<td><p>elements of the correlation matrix. The corresponding “idx_e” key is a tuple or a list of tuples of the two quadrature indices.</p></td>
+</tr>
+<tr class="row-odd"><td><p>“discord_G”</p></td>
+<td><p>Gaussian quantum discord. The corresponding “idx_e” key is a tuple or a list of tuples of the two mode indices.</p></td>
+</tr>
+<tr class="row-even"><td><p>“eigen_dm”</p></td>
+<td><p>eigenvalues of the drift matrix. The corresponding “idx_e” key is an integer or a list of integers of the quadrature indices.</p></td>
+</tr>
+<tr class="row-odd"><td><p>“entan_ln”</p></td>
+<td><p>quantum entanglement using logarithmic negativity. The corresponding “idx_e” key is a tuple or a list of tuples of the two mode indices.</p></td>
+</tr>
+<tr class="row-even"><td><p>“mode_amp”</p></td>
+<td><p>complex-valued classical mode amplitudes. The corresponding “idx_e” key is an integer or a list of integers of the mode indices.</p></td>
+</tr>
+<tr class="row-odd"><td><p>“sync_c”</p></td>
+<td><p>complete quantum synchronization. The corresponding “idx_e” key is a tuple or a list of tuples of the two mode indices.</p></td>
+</tr>
+<tr class="row-even"><td><p>“sync_p”</p></td>
+<td><p>quantum phase synchronization. The corresponding “idx_e” key is a tuple or a list of tuples of the two mode indices.</p></td>
+</tr>
+<tr class="row-odd"><td><p>“wigner_s”</p></td>
+<td><p>single-mode wigner function. The corresponding “idx_e” key is an integer or a list of integers of the mode indices.</p></td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All the options defined in <code class="docutils literal notranslate"><span class="pre">params</span></code> supersede individual function arguments.</p>
+</div>
+<dl>
+<dt>Some methods require one or more of the following predefined callables to work properly:</dt><dd><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>callable</p></th>
+<th class="head"><p>returns</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>func_ode</p></td>
+<td><p>the rate equations of the classical mode amplitudes and quantum correlations, formatted as <code class="docutils literal notranslate"><span class="pre">func_ode(t,</span> <span class="pre">v,</span> <span class="pre">c)</span></code>, where <code class="docutils literal notranslate"><span class="pre">t</span></code> is the time at which the integration is performed, <code class="docutils literal notranslate"><span class="pre">v</span></code> is a list of the amplitudes and fluctuations and <code class="docutils literal notranslate"><span class="pre">c</span></code> is a list of constant parameters. The output should match the dimension of <code class="docutils literal notranslate"><span class="pre">v</span></code>. If <code class="docutils literal notranslate"><span class="pre">func_ode_corrs</span></code> parameter is given, this function is treated as the function for the modes only.</p></td>
+</tr>
+<tr class="row-odd"><td><p>func_ode_corrs</p></td>
+<td><p>the rate equations of the quantum correlations. It follows the same formatting as <code class="docutils literal notranslate"><span class="pre">func_ode</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p>get_A</p></td>
+<td><p>the drift matrix, formatted as <code class="docutils literal notranslate"><span class="pre">get_A(modes,</span> <span class="pre">params,</span> <span class="pre">t)</span></code>, where <code class="docutils literal notranslate"><span class="pre">modes</span></code> are the modes amplitudes at time <code class="docutils literal notranslate"><span class="pre">t</span></code> and <code class="docutils literal notranslate"><span class="pre">params</span></code> are the constant parameters of the system. Returns the drift matrix <code class="docutils literal notranslate"><span class="pre">A</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p>get_ivc</p></td>
+<td><p>the initial values and constants, formatted as <code class="docutils literal notranslate"><span class="pre">get_ivc()</span></code>. Returns values <code class="docutils literal notranslate"><span class="pre">iv</span></code> and <code class="docutils literal notranslate"><span class="pre">c</span></code> for the initial values and constants respectively.</p></td>
+</tr>
+<tr class="row-even"><td><p>get_mode_rates</p></td>
+<td><p>the rates of the classical mode amplitudes, formatted as <code class="docutils literal notranslate"><span class="pre">get_mode_rates(modes,</span> <span class="pre">params,</span> <span class="pre">t)</span></code>, where <code class="docutils literal notranslate"><span class="pre">modes</span></code> are the modes amplitudes at time <code class="docutils literal notranslate"><span class="pre">t</span></code> and <code class="docutils literal notranslate"><span class="pre">params</span></code> are the constant parameters of the system. Returns the mode rates with same dimension as <code class="docutils literal notranslate"><span class="pre">modes</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p>get_oss_args</p></td>
+<td><p>the parameters required to calculate the optical steady states, formatted as <code class="docutils literal notranslate"><span class="pre">get_oss_args(params)</span></code>, where <code class="docutils literal notranslate"><span class="pre">params</span></code> are the constant parameters of the system.</p></td>
+</tr>
+<tr class="row-even"><td><p>get_oss_modes</p></td>
+<td><p>the steady state classical mode amplitudes from the mean optical occupancies, formatted as <code class="docutils literal notranslate"><span class="pre">get_oss_modes(params)</span></code>, where <code class="docutils literal notranslate"><span class="pre">params</span></code> are the constant parameters of the system. Returns the list of modes calculated for each mean optical occupancy.</p></td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>The <code class="docutils literal notranslate"><span class="pre">get_oss_args</span></code> function should return the following values in order:</dt><dd><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>parameter</p></th>
+<th class="head"><p>value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">A_l</span></code></p></td>
+<td><p>(<em>float</em>) amplitude of the laser.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Delta</span></code></p></td>
+<td><p>(<em>float</em>) effective detuning if method is “basic”, else detuning of the laser.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">kappa</span></code></p></td>
+<td><p>(<em>float</em>) optical decay rate.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">C</span></code></p></td>
+<td><p>(<em>float</em>) coefficient of <span class="math notranslate nohighlight">\(|\alpha_{s}|^{2}\)</span>.</p></td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.systems.BaseSystem.BaseSystem._get_D_params_ivp">
+<span class="sig-name descname"><span class="pre">_get_D_params_ivp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">c</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.systems.BaseSystem.BaseSystem._get_D_params_ivp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to obtain the noise matrix and the parameters of the system given the constants of the IVP.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>c</strong> (<em>list</em>) – Constants of the IVP.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>D</strong> (<cite>numpy.ndarray</cite>) – Noise matrix.</p></li>
+<li><p><strong>params_ivp</strong> (<em>list</em>) – Parameters for the IVP.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.systems.BaseSystem.BaseSystem._get_cache_options">
+<span class="sig-name descname"><span class="pre">_get_cache_options</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">solver_params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.systems.BaseSystem.BaseSystem._get_cache_options" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to obtain updated options to cache dynamics.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>solver_params</strong> (<em>dict</em>) – Parameters for the solver.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>cache</strong> (<em>bool, optional</em>) – Option to cache the time series.</p></li>
+<li><p><strong>cache_dir</strong> (<em>str</em>) – Directory where the time series is cached.</p></li>
+<li><p><strong>cache_file</strong> (<em>str</em>) – Filename of the cached time series.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.systems.BaseSystem.BaseSystem._get_func_real">
+<span class="sig-name descname"><span class="pre">_get_func_real</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.systems.BaseSystem.BaseSystem._get_func_real" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to obtain a real-valued function from a complex-valued one.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>func</strong> (<em>callable</em>) – Complex-valued function, formatted as <code class="docutils literal notranslate"><span class="pre">func(v,</span> <span class="pre">c,</span> <span class="pre">t)</span></code>, where <code class="docutils literal notranslate"><span class="pre">v</span></code> are the complex-valued variables at time <code class="docutils literal notranslate"><span class="pre">t</span></code> and <code class="docutils literal notranslate"><span class="pre">c</span></code> are real-valued arguments. Returns complex-valued variables <code class="docutils literal notranslate"><span class="pre">values</span></code> of same dimension as <code class="docutils literal notranslate"><span class="pre">v</span></code>.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>func_real</strong> – Real-valued function, formatted as <code class="docutils literal notranslate"><span class="pre">func_real(modes_real,</span> <span class="pre">c,</span> <span class="pre">t)</span></code>, where <code class="docutils literal notranslate"><span class="pre">v_real</span></code> contain the real and imaginary parts of <code class="docutils literal notranslate"><span class="pre">v</span></code> at time <code class="docutils literal notranslate"><span class="pre">t</span></code> and <code class="docutils literal notranslate"><span class="pre">c</span></code> are the unaltered real-valued arguments. Returns real-valued variables <code class="docutils literal notranslate"><span class="pre">values_real</span></code> of twice the dimension of <code class="docutils literal notranslate"><span class="pre">v</span></code>.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>callable</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.systems.BaseSystem.BaseSystem._get_measure">
+<span class="sig-name descname"><span class="pre">_get_measure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">solver_params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">corrs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.systems.BaseSystem.BaseSystem._get_measure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to calculate the measure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>solver_params</strong> (<em>dict</em>) – Parameters for the solver.</p></li>
+<li><p><strong>corrs</strong> (<em>list</em>) – Matrix of quantum correlations.</p></li>
+<li><p><strong>modes</strong> (<em>list</em>) – Values of classical mode amplitudes.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>measure</strong> – Calculated measure.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.systems.BaseSystem.BaseSystem._update_progress">
+<span class="sig-name descname"><span class="pre">_update_progress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pos:</span> <span class="pre">~typing.Optional[int]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dim:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status:</span> <span class="pre">~typing.Optional[str]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reset:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module_logger=&lt;Logger</span> <span class="pre">qom.systems.BaseSystem</span> <span class="pre">(WARNING)&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.systems.BaseSystem.BaseSystem._update_progress" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to update the progress of the module.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pos</strong> (<em>int</em><em>, </em><em>optional</em>) – Index of current iteration.</p></li>
+<li><p><strong>dim</strong> (<em>int</em><em>, </em><em>optional</em>) – Total number of iterations.</p></li>
+<li><p><strong>status</strong> (<em>str</em><em>, </em><em>optional</em>) – Status message.</p></li>
+<li><p><strong>reset</strong> (<em>bool</em><em>, </em><em>optional</em>) – Option to reset the console or GUI.</p></li>
+<li><p><strong>module_logger</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">logging.Logger</span></code>, optional) – Logger for the module requesting update.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.systems.BaseSystem.BaseSystem._validate_params_measure">
+<span class="sig-name descname"><span class="pre">_validate_params_measure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">solver_params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">count</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.systems.BaseSystem.BaseSystem._validate_params_measure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to validate parameters for 1D list indices.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>solver_params</strong> (<em>dict</em>) – Parameters for the solver.</p></li>
+<li><p><strong>count</strong> (<em>int</em>) – Minimum required number of modes.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.systems.BaseSystem.BaseSystem.func_ode">
+<span class="sig-name descname"><span class="pre">func_ode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.systems.BaseSystem.BaseSystem.func_ode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper function for the rate equations of the modes and quadrature correlations.</p>
+<p>Requires predefined callable <code class="docutils literal notranslate"><span class="pre">get_mode_rates</span></code>. Additionally, <code class="docutils literal notranslate"><span class="pre">get_A</span></code> should be defined for quantum correlations.</p>
+<p>The variables are complex-valued, hence the model requires a complex-valued integrator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>t</strong> (<em>float</em>) – Time at which the rate is calculated.</p></li>
+<li><p><strong>v</strong> (<em>list</em>) – Complex-valued variables defining the system.</p></li>
+<li><p><strong>c</strong> (<em>list</em>) – Constants of the integration. First (4 * num_modes^2) elements contain the noise matrix. Remaining elements contain the constant parameters.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>rates</strong> – Rates of the complex-valued variables defining the system.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.systems.BaseSystem.BaseSystem.get_averaged_eigenvalues">
+<span class="sig-name descname"><span class="pre">get_averaged_eigenvalues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">solver_params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.systems.BaseSystem.BaseSystem.get_averaged_eigenvalues" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to obtain the averaged eigenvalues of the drift matrix.</p>
+<p>Requires predefined callables <code class="docutils literal notranslate"><span class="pre">get_A</span></code>, <code class="docutils literal notranslate"><span class="pre">get_ivc</span></code> and <code class="docutils literal notranslate"><span class="pre">get_mode_rates</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>solver_params</strong> (<em>dict</em>) – Parameters for the solver.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>eig_avg</strong> – Averaged eigenvalues of the drift matrix.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.systems.BaseSystem.BaseSystem.get_classical_amplitude_difference">
+<span class="sig-name descname"><span class="pre">get_classical_amplitude_difference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">solver_params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.systems.BaseSystem.BaseSystem.get_classical_amplitude_difference" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to obtain the classical amplitude difference between two dynamical variables.</p>
+<p>Requires predefined callables <code class="docutils literal notranslate"><span class="pre">get_ivc</span></code> and <code class="docutils literal notranslate"><span class="pre">get_mode_rates</span></code>.</p>
+<p>Refer <a class="footnote-reference brackets" href="#id5" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a> for the implementation details.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>solver_params</strong> (<em>dict</em>) – Parameters for the solver.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>cad</strong> – Classical amplitude difference.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.systems.BaseSystem.BaseSystem.get_classical_phase_difference">
+<span class="sig-name descname"><span class="pre">get_classical_phase_difference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">solver_params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.systems.BaseSystem.BaseSystem.get_classical_phase_difference" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to obtain the classical phase difference between two dynamical variables.</p>
+<p>Requires predefined callables <code class="docutils literal notranslate"><span class="pre">get_ivc</span></code> and <code class="docutils literal notranslate"><span class="pre">get_mode_rates</span></code>.</p>
+<p>Refer <a class="footnote-reference brackets" href="#id4" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a> and <a class="footnote-reference brackets" href="#id5" id="id8" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a> for the implementation details.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>solver_params</strong> (<em>dict</em>) – Parameters for the solver.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>cpd</strong> – Classical phase difference.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.systems.BaseSystem.BaseSystem.get_lyapunov_exponents">
+<span class="sig-name descname"><span class="pre">get_lyapunov_exponents</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">solver_params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.systems.BaseSystem.BaseSystem.get_lyapunov_exponents" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to obtain the Lyapunov exponents.</p>
+<p>Requires predefined callables <code class="docutils literal notranslate"><span class="pre">get_A</span></code>, <code class="docutils literal notranslate"><span class="pre">get_ivc</span></code> and <code class="docutils literal notranslate"><span class="pre">get_mode_rates</span></code>.</p>
+<p>Refer <a class="footnote-reference brackets" href="#id3" id="id9" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> for the implementation details.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>solver_params</strong> (<em>dict</em>) – Parameters for the solver.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>lambdas</strong> – Lyapunov exponents.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.systems.BaseSystem.BaseSystem.get_mean_optical_amplitudes">
+<span class="sig-name descname"><span class="pre">get_mean_optical_amplitudes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'cubic'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.systems.BaseSystem.BaseSystem.get_mean_optical_amplitudes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to obtain the mean optical amplitudes.</p>
+<p>Requires predefined callables <code class="docutils literal notranslate"><span class="pre">get_ivc</span></code> and <code class="docutils literal notranslate"><span class="pre">get_oss_args</span></code>.</p>
+<p>The optical steady state is assumed to be of the form (refer <a class="footnote-reference brackets" href="#id1" id="id10" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>),</p>
+<div class="math notranslate nohighlight">
+\[\alpha_{s} = \frac{A_{l}}{\frac{\kappa}{2} - \iota \Delta}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\Delta = \Delta_{o} + C |\alpha_{s}|^{2}\)</span>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>method</strong> (<em>str</em><em>, </em><em>optional</em>) – <dl>
+<dt>Method of calculation of intracavity photon number. Currently available options are:</dt><dd><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>value</p></th>
+<th class="head"><p>meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>”basic”</p></td>
+<td><p>assuming constant effective detuning.</p></td>
+</tr>
+<tr class="row-odd"><td><p>”cubic”</p></td>
+<td><p>cubic variation with laser detuning (fallback).</p></td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>alpha_s</strong> (<em>list</em>) – Mean optical amplitudes.</p></li>
+<li><p><strong>roots</strong> (<em>list</em>) – Roots of the cubic equation. If <code class="docutils literal notranslate"><span class="pre">method</span></code> is “basic”, this is the same as <code class="docutils literal notranslate"><span class="pre">N_o</span></code>.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.systems.BaseSystem.BaseSystem.get_mean_optical_occupancies">
+<span class="sig-name descname"><span class="pre">get_mean_optical_occupancies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'cubic'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.systems.BaseSystem.BaseSystem.get_mean_optical_occupancies" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to obtain the mean optical occupancies.</p>
+<p>Requires predefined callables <code class="docutils literal notranslate"><span class="pre">get_ivc</span></code> and <code class="docutils literal notranslate"><span class="pre">get_oss_args</span></code>.</p>
+<p>The mean optical occupancy can be written as (refer <a class="footnote-reference brackets" href="#id1" id="id11" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>),</p>
+<div class="math notranslate nohighlight">
+\[N_{o} = |\alpha_{s}|^{2} = \frac{\left| A_{l} \right|^{2}}{\frac{\kappa^{2}}{4} + \Delta^{2}}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\Delta = \Delta_{l} + C N_{o}\)</span>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>method</strong> (<em>str</em><em>, </em><em>optional</em>) – <dl>
+<dt>Method of calculation of intracavity photon number. Currently available options are:</dt><dd><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>value</p></th>
+<th class="head"><p>meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>”basic”</p></td>
+<td><p>assuming constant effective detuning.</p></td>
+</tr>
+<tr class="row-odd"><td><p>”cubic”</p></td>
+<td><p>cubic variation with laser detuning (fallback).</p></td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>N_os</strong> (<em>list</em>) – Mean optical occupancies.</p></li>
+<li><p><strong>roots</strong> (<em>list</em>) – Roots of the cubic equation. If <code class="docutils literal notranslate"><span class="pre">method</span></code> is “basic”, this is the same as <code class="docutils literal notranslate"><span class="pre">N_os</span></code>.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.systems.BaseSystem.BaseSystem.get_measure_average">
+<span class="sig-name descname"><span class="pre">get_measure_average</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">solver_params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.systems.BaseSystem.BaseSystem.get_measure_average" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to obtain the average value of a measure.</p>
+<p>Requires predefined callables <code class="docutils literal notranslate"><span class="pre">get_ivc</span></code> and <code class="docutils literal notranslate"><span class="pre">get_mode_rates</span></code>. Additionally, <code class="docutils literal notranslate"><span class="pre">get_A</span></code> should be defined if the type of measure is a quantum correlation measure or “eigen_dm”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>solver_params</strong> (<em>dict</em>) – Parameters for the solver.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>M_avg</strong> – Average value of the measures.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.systems.BaseSystem.BaseSystem.get_measure_dynamics">
+<span class="sig-name descname"><span class="pre">get_measure_dynamics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">solver_params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plotter_params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.systems.BaseSystem.BaseSystem.get_measure_dynamics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to obtain the dynamics of a measure.</p>
+<p>Requires predefined callables <code class="docutils literal notranslate"><span class="pre">get_ivc</span></code> and <code class="docutils literal notranslate"><span class="pre">get_mode_rates</span></code>. Additionally, <code class="docutils literal notranslate"><span class="pre">get_A</span></code> should be defined if the type of measure is a quantum correlation measure or “eigen_dm”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>solver_params</strong> (<em>dict</em>) – Parameters for the solver.</p></li>
+<li><p><strong>plot</strong> (<em>bool</em>) – Option to plot the dynamics.</p></li>
+<li><p><strong>plotter_params</strong> (<em>dict</em>) – Parameters for the plotter.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>M</strong> (<em>list</em>) – Measures calculated at all times.</p></li>
+<li><p><strong>T</strong> (<em>list</em>) – Times at which the measures are calculated.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.systems.BaseSystem.BaseSystem.get_measure_stationary">
+<span class="sig-name descname"><span class="pre">get_measure_stationary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">solver_params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plotter_params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.systems.BaseSystem.BaseSystem.get_measure_stationary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to obtain the stationary value of a measure.</p>
+<p>Requires predefined callables <code class="docutils literal notranslate"><span class="pre">get_ivc</span></code> and <code class="docutils literal notranslate"><span class="pre">get_mode_rates</span></code>. Additionally, <code class="docutils literal notranslate"><span class="pre">get_A</span></code> should be defined if the type of measure is a quantum correlation measure or “eigen_dm”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>solver_params</strong> (<em>dict</em>) – Parameters for the solver.</p></li>
+<li><p><strong>plot</strong> (<em>bool</em>) – Option to plot the dynamics.</p></li>
+<li><p><strong>plotter_params</strong> (<em>dict</em>) – Parameters for the plotter.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>measure</strong> – Calculated measure.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.systems.BaseSystem.BaseSystem.get_modes_corrs_dynamics">
+<span class="sig-name descname"><span class="pre">get_modes_corrs_dynamics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">solver_params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.systems.BaseSystem.BaseSystem.get_modes_corrs_dynamics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to obtain the dynamics of the classical mode amplitudes and quantum correlations from the Heisenberg and Lyapunov equations.</p>
+<p>Requires predefined callables <code class="docutils literal notranslate"><span class="pre">get_ivc</span></code> and <code class="docutils literal notranslate"><span class="pre">get_mode_rates</span></code>. Additionally, <code class="docutils literal notranslate"><span class="pre">get_A</span></code> can be defined.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>solver_params</strong> (<em>dict</em>) – Parameters for the solver.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>Modes</strong> (<em>list</em>) – All the modes calculated at all times.</p></li>
+<li><p><strong>Corrs</strong> (<em>list</em>) – All the correlations calculated at all times.</p></li>
+<li><p><strong>T</strong> (<em>list</em>) – Times at which values are calculated.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.systems.BaseSystem.BaseSystem.get_modes_corrs_stationary">
+<span class="sig-name descname"><span class="pre">get_modes_corrs_stationary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">solver_params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.systems.BaseSystem.BaseSystem.get_modes_corrs_stationary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to obtain the steady states of the classical mode amplitudes and quantum correlations from the Heisenberg and Lyapunov equations.</p>
+<p>Requires predefined callable <code class="docutils literal notranslate"><span class="pre">get_ivc</span></code>. Also, either one of the functions <code class="docutils literal notranslate"><span class="pre">get_A</span></code> and <code class="docutils literal notranslate"><span class="pre">get_mode_rates</span></code> should be defined. Optionally, <code class="docutils literal notranslate"><span class="pre">get_oss_modes</span></code> can be defined.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>solver_params</strong> (<em>dict</em>) – Parameters for the solver.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>modes</strong> (<em>list</em>) – All the modes calculated at steady-state.</p></li>
+<li><p><strong>corrs</strong> (<em>list</em>) – All the correlations calculated at steady-state.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.systems.BaseSystem.BaseSystem.get_optical_stability_zone">
+<span class="sig-name descname"><span class="pre">get_optical_stability_zone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">solver_params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.systems.BaseSystem.BaseSystem.get_optical_stability_zone" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to obtain the stability zone using the optical steady state mode amplitudes and the Routh-Hurwitz criterion.</p>
+<p>Requires predefined callables <code class="docutils literal notranslate"><span class="pre">get_ivc</span></code> and <code class="docutils literal notranslate"><span class="pre">get_oss_modes</span></code>. Also, either one of the functions <code class="docutils literal notranslate"><span class="pre">get_A</span></code> and <code class="docutils literal notranslate"><span class="pre">get_coeffs</span></code> should be defined.</p>
+<p>Refer <a class="reference internal" href="qom.solvers.RHCSolver.html#module-qom.solvers.RHCSolver" title="qom.solvers.RHCSolver"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.solvers.RHCSolver</span></code></a> for the implementation details.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>solver_params</strong> (<em>dict</em>) – Parameters for the solver.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><p><strong>osz</strong> –</p>
+<dl>
+<dt>Stability zone indicator of the optical steady state. The indicator is calculated in the following pattern:</dt><dd><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>value</p></th>
+<th class="head"><p>meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>one unstable root.</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>one stable root.</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>three unstable roots.</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>one stable root and two unstable roots.</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>two stable roots and one unstable root.</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>three stable roots.</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>five unstable roots.</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>one stable root and four unstable roots.</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>two stable roots and three unstable root.</p></td>
+</tr>
+<tr class="row-odd"><td><p>9</p></td>
+<td><p>three stable roots and two unstable root.</p></td>
+</tr>
+<tr class="row-even"><td><p>10</p></td>
+<td><p>four stable roots and one unstable root.</p></td>
+</tr>
+<tr class="row-odd"><td><p>11</p></td>
+<td><p>five stable roots.</p></td>
+</tr>
+<tr class="row-even"><td><p>…</p></td>
+<td><p>…</p></td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.systems.BaseSystem.BaseSystem.get_pearson_correlation_coefficient">
+<span class="sig-name descname"><span class="pre">get_pearson_correlation_coefficient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">solver_params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.systems.BaseSystem.BaseSystem.get_pearson_correlation_coefficient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to obtain the Pearson correlation coefficient.</p>
+<p>Requires predefined callables <code class="docutils literal notranslate"><span class="pre">get_ivc</span></code> and <code class="docutils literal notranslate"><span class="pre">get_mode_rates</span></code>.</p>
+<p>The implementation measure reads as (refer <a class="footnote-reference brackets" href="#id2" id="id12" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>),</p>
+<div class="math notranslate nohighlight">
+\[C_{ij} = \frac{\Sigma_{t} \langle \delta \mathcal{O}_{i} (t) \delta \mathcal{O}_{j} (t) \rangle}{\sqrt{\Sigma_{t} \langle \delta \mathcal{O}_{i}^{2} (t) \rangle} \sqrt{\Sigma_{t} \langle \delta \mathcal{O}_{j}^{2} (t) \rangle}}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\delta \mathcal{O}_{i}\)</span> and <span class="math notranslate nohighlight">\(\delta \mathcal{O}_{j}\)</span> are the corresponding quadratures of quantum fluctuations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>solver_params</strong> (<em>dict</em>) – Parameters for the solver.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>pcc</strong> – Pearson correlation coefficient.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.systems.BaseSystem.BaseSystem.get_rhc_count_dynamics">
+<span class="sig-name descname"><span class="pre">get_rhc_count_dynamics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">solver_params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plotter_params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.systems.BaseSystem.BaseSystem.get_rhc_count_dynamics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to obtain the number of positive real roots of the drift matrix using the Routh-Hurwitz criterion.</p>
+<p>Requires predefined callables <code class="docutils literal notranslate"><span class="pre">get_A</span></code>, <code class="docutils literal notranslate"><span class="pre">get_ivc</span></code> and <code class="docutils literal notranslate"><span class="pre">get_mode_rates</span></code>.</p>
+<p>Refer <a class="reference internal" href="qom.solvers.RHCSolver.html#module-qom.solvers.RHCSolver" title="qom.solvers.RHCSolver"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.solvers.RHCSolver</span></code></a> for the implementation details.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>solver_params</strong> (<em>dict</em>) – Parameters for the solver.</p></li>
+<li><p><strong>plot</strong> (<em>bool</em>) – Option to plot the dynamics.</p></li>
+<li><p><strong>plotter_params</strong> (<em>dict</em>) – Parameters for the plotter.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Counts</strong> – Number of positive real roots of the drift matrix.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.systems.BaseSystem.BaseSystem.get_rhc_count_stationary">
+<span class="sig-name descname"><span class="pre">get_rhc_count_stationary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">solver_params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.systems.BaseSystem.BaseSystem.get_rhc_count_stationary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to obtain the number of positive real roots of the drift matrix from the stationary state using the Routh-Hurwitz criterion.</p>
+<p>Requires predefined callables <code class="docutils literal notranslate"><span class="pre">get_ivc</span></code> and <code class="docutils literal notranslate"><span class="pre">get_mode_rates</span></code>. Also, either one of the functions <code class="docutils literal notranslate"><span class="pre">get_A</span></code> and <code class="docutils literal notranslate"><span class="pre">get_coeffs</span></code> should be defined.</p>
+<p>Refer <a class="reference internal" href="qom.solvers.RHCSolver.html#module-qom.solvers.RHCSolver" title="qom.solvers.RHCSolver"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.solvers.RHCSolver</span></code></a> for the implementation details.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>solver_params</strong> (<em>dict</em>) – Parameters for the solver.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>count</strong> (<em>int</em>) – Number of positive real roots of the drift matrix.</p></li>
+<li><p><strong>idxs</strong> (<em>list</em>) – Indices of the RHC sequence.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.systems.BaseSystem.BaseSystem.get_wigner_single_mode">
+<span class="sig-name descname"><span class="pre">get_wigner_single_mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">solver_params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">corrs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plotter_params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.systems.BaseSystem.BaseSystem.get_wigner_single_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to obtain single-mode Wigner distribitions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>solver_params</strong> (<em>dict</em>) – Parameters for the solver.</p></li>
+<li><p><strong>corrs</strong> (<em>list</em>) – Matrix of quantum correlations.</p></li>
+<li><p><strong>modes</strong> (<em>list</em>) – Values of classical mode amplitudes.</p></li>
+<li><p><strong>plot</strong> (<em>bool</em>) – Option to plot the dynamics.</p></li>
+<li><p><strong>plotter_params</strong> (<em>dict</em>) – Parameters for the plotter.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Wigner</strong> – Wigner distributions at each point of time.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.systems.BaseSystem.BaseSystem.plot_dynamics">
+<span class="sig-name descname"><span class="pre">plot_dynamics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plotter_params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">V</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hold</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">5.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">5.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.systems.BaseSystem.BaseSystem.plot_dynamics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to plot the dynamics.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>plotter_params</strong> (<em>dict</em>) – Parameters for the plotter. Refer <a class="reference internal" href="qom.ui.plotters.MPLPlotter.html#module-qom.ui.plotters.MPLPlotter" title="qom.ui.plotters.MPLPlotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.ui.plotters.MPLPlotter</span></code></a> for curently available options.</p></li>
+<li><p><strong>V</strong> (<em>list</em>) – Values calculated at all times.</p></li>
+<li><p><strong>T</strong> (<em>list</em>) – Times at which values are calculated.</p></li>
+<li><p><strong>N</strong> (<em>list</em><em>, </em><em>optional</em>) – Positions at which the values are calculated.</p></li>
+<li><p><strong>hold</strong> (<em>bool</em><em>, </em><em>optional</em>) – Option to hold the plot.</p></li>
+<li><p><strong>width</strong> (<em>float</em><em>, </em><em>optional</em>) – Width of the figure.</p></li>
+<li><p><strong>height</strong> (<em>float</em><em>, </em><em>optional</em>) – Height of the figure.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>plotter</strong> – Instance of <code class="docutils literal notranslate"><span class="pre">MPLPLotter</span></code>.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="qom.ui.plotters.MPLPlotter.html#module-qom.ui.plotters.MPLPlotter" title="qom.ui.plotters.MPLPlotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.ui.plotters.MPLPlotter</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qom.systems.BaseSystem.BaseSystem.required_funcs">
+<span class="sig-name descname"><span class="pre">required_funcs</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'get_averaged_eigenvalues':</span> <span class="pre">['get_A',</span> <span class="pre">'get_ivc',</span> <span class="pre">'get_mode_rates'],</span> <span class="pre">'get_classical_amplitude_difference':</span> <span class="pre">['get_ivc',</span> <span class="pre">'get_mode_rates'],</span> <span class="pre">'get_classical_phase_difference':</span> <span class="pre">['get_ivc',</span> <span class="pre">'get_mode_rates'],</span> <span class="pre">'get_lyapunov_exponents':</span> <span class="pre">['get_A',</span> <span class="pre">'get_ivc',</span> <span class="pre">'get_mode_rates'],</span> <span class="pre">'get_mean_optical_amplitudes':</span> <span class="pre">['get_ivc',</span> <span class="pre">'get_oss_args'],</span> <span class="pre">'get_mean_optical_occupancies':</span> <span class="pre">['get_ivc',</span> <span class="pre">'get_oss_args'],</span> <span class="pre">'get_measure_average':</span> <span class="pre">['get_ivc',</span> <span class="pre">'get_mode_rates'],</span> <span class="pre">'get_measure_dynamics':</span> <span class="pre">['get_ivc',</span> <span class="pre">'get_mode_rates'],</span> <span class="pre">'get_measure_stationary':</span> <span class="pre">['get_ivc'],</span> <span class="pre">'get_modes_corrs_dynamics':</span> <span class="pre">['get_ivc',</span> <span class="pre">'get_mode_rates'],</span> <span class="pre">'get_modes_corrs_stationary':</span> <span class="pre">['get_ivc'],</span> <span class="pre">'get_optical_stability_zone':</span> <span class="pre">['get_ivc',</span> <span class="pre">'get_oss_modes'],</span> <span class="pre">'get_pearson_correlation_coefficient':</span> <span class="pre">['get_ivc',</span> <span class="pre">'get_mode_rates'],</span> <span class="pre">'get_rhc_count_dynamics':</span> <span class="pre">['get_A',</span> <span class="pre">'get_ivc',</span> <span class="pre">'get_mode_rates'],</span> <span class="pre">'get_rhc_count_stationary':</span> <span class="pre">['get_ivc',</span> <span class="pre">'get_mode_rates']}</span></em><a class="headerlink" href="#qom.systems.BaseSystem.BaseSystem.required_funcs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qom.systems.BaseSystem.BaseSystem.required_params">
+<span class="sig-name descname"><span class="pre">required_params</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'get_averaged_eigenvalues':</span> <span class="pre">['cache',</span> <span class="pre">'cache_dir',</span> <span class="pre">'cache_file',</span> <span class="pre">'idx_e',</span> <span class="pre">'method',</span> <span class="pre">'range_min',</span> <span class="pre">'range_max',</span> <span class="pre">'show_progress',</span> <span class="pre">'t_min',</span> <span class="pre">'t_max',</span> <span class="pre">'t_dim'],</span> <span class="pre">'get_classical_amplitude_difference':</span> <span class="pre">['cache',</span> <span class="pre">'cache_dir',</span> <span class="pre">'cache_file',</span> <span class="pre">'idx_e',</span> <span class="pre">'measure_type',</span> <span class="pre">'method',</span> <span class="pre">'show_progress',</span> <span class="pre">'t_min',</span> <span class="pre">'t_max',</span> <span class="pre">'t_dim'],</span> <span class="pre">'get_classical_phase_difference':</span> <span class="pre">['cache',</span> <span class="pre">'cache_dir',</span> <span class="pre">'cache_file',</span> <span class="pre">'idx_e',</span> <span class="pre">'measure_type',</span> <span class="pre">'method',</span> <span class="pre">'show_progress',</span> <span class="pre">'t_min',</span> <span class="pre">'t_max',</span> <span class="pre">'t_dim'],</span> <span class="pre">'get_lyapunov_exponents':</span> <span class="pre">['cache',</span> <span class="pre">'cache_dir',</span> <span class="pre">'cache_file',</span> <span class="pre">'method',</span> <span class="pre">'method_le',</span> <span class="pre">'num_iters',</span> <span class="pre">'show_progress',</span> <span class="pre">'t_min',</span> <span class="pre">'t_max',</span> <span class="pre">'t_dim'],</span> <span class="pre">'get_mean_optical_amplitudes':</span> <span class="pre">[],</span> <span class="pre">'get_mean_optical_occupancies':</span> <span class="pre">[],</span> <span class="pre">'get_measure_average':</span> <span class="pre">['cache',</span> <span class="pre">'cache_dir',</span> <span class="pre">'cache_file',</span> <span class="pre">'idx_e',</span> <span class="pre">'measure_type',</span> <span class="pre">'method',</span> <span class="pre">'range_min',</span> <span class="pre">'range_max',</span> <span class="pre">'show_progress',</span> <span class="pre">'t_min',</span> <span class="pre">'t_max',</span> <span class="pre">'t_dim'],</span> <span class="pre">'get_measure_dynamics':</span> <span class="pre">['cache',</span> <span class="pre">'cache_dir',</span> <span class="pre">'cache_file',</span> <span class="pre">'idx_e',</span> <span class="pre">'measure_type',</span> <span class="pre">'method',</span> <span class="pre">'range_min',</span> <span class="pre">'range_max',</span> <span class="pre">'show_progress',</span> <span class="pre">'t_min',</span> <span class="pre">'t_max',</span> <span class="pre">'t_dim'],</span> <span class="pre">'get_measure_stationary':</span> <span class="pre">['idx_e',</span> <span class="pre">'measure_type',</span> <span class="pre">'show_progress',</span> <span class="pre">'type_func'],</span> <span class="pre">'get_modes_corrs_dynamics':</span> <span class="pre">['cache',</span> <span class="pre">'cache_dir',</span> <span class="pre">'cache_file',</span> <span class="pre">'method',</span> <span class="pre">'show_progress',</span> <span class="pre">'t_min',</span> <span class="pre">'t_max',</span> <span class="pre">'t_dim'],</span> <span class="pre">'get_modes_corrs_stationary':</span> <span class="pre">['type_func'],</span> <span class="pre">'get_optical_stability_zone':</span> <span class="pre">['method_sz'],</span> <span class="pre">'get_pearson_correlation_coefficient':</span> <span class="pre">['cache',</span> <span class="pre">'cache_dir',</span> <span class="pre">'cache_file',</span> <span class="pre">'idx_e',</span> <span class="pre">'measure_type',</span> <span class="pre">'method',</span> <span class="pre">'show_progress',</span> <span class="pre">'t_min',</span> <span class="pre">'t_max',</span> <span class="pre">'t_dim'],</span> <span class="pre">'get_rhc_count_dynamics':</span> <span class="pre">['cache',</span> <span class="pre">'cache_dir',</span> <span class="pre">'cache_file',</span> <span class="pre">'method',</span> <span class="pre">'range_min',</span> <span class="pre">'range_max',</span> <span class="pre">'show_progress',</span> <span class="pre">'t_min',</span> <span class="pre">'t_max',</span> <span class="pre">'t_dim'],</span> <span class="pre">'get_rhc_count_stationary':</span> <span class="pre">['type_func']}</span></em><a class="headerlink" href="#qom.systems.BaseSystem.BaseSystem.required_params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qom.systems.BaseSystem.BaseSystem.types_measures">
+<span class="sig-name descname"><span class="pre">types_measures</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['corr_ele',</span> <span class="pre">'eigen_dm',</span> <span class="pre">'mode_amp',</span> <span class="pre">'wigner_s']</span></em><a class="headerlink" href="#qom.systems.BaseSystem.BaseSystem.types_measures" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qom.systems.BaseSystem.BaseSystem.types_plots">
+<span class="sig-name descname"><span class="pre">types_plots</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['line',</span> <span class="pre">'lines',</span> <span class="pre">'scatter',</span> <span class="pre">'scatters',</span> <span class="pre">'contour',</span> <span class="pre">'contourf',</span> <span class="pre">'pcolormesh',</span> <span class="pre">'density',</span> <span class="pre">'density_unit',</span> <span class="pre">'line_3d',</span> <span class="pre">'lines_3d',</span> <span class="pre">'scatter_3d',</span> <span class="pre">'scatters_3d',</span> <span class="pre">'surface',</span> <span class="pre">'surface_cx',</span> <span class="pre">'surface_cy',</span> <span class="pre">'surface_cz']</span></em><a class="headerlink" href="#qom.systems.BaseSystem.BaseSystem.types_plots" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qom.systems.BaseSystem.BaseSystem.types_qcm">
+<span class="sig-name descname"><span class="pre">types_qcm</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['discord_G',</span> <span class="pre">'entan_ln',</span> <span class="pre">'sync_c',</span> <span class="pre">'sync_p']</span></em><a class="headerlink" href="#qom.systems.BaseSystem.BaseSystem.types_qcm" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qom.systems.BaseSystem.BaseSystem.ui_defaults">
+<span class="sig-name descname"><span class="pre">ui_defaults</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'cache':</span> <span class="pre">True,</span> <span class="pre">'cache_dir':</span> <span class="pre">'data',</span> <span class="pre">'cache_file':</span> <span class="pre">'V',</span> <span class="pre">'idx_e':</span> <span class="pre">[0],</span> <span class="pre">'measure_type':</span> <span class="pre">'mode_amp',</span> <span class="pre">'method':</span> <span class="pre">'RK45',</span> <span class="pre">'method_le':</span> <span class="pre">'svd',</span> <span class="pre">'method_sz':</span> <span class="pre">'oss',</span> <span class="pre">'num_iters':</span> <span class="pre">10000,</span> <span class="pre">'range_max':</span> <span class="pre">10001,</span> <span class="pre">'range_min':</span> <span class="pre">0,</span> <span class="pre">'show_progress':</span> <span class="pre">True,</span> <span class="pre">'t_dim':</span> <span class="pre">10001,</span> <span class="pre">'t_max':</span> <span class="pre">1000.0,</span> <span class="pre">'t_min':</span> <span class="pre">0.0,</span> <span class="pre">'type_func':</span> <span class="pre">'complex'}</span></em><a class="headerlink" href="#qom.systems.BaseSystem.BaseSystem.ui_defaults" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.systems.BaseSystem.BaseSystem.validate_required_funcs">
+<span class="sig-name descname"><span class="pre">validate_required_funcs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'silent'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.systems.BaseSystem.BaseSystem.validate_required_funcs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to validate the arguments of available functions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>func_name</strong> (<em>str</em>) – Name of the getter function.</p></li>
+<li><p><strong>mode</strong> (<em>str</em>) – Mode of return of the validation check. Available options are:
+==============  ================================================
+value           meaning
+==============  ================================================
+“verbose”       Provides a detailed log of missing functions
+“silent”        No log provided are raised (fallback).
+==============  ================================================</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>is_valid</strong> – Verdict whether all requirements are met.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="qom.systems.html"
+                          title="previous chapter">qom.systems package</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="qom.systems.DODMSystem.html"
+                          title="next chapter">qom.systems.DODMSystem module</a></p>
+  </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="qom.systems.DODMSystem.html" title="qom.systems.DODMSystem module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="qom.systems.html" title="qom.systems package"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">The Quantum Optomechanics Toolbox  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="qom.systems.html" >qom.systems package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">qom.systems.BaseSystem module</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2023, Sampreet Kalita.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
+    </div>
+  </body>
+</html>

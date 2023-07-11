@@ -1,0 +1,339 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>qom.loopers.base module &#8212; The Quantum Optomechanics Toolbox  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/nature.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="qom.solvers package" href="qom.solvers.html" />
+    <link rel="prev" title="qom.loopers.axes module" href="qom.loopers.axes.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="qom.solvers.html" title="qom.solvers package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="qom.loopers.axes.html" title="qom.loopers.axes module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">The Quantum Optomechanics Toolbox  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="qom.loopers.html" accesskey="U">qom.loopers package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">qom.loopers.base module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-qom.loopers.base">
+<span id="qom-loopers-base-module"></span><h1>qom.loopers.base module<a class="headerlink" href="#module-qom.loopers.base" title="Permalink to this heading">¶</a></h1>
+<p>Module to interface loopers.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="qom.loopers.base.BaseLooper">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qom.loopers.base.</span></span><span class="sig-name descname"><span class="pre">BaseLooper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_system</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cb_update</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parallel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_start</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.loopers.base.BaseLooper" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class to interface loopers.</p>
+<p>Initializes <cite>func</cite>, <cite>params</cite>, <cite>axes</cite>, <cite>results</cite> and <cite>updater</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>func</strong> (<em>callable</em>) – Function to loop, formatted as <cite>func(system_params)</cite>, where <cite>system_params</cite> is a dictionary of the updated parameters for the system for that iteration of the looper.</p></li>
+<li><p><strong>params</strong> (<em>dict</em>) – Parameters of the looper containing the key <cite>‘X’</cite>, each with the keys <cite>‘var’</cite> and <cite>‘val’</cite> (or <cite>‘min’</cite>, <cite>‘max’</cite> and <cite>‘dim’</cite>) for the name of the parameter to loop and its corresponding values (or minimum and maximum values along with dimension). Refer to <code class="docutils literal notranslate"><span class="pre">Notes</span></code> below for all available options.</p></li>
+<li><p><strong>params_system</strong> (<em>dict</em>) – Parameters of the system. If not provided, new keys are created for the looper variables.</p></li>
+<li><p><strong>cb_update</strong> (<em>callable</em>) – Callback function to update status and progress, formatted as <cite>cb_update(status, progress, reset)</cite>, where <cite>status</cite> is a string, <cite>progress</cite> is a float and <cite>reset</cite> is a boolean.</p></li>
+<li><p><strong>parallel</strong> (<em>bool</em>) – Option to format outputs when running in parallel.</p></li>
+<li><p><strong>p_index</strong> (<em>int</em>) – Index of the process.</p></li>
+<li><p><strong>p_start</strong> (<em>float</em>) – Time at which the process was started. If not provided, the value is initialized to current time.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<dl>
+<dt>The <cite>params</cite> dictionary currently supports the following keys:</dt><dd><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>key</p></th>
+<th class="head"><p>value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>‘show_progress’</p></td>
+<td><p>(<em>bool</em>) option to display the progress for the looper. Default is <cite>False</cite>.</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘file_path_prefix’</p></td>
+<td><p>(<em>str</em>) prefix for the file path to save the looper results. If not provided, the results are not saved.</p></td>
+</tr>
+<tr class="row-even"><td><p>‘prefix_with_system’</p></td>
+<td><p>(<em>bool</em>) option to append the system parameters in the file path. Default is <cite>False</cite>.</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘grad’</p></td>
+<td><p>(<em>bool</em>) option to calculate gradients with respect to the X-axis. Default is <cite>False</cite>.</p></td>
+</tr>
+<tr class="row-even"><td><p>‘grad_position’</p></td>
+<td><p>(<em>int</em> or <em>float</em> or <em>str</em>) a value denoting the position or a mode to calculate the position. Options are <cite>‘mean’</cite> for the mean of the axis values and <cite>‘all’</cite> to output all positions. Default is <cite>‘all’</cite>.</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘threshold_mode’</p></td>
+<td><p>(<em>str</em>) Mode of calculation of threshold values. Options are <cite>‘minmax’</cite> for minimum value at which maximum is reached and <cite>‘minmin’</cite> for minimmum value at which minimum is reached. Default is <cite>‘minmax’</cite>.</p></td>
+</tr>
+<tr class="row-even"><td><p>‘X’</p></td>
+<td><p>(<em>dict</em>) parameters of the X-axis.</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘Y’</p></td>
+<td><p>(<em>dict</em>) parameters of the Y-axis.</p></td>
+</tr>
+<tr class="row-even"><td><p>‘Z’</p></td>
+<td><p>(<em>dict</em>) parameters of the Z-axis.</p></td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>Each axis dictionary (<cite>‘X’</cite>, <cite>‘Y’</cite> or <cite>‘Z’</cite>) can contain the following keys (arranged in the descending order of their priorities):</dt><dd><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>key</p></th>
+<th class="head"><p>value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>‘var’</p></td>
+<td><p>(<em>str</em>) name of the parameter to loop. Its value defaults to the axis name in lower case if the axis is a sequence of values and not a dictionary.</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘idx’</p></td>
+<td><p>(<em>int</em>) index of the parameter if the parameter is a sequence of values.</p></td>
+</tr>
+<tr class="row-even"><td><p>‘val’</p></td>
+<td><p>(<em>list</em> or <em>numpy.ndarray</em>) values of the parameter. The remaining keys are not checked if its value is given. Otherwise, the values of <cite>‘min’</cite>, <cite>‘max’</cite>, <cite>‘dim’</cite> and <cite>‘scale’</cite> are used to obtain <cite>‘val’</cite>.</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘min’</p></td>
+<td><p>(<em>float</em>) minimum value of the parameter. Default is <cite>-5.0</cite>.</p></td>
+</tr>
+<tr class="row-even"><td><p>‘max’</p></td>
+<td><p>(<em>float</em>) maximum value of the parameter. Default is <cite>5.0</cite>.</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘dim’</p></td>
+<td><p>(<em>int</em>) number of values from ‘min’ to ‘max’, both inclusive. Default is <cite>101</cite>.</p></td>
+</tr>
+<tr class="row-even"><td><p>‘scale’</p></td>
+<td><p>(<em>str</em>) step scale of the values. Options are <cite>‘log’</cite> for logarithmic and <cite>‘linear’</cite> for linear. Default is <cite>‘linear’</cite></p></td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.loopers.base.BaseLooper.get_X_results">
+<span class="sig-name descname"><span class="pre">get_X_results</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.loopers.base.BaseLooper.get_X_results" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to obtain results for variation in X-axis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p><strong>xs</strong> (<em>numpy.ndarray</em>) – Values of the X-axis.</p></li>
+<li><p><strong>vs</strong> (<em>numpy.ndarray</em>) – Calculated values.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.loopers.base.BaseLooper.get_full_file_path">
+<span class="sig-name descname"><span class="pre">get_full_file_path</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.loopers.base.BaseLooper.get_full_file_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to obtain the full file path.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>file_path</strong> – Full file path.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.loopers.base.BaseLooper.get_grad_index">
+<span class="sig-name descname"><span class="pre">get_grad_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axis_values</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.loopers.base.BaseLooper.get_grad_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to obtain the index of a particular position to calculate the gradients.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>axis_values</strong> (<em>numpy.ndarray</em>) – Values of the axis.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>idx</strong> – Index of the required position.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.loopers.base.BaseLooper.get_params_str">
+<span class="sig-name descname"><span class="pre">get_params_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.loopers.base.BaseLooper.get_params_str" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to obtain a string containing the parameters used in the looper.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>axis</strong> ({<cite>‘X’</cite>, <cite>‘Y’</cite>, <cite>‘Z’</cite>}) – Name of the axis.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>params_str</strong> – String containing the parameters used in the looper.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.loopers.base.BaseLooper.get_thresholds">
+<span class="sig-name descname"><span class="pre">get_thresholds</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.loopers.base.BaseLooper.get_thresholds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to calculate the threshold values for the results.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>thresholds</strong> – Threshold values. Keys are <cite>‘X’</cite>, <cite>‘Y’</cite>, <cite>‘Z’</cite> and <cite>‘V’</cite>.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.loopers.base.BaseLooper.load_results">
+<span class="sig-name descname"><span class="pre">load_results</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.loopers.base.BaseLooper.load_results" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to load the results from a .npz file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>loaded</strong> – Boolean denoting whether results were successfully loaded.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qom.loopers.base.BaseLooper.looper_defaults">
+<span class="sig-name descname"><span class="pre">looper_defaults</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'X':</span> <span class="pre">None,</span> <span class="pre">'Y':</span> <span class="pre">None,</span> <span class="pre">'Z':</span> <span class="pre">None,</span> <span class="pre">'file_path_prefix':</span> <span class="pre">None,</span> <span class="pre">'grad':</span> <span class="pre">False,</span> <span class="pre">'grad_position':</span> <span class="pre">'all',</span> <span class="pre">'prefix_with_system':</span> <span class="pre">False,</span> <span class="pre">'show_progress':</span> <span class="pre">False,</span> <span class="pre">'threshold_mode':</span> <span class="pre">'minmax'}</span></em><a class="headerlink" href="#qom.loopers.base.BaseLooper.looper_defaults" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default parameters of the looper.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.loopers.base.BaseLooper.save_results">
+<span class="sig-name descname"><span class="pre">save_results</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.loopers.base.BaseLooper.save_results" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to save the results to a .npz file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>saved</strong> – Boolean denoting whether results were successfully saved.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.loopers.base.BaseLooper.set_axis">
+<span class="sig-name descname"><span class="pre">set_axis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.loopers.base.BaseLooper.set_axis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to set the list of axis values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>axis</strong> (<em>str</em>) – Name of the axis (<cite>‘X’</cite>, <cite>‘Y’</cite> or <cite>‘Z’</cite>).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.loopers.base.BaseLooper.set_params">
+<span class="sig-name descname"><span class="pre">set_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.loopers.base.BaseLooper.set_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to validate and set the looper parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>params</strong> (<em>dict</em>) – Parameters for the looper.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="qom.loopers.axes.html"
+                          title="previous chapter">qom.loopers.axes module</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="qom.solvers.html"
+                          title="next chapter">qom.solvers package</a></p>
+  </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="qom.solvers.html" title="qom.solvers package"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="qom.loopers.axes.html" title="qom.loopers.axes module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">The Quantum Optomechanics Toolbox  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="qom.loopers.html" >qom.loopers package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">qom.loopers.base module</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2023, Sampreet Kalita.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
+    </div>
+  </body>
+</html>

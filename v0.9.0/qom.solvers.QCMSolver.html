@@ -1,0 +1,264 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>qom.solvers.QCMSolver module &#8212; The Quantum Optomechanics Toolbox  documentation</title>
+    <link rel="stylesheet" type="text/css" href="pygments.css" />
+    <link rel="stylesheet" type="text/css" href="nature.css" />
+    <script data-url_root="./" id="documentation_options" src="documentation_options.js"></script>
+    <script src="jquery.js"></script>
+    <script src="underscore.js"></script>
+    <script src="_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="qom.solvers.RHCSolver module" href="qom.solvers.RHCSolver.html" />
+    <link rel="prev" title="qom.solvers.ODESolver module" href="qom.solvers.ODESolver.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="qom.solvers.RHCSolver.html" title="qom.solvers.RHCSolver module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="qom.solvers.ODESolver.html" title="qom.solvers.ODESolver module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">The Quantum Optomechanics Toolbox  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="qom.solvers.html" accesskey="U">qom.solvers package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">qom.solvers.QCMSolver module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-qom.solvers.QCMSolver">
+<span id="qom-solvers-qcmsolver-module"></span><h1>qom.solvers.QCMSolver module<a class="headerlink" href="#module-qom.solvers.QCMSolver" title="Permalink to this heading">¶</a></h1>
+<p>Module to handle quantum correlation measure solver.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="qom.solvers.QCMSolver.QCMSolver">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qom.solvers.QCMSolver.</span></span><span class="sig-name descname"><span class="pre">QCMSolver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">modes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">corrs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.QCMSolver.QCMSolver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class to handle quantum correlation measure solver.</p>
+<p>Initializes <code class="docutils literal notranslate"><span class="pre">corrs</span></code> and <code class="docutils literal notranslate"><span class="pre">modes</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>modes</strong> (<em>list</em>) – Classical mode amplitudes of the system.</p></li>
+<li><p><strong>corrs</strong> (<em>list</em>) – Quantum correlations of the quadratures.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">References</p>
+<aside class="footnote brackets" id="id1" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">1</a><span class="fn-bracket">]</span></span>
+<ol class="upperalpha simple" start="19">
+<li><ol class="upperalpha simple" start="12">
+<li><p>Braunstein and P. van Loock, <em>Quantum Information with Continuous Variables</em>, Rev. Mod. Phys. <strong>77</strong>, 513 (2005).</p></li>
+</ol>
+</li>
+</ol>
+</aside>
+<aside class="footnote brackets" id="id2" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">2</a><span class="fn-bracket">]</span></span>
+<ol class="upperalpha simple" start="19">
+<li><p>Olivares, <em>Quantum Optics in Phase Space: A Tutorial on Gaussian States</em>, Eur. Phys. J. Special Topics <strong>203</strong>, 3 (2012).</p></li>
+</ol>
+</aside>
+<aside class="footnote brackets" id="id3" role="note">
+<span class="label"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id6">1</a>,<a role="doc-backlink" href="#id7">2</a>)</span>
+<ol class="upperalpha simple">
+<li><p>Mari, A. Farace, N. Didier, V. Giovannetti and R. Fazio, <em>Measures of Quantum Synchronization in Continuous Variable Systems</em>, Phys. Rev. Lett. <strong>111</strong>, 103605 (2013).</p></li>
+</ol>
+</aside>
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.solvers.QCMSolver.QCMSolver._get_W">
+<span class="sig-name descname"><span class="pre">_get_W</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">I_1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">I_2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">I_3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">I_4</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.QCMSolver.QCMSolver._get_W" title="Permalink to this definition">¶</a></dt>
+<dd><p>Helper function for quantum discord calculation.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.solvers.QCMSolver.QCMSolver._get_invariants">
+<span class="sig-name descname"><span class="pre">_get_invariants</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pos_i</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos_j</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.QCMSolver.QCMSolver._get_invariants" title="Permalink to this definition">¶</a></dt>
+<dd><p>Helper function to calculate symplectic invariants for two modes given the correlation matrix of their quadratures.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pos_i</strong> (<em>int</em>) – Index of ith quadrature.</p></li>
+<li><p><strong>pos_j</strong> (<em>int</em>) – Index of jth quadrature.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>invariants</strong> – Symplectic invariants.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qom.solvers.QCMSolver.QCMSolver.code">
+<span class="sig-name descname"><span class="pre">code</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'QCMSolver'</span></em><a class="headerlink" href="#qom.solvers.QCMSolver.QCMSolver.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.solvers.QCMSolver.QCMSolver.get_discord_Gaussian">
+<span class="sig-name descname"><span class="pre">get_discord_Gaussian</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pos_i</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos_j</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.QCMSolver.QCMSolver.get_discord_Gaussian" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to obtain Gaussian quantum discord <a class="footnote-reference brackets" href="#id2" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> between two modes given the correlation matrix of their quadratures.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pos_i</strong> (<em>int</em>) – Index of ith quadrature.</p></li>
+<li><p><strong>pos_j</strong> (<em>int</em>) – Index of jth quadrature.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>D_G</strong> – Gaussian quantum discord.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.solvers.QCMSolver.QCMSolver.get_entanglement_logarithmic_negativity">
+<span class="sig-name descname"><span class="pre">get_entanglement_logarithmic_negativity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pos_i</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos_j</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.QCMSolver.QCMSolver.get_entanglement_logarithmic_negativity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to calculate quantum entanglement via logarithmic negativity <a class="footnote-reference brackets" href="#id1" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> between two modes given the correlation matrix of their quadratures.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pos_i</strong> (<em>int</em>) – Index of ith quadrature.</p></li>
+<li><p><strong>pos_j</strong> (<em>int</em>) – Index of jth quadrature.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>E_n</strong> – Quantum entanglement value using logarithmic negativity.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.solvers.QCMSolver.QCMSolver.get_synchronization_complete">
+<span class="sig-name descname"><span class="pre">get_synchronization_complete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pos_i</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos_j</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.QCMSolver.QCMSolver.get_synchronization_complete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to obtain the quantum complete synchronization measure <a class="footnote-reference brackets" href="#id3" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> between two modes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pos_i</strong> (<em>int</em>) – Index of ith quadrature.</p></li>
+<li><p><strong>pos_j</strong> (<em>int</em>) – Index of jth quadrature.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>S_complete</strong> – Quantum complete synchronization measure.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.solvers.QCMSolver.QCMSolver.get_synchronization_phase">
+<span class="sig-name descname"><span class="pre">get_synchronization_phase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pos_i</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos_j</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.QCMSolver.QCMSolver.get_synchronization_phase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to obtain the quantum phase synchronization measure <a class="footnote-reference brackets" href="#id3" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> between two modes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pos_i</strong> (<em>int</em>) – Index of ith quadrature.</p></li>
+<li><p><strong>pos_j</strong> (<em>int</em>) – Index of jth quadrature.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>S_phase</strong> – Quantum phase synchronization measure.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qom.solvers.QCMSolver.QCMSolver.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Quantum</span> <span class="pre">Correlations</span> <span class="pre">Measure</span> <span class="pre">Solver'</span></em><a class="headerlink" href="#qom.solvers.QCMSolver.QCMSolver.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="qom.solvers.ODESolver.html"
+                          title="previous chapter">qom.solvers.ODESolver module</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="qom.solvers.RHCSolver.html"
+                          title="next chapter">qom.solvers.RHCSolver module</a></p>
+  </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="qom.solvers.RHCSolver.html" title="qom.solvers.RHCSolver module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="qom.solvers.ODESolver.html" title="qom.solvers.ODESolver module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">The Quantum Optomechanics Toolbox  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="qom.solvers.html" >qom.solvers package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">qom.solvers.QCMSolver module</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2023, Sampreet Kalita.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
+    </div>
+  </body>
+</html>

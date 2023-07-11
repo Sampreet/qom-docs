@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>qom.ui.log module &#8212; The Quantum Optomechanics Toolbox  documentation</title>
+    <link rel="stylesheet" type="text/css" href="pygments.css" />
+    <link rel="stylesheet" type="text/css" href="nature.css" />
+    <script data-url_root="./" id="documentation_options" src="documentation_options.js"></script>
+    <script src="jquery.js"></script>
+    <script src="underscore.js"></script>
+    <script src="_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="qom.utils package" href="qom.utils.html" />
+    <link rel="prev" title="qom.ui.plotters.MPLPlotter module" href="qom.ui.plotters.MPLPlotter.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="qom.utils.html" title="qom.utils package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="qom.ui.plotters.MPLPlotter.html" title="qom.ui.plotters.MPLPlotter module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">The Quantum Optomechanics Toolbox  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="qom.ui.html" accesskey="U">qom.ui package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">qom.ui.log module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-qom.ui.log">
+<span id="qom-ui-log-module"></span><h1>qom.ui.log module<a class="headerlink" href="#module-qom.ui.log" title="Permalink to this heading">¶</a></h1>
+<p>UI module to format logging.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="qom.ui.log.FullFormatter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qom.ui.log.</span></span><span class="sig-name descname"><span class="pre">FullFormatter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fmt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datefmt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">style</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'%'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">validate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.log.FullFormatter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Formatter</span></code></p>
+<p>Class to customize logging format.</p>
+<p>The class inherits <code class="xref py py-class docutils literal notranslate"><span class="pre">logging.Formatter</span></code>.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.ui.log.FullFormatter.formatTime">
+<span class="sig-name descname"><span class="pre">formatTime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datefmt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.log.FullFormatter.formatTime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overriding method to display milliseconds in the time format.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>record</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">logging.LogRecord</span></code>) – Current record to log.</p></li>
+<li><p><strong>datefmt</strong> (<em>str</em>) – Date format for log.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>f_time</strong> – Formatted time.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qom.ui.log.get_formatter">
+<span class="sig-prename descclassname"><span class="pre">qom.ui.log.</span></span><span class="sig-name descname"><span class="pre">get_formatter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">log_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'full'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.log.get_formatter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to obtain the formatter for stream handler.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>log_format</strong> (<em>str</em><em>, </em><em>optional</em>) – Format type for output to console.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>formatter</strong> – Formatter for stream handler.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">logging.Formatter</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qom.ui.log.get_handler">
+<span class="sig-prename descclassname"><span class="pre">qom.ui.log.</span></span><span class="sig-name descname"><span class="pre">get_handler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">formatter</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.log.get_handler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to obtain the stream handler for console logger.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>formatter</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">logging.Formatter</span></code>) – Formatter for stream handler.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>handler</strong> – Stream handler for console logger.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">logging.StreamHandler</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qom.ui.log.init_log">
+<span class="sig-prename descclassname"><span class="pre">qom.ui.log.</span></span><span class="sig-name descname"><span class="pre">init_log</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">log_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'full'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parallel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.log.init_log" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to initialize the logger for the package.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>log_format</strong> (<em>str</em>) – Format type for output to console.</p></li>
+<li><p><strong>debug</strong> (<em>boolean</em><em>, </em><em>optional</em>) – Option to enable DEBUG log level.</p></li>
+<li><p><strong>parallel</strong> (<em>boolean</em><em>, </em><em>optional</em>) – Option to only display errors when running code in parallel</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>logger</strong> – Logger for output to console.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">logging.Logger</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="qom.ui.plotters.MPLPlotter.html"
+                          title="previous chapter">qom.ui.plotters.MPLPlotter module</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="qom.utils.html"
+                          title="next chapter">qom.utils package</a></p>
+  </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="qom.utils.html" title="qom.utils package"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="qom.ui.plotters.MPLPlotter.html" title="qom.ui.plotters.MPLPlotter module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">The Quantum Optomechanics Toolbox  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="qom.ui.html" >qom.ui package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">qom.ui.log module</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2023, Sampreet Kalita.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
+    </div>
+  </body>
+</html>

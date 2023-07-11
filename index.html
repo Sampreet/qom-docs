@@ -6,14 +6,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Welcome to the qom-v0.9.0 Documentation! &#8212; The Quantum Optomechanics Toolbox  documentation</title>
-    <link rel="stylesheet" type="text/css" href="pygments.css" />
-    <link rel="stylesheet" type="text/css" href="nature.css" />
-    <script data-url_root="./" id="documentation_options" src="documentation_options.js"></script>
-    <script src="jquery.js"></script>
-    <script src="underscore.js"></script>
-    <script src="_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="doctools.js"></script>
+    <title>Welcome to the qom-v1.0.0 Documentation! &#8212; The Quantum Optomechanics Toolbox  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/nature.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="qom.loopers package" href="qom.loopers.html" /> 
@@ -31,7 +31,7 @@
           <a href="qom.loopers.html" title="qom.loopers package"
              accesskey="N">next</a> |</li>
         <li class="nav-item nav-item-0"><a href="#">The Quantum Optomechanics Toolbox  documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Welcome to the <code class="docutils literal notranslate"><span class="pre">qom-v0.9.0</span></code> Documentation!</a></li> 
+        <li class="nav-item nav-item-this"><a href="">Welcome to the <cite>qom-v1.0.0</cite> Documentation!</a></li> 
       </ul>
     </div>  
 
@@ -40,70 +40,220 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="welcome-to-the-qom-v0-9-0-documentation">
-<h1>Welcome to the <code class="docutils literal notranslate"><span class="pre">qom-v0.9.0</span></code> Documentation!<a class="headerlink" href="#welcome-to-the-qom-v0-9-0-documentation" title="Permalink to this heading">¶</a></h1>
-<p>The Quantum Optomechanics Toolbox (packaged as <code class="docutils literal notranslate"><span class="pre">qom</span></code>) is a wrapper-styled, scalable toolbox featuring multiple modules for the calculation of stationary as well as dynamical properties of many-body quantum optomechanical systems.
-Its inheritable system classes can also be used to study other systems that follow the optomechanical model.
+  <section id="welcome-to-the-qom-v1-0-0-documentation">
+<h1>Welcome to the <cite>qom-v1.0.0</cite> Documentation!<a class="headerlink" href="#welcome-to-the-qom-v1-0-0-documentation" title="Permalink to this heading">¶</a></h1>
+<p>The Quantum Optomechanics Toolbox (packaged as <cite>qom</cite>) is a wrapper-styled, scalable toolbox featuring multiple modules for the calculation of stationary as well as dynamical properties of many-body quantum optomechanical systems.
 Backed by numerical libraries like NumPy and SciPy, and featuring the highly customizable visualizations offered by Matplotlib and Seaborn APIs, the toolbox aims to serve as an easy-to-use alternative to writing code explicitly and avoiding repetitive exercises for presentable visuals.</p>
 <section id="key-features">
 <h2>Key Features<a class="headerlink" href="#key-features" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
-<li><p>Automatically managed loops and parameter validation modules.</p></li>
-<li><p>Solver modules to calculate classical and quantum signatures.</p></li>
-<li><p>Inheritable optomechanical systems supporting callable properties.</p></li>
-<li><p>Configurable visualizations without the need for explicit plotting.</p></li>
+<li><p>Run automatically-managed loops in parallel and pool results.</p></li>
+<li><p>Solve for stability and classical/quantum signatures seamlessly.</p></li>
+<li><p>Configure plots across plotting libraries with a common syntax.</p></li>
 </ul>
 </section>
+<section id="what-s-new-in-v1-0">
+<h2>What’s New in v1.0!<a class="headerlink" href="#what-s-new-in-v1-0" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Non-linear Schrodinger equation solver with integration support.</p></li>
+<li><p>Attractor detection and bifurcation for non-linear dynamical systems.</p></li>
+<li><p>Huge performance boost with NumPy-based vectorization.</p></li>
+</ul>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Dynamical Stability</p></th>
+<th class="head"><p>Quantum Correlations</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><img alt="_images/00_00_sz.png" src="_images/00_00_sz.png" />
+</td>
+<td><img alt="_images/00_01_en.png" src="_images/00_01_en.png" />
+</td>
+</tr>
+<tr class="row-odd"><td><p>Runtimes for the calculation of dynamical stability of the steady state using the Routh-Hurwitz criteria.</p></td>
+<td><p>Runtimes for the calculation of average entanglement from the dynamical values of modes and correlations.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Classical Amplitudes</p></th>
+<th class="head"><p>Quantum Fluctuations</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><img alt="_images/01_00_classical.gif" src="_images/01_00_classical.gif" />
+</td>
+<td><img alt="_images/01_01_quantum.gif" src="_images/01_01_quantum.gif" />
+</td>
+</tr>
+<tr class="row-odd"><td><p>The classical mean values of the optical and mechanical modes are obtained using the rate equations of the modes.</p></td>
+<td><p>The variances of the quantum fluctuation quadratures are obtained using the rate equation for the correlation matrix.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Limit Cycle</p></th>
+<th class="head"><p>Chaos</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><img alt="_images/02_00_limit_cycle.gif" src="_images/02_00_limit_cycle.gif" />
+</td>
+<td><img alt="_images/02_01_chaos.gif" src="_images/02_01_chaos.gif" />
+</td>
+</tr>
+<tr class="row-odd"><td><p>Self-sustained oscillations in an optomechanical system.</p></td>
+<td><p>An optomechanical system in the chaotic regime.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Dynamical Stability</p></th>
+<th class="head"><p>Optical Bistability</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><img alt="_images/03_00_sz.gif" src="_images/03_00_sz.gif" />
+</td>
+<td><img alt="_images/03_01_ob.gif" src="_images/03_01_ob.gif" />
+</td>
+</tr>
+<tr class="row-odd"><td><p>Dynamical stability obtained from the steady state drift matrix.</p></td>
+<td><p>Bistability obtained from the steady state optical occupancies.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Optomechanical Entanglement</p></th>
+<th class="head"><p>Mechanical Synchronization</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><img alt="_images/04_00_en.png" src="_images/04_00_en.png" />
+</td>
+<td><img alt="_images/04_01_sp.png" src="_images/04_01_sp.png" />
+</td>
+</tr>
+<tr class="row-odd"><td><p>Quantum entanglement between the optical and mechanical modes of an optomechanical system.</p></td>
+<td><p>Quantum phase synchronization between the mechanical modes of two coupled identical systems.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Wigner Distributions</p></th>
+<th class="head"><p>Optomechanical Solitons</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><img alt="_images/05_00_wigner.gif" src="_images/05_00_wigner.gif" />
+</td>
+<td><img alt="_images/05_01_soliton.gif" src="_images/05_01_soliton.gif" />
+</td>
+</tr>
+<tr class="row-odd"><td><p>Wigner distribution depicting the evolution of mechanical squeezing in a modulated optomechanical system.</p></td>
+<td><p>Soliton propagation in an array of optomechanical systems at different phase lags between the input solitons.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">¶</a></h1>
+<section id="dependencies">
+<h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this heading">¶</a></h2>
+<p>The project requires <cite>Python 3.8+</cite> installed, preferably via the [Anaconda distribution](<a class="reference external" href="https://www.anaconda.com/download">https://www.anaconda.com/download</a>).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To run the GUI modules, <code class="docutils literal notranslate"><span class="pre">pyqt</span></code> should be installed separately.</p>
+</div>
+</section>
+<section id="installing-from-pypi">
+<h2>Installing from PyPI<a class="headerlink" href="#installing-from-pypi" title="Permalink to this heading">¶</a></h2>
+<p>To install the package and its requirements from the Python Package Index, execute:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-i<span class="w"> </span>https://test.pypi.org/simple/<span class="w"> </span>qom
+</pre></div>
+</div>
+</section>
+<section id="installing-locally">
+<h2>Installing Locally<a class="headerlink" href="#installing-locally" title="Permalink to this heading">¶</a></h2>
+<p>To install the package locally, download [the repository](<a class="reference external" href="https://github.com/sampreet/qom">https://github.com/sampreet/qom</a>) as <cite>.zip</cite> and extract the contents.
+Now, execute the following from <em>outside</em> the top-level directory, <cite>ROOT_DIR</cite>, inside which <cite>setup.py</cite> is located:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>ROOT_DIR
+</pre></div>
+</div>
+</section>
+</section>
 <section id="available-modules">
-<h2>Available Modules<a class="headerlink" href="#available-modules" title="Permalink to this heading">¶</a></h2>
+<h1>Available Modules<a class="headerlink" href="#available-modules" title="Permalink to this heading">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="qom.loopers.html">qom.loopers package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="qom.loopers.BaseLooper.html">qom.loopers.BaseLooper module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="qom.loopers.XLooper.html">qom.loopers.XLooper module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="qom.loopers.XYLooper.html">qom.loopers.XYLooper module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="qom.loopers.XYZLooper.html">qom.loopers.XYZLooper module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qom.loopers.axes.html">qom.loopers.axes module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qom.loopers.base.html">qom.loopers.base module</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="qom.solvers.html">qom.solvers package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="qom.solvers.HLESolver.html">qom.solvers.HLESolver module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="qom.solvers.ODESolver.html">qom.solvers.ODESolver module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="qom.solvers.QCMSolver.html">qom.solvers.QCMSolver module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="qom.solvers.RHCSolver.html">qom.solvers.RHCSolver module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qom.solvers.base.html">qom.solvers.base module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qom.solvers.deterministic.html">qom.solvers.deterministic module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qom.solvers.differential.html">qom.solvers.differential module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qom.solvers.measure.html">qom.solvers.measure module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qom.solvers.stability.html">qom.solvers.stability module</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="qom.systems.html">qom.systems package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="qom.systems.BaseSystem.html">qom.systems.BaseSystem module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="qom.systems.DODMSystem.html">qom.systems.DODMSystem module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="qom.systems.DOSMSystem.html">qom.systems.DOSMSystem module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="qom.systems.SODMSystem.html">qom.systems.SODMSystem module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="qom.systems.SOMASystem.html">qom.systems.SOMASystem module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="qom.systems.SOSMSystem.html">qom.systems.SOSMSystem module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qom.systems.base.html">qom.systems.base module</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="qom.ui.html">qom.ui package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="qom.ui.axes.html">qom.ui.axes subpackage</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="qom.ui.axes.BaseAxis.html">qom.ui.axes.BaseAxis module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="qom.ui.axes.DynamicAxis.html">qom.ui.axes.DynamicAxis module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="qom.ui.axes.MultiAxis.html">qom.ui.axes.MultiAxis module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="qom.ui.axes.StaticAxis.html">qom.ui.axes.StaticAxis module</a></li>
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="qom.ui.plotters.html">qom.ui.plotters subpackage</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="qom.ui.plotters.BasePlotter.html">qom.ui.plotters.BasePlotter module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="qom.ui.plotters.MPLPlotter.html">qom.ui.plotters.MPLPlotter module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qom.ui.plotters.base.html">qom.ui.plotters.base module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qom.ui.plotters.matplotlib.html">qom.ui.plotters.matplotlib module</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="qom.ui.log.html">qom.ui.log module</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="qom.utils.html">qom.utils package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="qom.utils.looper.html">qom.utils.looper module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qom.utils.loopers.html">qom.utils.loopers module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qom.utils.solvers.html">qom.utils.solvers module</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="qom.io.html">qom.io module</a></li>
 </ul>
 </div>
-</section>
 </section>
 <section id="indices-and-tables">
 <h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this heading">¶</a></h1>
@@ -124,11 +274,19 @@ Backed by numerical libraries like NumPy and SciPy, and featuring the highly cus
   <div>
     <h3><a href="#">Table of Contents</a></h3>
     <ul>
-<li><a class="reference internal" href="#">Welcome to the <code class="docutils literal notranslate"><span class="pre">qom-v0.9.0</span></code> Documentation!</a><ul>
+<li><a class="reference internal" href="#">Welcome to the <cite>qom-v1.0.0</cite> Documentation!</a><ul>
 <li><a class="reference internal" href="#key-features">Key Features</a></li>
-<li><a class="reference internal" href="#available-modules">Available Modules</a></li>
+<li><a class="reference internal" href="#what-s-new-in-v1-0">What’s New in v1.0!</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#installation">Installation</a><ul>
+<li><a class="reference internal" href="#dependencies">Dependencies</a></li>
+<li><a class="reference internal" href="#installing-from-pypi">Installing from PyPI</a></li>
+<li><a class="reference internal" href="#installing-locally">Installing Locally</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#available-modules">Available Modules</a></li>
 <li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
 </ul>
 
@@ -165,7 +323,7 @@ Backed by numerical libraries like NumPy and SciPy, and featuring the highly cus
           <a href="qom.loopers.html" title="qom.loopers package"
              >next</a> |</li>
         <li class="nav-item nav-item-0"><a href="#">The Quantum Optomechanics Toolbox  documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Welcome to the <code class="docutils literal notranslate"><span class="pre">qom-v0.9.0</span></code> Documentation!</a></li> 
+        <li class="nav-item nav-item-this"><a href="">Welcome to the <cite>qom-v1.0.0</cite> Documentation!</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">

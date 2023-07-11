@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>qom.solvers.base module &#8212; The Quantum Optomechanics Toolbox  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/nature.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="qom.solvers.deterministic module" href="qom.solvers.deterministic.html" />
+    <link rel="prev" title="qom.solvers package" href="qom.solvers.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="qom.solvers.deterministic.html" title="qom.solvers.deterministic module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="qom.solvers.html" title="qom.solvers package"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">The Quantum Optomechanics Toolbox  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="qom.solvers.html" accesskey="U">qom.solvers package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">qom.solvers.base module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-qom.solvers.base">
+<span id="qom-solvers-base-module"></span><h1>qom.solvers.base module<a class="headerlink" href="#module-qom.solvers.base" title="Permalink to this heading">¶</a></h1>
+<p>Base module for solver functions.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="qom.solvers.base.get_all_times">
+<span class="sig-prename descclassname"><span class="pre">qom.solvers.base.</span></span><span class="sig-name descname"><span class="pre">get_all_times</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.base.get_all_times" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to obtain all times.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>params</strong> (<em>dict</em>) – <dl>
+<dt>Parameters of the solver. Required options are:</dt><dd><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>key</p></th>
+<th class="head"><p>value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>’t_min’</p></td>
+<td><p>(<em>float</em>) minimum time at which integration starts.</p></td>
+</tr>
+<tr class="row-odd"><td><p>’t_max’</p></td>
+<td><p>(<em>float</em>) maximum time at which integration stops.</p></td>
+</tr>
+<tr class="row-even"><td><p>’t_dim’</p></td>
+<td><p>(<em>int</em>) number of values from <cite>‘t_max’</cite> to <cite>‘t_min’</cite>, both inclusive.</p></td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>T</strong> – All times.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qom.solvers.base.validate_As_Coeffs">
+<span class="sig-prename descclassname"><span class="pre">qom.solvers.base.</span></span><span class="sig-name descname"><span class="pre">validate_As_Coeffs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">As</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Coeffs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.base.validate_As_Coeffs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to validate the drift matrices and the coefficients.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>As</strong> (<em>list</em><em> or </em><em>numpy.ndarray</em><em>, </em><em>optional</em>) – Drift matrix.</p></li>
+<li><p><strong>Coeffs</strong> (<em>list</em><em> or </em><em>numpy.ndarray</em><em>, </em><em>optional</em>) – Coefficients of the characteristic equation.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>As</strong> (<em>numpy.ndarray</em>) – Drift matrix.</p></li>
+<li><p><strong>Coeffs</strong> (<em>numpy.ndarray</em>) – Coefficients of the characteristic equation.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qom.solvers.base.validate_Modes_Corrs">
+<span class="sig-prename descclassname"><span class="pre">qom.solvers.base.</span></span><span class="sig-name descname"><span class="pre">validate_Modes_Corrs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Modes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Corrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_modes_required</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_corrs_required</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.base.validate_Modes_Corrs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to validate the modes and correlations.</p>
+<p>At least one of <cite>Modes</cite> or <cite>Corrs</cite> should be non-<cite>None</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Modes</strong> (<em>list</em><em> or </em><em>numpy.ndarray</em><em>, </em><em>optional</em>) – Classical modes with shape <cite>(dim, num_modes)</cite>.</p></li>
+<li><p><strong>Corrs</strong> (<em>list</em><em> or </em><em>numpy.ndarray</em><em>, </em><em>optional</em>) – Quadrature quadrature correlations with shape <cite>(dim, 2 * num_modes, 2 * num_modes)</cite>.</p></li>
+<li><p><strong>is_modes_required</strong> (<em>bool</em><em>, </em><em>optional</em>) – Option to set <cite>Modes</cite> as required.</p></li>
+<li><p><strong>is_corrs_required</strong> (<em>bool</em><em>, </em><em>optional</em>) – Option to set <cite>Corrs</cite> as required.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>Modes</strong> (<em>numpy.ndarray</em>) – Classical modes with shape <cite>(dim, num_modes)</cite>.</p></li>
+<li><p><strong>Corrs</strong> (<em>numpy.ndarray</em>) – Quadrature quadrature correlations with shape <cite>(dim, 2 * num_modes, 2 * num_modes)</cite>.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qom.solvers.base.validate_system">
+<span class="sig-prename descclassname"><span class="pre">qom.solvers.base.</span></span><span class="sig-name descname"><span class="pre">validate_system</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">system</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">required_system_attributes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.base.validate_system" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to validate the required system attributes for a given solver method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>system</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">qom.systems.*</span></code>) – Instance of the system.</p></li>
+<li><p><strong>required_system_attributes</strong> (<em>list</em>) – Required system attributes.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="qom.solvers.html"
+                          title="previous chapter">qom.solvers package</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="qom.solvers.deterministic.html"
+                          title="next chapter">qom.solvers.deterministic module</a></p>
+  </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="qom.solvers.deterministic.html" title="qom.solvers.deterministic module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="qom.solvers.html" title="qom.solvers package"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">The Quantum Optomechanics Toolbox  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="qom.solvers.html" >qom.solvers package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">qom.solvers.base module</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2023, Sampreet Kalita.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
+    </div>
+  </body>
+</html>
