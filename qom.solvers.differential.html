@@ -53,19 +53,19 @@
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qom.solvers.differential.</span></span><span class="sig-name descname"><span class="pre">ODESolver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cb_update</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.differential.ODESolver" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Class to solve ordinary differential equations using <code class="xref py py-class docutils literal notranslate"><span class="pre">scipy.integrate</span></code>.</p>
-<p>Initializes <cite>solver_methods</cite>, <cite>func</cite>, <cite>params</cite>, <cite>integrator</cite> and <cite>updater</cite>.</p>
+<p>Initializes <code class="docutils literal notranslate"><span class="pre">solver_methods</span></code>, <code class="docutils literal notranslate"><span class="pre">func</span></code>, <code class="docutils literal notranslate"><span class="pre">params</span></code>, <code class="docutils literal notranslate"><span class="pre">integrator</span></code> and <code class="docutils literal notranslate"><span class="pre">updater</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>func</strong> (<em>callable</em>) – Function returning the rate equations of the input variables, formatted as <cite>func(t, v, c)</cite>, where <cite>t</cite> is the time at which the integration is performed, <cite>v</cite> is a list of variables and <cite>c</cite> is a list of constants. The output should match the dimension of <cite>v</cite>.</p></li>
-<li><p><strong>params</strong> (<em>dict</em>) – Parameters for the solver. Refer to <code class="docutils literal notranslate"><span class="pre">Notes</span></code> below for all available options.</p></li>
-<li><p><strong>cb_update</strong> (<em>callable</em><em>, </em><em>optional</em>) – Callback function to update status and progress, formatted as <cite>cb_update(status, progress, reset)</cite>, where <cite>status</cite> is a string, <cite>progress</cite> is a float and <cite>reset</cite> is a boolean.</p></li>
+<li><p><strong>func</strong> (<em>callable</em>) – Function returning the rate equations of the input variables, formatted as <code class="docutils literal notranslate"><span class="pre">func(t,</span> <span class="pre">v,</span> <span class="pre">c)</span></code>, where <code class="docutils literal notranslate"><span class="pre">t</span></code> is the time at which the integration is performed, <code class="docutils literal notranslate"><span class="pre">v</span></code> is a list of variables and <code class="docutils literal notranslate"><span class="pre">c</span></code> is a list of constants. The output should match the dimension of <code class="docutils literal notranslate"><span class="pre">v</span></code>.</p></li>
+<li><p><strong>params</strong> (<em>dict</em>) – Parameters for the solver. Refer to <strong>Notes</strong> below for all available options.</p></li>
+<li><p><strong>cb_update</strong> (<em>callable</em><em>, </em><em>optional</em>) – Callback function to update status and progress, formatted as <code class="docutils literal notranslate"><span class="pre">cb_update(status,</span> <span class="pre">progress,</span> <span class="pre">reset)</span></code>, where <code class="docutils literal notranslate"><span class="pre">status</span></code> is a string, <code class="docutils literal notranslate"><span class="pre">progress</span></code> is a float and <code class="docutils literal notranslate"><span class="pre">reset</span></code> is a boolean.</p></li>
 </ul>
 </dd>
 </dl>
 <p class="rubric">Notes</p>
 <dl>
-<dt>The <cite>params</cite> dictionary currently supports the following keys:</dt><dd><table class="docutils align-default">
+<dt>The <code class="docutils literal notranslate"><span class="pre">params</span></code> dictionary currently supports the following keys:</dt><dd><table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>key</p></th>
 <th class="head"><p>value</p></th>
@@ -73,19 +73,19 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>‘show_progress’</p></td>
-<td><p>(<em>bool</em>) option to display the progress of the integration. Default is <cite>False</cite>.</p></td>
+<td><p>(<em>bool</em>) option to display the progress of the integration. Default is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></td>
 </tr>
 <tr class="row-odd"><td><p>‘ode_method’</p></td>
-<td><p>(<em>str</em>) method used to solve the ODEs. Available options are <cite>‘BDF’</cite>, <cite>‘DOP853’</cite>, <cite>‘LSODA’</cite>, <cite>‘Radau’</cite>, <cite>‘RK23’</cite>, <cite>‘RK45’</cite> (fallback), <cite>‘dop853’</cite>, <cite>‘dopri5’</cite>, <cite>‘lsoda’</cite>, <cite>‘vode’</cite> and <cite>‘zvode’</cite> (refer to <code class="xref py py-class docutils literal notranslate"><span class="pre">qom.solvers.ODESolver</span></code>). Default is <cite>‘RK45’</cite>.</p></td>
+<td><p>(<em>str</em>) method used to solve the ODEs. Available options are <code class="docutils literal notranslate"><span class="pre">'BDF'</span></code>, <code class="docutils literal notranslate"><span class="pre">'DOP853'</span></code>, <code class="docutils literal notranslate"><span class="pre">'LSODA'</span></code>, <code class="docutils literal notranslate"><span class="pre">'Radau'</span></code>, <code class="docutils literal notranslate"><span class="pre">'RK23'</span></code>, <code class="docutils literal notranslate"><span class="pre">'RK45'</span></code> (fallback), <code class="docutils literal notranslate"><span class="pre">'dop853'</span></code>, <code class="docutils literal notranslate"><span class="pre">'dopri5'</span></code>, <code class="docutils literal notranslate"><span class="pre">'lsoda'</span></code>, <code class="docutils literal notranslate"><span class="pre">'vode'</span></code> and <code class="docutils literal notranslate"><span class="pre">'zvode'</span></code> (refer to <code class="xref py py-class docutils literal notranslate"><span class="pre">qom.solvers.ODESolver</span></code>). Default is <code class="docutils literal notranslate"><span class="pre">'RK45'</span></code>.</p></td>
 </tr>
 <tr class="row-even"><td><p>‘ode_is_stiff’</p></td>
-<td><p>(<em>bool</em>) option to select whether the integration is a stiff problem or a non-stiff one. Default is <cite>False</cite>.</p></td>
+<td><p>(<em>bool</em>) option to select whether the integration is a stiff problem or a non-stiff one. Default is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></td>
 </tr>
 <tr class="row-odd"><td><p>‘ode_atol’</p></td>
-<td><p>(<em>float</em>) absolute tolerance of the integrator. Default is <cite>1e-12</cite>.</p></td>
+<td><p>(<em>float</em>) absolute tolerance of the integrator. Default is <code class="docutils literal notranslate"><span class="pre">1e-12</span></code>.</p></td>
 </tr>
 <tr class="row-even"><td><p>‘ode_rtol’</p></td>
-<td><p>(<em>float</em>) relative tolerance of the integrator. Default is <cite>1e-6</cite>.</p></td>
+<td><p>(<em>float</em>) relative tolerance of the integrator. Default is <code class="docutils literal notranslate"><span class="pre">1e-6</span></code>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -209,7 +209,7 @@
 <li><p><strong>T</strong> (<em>numpy.ndarray</em>) – Times at which the values are calculated.</p></li>
 <li><p><strong>iv</strong> (<em>numpy.ndarray</em>) – Initial values for the integration.</p></li>
 <li><p><strong>c</strong> (<em>numpy.ndarray</em>) – Constants of the integration.</p></li>
-<li><p><strong>func_c</strong> (<em>callable</em><em>, </em><em>optional</em>) – Function returning the time-dependent constants of the integration, formatted as <cite>func_c(i)</cite>, where <cite>i</cite> is the <em>i</em>-th step of integration.</p></li>
+<li><p><strong>func_c</strong> (<em>callable</em><em>, </em><em>optional</em>) – Function returning the time-dependent constants of the integration, formatted as <code class="docutils literal notranslate"><span class="pre">func_c(i)</span></code>, where <code class="docutils literal notranslate"><span class="pre">i</span></code> is the <em>i</em>-th step of integration.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>

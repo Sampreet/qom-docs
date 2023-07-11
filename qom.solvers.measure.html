@@ -112,12 +112,12 @@
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qom.solvers.measure.</span></span><span class="sig-name descname"><span class="pre">QCMSolver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Modes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Corrs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cb_update</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.measure.QCMSolver" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Class to solve for quantum correlation measures.</p>
-<p>Initializes <cite>Modes</cite>, <cite>Corrs</cite>, <cite>Omega_s</cite> (symplectic matrix), <cite>params</cite> and <cite>updater</cite>.</p>
+<p>Initializes <code class="docutils literal notranslate"><span class="pre">Modes</span></code>, <code class="docutils literal notranslate"><span class="pre">Corrs</span></code>, <code class="docutils literal notranslate"><span class="pre">Omega_s</span></code> (symplectic matrix), <code class="docutils literal notranslate"><span class="pre">params</span></code> and <code class="docutils literal notranslate"><span class="pre">updater</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>Modes</strong> (<em>numpy.ndarray</em>) – Classical modes with shape <cite>(dim, num_modes)</cite>.</p></li>
-<li><p><strong>Corrs</strong> (<em>numpy.ndarray</em>) – Quadrature quadrature correlations with shape <cite>(dim, 2 * num_modes, 2 * num_modes)</cite>.</p></li>
+<li><p><strong>Modes</strong> (<em>numpy.ndarray</em>) – Classical modes with shape <code class="docutils literal notranslate"><span class="pre">(dim,</span> <span class="pre">num_modes)</span></code>.</p></li>
+<li><p><strong>Corrs</strong> (<em>numpy.ndarray</em>) – Quadrature quadrature correlations with shape <code class="docutils literal notranslate"><span class="pre">(dim,</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">num_modes,</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">num_modes)</span></code>.</p></li>
 <li><p><strong>params</strong> (<em>dict</em>) – <dl>
 <dt>Parameters for the solver. Available options are:</dt><dd><table class="docutils align-default">
 <thead>
@@ -127,20 +127,20 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>’show_progress’</p></td>
-<td><p>(<em>bool</em>) option to display the progress of the solver. Default is <cite>False</cite>.</p></td>
+<td><p>(<em>bool</em>) option to display the progress of the solver. Default is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></td>
 </tr>
 <tr class="row-odd"><td><p>’measure_codes’</p></td>
-<td><p>(<em>list</em> or <em>str</em>) codenames of the measures to calculate. Options are <cite>‘discord_G’</cite> for Gaussian quantum discord <a class="footnote-reference brackets" href="#id3" id="id9" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>, <cite>‘entan_ln’</cite> for quantum entanglement (using matrix multiplications, fallback) <a class="footnote-reference brackets" href="#id1" id="id10" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>, <cite>‘entan_ln_2’</cite> for quantum entanglement (using analytical expressions) <a class="footnote-reference brackets" href="#id2" id="id11" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>, <cite>‘sync_c’</cite> for complete quantum synchronization <a class="footnote-reference brackets" href="#id4" id="id12" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a>, <cite>‘sync_p’</cite> for quantum phase synchronization <a class="footnote-reference brackets" href="#id4" id="id13" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a>]). Default is <cite>[‘entan_ln’]</cite>.</p></td>
+<td><p>(<em>list</em> or <em>str</em>) codenames of the measures to calculate. Options are <code class="docutils literal notranslate"><span class="pre">'discord_G'</span></code> for Gaussian quantum discord <a class="footnote-reference brackets" href="#id3" id="id9" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>, <code class="docutils literal notranslate"><span class="pre">'entan_ln'</span></code> for quantum entanglement (using matrix multiplications, fallback) <a class="footnote-reference brackets" href="#id1" id="id10" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>, <code class="docutils literal notranslate"><span class="pre">'entan_ln_2'</span></code> for quantum entanglement (using analytical expressions) <a class="footnote-reference brackets" href="#id2" id="id11" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>, <code class="docutils literal notranslate"><span class="pre">'sync_c'</span></code> for complete quantum synchronization <a class="footnote-reference brackets" href="#id4" id="id12" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a>, <code class="docutils literal notranslate"><span class="pre">'sync_p'</span></code> for quantum phase synchronization <a class="footnote-reference brackets" href="#id4" id="id13" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a>]). Default is <code class="docutils literal notranslate"><span class="pre">['entan_ln']</span></code>.</p></td>
 </tr>
 <tr class="row-even"><td><p>’indices’</p></td>
-<td><p>(<em>list</em> or <em>tuple</em>) indices of the modes as a list or tuple of two integers. Default is <cite>(0, 1)</cite>.</p></td>
+<td><p>(<em>list</em> or <em>tuple</em>) indices of the modes as a list or tuple of two integers. Default is <code class="docutils literal notranslate"><span class="pre">(0,</span> <span class="pre">1)</span></code>.</p></td>
 </tr>
 </tbody>
 </table>
 </dd>
 </dl>
 </p></li>
-<li><p><strong>cb_update</strong> (<em>callable</em><em>, </em><em>optional</em>) – Callback function to update status and progress, formatted as <cite>cb_update(status, progress, reset)</cite>, where <cite>status</cite> is a string, <cite>progress</cite> is a float and <cite>reset</cite> is a boolean.</p></li>
+<li><p><strong>cb_update</strong> (<em>callable</em><em>, </em><em>optional</em>) – Callback function to update status and progress, formatted as <code class="docutils literal notranslate"><span class="pre">cb_update(status,</span> <span class="pre">progress,</span> <span class="pre">reset)</span></code>, where <code class="docutils literal notranslate"><span class="pre">status</span></code> is a string, <code class="docutils literal notranslate"><span class="pre">progress</span></code> is a float and <code class="docutils literal notranslate"><span class="pre">reset</span></code> is a boolean.</p></li>
 </ul>
 </dd>
 </dl>
@@ -252,10 +252,10 @@
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><ul class="simple">
-<li><p><strong>I_1s</strong> (<em>numpy.ndarray</em>) – Determinants of <cite>A</cite>.</p></li>
-<li><p><strong>I_2s</strong> (<em>numpy.ndarray</em>) – Determinants of <cite>B</cite>.</p></li>
-<li><p><strong>I_3s</strong> (<em>numpy.ndarray</em>) – Determinants of <cite>C</cite>.</p></li>
-<li><p><strong>I_4s</strong> (<em>numpy.ndarray</em>) – Determinants of <cite>corrs_modes</cite>.</p></li>
+<li><p><strong>I_1s</strong> (<em>numpy.ndarray</em>) – Determinants of <code class="docutils literal notranslate"><span class="pre">A</span></code>.</p></li>
+<li><p><strong>I_2s</strong> (<em>numpy.ndarray</em>) – Determinants of <code class="docutils literal notranslate"><span class="pre">B</span></code>.</p></li>
+<li><p><strong>I_3s</strong> (<em>numpy.ndarray</em>) – Determinants of <code class="docutils literal notranslate"><span class="pre">C</span></code>.</p></li>
+<li><p><strong>I_4s</strong> (<em>numpy.ndarray</em>) – Determinants of <code class="docutils literal notranslate"><span class="pre">corrs_modes</span></code>.</p></li>
 </ul>
 </p>
 </dd>
@@ -268,7 +268,7 @@
 <dd><p>Method to obtain the each measure.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>Measures</strong> – Measures calculated with shape <cite>(dim, num_measure_codes)</cite>.</p>
+<dd class="field-odd"><p><strong>Measures</strong> – Measures calculated with shape <code class="docutils literal notranslate"><span class="pre">(dim,</span> <span class="pre">num_measure_codes)</span></code>.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>numpy.ndarray</p>
@@ -392,8 +392,8 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>system</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">qom.systems.*</span></code>) – Instance of the system. Requires predefined system method <cite>get_ivc</cite> and <cite>get_A</cite>.</p></li>
-<li><p><strong>modes</strong> (<em>numpy.ndarray</em>) – Final classical modes with shape <cite>(num_modes, )</cite>.</p></li>
+<li><p><strong>system</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">qom.systems.*</span></code>) – Instance of the system. Requires predefined system method <code class="docutils literal notranslate"><span class="pre">get_ivc</span></code> and <code class="docutils literal notranslate"><span class="pre">get_A</span></code>.</p></li>
+<li><p><strong>modes</strong> (<em>numpy.ndarray</em>) – Final classical modes with shape <code class="docutils literal notranslate"><span class="pre">(num_modes,</span> <span class="pre">)</span></code>.</p></li>
 <li><p><strong>t</strong> (<em>numpy.ndarray</em><em>, </em><em>optional</em>) – Final time of the evolution.</p></li>
 <li><p><strong>params</strong> (<em>dict</em>) – <dl>
 <dt>Parameters for the solver. Refer to <code class="xref py py-class docutils literal notranslate"><span class="pre">qom.solvers.deterministic.ODESolver</span></code> for all available options. Additionally available options are:</dt><dd><table class="docutils align-default">
@@ -404,23 +404,23 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>’show_progress’</p></td>
-<td><p>(<em>bool</em>) option to display the progress of the solver. Default is <cite>False</cite>.</p></td>
+<td><p>(<em>bool</em>) option to display the progress of the solver. Default is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></td>
 </tr>
 <tr class="row-odd"><td><p>’num_steps’</p></td>
-<td><p>(<em>int</em>) number of additional time steps to calculate the deviations for Lyapunov exponents. Default value is <cite>1000</cite>.</p></td>
+<td><p>(<em>int</em>) number of additional time steps to calculate the deviations for Lyapunov exponents. Default value is <code class="docutils literal notranslate"><span class="pre">1000</span></code>.</p></td>
 </tr>
 <tr class="row-even"><td><p>’step_size’</p></td>
-<td><p>(<em>float</em>) step size of each time step. Default value is <cite>0.1</cite>.</p></td>
+<td><p>(<em>float</em>) step size of each time step. Default value is <code class="docutils literal notranslate"><span class="pre">0.1</span></code>.</p></td>
 </tr>
 <tr class="row-odd"><td><p>’use_svd’</p></td>
-<td><p>(<em>bool</em>) option to use the singular value decomposition method to calculate the Lyapunov exponents. If <cite>False</cite>, the Gram-Schmidt orthonormalization method is used. Default is <cite>True</cite>.</p></td>
+<td><p>(<em>bool</em>) option to use the singular value decomposition method to calculate the Lyapunov exponents. If <code class="docutils literal notranslate"><span class="pre">False</span></code>, the Gram-Schmidt orthonormalization method is used. Default is <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p></td>
 </tr>
 </tbody>
 </table>
 </dd>
 </dl>
 </p></li>
-<li><p><strong>cb_update</strong> (<em>callable</em><em>, </em><em>optional</em>) – Callback function to update status and progress, formatted as <cite>cb_update(status, progress, reset)</cite>, where <cite>status</cite> is a string, <cite>progress</cite> is a float and <cite>reset</cite> is a boolean.</p></li>
+<li><p><strong>cb_update</strong> (<em>callable</em><em>, </em><em>optional</em>) – Callback function to update status and progress, formatted as <code class="docutils literal notranslate"><span class="pre">cb_update(status,</span> <span class="pre">progress,</span> <span class="pre">reset)</span></code>, where <code class="docutils literal notranslate"><span class="pre">status</span></code> is a string, <code class="docutils literal notranslate"><span class="pre">progress</span></code> is a float and <code class="docutils literal notranslate"><span class="pre">reset</span></code> is a boolean.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -439,21 +439,21 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>Corrs</strong> (<em>numpy.ndarray</em>) – Quadrature quadrature correlations with shape <cite>(dim, 2 * num_modes, 2 * num_modes)</cite>.</p></li>
+<li><p><strong>Corrs</strong> (<em>numpy.ndarray</em>) – Quadrature quadrature correlations with shape <code class="docutils literal notranslate"><span class="pre">(dim,</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">num_modes,</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">num_modes)</span></code>.</p></li>
 <li><p><strong>params</strong> (<em>dict</em>) – Parameters of the solver. Available options are:
 ================    ====================================================
 key                 value
 ================    ====================================================
-‘show_progress’     (<em>bool</em>) option to display the progress of the solver. Default is <cite>False</cite>.
-‘indices’           (<em>list</em> or <em>tuple</em>) indices of the modes as a list, or a tuple of two integers. Default is <cite>[0]</cite>.
+‘show_progress’     (<em>bool</em>) option to display the progress of the solver. Default is <code class="docutils literal notranslate"><span class="pre">False</span></code>.
+‘indices’           (<em>list</em> or <em>tuple</em>) indices of the modes as a list, or a tuple of two integers. Default is <code class="docutils literal notranslate"><span class="pre">[0]</span></code>.
 ‘wigner_xs’         (<em>list</em>) X-axis values.
 ‘wigner_ys’         (<em>list</em>) Y-axis values.
 ================    ====================================================</p></li>
-<li><p><strong>cb_update</strong> (<em>callable</em><em>, </em><em>optional</em>) – Callback function to update status and progress, formatted as <cite>cb_update(status, progress, reset)</cite>, where <cite>status</cite> is a string, <cite>progress</cite> is a float and <cite>reset</cite> is a boolean.</p></li>
+<li><p><strong>cb_update</strong> (<em>callable</em><em>, </em><em>optional</em>) – Callback function to update status and progress, formatted as <code class="docutils literal notranslate"><span class="pre">cb_update(status,</span> <span class="pre">progress,</span> <span class="pre">reset)</span></code>, where <code class="docutils literal notranslate"><span class="pre">status</span></code> is a string, <code class="docutils literal notranslate"><span class="pre">progress</span></code> is a float and <code class="docutils literal notranslate"><span class="pre">reset</span></code> is a boolean.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>Wigners</strong> – Single-mode Wigner distributions of shape <cite>(dim_1, dim_0, p_dim, q_dim)</cite>, where <cite>dim_1</cite> and <cite>dim_0</cite> are the first dimensions of the correlations and the indices respectively.</p>
+<dd class="field-even"><p><strong>Wigners</strong> – Single-mode Wigner distributions of shape <code class="docutils literal notranslate"><span class="pre">(dim_1,</span> <span class="pre">dim_0,</span> <span class="pre">p_dim,</span> <span class="pre">q_dim)</span></code>, where <code class="docutils literal notranslate"><span class="pre">dim_1</span></code> and <code class="docutils literal notranslate"><span class="pre">dim_0</span></code> are the first dimensions of the correlations and the indices respectively.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>numpy.ndarray</p>
@@ -467,7 +467,7 @@ key                 value
 <dd><p>Method to obtain the average amplitude differences for two specific modes <a class="footnote-reference brackets" href="#id7" id="id21" role="doc-noteref"><span class="fn-bracket">[</span>7<span class="fn-bracket">]</span></a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>Modes</strong> (<em>numpy.ndarray</em>) – The two specific modes with shape <cite>(dim, 2)</cite>.</p>
+<dd class="field-odd"><p><strong>Modes</strong> (<em>numpy.ndarray</em>) – The two specific modes with shape <code class="docutils literal notranslate"><span class="pre">(dim,</span> <span class="pre">2)</span></code>.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>diff_a</strong> – The average amplitude difference.</p>
@@ -484,7 +484,7 @@ key                 value
 <dd><p>Method to obtain the average phase differences for two specific modes <a class="footnote-reference brackets" href="#id4" id="id22" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>Modes</strong> (<em>numpy.ndarray</em>) – The two specific modes with shape <cite>(dim, 2)</cite>.</p>
+<dd class="field-odd"><p><strong>Modes</strong> (<em>numpy.ndarray</em>) – The two specific modes with shape <code class="docutils literal notranslate"><span class="pre">(dim,</span> <span class="pre">2)</span></code>.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>diff_p</strong> – The average phase difference.</p>
@@ -501,10 +501,10 @@ key                 value
 <dd><p>Method to obtain the bifurcation amplitudes of the modes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>Modes</strong> (<em>numpy.ndarray</em>) – The mode amplitudes in the trajectory with shape <cite>(dim, num_modes)</cite>.</p>
+<dd class="field-odd"><p><strong>Modes</strong> (<em>numpy.ndarray</em>) – The mode amplitudes in the trajectory with shape <code class="docutils literal notranslate"><span class="pre">(dim,</span> <span class="pre">num_modes)</span></code>.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>Amps</strong> – The bifurcation amplitudes of the modes. The first <cite>num_modes</cite> arrays contain the bifurcation amplitudes of the real parts of the modes; the next <cite>num_modes</cite> arrays contain those of the imaginary parts.</p>
+<dd class="field-even"><p><strong>Amps</strong> – The bifurcation amplitudes of the modes. The first <code class="docutils literal notranslate"><span class="pre">num_modes</span></code> arrays contain the bifurcation amplitudes of the real parts of the modes; the next <code class="docutils literal notranslate"><span class="pre">num_modes</span></code> arrays contain those of the imaginary parts.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>list</p>
@@ -521,7 +521,7 @@ key                 value
 <p>where <span class="math notranslate nohighlight">\(\mathcal{O}_{i}\)</span> and <span class="math notranslate nohighlight">\(\mathcal{O}_{j}\)</span> are the corresponding modes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>Modes</strong> (<em>numpy.ndarray</em>) – The two specific modes with shape <cite>(dim, 2)</cite>.</p>
+<dd class="field-odd"><p><strong>Modes</strong> (<em>numpy.ndarray</em>) – The two specific modes with shape <code class="docutils literal notranslate"><span class="pre">(dim,</span> <span class="pre">2)</span></code>.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>corr_P</strong> – Pearson correlation coefficient.</p>
@@ -605,9 +605,9 @@ key                 value
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>system</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">qom.systems.*</span></code>) – Instance of the system. Requires predefined system method <cite>get_ivc</cite> and the getter for the system measure.</p></li>
-<li><p><strong>Modes</strong> (<em>numpy.ndarray</em>) – Classical modes with shape <cite>(dim, num_modes)</cite>.</p></li>
-<li><p><strong>T</strong> (<em>numpy.ndarray</em><em>, </em><em>optional</em>) – Times with shape <cite>(dim, )</cite>.</p></li>
+<li><p><strong>system</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">qom.systems.*</span></code>) – Instance of the system. Requires predefined system method <code class="docutils literal notranslate"><span class="pre">get_ivc</span></code> and the getter for the system measure.</p></li>
+<li><p><strong>Modes</strong> (<em>numpy.ndarray</em>) – Classical modes with shape <code class="docutils literal notranslate"><span class="pre">(dim,</span> <span class="pre">num_modes)</span></code>.</p></li>
+<li><p><strong>T</strong> (<em>numpy.ndarray</em><em>, </em><em>optional</em>) – Times with shape <code class="docutils literal notranslate"><span class="pre">(dim,</span> <span class="pre">)</span></code>.</p></li>
 <li><p><strong>params</strong> (<em>dict</em>) – <dl>
 <dt>Parameters for the solver. Available options are:</dt><dd><table class="docutils align-default">
 <thead>
@@ -617,17 +617,17 @@ key                 value
 </thead>
 <tbody>
 <tr class="row-even"><td><p>’show_progress’</p></td>
-<td><p>(<em>bool</em>) option to display the progress of the solver. Default is <cite>False</cite>.</p></td>
+<td><p>(<em>bool</em>) option to display the progress of the solver. Default is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></td>
 </tr>
 <tr class="row-odd"><td><p>’system_measure_name’</p></td>
-<td><p>(<em>str</em>) name of the system measure to calculate. Requires a callable formatted with the prefix <cite>‘get_’</cite> and arguments <cite>modes</cite>, <cite>c</cite> and <cite>t</cite>. For e.g., <cite>get_A(modes, c, t)</cite>.</p></td>
+<td><p>(<em>str</em>) name of the system measure to calculate. Requires a callable formatted with the prefix <code class="docutils literal notranslate"><span class="pre">'get_'</span></code> and arguments <code class="docutils literal notranslate"><span class="pre">modes</span></code>, <code class="docutils literal notranslate"><span class="pre">c</span></code> and <code class="docutils literal notranslate"><span class="pre">t</span></code>. For e.g., <code class="docutils literal notranslate"><span class="pre">get_A(modes,</span> <span class="pre">c,</span> <span class="pre">t)</span></code>.</p></td>
 </tr>
 </tbody>
 </table>
 </dd>
 </dl>
 </p></li>
-<li><p><strong>cb_update</strong> (<em>callable</em><em>, </em><em>optional</em>) – Callback function to update status and progress, formatted as <cite>cb_update(status, progress, reset)</cite>, where <cite>status</cite> is a string, <cite>progress</cite> is a float and <cite>reset</cite> is a boolean.</p></li>
+<li><p><strong>cb_update</strong> (<em>callable</em><em>, </em><em>optional</em>) – Callback function to update status and progress, formatted as <code class="docutils literal notranslate"><span class="pre">cb_update(status,</span> <span class="pre">progress,</span> <span class="pre">reset)</span></code>, where <code class="docutils literal notranslate"><span class="pre">status</span></code> is a string, <code class="docutils literal notranslate"><span class="pre">progress</span></code> is a float and <code class="docutils literal notranslate"><span class="pre">reset</span></code> is a boolean.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>

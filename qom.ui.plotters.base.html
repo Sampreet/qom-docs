@@ -54,13 +54,13 @@
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qom.ui.plotters.base.</span></span><span class="sig-name descname"><span class="pre">BaseAxis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_plotter</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.plotters.base.BaseAxis" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Class to interface axes.</p>
-<p>Initializes <cite>bound</cite>, <cite>dim</cite>, <cite>label</cite>, <cite>label_color</cite>, <cite>label_pad</cite>, <cite>limits</cite>, <cite>name</cite>, <cite>scale</cite>, <cite>tick_dim</cite>, <cite>tick_labels</cite>, <cite>tick_pad</cite>, <cite>tick_position</cite>, <cite>ticks</cite>, <cite>ticks_minor</cite>, <cite>unit</cite> and <cite>val</cite>. Inherited objects need to set the other properties individually.</p>
+<p>Initializes <code class="docutils literal notranslate"><span class="pre">bound</span></code>, <code class="docutils literal notranslate"><span class="pre">dim</span></code>, <code class="docutils literal notranslate"><span class="pre">label</span></code>, <code class="docutils literal notranslate"><span class="pre">label_color</span></code>, <code class="docutils literal notranslate"><span class="pre">label_pad</span></code>, <code class="docutils literal notranslate"><span class="pre">limits</span></code>, <code class="docutils literal notranslate"><span class="pre">name</span></code>, <code class="docutils literal notranslate"><span class="pre">scale</span></code>, <code class="docutils literal notranslate"><span class="pre">tick_dim</span></code>, <code class="docutils literal notranslate"><span class="pre">tick_labels</span></code>, <code class="docutils literal notranslate"><span class="pre">tick_pad</span></code>, <code class="docutils literal notranslate"><span class="pre">tick_position</span></code>, <code class="docutils literal notranslate"><span class="pre">ticks</span></code>, <code class="docutils literal notranslate"><span class="pre">ticks_minor</span></code>, <code class="docutils literal notranslate"><span class="pre">unit</span></code> and <code class="docutils literal notranslate"><span class="pre">val</span></code>. Inherited objects need to set the other properties individually.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>axis</strong> ({<cite>‘X’</cite>, <cite>‘Y’</cite>, <cite>‘Z’</cite>, <cite>‘V’</cite>, <cite>‘V_twin’</cite>}) – Name of the axis.</p></li>
+<li><p><strong>axis</strong> ({<code class="docutils literal notranslate"><span class="pre">'X'</span></code>, <code class="docutils literal notranslate"><span class="pre">'Y'</span></code>, <code class="docutils literal notranslate"><span class="pre">'Z'</span></code>, <code class="docutils literal notranslate"><span class="pre">'V'</span></code>, <code class="docutils literal notranslate"><span class="pre">'V_twin'</span></code>}) – Name of the axis.</p></li>
 <li><p><strong>params</strong> (<em>dict</em><em> or </em><em>list</em>) – Parameters of the axis as a list of values, or a dictionary. Refer to <a class="reference internal" href="#qom.ui.plotters.base.BasePlotter" title="qom.ui.plotters.base.BasePlotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.ui.plotters.base.BasePlotter</span></code></a> for currently supported keys.</p></li>
-<li><p><strong>params_plotter</strong> (<em>dict</em>) – Parameters for the plotter. Refer to <code class="docutils literal notranslate"><span class="pre">Notes</span></code> of <a class="reference internal" href="#qom.ui.plotters.base.BasePlotter" title="qom.ui.plotters.base.BasePlotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.ui.plotters.base.BasePlotter</span></code></a> for all available options.</p></li>
+<li><p><strong>params_plotter</strong> (<em>dict</em>) – Parameters for the plotter. Refer to <strong>Notes</strong> of <a class="reference internal" href="#qom.ui.plotters.base.BasePlotter" title="qom.ui.plotters.base.BasePlotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.ui.plotters.base.BasePlotter</span></code></a> for all available options.</p></li>
 </ul>
 </dd>
 </dl>
@@ -74,7 +74,7 @@
 <li><p><strong>mini</strong> (<em>int</em>) – Minimum value of the range.</p></li>
 <li><p><strong>maxi</strong> (<em>int</em>) – Maximum value of the range.</p></li>
 <li><p><strong>dim</strong> (<em>int</em>) – Number of elements to consider.</p></li>
-<li><p><strong>scale</strong> ({<cite>‘linear’</cite>, <cite>‘log’</cite>}) – Step scale for the values.</p></li>
+<li><p><strong>scale</strong> ({<code class="docutils literal notranslate"><span class="pre">'linear'</span></code>, <code class="docutils literal notranslate"><span class="pre">'log'</span></code>}) – Step scale for the values.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -104,12 +104,12 @@
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qom.ui.plotters.base.</span></span><span class="sig-name descname"><span class="pre">BasePlotter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cb_update</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.plotters.base.BasePlotter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Class to interface plotters.</p>
-<p>Initializes <cite>axes</cite>, <cite>bins</cite>, <cite>params</cite> and <cite>updater</cite>.</p>
+<p>Initializes <code class="docutils literal notranslate"><span class="pre">axes</span></code>, <code class="docutils literal notranslate"><span class="pre">bins</span></code>, <code class="docutils literal notranslate"><span class="pre">params</span></code> and <code class="docutils literal notranslate"><span class="pre">updater</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>axes</strong> (<em>dict</em>) – <dl>
-<dt>Axes for the plot containing one or more keys for the axes (<cite>‘X’</cite>, ‘Y’ or ‘Z’), each either a list of values, or dictionary containing the following keys (arranged in the descending order of their priorities):</dt><dd><table class="docutils align-default">
+<dt>Axes for the plot containing one or more keys for the axes (<code class="docutils literal notranslate"><span class="pre">'X'</span></code>, ‘Y’ or ‘Z’), each either a list of values, or dictionary containing the following keys (arranged in the descending order of their priorities):</dt><dd><table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>key</p></th>
 <th class="head"><p>value</p></th>
@@ -120,19 +120,19 @@
 <td><p>(<em>str</em>) name of the parameter to loop. Its value defaults to the axis name in lower case if the axis is a sequence of values and not a dictionary.</p></td>
 </tr>
 <tr class="row-odd"><td><p>’val’</p></td>
-<td><p>(<em>list</em> or <em>numpy.ndarray</em>) values of the parameter. The remaining keys are not checked if its value is given. Otherwise, the values of <cite>‘min’</cite>, <cite>‘max’</cite>, <cite>‘dim’</cite> and <cite>‘scale’</cite> are used to obtain <cite>‘val’</cite>.</p></td>
+<td><p>(<em>list</em> or <em>numpy.ndarray</em>) values of the parameter. The remaining keys are not checked if its value is given. Otherwise, the values of <code class="docutils literal notranslate"><span class="pre">'min'</span></code>, <code class="docutils literal notranslate"><span class="pre">'max'</span></code>, <code class="docutils literal notranslate"><span class="pre">'dim'</span></code> and <code class="docutils literal notranslate"><span class="pre">'scale'</span></code> are used to obtain <code class="docutils literal notranslate"><span class="pre">'val'</span></code>.</p></td>
 </tr>
 <tr class="row-even"><td><p>’min’</p></td>
-<td><p>(<em>float</em>) minimum value of the parameter. Default is <cite>-5.0</cite>.</p></td>
+<td><p>(<em>float</em>) minimum value of the parameter. Default is <code class="docutils literal notranslate"><span class="pre">-5.0</span></code>.</p></td>
 </tr>
 <tr class="row-odd"><td><p>’max’</p></td>
-<td><p>(<em>float</em>) maximum value of the parameter. Default is <cite>5.0</cite>.</p></td>
+<td><p>(<em>float</em>) maximum value of the parameter. Default is <code class="docutils literal notranslate"><span class="pre">5.0</span></code>.</p></td>
 </tr>
 <tr class="row-even"><td><p>’dim’</p></td>
-<td><p>(<em>int</em>) number of values from ‘min’ to ‘max’, both inclusive. Default is <cite>101</cite>.</p></td>
+<td><p>(<em>int</em>) number of values from ‘min’ to ‘max’, both inclusive. Default is <code class="docutils literal notranslate"><span class="pre">101</span></code>.</p></td>
 </tr>
 <tr class="row-odd"><td><p>’scale’</p></td>
-<td><p>(<em>str</em>) step scale of the values. Options are <cite>‘log’</cite> for logarithmic and <cite>‘linear’</cite> for linear. Default is <cite>‘linear’</cite></p></td>
+<td><p>(<em>str</em>) step scale of the values. Options are <code class="docutils literal notranslate"><span class="pre">'log'</span></code> for logarithmic and <code class="docutils literal notranslate"><span class="pre">'linear'</span></code> for linear. Default is <code class="docutils literal notranslate"><span class="pre">'linear'</span></code></p></td>
 </tr>
 </tbody>
 </table>
@@ -148,13 +148,13 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>’annotations’</p></td>
-<td><p>(<em>list</em>) annotation dictionaries for the plot. Refer to <code class="docutils literal notranslate"><span class="pre">Notes</span></code> below for currently supported keys.</p></td>
+<td><p>(<em>list</em>) annotation dictionaries for the plot. Refer to <strong>Notes</strong> below for currently supported keys.</p></td>
 </tr>
 <tr class="row-odd"><td><p>’bins’</p></td>
-<td><p>(<em>int</em>) number of colors for the plot. Default is <cite>11</cite>.</p></td>
+<td><p>(<em>int</em>) number of colors for the plot. Default is <code class="docutils literal notranslate"><span class="pre">11</span></code>.</p></td>
 </tr>
 <tr class="row-even"><td><p>’cbar_position’</p></td>
-<td><p>(<em>str</em>) position of the color bar. Options are <cite>‘top’</cite>, <cite>‘right’</cite>, <cite>‘bottom’</cite> and <cite>‘left’</cite>. Default is <cite>‘right’</cite>.</p></td>
+<td><p>(<em>str</em>) position of the color bar. Options are <code class="docutils literal notranslate"><span class="pre">'top'</span></code>, <code class="docutils literal notranslate"><span class="pre">'right'</span></code>, <code class="docutils literal notranslate"><span class="pre">'bottom'</span></code> and <code class="docutils literal notranslate"><span class="pre">'left'</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">'right'</span></code>.</p></td>
 </tr>
 <tr class="row-odd"><td><p>’cbar_tick_labels’</p></td>
 <td><p>(<em>list</em>) tick labels of the color bar.</p></td>
@@ -163,71 +163,71 @@
 <td><p>(<em>list</em>) ticks of the color bar.</p></td>
 </tr>
 <tr class="row-odd"><td><p>’cbar_title’</p></td>
-<td><p>(<em>str</em>) title of the color bar. Default is <cite>‘’</cite>.</p></td>
+<td><p>(<em>str</em>) title of the color bar. Default is <code class="docutils literal notranslate"><span class="pre">''</span></code>.</p></td>
 </tr>
 <tr class="row-even"><td><p>’cbar_x_label’</p></td>
-<td><p>(<em>str</em>) X-axis label of the color bar. Default is <cite>‘’</cite>.</p></td>
+<td><p>(<em>str</em>) X-axis label of the color bar. Default is <code class="docutils literal notranslate"><span class="pre">''</span></code>.</p></td>
 </tr>
 <tr class="row-odd"><td><p>’cbar_y_label’</p></td>
-<td><p>(<em>str</em>) Y-axis label of the color bar. Default is <cite>‘’</cite>.</p></td>
+<td><p>(<em>str</em>) Y-axis label of the color bar. Default is <code class="docutils literal notranslate"><span class="pre">''</span></code>.</p></td>
 </tr>
 <tr class="row-even"><td><p>’colors’</p></td>
 <td><p>(<em>list</em>) colors of the 1D plots. If not provided, the palette colors are used.</p></td>
 </tr>
 <tr class="row-odd"><td><p>’component’</p></td>
-<td><p>(<em>str</em>) component of complex value. Options are <cite>‘real’</cite> or <cite>‘imag’</cite>. Default is <cite>‘real’</cite>.</p></td>
+<td><p>(<em>str</em>) component of complex value. Options are <code class="docutils literal notranslate"><span class="pre">'real'</span></code> or <code class="docutils literal notranslate"><span class="pre">'imag'</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">'real'</span></code>.</p></td>
 </tr>
 <tr class="row-even"><td><p>’font_math’</p></td>
-<td><p>(<em>str</em>) math renderer for fonts. Options are <cite>‘dejavusans’</cite>, <cite>‘dejavuserif’</cite>, <cite>‘cm’</cite>, <cite>‘stix’</cite> and <cite>‘stixsans’</cite>. Default is <cite>‘cm’</cite>.</p></td>
+<td><p>(<em>str</em>) math renderer for fonts. Options are <code class="docutils literal notranslate"><span class="pre">'dejavusans'</span></code>, <code class="docutils literal notranslate"><span class="pre">'dejavuserif'</span></code>, <code class="docutils literal notranslate"><span class="pre">'cm'</span></code>, <code class="docutils literal notranslate"><span class="pre">'stix'</span></code> and <code class="docutils literal notranslate"><span class="pre">'stixsans'</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">'cm'</span></code>.</p></td>
 </tr>
 <tr class="row-odd"><td><p>’height’</p></td>
-<td><p>(<em>float</em>) height of the plot. Default is <cite>5.0</cite>.</p></td>
+<td><p>(<em>float</em>) height of the plot. Default is <code class="docutils literal notranslate"><span class="pre">5.0</span></code>.</p></td>
 </tr>
 <tr class="row-even"><td><p>’legend_labels’</p></td>
 <td><p>(<em>list</em>) labels of the legend. If a twin axis exists, the legend is not displayed.</p></td>
 </tr>
 <tr class="row-odd"><td><p>’legend_location’</p></td>
-<td><p>(<em>bool</em>) location of the legend. Options are <cite>‘best’</cite>, <cite>‘center’</cite>, <cite>‘center left’</cite>, <cite>‘center right’</cite>, <cite>‘lower center’</cite>, <cite>‘lower left’</cite>, <cite>‘lower right’</cite>, <cite>‘right’</cite>, <cite>‘upper center’</cite>, <cite>‘upper left’</cite> and <cite>‘upper right’</cite>. Default is <cite>‘best’</cite>.</p></td>
+<td><p>(<em>bool</em>) location of the legend. Options are <code class="docutils literal notranslate"><span class="pre">'best'</span></code>, <code class="docutils literal notranslate"><span class="pre">'center'</span></code>, <code class="docutils literal notranslate"><span class="pre">'center</span> <span class="pre">left'</span></code>, <code class="docutils literal notranslate"><span class="pre">'center</span> <span class="pre">right'</span></code>, <code class="docutils literal notranslate"><span class="pre">'lower</span> <span class="pre">center'</span></code>, <code class="docutils literal notranslate"><span class="pre">'lower</span> <span class="pre">left'</span></code>, <code class="docutils literal notranslate"><span class="pre">'lower</span> <span class="pre">right'</span></code>, <code class="docutils literal notranslate"><span class="pre">'right'</span></code>, <code class="docutils literal notranslate"><span class="pre">'upper</span> <span class="pre">center'</span></code>, <code class="docutils literal notranslate"><span class="pre">'upper</span> <span class="pre">left'</span></code> and <code class="docutils literal notranslate"><span class="pre">'upper</span> <span class="pre">right'</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">'best'</span></code>.</p></td>
 </tr>
 <tr class="row-even"><td><p>’palette’</p></td>
-<td><p>(<em>str</em>) color palette of the plot. Refer to <cite>default_palettes</cite> attribute for available options. Default is <cite>‘RdBu_r’</cite>.</p></td>
+<td><p>(<em>str</em>) color palette of the plot. Refer to <code class="docutils literal notranslate"><span class="pre">default_palettes</span></code> attribute for available options. Default is <code class="docutils literal notranslate"><span class="pre">'RdBu_r'</span></code>.</p></td>
 </tr>
 <tr class="row-odd"><td><p>’show_cbar’</p></td>
-<td><p>(<em>bool</em>) option to show the color bar. Default is <cite>False</cite>.</p></td>
+<td><p>(<em>bool</em>) option to show the color bar. Default is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></td>
 </tr>
 <tr class="row-even"><td><p>’show_legend’</p></td>
-<td><p>(<em>bool</em>) option to show the legend. Default is <cite>False</cite>.</p></td>
+<td><p>(<em>bool</em>) option to show the legend. Default is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></td>
 </tr>
 <tr class="row-odd"><td><p>’sizes’</p></td>
-<td><p>(<em>list</em>) size values for 1D plots. If not provided, a default value of <cite>1.0</cite> is used for each plot.</p></td>
+<td><p>(<em>list</em>) size values for 1D plots. If not provided, a default value of <code class="docutils literal notranslate"><span class="pre">1.0</span></code> is used for each plot.</p></td>
 </tr>
 <tr class="row-even"><td><p>’styles’</p></td>
-<td><p>(<em>list</em>) styles for 1D plots. If not provided, styles are set serially from <cite>default_linestyles</cite> (for line plots) and <cite>default_markers</cite> (for scatter plots) attributes.</p></td>
+<td><p>(<em>list</em>) styles for 1D plots. If not provided, styles are set serially from <code class="docutils literal notranslate"><span class="pre">default_linestyles</span></code> (for line plots) and <code class="docutils literal notranslate"><span class="pre">default_markers</span></code> (for scatter plots) attributes.</p></td>
 </tr>
 <tr class="row-odd"><td><p>’type’</p></td>
-<td><p>(<em>str</em>) type of the plot. Refer to <code class="docutils literal notranslate"><span class="pre">Notes</span></code> below for all available options. Default is <cite>‘lines’</cite>.</p></td>
+<td><p>(<em>str</em>) type of the plot. Refer to <strong>Notes</strong> below for all available options. Default is <code class="docutils literal notranslate"><span class="pre">'lines'</span></code>.</p></td>
 </tr>
 <tr class="row-even"><td><p>’view_aspect’</p></td>
-<td><p>(<em>list</em>) aspect ratios of the 3D axes. Default is <cite>[1.0, 1.0, 1.0]</cite>.</p></td>
+<td><p>(<em>list</em>) aspect ratios of the 3D axes. Default is <code class="docutils literal notranslate"><span class="pre">[1.0,</span> <span class="pre">1.0,</span> <span class="pre">1.0]</span></code>.</p></td>
 </tr>
 <tr class="row-odd"><td><p>’view_elevation’</p></td>
-<td><p>(<em>float</em>) elevation for 3D view on Z-axis. Default is <cite>32.0</cite>.</p></td>
+<td><p>(<em>float</em>) elevation for 3D view on Z-axis. Default is <code class="docutils literal notranslate"><span class="pre">32.0</span></code>.</p></td>
 </tr>
 <tr class="row-even"><td><p>’view_rotation’</p></td>
-<td><p>(<em>float</em>) rotation for 3D view about Z-axis in degrees. Default is <cite>215.0</cite>.</p></td>
+<td><p>(<em>float</em>) rotation for 3D view about Z-axis in degrees. Default is <code class="docutils literal notranslate"><span class="pre">215.0</span></code>.</p></td>
 </tr>
 <tr class="row-odd"><td><p>’vertical_spans’</p></td>
-<td><p>(<em>list</em>) vertical background spanning dictionaries for the plot. Refer to <code class="docutils literal notranslate"><span class="pre">Notes</span></code> below for currently supported keys.</p></td>
+<td><p>(<em>list</em>) vertical background spanning dictionaries for the plot. Refer to <strong>Notes</strong> below for currently supported keys.</p></td>
 </tr>
 <tr class="row-even"><td><p>’width’</p></td>
-<td><p>(<em>float</em>) width of the plot. Default is <cite>‘5.0’</cite>.</p></td>
+<td><p>(<em>float</em>) width of the plot. Default is <code class="docutils literal notranslate"><span class="pre">'5.0'</span></code>.</p></td>
 </tr>
 </tbody>
 </table>
 </dd>
 </dl>
 </p></li>
-<li><p><strong>cb_update</strong> (<em>callable</em>) – Callback function to update status and progress, formatted as <cite>cb_update(status, progress, reset)</cite>, where <cite>status</cite> is a string, <cite>progress</cite> is a float and <cite>reset</cite> is a boolean.</p></li>
+<li><p><strong>cb_update</strong> (<em>callable</em>) – Callback function to update status and progress, formatted as <code class="docutils literal notranslate"><span class="pre">cb_update(status,</span> <span class="pre">progress,</span> <span class="pre">reset)</span></code>, where <code class="docutils literal notranslate"><span class="pre">status</span></code> is a string, <code class="docutils literal notranslate"><span class="pre">progress</span></code> is a float and <code class="docutils literal notranslate"><span class="pre">reset</span></code> is a boolean.</p></li>
 </ul>
 </dd>
 </dl>
@@ -294,7 +294,7 @@
 </tbody>
 </table>
 </dd>
-<dt>The properties of each axis (<cite>‘X’</cite>, <cite>‘Y’</cite>, <cite>‘Z’</cite>, <cite>‘V’</cite> and <cite>‘V_twin’</cite>) can be set by prefixing the specific property with the lower-case name of the axis and an underscore, e.g. <cite>‘v_label’</cite>. Currently supported keys are:</dt><dd><table class="docutils align-default">
+<dt>The properties of each axis (<code class="docutils literal notranslate"><span class="pre">'X'</span></code>, <code class="docutils literal notranslate"><span class="pre">'Y'</span></code>, <code class="docutils literal notranslate"><span class="pre">'Z'</span></code>, <code class="docutils literal notranslate"><span class="pre">'V'</span></code> and <code class="docutils literal notranslate"><span class="pre">'V_twin'</span></code>) can be set by prefixing the specific property with the lower-case name of the axis and an underscore, e.g. <code class="docutils literal notranslate"><span class="pre">'v_label'</span></code>. Currently supported keys are:</dt><dd><table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>key</p></th>
 <th class="head"><p>value</p></th>
@@ -302,13 +302,13 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>‘label’</p></td>
-<td><p>(<em>str</em>) text of the axis label. If not provided, the values of <cite>‘name’</cite> and <cite>‘unit’</cite> are used for the label.</p></td>
+<td><p>(<em>str</em>) text of the axis label. If not provided, the values of <code class="docutils literal notranslate"><span class="pre">'name'</span></code> and <code class="docutils literal notranslate"><span class="pre">'unit'</span></code> are used for the label.</p></td>
 </tr>
 <tr class="row-odd"><td><p>‘label_color’</p></td>
-<td><p>(<em>str</em> or <em>int</em>) color of the axis label as an index from the color palette or a supported color string. Default is <cite>‘k’</cite>.</p></td>
+<td><p>(<em>str</em> or <em>int</em>) color of the axis label as an index from the color palette or a supported color string. Default is <code class="docutils literal notranslate"><span class="pre">'k'</span></code>.</p></td>
 </tr>
 <tr class="row-even"><td><p>‘label_pad’</p></td>
-<td><p>(<em>int</em>) padding of the axis label. Default is <cite>4</cite>.</p></td>
+<td><p>(<em>int</em>) padding of the axis label. Default is <code class="docutils literal notranslate"><span class="pre">4</span></code>.</p></td>
 </tr>
 <tr class="row-odd"><td><p>‘limits’</p></td>
 <td><p>(<em>list</em>) minimum and maximum limits for the axis.</p></td>
@@ -317,22 +317,22 @@
 <td><p>(<em>str</em>) display name of the axis.</p></td>
 </tr>
 <tr class="row-odd"><td><p>‘scale’</p></td>
-<td><p>(<em>str</em>) step scale for the values. Options are <cite>‘linear’</cite> (fallback) and <cite>‘log’</cite>. Default is <cite>‘linear’</cite>.</p></td>
+<td><p>(<em>str</em>) step scale for the values. Options are <code class="docutils literal notranslate"><span class="pre">'linear'</span></code> (fallback) and <code class="docutils literal notranslate"><span class="pre">'log'</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">'linear'</span></code>.</p></td>
 </tr>
 <tr class="row-even"><td><p>‘tick_color’</p></td>
-<td><p>(<em>str</em> or <em>int</em>) color of the axis label as an index from the color palette or a supported color string. Default is <cite>‘k’</cite>.</p></td>
+<td><p>(<em>str</em> or <em>int</em>) color of the axis label as an index from the color palette or a supported color string. Default is <code class="docutils literal notranslate"><span class="pre">'k'</span></code>.</p></td>
 </tr>
 <tr class="row-odd"><td><p>‘tick_dim’</p></td>
-<td><p>(<em>float</em>) dimension of the ticks. Default is <cite>‘5’</cite>.</p></td>
+<td><p>(<em>float</em>) dimension of the ticks. Default is <code class="docutils literal notranslate"><span class="pre">'5'</span></code>.</p></td>
 </tr>
 <tr class="row-even"><td><p>‘tick_labels’</p></td>
 <td><p>(<em>list</em>) tick labels of the plots.</p></td>
 </tr>
 <tr class="row-odd"><td><p>‘tick_pad’</p></td>
-<td><p>(<em>int</em>) padding of the tick labels. Default is <cite>‘8’</cite>.</p></td>
+<td><p>(<em>int</em>) padding of the tick labels. Default is <code class="docutils literal notranslate"><span class="pre">'8'</span></code>.</p></td>
 </tr>
 <tr class="row-even"><td><p>‘tick_position’</p></td>
-<td><p>(<em>str</em>) position of ticks on the plot. Options are <cite>‘both-in’</cite>, <cite>‘both-out’</cite>, <cite>‘bottom-in’</cite>, <cite>‘bottom-out’</cite>, <cite>‘left-in’</cite>, <cite>‘left-out’</cite>, <cite>‘right-in’</cite>, <cite>‘right-out’</cite>, <cite>‘top-in’</cite> and <cite>‘top-out’</cite>. Default is <cite>‘both-in’</cite>.</p></td>
+<td><p>(<em>str</em>) position of ticks on the plot. Options are <code class="docutils literal notranslate"><span class="pre">'both-in'</span></code>, <code class="docutils literal notranslate"><span class="pre">'both-out'</span></code>, <code class="docutils literal notranslate"><span class="pre">'bottom-in'</span></code>, <code class="docutils literal notranslate"><span class="pre">'bottom-out'</span></code>, <code class="docutils literal notranslate"><span class="pre">'left-in'</span></code>, <code class="docutils literal notranslate"><span class="pre">'left-out'</span></code>, <code class="docutils literal notranslate"><span class="pre">'right-in'</span></code>, <code class="docutils literal notranslate"><span class="pre">'right-out'</span></code>, <code class="docutils literal notranslate"><span class="pre">'top-in'</span></code> and <code class="docutils literal notranslate"><span class="pre">'top-out'</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">'both-in'</span></code>.</p></td>
 </tr>
 <tr class="row-odd"><td><p>‘ticks’</p></td>
 <td><p>(<em>list</em>) ticks of the plots.</p></td>
@@ -346,7 +346,7 @@
 </tbody>
 </table>
 </dd>
-<dt>The font properties of each text type (<cite>‘label’</cite>, <cite>legend’</cite>, <cite>‘tick’</cite> and <cite>‘title’</cite>) can be set by prefixing the specific property with the lower-case name of the type and an underscore, e.g. <cite>‘label_font_family’</cite>. Currently supported keys are:</dt><dd><table class="docutils align-default">
+<dt>The font properties of each text type (<code class="docutils literal notranslate"><span class="pre">'label'</span></code>, <code class="docutils literal notranslate"><span class="pre">legend'</span></code>, <code class="docutils literal notranslate"><span class="pre">'tick'</span></code> and <code class="docutils literal notranslate"><span class="pre">'title'</span></code>) can be set by prefixing the specific property with the lower-case name of the type and an underscore, e.g. <code class="docutils literal notranslate"><span class="pre">'label_font_family'</span></code>. Currently supported keys are:</dt><dd><table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>key</p></th>
 <th class="head"><p>value</p></th>
@@ -354,27 +354,27 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>‘font_family’</p></td>
-<td><p>(<em>str</em>) font family for the labels. Default is <cite>‘Times New Roman’</cite>.</p></td>
+<td><p>(<em>str</em>) font family for the labels. Default is <code class="docutils literal notranslate"><span class="pre">'Times</span> <span class="pre">New</span> <span class="pre">Roman'</span></code>.</p></td>
 </tr>
 <tr class="row-odd"><td><p>‘font_size’</p></td>
-<td><p>(<em>float</em>) font size for the labels. Default is <cite>20.0</cite> for <cite>‘label’</cite> and <cite>‘title’</cite> and <cite>16.0</cite> for <cite>‘legend’</cite> and <cite>‘tick’</cite>.</p></td>
+<td><p>(<em>float</em>) font size for the labels. Default is <code class="docutils literal notranslate"><span class="pre">20.0</span></code> for <code class="docutils literal notranslate"><span class="pre">'label'</span></code> and <code class="docutils literal notranslate"><span class="pre">'title'</span></code> and <code class="docutils literal notranslate"><span class="pre">16.0</span></code> for <code class="docutils literal notranslate"><span class="pre">'legend'</span></code> and <code class="docutils literal notranslate"><span class="pre">'tick'</span></code>.</p></td>
 </tr>
 <tr class="row-even"><td><p>‘font_stretch’</p></td>
-<td><p>(<em>int</em>) font stretch for the labels. Default is <cite>500</cite>.</p></td>
+<td><p>(<em>int</em>) font stretch for the labels. Default is <code class="docutils literal notranslate"><span class="pre">500</span></code>.</p></td>
 </tr>
 <tr class="row-odd"><td><p>‘font_style’</p></td>
-<td><p>(<em>str</em>) font style for the labels. Default is <cite>‘normal’</cite>.</p></td>
+<td><p>(<em>str</em>) font style for the labels. Default is <code class="docutils literal notranslate"><span class="pre">'normal'</span></code>.</p></td>
 </tr>
 <tr class="row-even"><td><p>‘font_variant’</p></td>
-<td><p>(<em>str</em>) font variant for the labels. Default is <cite>‘normal’</cite>.</p></td>
+<td><p>(<em>str</em>) font variant for the labels. Default is <code class="docutils literal notranslate"><span class="pre">'normal'</span></code>.</p></td>
 </tr>
 <tr class="row-odd"><td><p>‘font_weight’</p></td>
-<td><p>(<em>int</em>) font weightt for the labels. Default is <cite>500</cite>.</p></td>
+<td><p>(<em>int</em>) font weightt for the labels. Default is <code class="docutils literal notranslate"><span class="pre">500</span></code>.</p></td>
 </tr>
 </tbody>
 </table>
 </dd>
-<dt>The <cite>‘annotations’</cite> array currently supports dictionaries with the following keys:</dt><dd><table class="docutils align-default">
+<dt>The <code class="docutils literal notranslate"><span class="pre">'annotations'</span></code> array currently supports dictionaries with the following keys:</dt><dd><table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>key</p></th>
 <th class="head"><p>value</p></th>
@@ -382,24 +382,24 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>‘text’</p></td>
-<td><p>(<em>str</em>) the text. Default is <cite>‘’</cite>.</p></td>
+<td><p>(<em>str</em>) the text. Default is <code class="docutils literal notranslate"><span class="pre">''</span></code>.</p></td>
 </tr>
 <tr class="row-odd"><td><p>‘xy’</p></td>
-<td><p>(<em>tuple</em>) tuple of positions of the text on the figure in fractions. Default is <cite>(0.2, 0.8)</cite>.</p></td>
+<td><p>(<em>tuple</em>) tuple of positions of the text on the figure in fractions. Default is <code class="docutils literal notranslate"><span class="pre">(0.2,</span> <span class="pre">0.8)</span></code>.</p></td>
 </tr>
 <tr class="row-even"><td><p>‘color’</p></td>
-<td><p>(<em>str</em> or <em>int</em>) color of the axis label as an index from the color palette or a supported color string. Default is <cite>‘k’</cite>.</p></td>
+<td><p>(<em>str</em> or <em>int</em>) color of the axis label as an index from the color palette or a supported color string. Default is <code class="docutils literal notranslate"><span class="pre">'k'</span></code>.</p></td>
 </tr>
 <tr class="row-odd"><td><p>‘font_dict_type’</p></td>
-<td><p>(<em>str</em>) the type of font dictionary. Options are <cite>‘label’</cite>, <cite>‘legend’</cite>, <cite>‘tick’</cite> and <cite>‘title’</cite>. Default is <cite>‘label’</cite>.</p></td>
+<td><p>(<em>str</em>) the type of font dictionary. Options are <code class="docutils literal notranslate"><span class="pre">'label'</span></code>, <code class="docutils literal notranslate"><span class="pre">'legend'</span></code>, <code class="docutils literal notranslate"><span class="pre">'tick'</span></code> and <code class="docutils literal notranslate"><span class="pre">'title'</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">'label'</span></code>.</p></td>
 </tr>
 <tr class="row-even"><td><p>‘orientation’</p></td>
-<td><p>(<em>str</em>) the orientation of the text. Options are <cite>‘horizontal’</cite> and <cite>‘vertical’</cite>. Default is <cite>‘horizontal’</cite>.</p></td>
+<td><p>(<em>str</em>) the orientation of the text. Options are <code class="docutils literal notranslate"><span class="pre">'horizontal'</span></code> and <code class="docutils literal notranslate"><span class="pre">'vertical'</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">'horizontal'</span></code>.</p></td>
 </tr>
 </tbody>
 </table>
 </dd>
-<dt>The <cite>‘vertical_spans’</cite> array currently supports dictionaries with the following keys:</dt><dd><table class="docutils align-default">
+<dt>The <code class="docutils literal notranslate"><span class="pre">'vertical_spans'</span></code> array currently supports dictionaries with the following keys:</dt><dd><table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>key</p></th>
 <th class="head"><p>value</p></th>
@@ -407,13 +407,13 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>‘limits’</p></td>
-<td><p>(<em>list</em>) the minimum and maximum X-axis values as a tuple. Default is <cite>(0.0, 0.0)</cite>.</p></td>
+<td><p>(<em>list</em>) the minimum and maximum X-axis values as a tuple. Default is <code class="docutils literal notranslate"><span class="pre">(0.0,</span> <span class="pre">0.0)</span></code>.</p></td>
 </tr>
 <tr class="row-odd"><td><p>‘color’</p></td>
-<td><p>(<em>str</em> or <em>int</em>) color of the axis label as an index from the color palette or a supported color string. Default is <cite>‘k’</cite>.</p></td>
+<td><p>(<em>str</em> or <em>int</em>) color of the axis label as an index from the color palette or a supported color string. Default is <code class="docutils literal notranslate"><span class="pre">'k'</span></code>.</p></td>
 </tr>
 <tr class="row-even"><td><p>‘alpha’</p></td>
-<td><p>(<em>float</em>) the opacity value. Default is <cite>0.25</cite>.</p></td>
+<td><p>(<em>float</em>) the opacity value. Default is <code class="docutils literal notranslate"><span class="pre">0.25</span></code>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -421,7 +421,7 @@
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Color palettes and font properties are currently backed by <cite>matplotlib</cite>.</p>
+<p>Color palettes and font properties are currently backed by <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>.</p>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="qom.ui.plotters.base.BasePlotter._get_font_dict">
@@ -431,7 +431,7 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>params</strong> (<em>dict</em>) – Plot parameters passed.</p></li>
-<li><p><strong>font_dict_type</strong> ({<cite>‘label’</cite>, <cite>legend’</cite>, <cite>‘tick’</cite>, <cite>‘title’</cite>}) – Type of font dictionary.</p></li>
+<li><p><strong>font_dict_type</strong> ({<code class="docutils literal notranslate"><span class="pre">'label'</span></code>, <code class="docutils literal notranslate"><span class="pre">legend'</span></code>, <code class="docutils literal notranslate"><span class="pre">'tick'</span></code>, <code class="docutils literal notranslate"><span class="pre">'title'</span></code>}) – Type of font dictionary.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -479,7 +479,7 @@
 <dl class="py attribute">
 <dt class="sig sig-object py" id="qom.ui.plotters.base.BasePlotter.default_palettes">
 <span class="sig-name descname"><span class="pre">default_palettes</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['Accent',</span> <span class="pre">'Accent_r',</span> <span class="pre">'Blues',</span> <span class="pre">'Blues_r',</span> <span class="pre">'BrBG',</span> <span class="pre">'BrBG_r',</span> <span class="pre">'BuGn',</span> <span class="pre">'BuGn_r',</span> <span class="pre">'BuPu',</span> <span class="pre">'BuPu_r',</span> <span class="pre">'CMRmap',</span> <span class="pre">'CMRmap_r',</span> <span class="pre">'Dark2',</span> <span class="pre">'Dark2_r',</span> <span class="pre">'GnBu',</span> <span class="pre">'GnBu_r',</span> <span class="pre">'Greens',</span> <span class="pre">'Greens_r',</span> <span class="pre">'Greys',</span> <span class="pre">'Greys_r',</span> <span class="pre">'OrRd',</span> <span class="pre">'OrRd_r',</span> <span class="pre">'Oranges',</span> <span class="pre">'Oranges_r',</span> <span class="pre">'PRGn',</span> <span class="pre">'PRGn_r',</span> <span class="pre">'Paired',</span> <span class="pre">'Paired_r',</span> <span class="pre">'Pastel1',</span> <span class="pre">'Pastel1_r',</span> <span class="pre">'Pastel2',</span> <span class="pre">'Pastel2_r',</span> <span class="pre">'PiYG',</span> <span class="pre">'PiYG_r',</span> <span class="pre">'PuBu',</span> <span class="pre">'PuBuGn',</span> <span class="pre">'PuBuGn_r',</span> <span class="pre">'PuBu_r',</span> <span class="pre">'PuOr',</span> <span class="pre">'PuOr_r',</span> <span class="pre">'PuRd',</span> <span class="pre">'PuRd_r',</span> <span class="pre">'Purples',</span> <span class="pre">'Purples_r',</span> <span class="pre">'RdBu',</span> <span class="pre">'RdBu_r',</span> <span class="pre">'RdGy',</span> <span class="pre">'RdGy_r',</span> <span class="pre">'RdPu',</span> <span class="pre">'RdPu_r',</span> <span class="pre">'RdYlBu',</span> <span class="pre">'RdYlBu_r',</span> <span class="pre">'RdYlGn',</span> <span class="pre">'RdYlGn_r',</span> <span class="pre">'Reds',</span> <span class="pre">'Reds_r',</span> <span class="pre">'Set1',</span> <span class="pre">'Set1_r',</span> <span class="pre">'Set2',</span> <span class="pre">'Set2_r',</span> <span class="pre">'Set3',</span> <span class="pre">'Set3_r',</span> <span class="pre">'Spectral',</span> <span class="pre">'Spectral_r',</span> <span class="pre">'Wistia',</span> <span class="pre">'Wistia_r',</span> <span class="pre">'YlGn',</span> <span class="pre">'YlGnBu',</span> <span class="pre">'YlGnBu_r',</span> <span class="pre">'YlGn_r',</span> <span class="pre">'YlOrBr',</span> <span class="pre">'YlOrBr_r',</span> <span class="pre">'YlOrRd',</span> <span class="pre">'YlOrRd_r',</span> <span class="pre">'afmhot',</span> <span class="pre">'afmhot_r',</span> <span class="pre">'autumn',</span> <span class="pre">'autumn_r',</span> <span class="pre">'binary',</span> <span class="pre">'binary_r',</span> <span class="pre">'bone',</span> <span class="pre">'bone_r',</span> <span class="pre">'brg',</span> <span class="pre">'brg_r',</span> <span class="pre">'bwr',</span> <span class="pre">'bwr_r',</span> <span class="pre">'cividis',</span> <span class="pre">'cividis_r',</span> <span class="pre">'cool',</span> <span class="pre">'cool_r',</span> <span class="pre">'coolwarm',</span> <span class="pre">'coolwarm_r',</span> <span class="pre">'copper',</span> <span class="pre">'copper_r',</span> <span class="pre">'cubehelix',</span> <span class="pre">'cubehelix_r',</span> <span class="pre">'flag',</span> <span class="pre">'flag_r',</span> <span class="pre">'gist_earth',</span> <span class="pre">'gist_earth_r',</span> <span class="pre">'gist_gray',</span> <span class="pre">'gist_gray_r',</span> <span class="pre">'gist_heat',</span> <span class="pre">'gist_heat_r',</span> <span class="pre">'gist_ncar',</span> <span class="pre">'gist_ncar_r',</span> <span class="pre">'gist_rainbow',</span> <span class="pre">'gist_rainbow_r',</span> <span class="pre">'gist_stern',</span> <span class="pre">'gist_stern_r',</span> <span class="pre">'gist_yarg',</span> <span class="pre">'gist_yarg_r',</span> <span class="pre">'gnuplot',</span> <span class="pre">'gnuplot2',</span> <span class="pre">'gnuplot2_r',</span> <span class="pre">'gnuplot_r',</span> <span class="pre">'gray',</span> <span class="pre">'gray_r',</span> <span class="pre">'hot',</span> <span class="pre">'hot_r',</span> <span class="pre">'hsv',</span> <span class="pre">'hsv_r',</span> <span class="pre">'icefire',</span> <span class="pre">'icefire_r',</span> <span class="pre">'inferno',</span> <span class="pre">'inferno_r',</span> <span class="pre">'magma',</span> <span class="pre">'magma_r',</span> <span class="pre">'mako',</span> <span class="pre">'mako_r',</span> <span class="pre">'nipy_spectral',</span> <span class="pre">'nipy_spectral_r',</span> <span class="pre">'ocean',</span> <span class="pre">'ocean_r',</span> <span class="pre">'pink',</span> <span class="pre">'pink_r',</span> <span class="pre">'plasma',</span> <span class="pre">'plasma_r',</span> <span class="pre">'prism',</span> <span class="pre">'prism_r',</span> <span class="pre">'rainbow',</span> <span class="pre">'rainbow_r',</span> <span class="pre">'rocket',</span> <span class="pre">'rocket_r',</span> <span class="pre">'seismic',</span> <span class="pre">'seismic_r',</span> <span class="pre">'spring',</span> <span class="pre">'spring_r',</span> <span class="pre">'summer',</span> <span class="pre">'summer_r',</span> <span class="pre">'tab10',</span> <span class="pre">'tab10_r',</span> <span class="pre">'tab20',</span> <span class="pre">'tab20_r',</span> <span class="pre">'tab20b',</span> <span class="pre">'tab20b_r',</span> <span class="pre">'tab20c',</span> <span class="pre">'tab20c_r',</span> <span class="pre">'terrain',</span> <span class="pre">'terrain_r',</span> <span class="pre">'twilight',</span> <span class="pre">'twilight_r',</span> <span class="pre">'twilight_shifted',</span> <span class="pre">'twilight_shifted_r',</span> <span class="pre">'viridis',</span> <span class="pre">'viridis_r',</span> <span class="pre">'vlag',</span> <span class="pre">'vlag_r',</span> <span class="pre">'winter',</span> <span class="pre">'winter_r']</span></em><a class="headerlink" href="#qom.ui.plotters.base.BasePlotter.default_palettes" title="Permalink to this definition">¶</a></dt>
-<dd><p>Default <cite>seaborn</cite> palettes.</p>
+<dd><p>Default <code class="docutils literal notranslate"><span class="pre">seaborn</span></code> palettes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>list</p>

@@ -56,7 +56,7 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>looper</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">qom.loopers.axes.*</span></code>) – Instance of the looper.</p></li>
-<li><p><strong>params_plotter</strong> (<em>dict</em>) – Parameters of the plotter. Refer to <code class="docutils literal notranslate"><span class="pre">Notes</span></code> of <a class="reference internal" href="qom.ui.plotters.base.html#qom.ui.plotters.base.BasePlotter" title="qom.ui.plotters.base.BasePlotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.ui.plotters.base.BasePlotter</span></code></a> for all available parameters.</p></li>
+<li><p><strong>params_plotter</strong> (<em>dict</em>) – Parameters of the plotter. Refer to <strong>Notes</strong> of <a class="reference internal" href="qom.ui.plotters.base.html#qom.ui.plotters.base.BasePlotter" title="qom.ui.plotters.base.BasePlotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.ui.plotters.base.BasePlotter</span></code></a> for all available parameters.</p></li>
 </ul>
 </dd>
 </dl>
@@ -65,10 +65,10 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="qom.utils.loopers.run_looper_instance">
 <span class="sig-prename descclassname"><span class="pre">qom.utils.loopers.</span></span><span class="sig-name descname"><span class="pre">run_looper_instance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.utils.loopers.run_looper_instance" title="Permalink to this definition">¶</a></dt>
-<dd><p>Function to run a single instance of <cite>wrap_looper</cite>.</p>
+<dd><p>Function to run a single instance of <code class="docutils literal notranslate"><span class="pre">wrap_looper</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>args</strong> (<em>list</em>) – Arguments of the <cite>wrap_looper</cite> function.</p>
+<dd class="field-odd"><p><strong>args</strong> (<em>list</em>) – Arguments of the <code class="docutils literal notranslate"><span class="pre">wrap_looper</span></code> function.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>looper</strong> – Instance of the looper.</p>
@@ -86,7 +86,7 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>looper_name</strong> ({<cite>‘XLooper’</cite>, <cite>‘XYLooper’</cite>, <cite>‘XYZLooper’</cite>}) – <dl>
+<li><p><strong>looper_name</strong> ({<code class="docutils literal notranslate"><span class="pre">'XLooper'</span></code>, <code class="docutils literal notranslate"><span class="pre">'XYLooper'</span></code>, <code class="docutils literal notranslate"><span class="pre">'XYZLooper'</span></code>}) – <dl>
 <dt>Name of the looper. Available options are:</dt><dd><table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>value</p></th>
@@ -108,14 +108,14 @@
 </dd>
 </dl>
 </p></li>
-<li><p><strong>func</strong> (<em>callable</em>) – Function to loop, formatted as <cite>func(system_params)</cite>, where <cite>system_params</cite> is a dictionary of the updated parameters for the system for that iteration of the looper.</p></li>
-<li><p><strong>params</strong> (<em>dict</em>) – Parameters of the looper. Refer to <code class="docutils literal notranslate"><span class="pre">Notes</span></code> of <a class="reference internal" href="qom.loopers.base.html#qom.loopers.base.BaseLooper" title="qom.loopers.base.BaseLooper"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.loopers.base.BaseLooper</span></code></a> for all available options.</p></li>
+<li><p><strong>func</strong> (<em>callable</em>) – Function to loop, formatted as <code class="docutils literal notranslate"><span class="pre">func(system_params)</span></code>, where <code class="docutils literal notranslate"><span class="pre">system_params</span></code> is a dictionary of the updated parameters for the system for that iteration of the looper.</p></li>
+<li><p><strong>params</strong> (<em>dict</em>) – Parameters of the looper. Refer to <strong>Notes</strong> of <a class="reference internal" href="qom.loopers.base.html#qom.loopers.base.BaseLooper" title="qom.loopers.base.BaseLooper"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.loopers.base.BaseLooper</span></code></a> for all available options.</p></li>
 <li><p><strong>params_system</strong> (<em>dict</em>) – Parameters of the system. If not provided, new keys are created for the looper variables.</p></li>
 <li><p><strong>plot</strong> (<em>bool</em><em>, </em><em>default=False</em>) – Option to plot the results of the main process.</p></li>
 <li><p><strong>subplots</strong> (<em>bool</em><em>, </em><em>default=False</em>) – Option to plot the results of each subprocesses.</p></li>
 <li><p><strong>params_plotter</strong> (<em>dict</em><em>, </em><em>optional</em>) – Parameters of the plotter.</p></li>
 <li><p><strong>num_processes</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of loopers to run in parallel. The slicing of the values is performed on the first axis. If not provided, then the number slices are determined automatically, throttled by the number of available cores.</p></li>
-<li><p><strong>cb_update</strong> (<em>callable</em>) – Callback function to update status and progress, formatted as <cite>cb_update(status, progress, reset)</cite>, where <cite>status</cite> is a string, <cite>progress</cite> is a float and <cite>reset</cite> is a boolean.</p></li>
+<li><p><strong>cb_update</strong> (<em>callable</em>) – Callback function to update status and progress, formatted as <code class="docutils literal notranslate"><span class="pre">cb_update(status,</span> <span class="pre">progress,</span> <span class="pre">reset)</span></code>, where <code class="docutils literal notranslate"><span class="pre">status</span></code> is a string, <code class="docutils literal notranslate"><span class="pre">progress</span></code> is a float and <code class="docutils literal notranslate"><span class="pre">reset</span></code> is a boolean.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -134,7 +134,7 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>looper_name</strong> ({<cite>‘XLooper’</cite>, <cite>‘XYLooper’</cite>, <cite>‘XYZLooper’</cite>}) – <dl>
+<li><p><strong>looper_name</strong> ({<code class="docutils literal notranslate"><span class="pre">'XLooper'</span></code>, <code class="docutils literal notranslate"><span class="pre">'XYLooper'</span></code>, <code class="docutils literal notranslate"><span class="pre">'XYZLooper'</span></code>}) – <dl>
 <dt>Name of the looper. Available options are:</dt><dd><table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>value</p></th>
@@ -156,12 +156,12 @@
 </dd>
 </dl>
 </p></li>
-<li><p><strong>func</strong> (<em>callable</em>) – Function to loop, formatted as <cite>func(system_params)</cite>, where <cite>system_params</cite> is a dictionary of the updated parameters for the system for that iteration of the looper.</p></li>
-<li><p><strong>params</strong> (<em>dict</em>) – Parameters of the looper. Refer to <code class="docutils literal notranslate"><span class="pre">Notes</span></code> of <a class="reference internal" href="qom.loopers.base.html#qom.loopers.base.BaseLooper" title="qom.loopers.base.BaseLooper"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.loopers.base.BaseLooper</span></code></a> for all available options.</p></li>
+<li><p><strong>func</strong> (<em>callable</em>) – Function to loop, formatted as <code class="docutils literal notranslate"><span class="pre">func(system_params)</span></code>, where <code class="docutils literal notranslate"><span class="pre">system_params</span></code> is a dictionary of the updated parameters for the system for that iteration of the looper.</p></li>
+<li><p><strong>params</strong> (<em>dict</em>) – Parameters of the looper. Refer to <strong>Notes</strong> of <a class="reference internal" href="qom.loopers.base.html#qom.loopers.base.BaseLooper" title="qom.loopers.base.BaseLooper"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.loopers.base.BaseLooper</span></code></a> for all available options.</p></li>
 <li><p><strong>params_system</strong> (<em>dict</em>) – Parameters of the system. If not provided, new keys are created for the looper variables.</p></li>
 <li><p><strong>plot</strong> (<em>bool</em><em>, </em><em>default=False</em>) – Option to plot the results of the main process.</p></li>
 <li><p><strong>params_plotter</strong> (<em>dict</em><em>, </em><em>optional</em>) – Parameters of the plotter.</p></li>
-<li><p><strong>cb_update</strong> (<em>callable</em>) – Callback function to update status and progress, formatted as <cite>cb_update(status, progress, reset)</cite>, where <cite>status</cite> is a string, <cite>progress</cite> is a float and <cite>reset</cite> is a boolean.</p></li>
+<li><p><strong>cb_update</strong> (<em>callable</em>) – Callback function to update status and progress, formatted as <code class="docutils literal notranslate"><span class="pre">cb_update(status,</span> <span class="pre">progress,</span> <span class="pre">reset)</span></code>, where <code class="docutils literal notranslate"><span class="pre">status</span></code> is a string, <code class="docutils literal notranslate"><span class="pre">progress</span></code> is a float and <code class="docutils literal notranslate"><span class="pre">reset</span></code> is a boolean.</p></li>
 <li><p><strong>parallel</strong> (<em>bool</em><em>, </em><em>default=False</em>) – Option to format outputs when running in parallel.</p></li>
 <li><p><strong>p_index</strong> (<em>int</em><em>, </em><em>default=0</em>) – Index of the process.</p></li>
 <li><p><strong>p_start</strong> (<em>float</em><em>, </em><em>optional</em>) – Time at which the process was started. If not provided, the value is initialized to current time.</p></li>

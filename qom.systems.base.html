@@ -61,8 +61,8 @@
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qom.systems.base.</span></span><span class="sig-name descname"><span class="pre">BaseSystem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Sys_00'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">desc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Base</span> <span class="pre">System'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_modes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cb_update</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.systems.base.BaseSystem" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Class to interface QOM systems.</p>
-<p>Requires <cite>system_defaults</cite> attribute before initializing parent.</p>
-<p>Initializes <cite>name</cite>, <cite>desc</cite>, <cite>num_modes</cite>, <cite>dim_corrs</cite>, <cite>num_corrs</cite>, <cite>params</cite>, <cite>A</cite>, <cite>D</cite> and <cite>updater</cite>.</p>
+<p>Requires <code class="docutils literal notranslate"><span class="pre">system_defaults</span></code> attribute before initializing parent.</p>
+<p>Initializes <code class="docutils literal notranslate"><span class="pre">name</span></code>, <code class="docutils literal notranslate"><span class="pre">desc</span></code>, <code class="docutils literal notranslate"><span class="pre">num_modes</span></code>, <code class="docutils literal notranslate"><span class="pre">dim_corrs</span></code>, <code class="docutils literal notranslate"><span class="pre">num_corrs</span></code>, <code class="docutils literal notranslate"><span class="pre">params</span></code>, <code class="docutils literal notranslate"><span class="pre">A</span></code>, <code class="docutils literal notranslate"><span class="pre">D</span></code> and <code class="docutils literal notranslate"><span class="pre">updater</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -70,7 +70,7 @@
 <li><p><strong>name</strong> (<em>str</em><em>, </em><em>default='Sys_00'</em>) – Name of the interfaced system.</p></li>
 <li><p><strong>desc</strong> (<em>str</em><em>, </em><em>default=&quot;Base System&quot;</em>) – Description of the interfaced system.</p></li>
 <li><p><strong>num_modes</strong> (<em>int</em><em>, </em><em>default=2</em>) – Number of modes of the interfaced system.</p></li>
-<li><p><strong>cb_update</strong> (<em>callable</em><em>, </em><em>optional</em>) – Callback function to update status and progress, formatted as <cite>cb_update(status, progress, reset)</cite>, where <cite>status</cite> is a string, <cite>progress</cite> is a float and <cite>reset</cite> is a boolean.</p></li>
+<li><p><strong>cb_update</strong> (<em>callable</em><em>, </em><em>optional</em>) – Callback function to update status and progress, formatted as <code class="docutils literal notranslate"><span class="pre">cb_update(status,</span> <span class="pre">progress,</span> <span class="pre">reset)</span></code>, where <code class="docutils literal notranslate"><span class="pre">status</span></code> is a string, <code class="docutils literal notranslate"><span class="pre">progress</span></code> is a float and <code class="docutils literal notranslate"><span class="pre">reset</span></code> is a boolean.</p></li>
 </ul>
 </dd>
 </dl>
@@ -84,46 +84,46 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>func_ode_modes_corrs</p></td>
-<td><p>the rates of change of the modes and correlations, formatted as <cite>func_ode_modes_corrs(t, v, c)</cite>, where <cite>t</cite> is the time at which the integration is performed, <cite>v</cite> is an array of the modes and correlations and <cite>c</cite> is an array of the derived constants and controls of the system. The output should match the dimension of <cite>v</cite>. This function is already defined inside this class. If <cite>func_ode_corrs</cite> parameter is given, this function is treated as the function for the modes only.</p></td>
+<td><p>the rates of change of the modes and correlations, formatted as <code class="docutils literal notranslate"><span class="pre">func_ode_modes_corrs(t,</span> <span class="pre">v,</span> <span class="pre">c)</span></code>, where <code class="docutils literal notranslate"><span class="pre">t</span></code> is the time at which the integration is performed, <code class="docutils literal notranslate"><span class="pre">v</span></code> is an array of the modes and correlations and <code class="docutils literal notranslate"><span class="pre">c</span></code> is an array of the derived constants and controls of the system. The output should match the dimension of <code class="docutils literal notranslate"><span class="pre">v</span></code>. This function is already defined inside this class. If <code class="docutils literal notranslate"><span class="pre">func_ode_corrs</span></code> parameter is given, this function is treated as the function for the modes only.</p></td>
 </tr>
 <tr class="row-odd"><td><p>func_ode_modes_deviations</p></td>
-<td><p>the rate equations of the modes and deviations. It follows the same formatting as <cite>func_ode_modes_corrs</cite>. However, the parameter <cite>v</cite> contains only the deviations.</p></td>
+<td><p>the rate equations of the modes and deviations. It follows the same formatting as <code class="docutils literal notranslate"><span class="pre">func_ode_modes_corrs</span></code>. However, the parameter <code class="docutils literal notranslate"><span class="pre">v</span></code> contains only the deviations.</p></td>
 </tr>
 <tr class="row-even"><td><p>func_ode_corrs</p></td>
-<td><p>the rate equations of the correlations. It follows the same formatting as <cite>func_ode_modes_corrs</cite>. However, the parameter <cite>v</cite> contains only the correlations.</p></td>
+<td><p>the rate equations of the correlations. It follows the same formatting as <code class="docutils literal notranslate"><span class="pre">func_ode_modes_corrs</span></code>. However, the parameter <code class="docutils literal notranslate"><span class="pre">v</span></code> contains only the correlations.</p></td>
 </tr>
 <tr class="row-odd"><td><p>get_ivc</p></td>
-<td><p>the initial values of the modes, correlations and derived constants and controls, formatted as <cite>get_ivc()</cite>.</p></td>
+<td><p>the initial values of the modes, correlations and derived constants and controls, formatted as <code class="docutils literal notranslate"><span class="pre">get_ivc()</span></code>.</p></td>
 </tr>
 <tr class="row-even"><td><p>get_A</p></td>
-<td><p>the drift matrix, formatted as <cite>get_A(modes, c, t)</cite>, where <cite>modes</cite> are the mode amplitudes at time <cite>t</cite> and <cite>c</cite> are the derived constants and controls of the system.</p></td>
+<td><p>the drift matrix, formatted as <code class="docutils literal notranslate"><span class="pre">get_A(modes,</span> <span class="pre">c,</span> <span class="pre">t)</span></code>, where <code class="docutils literal notranslate"><span class="pre">modes</span></code> are the mode amplitudes at time <code class="docutils literal notranslate"><span class="pre">t</span></code> and <code class="docutils literal notranslate"><span class="pre">c</span></code> are the derived constants and controls of the system.</p></td>
 </tr>
 <tr class="row-odd"><td><p>get_mode_rates</p></td>
-<td><p>the rate of change of the modes. It follows the same formatting as <cite>get_A</cite>.</p></td>
+<td><p>the rate of change of the modes. It follows the same formatting as <code class="docutils literal notranslate"><span class="pre">get_A</span></code>.</p></td>
 </tr>
 <tr class="row-even"><td><p>get_coeffs_A</p></td>
-<td><p>the coefficients of the characteristic equations of the drift matrix. It follows the same formatting as <cite>get_A</cite>.</p></td>
+<td><p>the coefficients of the characteristic equations of the drift matrix. It follows the same formatting as <code class="docutils literal notranslate"><span class="pre">get_A</span></code>.</p></td>
 </tr>
 <tr class="row-odd"><td><p>get_coeffs_dispersion</p></td>
-<td><p>the coefficients of <span class="math notranslate nohighlight">\(( i \omega )^{j}\)</span> in the dispersions. It follows the same formatting as <cite>get_A</cite>.</p></td>
+<td><p>the coefficients of <span class="math notranslate nohighlight">\(( i \omega )^{j}\)</span> in the dispersions. It follows the same formatting as <code class="docutils literal notranslate"><span class="pre">get_A</span></code>.</p></td>
 </tr>
 <tr class="row-even"><td><p>get_nonlinearities</p></td>
-<td><p>the nonlinearities. It follows the same formatting as <cite>get_A</cite>.</p></td>
+<td><p>the nonlinearities. It follows the same formatting as <code class="docutils literal notranslate"><span class="pre">get_A</span></code>.</p></td>
 </tr>
 <tr class="row-odd"><td><p>get_beta_rates</p></td>
-<td><p>the rates of change of the mechanical modes. It follows the same formatting as <cite>get_A</cite>.</p></td>
+<td><p>the rates of change of the mechanical modes. It follows the same formatting as <code class="docutils literal notranslate"><span class="pre">get_A</span></code>.</p></td>
 </tr>
 <tr class="row-even"><td><p>get_betas</p></td>
-<td><p>the mechanical modes. It follows the same formatting as <cite>get_A</cite>.</p></td>
+<td><p>the mechanical modes. It follows the same formatting as <code class="docutils literal notranslate"><span class="pre">get_A</span></code>.</p></td>
 </tr>
 <tr class="row-odd"><td><p>get_D</p></td>
-<td><p>the noise matrix, formatted as <cite>get_D(modes, corrs, c, t)</cite>, where <cite>modes</cite> and <cite>corrs</cite> are modes and correlations at time <cite>t</cite> and <cite>c</cite> are the derived constants and controls of the system.</p></td>
+<td><p>the noise matrix, formatted as <code class="docutils literal notranslate"><span class="pre">get_D(modes,</span> <span class="pre">corrs,</span> <span class="pre">c,</span> <span class="pre">t)</span></code>, where <code class="docutils literal notranslate"><span class="pre">modes</span></code> and <code class="docutils literal notranslate"><span class="pre">corrs</span></code> are modes and correlations at time <code class="docutils literal notranslate"><span class="pre">t</span></code> and <code class="docutils literal notranslate"><span class="pre">c</span></code> are the derived constants and controls of the system.</p></td>
 </tr>
 <tr class="row-even"><td><p>get_coeffs_N_o</p></td>
-<td><p>the coefficients of the polynomial in mean optical occupancy, formatted as <cite>get_coeffs_N_o(c)</cite>, where <cite>c</cite> are the derived constants and controls of the system.</p></td>
+<td><p>the coefficients of the polynomial in mean optical occupancy, formatted as <code class="docutils literal notranslate"><span class="pre">get_coeffs_N_o(c)</span></code>, where <code class="docutils literal notranslate"><span class="pre">c</span></code> are the derived constants and controls of the system.</p></td>
 </tr>
 <tr class="row-odd"><td><p>get_modes_steady_state</p></td>
-<td><p>the steady state modes with shape <cite>(dim, num_modes)</cite>. It follows the same formatting as <cite>get_coeffs_N_o</cite>.</p></td>
+<td><p>the steady state modes with shape <code class="docutils literal notranslate"><span class="pre">(dim,</span> <span class="pre">num_modes)</span></code>. It follows the same formatting as <code class="docutils literal notranslate"><span class="pre">get_coeffs_N_o</span></code>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -133,13 +133,13 @@
 <dt class="sig sig-object py" id="qom.systems.base.BaseSystem.func_ode_modes_corrs">
 <span class="sig-name descname"><span class="pre">func_ode_modes_corrs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.systems.base.BaseSystem.func_ode_modes_corrs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Wrapper function for the rates of change of the real-valued modes and correlations.</p>
-<p>Requires system method <cite>get_mode_rates</cite>. Additionally, <cite>get_A</cite> should be defined for the correlations. Optionally, <cite>get_D</cite> may be defined for correlations. Refer to <code class="docutils literal notranslate"><span class="pre">Notes</span></code> for their implementations.</p>
+<p>Requires system method <code class="docutils literal notranslate"><span class="pre">get_mode_rates</span></code>. Additionally, <code class="docutils literal notranslate"><span class="pre">get_A</span></code> should be defined for the correlations. Optionally, <code class="docutils literal notranslate"><span class="pre">get_D</span></code> may be defined for correlations. Refer to <strong>Notes</strong> for their implementations.</p>
 <p>The variables are casted to real-valued.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>t</strong> (<em>float</em>) – Time at which the values are calculated.</p></li>
-<li><p><strong>v</strong> (<em>numpy.ndarray</em>) – Real-valued modes and flattened correlations. First <cite>num_modes</cite> elements contain the real parts of the modes, the next <cite>num_modes</cite> elements contain the imaginary parts of the modes and optionally, the last <cite>num_corrs</cite> elements contain the correlations.</p></li>
+<li><p><strong>v</strong> (<em>numpy.ndarray</em>) – Real-valued modes and flattened correlations. First <code class="docutils literal notranslate"><span class="pre">num_modes</span></code> elements contain the real parts of the modes, the next <code class="docutils literal notranslate"><span class="pre">num_modes</span></code> elements contain the imaginary parts of the modes and optionally, the last <code class="docutils literal notranslate"><span class="pre">num_corrs</span></code> elements contain the correlations.</p></li>
 <li><p><strong>c</strong> (<em>numpy.ndarray</em>) – Defived constants and controls.</p></li>
 </ul>
 </dd>
@@ -156,13 +156,13 @@
 <dt class="sig sig-object py" id="qom.systems.base.BaseSystem.func_ode_modes_deviations">
 <span class="sig-name descname"><span class="pre">func_ode_modes_deviations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.systems.base.BaseSystem.func_ode_modes_deviations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Wrapper function for the rates of change of the real-valued modes and flattened deviations.</p>
-<p>Requires system method <cite>get_mode_rates</cite>. Additionally, <cite>get_A</cite> should be defined for the deviations. Refer to <code class="docutils literal notranslate"><span class="pre">Notes</span></code> for their implementations.</p>
+<p>Requires system method <code class="docutils literal notranslate"><span class="pre">get_mode_rates</span></code>. Additionally, <code class="docutils literal notranslate"><span class="pre">get_A</span></code> should be defined for the deviations. Refer to <strong>Notes</strong> for their implementations.</p>
 <p>The variables are casted to real-valued.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>t</strong> (<em>float</em>) – Time at which the values are calculated.</p></li>
-<li><p><strong>v</strong> (<em>numpy.ndarray</em>) – Real-valued modes and flattened deviations. First <cite>num_modes</cite> elements contain the real parts of the modes, the next <cite>num_modes</cite> elements contain the imaginary parts of the modes and optionally, the last <cite>num_corrs</cite> elements contain the deviations.</p></li>
+<li><p><strong>v</strong> (<em>numpy.ndarray</em>) – Real-valued modes and flattened deviations. First <code class="docutils literal notranslate"><span class="pre">num_modes</span></code> elements contain the real parts of the modes, the next <code class="docutils literal notranslate"><span class="pre">num_modes</span></code> elements contain the imaginary parts of the modes and optionally, the last <code class="docutils literal notranslate"><span class="pre">num_corrs</span></code> elements contain the deviations.</p></li>
 <li><p><strong>c</strong> (<em>numpy.ndarray</em>) – Defived constants and controls.</p></li>
 </ul>
 </dd>
@@ -179,11 +179,11 @@
 <dt class="sig sig-object py" id="qom.systems.base.BaseSystem.get_mean_optical_occupancies">
 <span class="sig-name descname"><span class="pre">get_mean_optical_occupancies</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.systems.base.BaseSystem.get_mean_optical_occupancies" title="Permalink to this definition">¶</a></dt>
 <dd><p>Method to obtain the mean optical occupancies.</p>
-<p>Requires system methods <cite>get_ivc</cite> and <cite>get_coeffs_N_o</cite>. Refer to <code class="docutils literal notranslate"><span class="pre">Notes</span></code> for their implementations.</p>
+<p>Requires system methods <code class="docutils literal notranslate"><span class="pre">get_ivc</span></code> and <code class="docutils literal notranslate"><span class="pre">get_coeffs_N_o</span></code>. Refer to <strong>Notes</strong> for their implementations.</p>
 <p>For example, the mean optical occupancy of a simple end-mirror optomechanical system can be written as <a class="footnote-reference brackets" href="#id1" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>,</p>
 <div class="math notranslate nohighlight">
 \[N_{o} = |\alpha_{s}|^{2} = \frac{\left| A_{l} \right|^{2}}{\frac{\kappa^{2}}{4} + \Delta^{2}}\]</div>
-<p>where <span class="math notranslate nohighlight">\(\Delta = \Delta_{l} + C N_{o}\)</span>. This results in a cubic equation with <span class="math notranslate nohighlight">\(4\)</span> coefficients. The <cite>get_coeffs_N_o</cite> method should return these coefficients.</p>
+<p>where <span class="math notranslate nohighlight">\(\Delta = \Delta_{l} + C N_{o}\)</span>. This results in a cubic equation with <span class="math notranslate nohighlight">\(4\)</span> coefficients. The <code class="docutils literal notranslate"><span class="pre">get_coeffs_N_o</span></code> method should return these coefficients.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>N_os</strong> – Mean optical occupancies.</p>
@@ -198,7 +198,7 @@
 <dt class="sig sig-object py" id="qom.systems.base.BaseSystem.get_mode_rates_real">
 <span class="sig-name descname"><span class="pre">get_mode_rates_real</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">modes_real</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.systems.base.BaseSystem.get_mode_rates_real" title="Permalink to this definition">¶</a></dt>
 <dd><p>Method to obtain the real-valued mode rates from real-valued modes.</p>
-<p>Requires the system method <cite>get_mode_rates</cite>. Refer to <code class="docutils literal notranslate"><span class="pre">Notes</span></code> for its implementation.</p>
+<p>Requires the system method <code class="docutils literal notranslate"><span class="pre">get_mode_rates</span></code>. Refer to <strong>Notes</strong> for its implementation.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">

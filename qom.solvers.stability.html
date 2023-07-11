@@ -65,7 +65,7 @@
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qom.solvers.stability.</span></span><span class="sig-name descname"><span class="pre">RHCSolver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">As</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Coeffs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cb_update</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.stability.RHCSolver" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Class to solve for stability using the Routh-Hurwitz criterion.</p>
-<p>Initializes <cite>As</cite>, <cite>Coeffs</cite>, <cite>params</cite> and <cite>updater</cite>.</p>
+<p>Initializes <code class="docutils literal notranslate"><span class="pre">As</span></code>, <code class="docutils literal notranslate"><span class="pre">Coeffs</span></code>, <code class="docutils literal notranslate"><span class="pre">params</span></code> and <code class="docutils literal notranslate"><span class="pre">updater</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -80,15 +80,15 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>’show_progress’</p></td>
-<td><p>(<em>bool</em>) option to display the progress of the solver. Default is <cite>False</cite>.</p></td>
+<td><p>(<em>bool</em>) option to display the progress of the solver. Default is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></td>
 </tr>
 </tbody>
 </table>
 </dd>
 </dl>
 </p></li>
-<li><p><strong>cb_update</strong> (<em>callable</em><em>, </em><em>optional</em>) – Callback function to update status and progress, formatted as <cite>cb_update(status, progress, reset)</cite>, where <cite>status</cite> is a string, <cite>progress</cite> is a float and <cite>reset</cite> is a boolean.</p></li>
-<li><p><strong>note:</strong> (<em>..</em>) – At least one of the parameters <cite>As</cite> and <cite>Coeffs</cite> (preferably <cite>Coeffs</cite>) should be non-<cite>None</cite>.:</p></li>
+<li><p><strong>cb_update</strong> (<em>callable</em><em>, </em><em>optional</em>) – Callback function to update status and progress, formatted as <code class="docutils literal notranslate"><span class="pre">cb_update(status,</span> <span class="pre">progress,</span> <span class="pre">reset)</span></code>, where <code class="docutils literal notranslate"><span class="pre">status</span></code> is a string, <code class="docutils literal notranslate"><span class="pre">progress</span></code> is a float and <code class="docutils literal notranslate"><span class="pre">reset</span></code> is a boolean.</p></li>
+<li><p><strong>note:</strong> (<em>..</em>) – At least one of the parameters <code class="docutils literal notranslate"><span class="pre">As</span></code> and <code class="docutils literal notranslate"><span class="pre">Coeffs</span></code> (preferably <code class="docutils literal notranslate"><span class="pre">Coeffs</span></code>) should be non-<code class="docutils literal notranslate"><span class="pre">None</span></code>.:</p></li>
 </ul>
 </dd>
 </dl>
@@ -144,10 +144,10 @@
 a_{2i - j}, ~ \mathrm{if} ~ 0 \le 2 i - j \le n \\
 0, ~ \mathrm{otherwise}
 \end{cases}\end{split}\]</div>
-<p>where the indices of <span class="math notranslate nohighlight">\(M\)</span> are <cite>1</cite>-based.</p>
+<p>where the indices of <span class="math notranslate nohighlight">\(M\)</span> are <code class="docutils literal notranslate"><span class="pre">1</span></code>-based.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>Indices</strong> – Indices where the sequence changes sign as <a href="#id4"><span class="problematic" id="id5">`</span></a>0`s and <a href="#id6"><span class="problematic" id="id7">`</span></a>1`s for each drift matrix.</p>
+<dd class="field-odd"><p><strong>Indices</strong> – Indices where the sequence changes sign as <a href="#id4"><span class="problematic" id="id5">``</span></a>0``s and <a href="#id6"><span class="problematic" id="id7">``</span></a>1``s for each drift matrix.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>numpy.ndarray</p>
@@ -215,7 +215,7 @@ a_{2i - j}, ~ \mathrm{if} ~ 0 \le 2 i - j \le n \\
 </dd>
 </dl>
 </p></li>
-<li><p><strong>cb_update</strong> (<em>callable</em><em>, </em><em>optional</em>) – Callback function to update status and progress, formatted as <cite>cb_update(status, progress, reset)</cite>, where <cite>status</cite> is a string, <cite>progress</cite> is a float and <cite>reset</cite> is a boolean.</p></li>
+<li><p><strong>cb_update</strong> (<em>callable</em><em>, </em><em>optional</em>) – Callback function to update status and progress, formatted as <code class="docutils literal notranslate"><span class="pre">cb_update(status,</span> <span class="pre">progress,</span> <span class="pre">reset)</span></code>, where <code class="docutils literal notranslate"><span class="pre">status</span></code> is a string, <code class="docutils literal notranslate"><span class="pre">progress</span></code> is a float and <code class="docutils literal notranslate"><span class="pre">reset</span></code> is a boolean.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
