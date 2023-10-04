@@ -14,6 +14,7 @@
     <script src="_static/underscore.js"></script>
     <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.1.2/es5/tex-mml-chtml.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="qom.io module" href="qom.io.html" />
@@ -133,6 +134,90 @@
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>callable</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qom.utils.solvers.plot_mcqt_solver_results">
+<span class="sig-prename descclassname"><span class="pre">qom.utils.solvers.</span></span><span class="sig-name descname"><span class="pre">plot_mcqt_solver_results</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">solver</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_plotter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.utils.solvers.plot_mcqt_solver_results" title="Permalink to this definition">¶</a></dt>
+<dd><p>Helper function to plot results.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>solver</strong> (<a class="reference internal" href="qom.solvers.stochastic.html#qom.solvers.stochastic.MCQTSolver" title="qom.solvers.stochastic.MCQTSolver"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.solvers.stochastic.MCQTSolver</span></code></a>) – Instance of the solver.</p></li>
+<li><p><strong>params_plotter</strong> (<em>dict</em>) – Parameters of the plotter. Refer to <strong>Notes</strong> of <a class="reference internal" href="qom.ui.plotters.base.html#qom.ui.plotters.base.BasePlotter" title="qom.ui.plotters.base.BasePlotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.ui.plotters.base.BasePlotter</span></code></a> for all available parameters.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qom.utils.solvers.run_mcqt_solver_instance">
+<span class="sig-prename descclassname"><span class="pre">qom.utils.solvers.</span></span><span class="sig-name descname"><span class="pre">run_mcqt_solver_instance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.utils.solvers.run_mcqt_solver_instance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to run a single instance of <code class="docutils literal notranslate"><span class="pre">wrap_mcqt_solver</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>args</strong> (<em>list</em>) – Arguments of the <code class="docutils literal notranslate"><span class="pre">wrap_mcqt_solver</span></code> function.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>solver</strong> – Instance of the solver.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="qom.solvers.stochastic.html#qom.solvers.stochastic.MCQTSolver" title="qom.solvers.stochastic.MCQTSolver"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.solvers.stochastic.MCQTSolver</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qom.utils.solvers.run_mcqt_solvers_in_parallel">
+<span class="sig-prename descclassname"><span class="pre">qom.utils.solvers.</span></span><span class="sig-name descname"><span class="pre">run_mcqt_solvers_in_parallel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">system</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_trajs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subplots</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_plotter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_processes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cb_update</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.utils.solvers.run_mcqt_solvers_in_parallel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to run multiple MCQTSolver in parallel processes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>system</strong> (<a class="reference internal" href="qom.systems.base.html#module-qom.systems.base" title="qom.systems.base"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.systems.base</span></code></a>) – Instance of the system. Requires predefined system methods <code class="docutils literal notranslate"><span class="pre">get_ops_collapse</span></code>, <code class="docutils literal notranslate"><span class="pre">get_ops_expect</span></code>, <code class="docutils literal notranslate"><span class="pre">get_H_0</span></code> and <code class="docutils literal notranslate"><span class="pre">get_ivc</span></code>. For time-dependent Hamiltonians, the method <code class="docutils literal notranslate"><span class="pre">get_H_t</span></code> should also be defined. Refer to <strong>Notes</strong> of <a class="reference internal" href="qom.solvers.stochastic.html#qom.solvers.stochastic.MCQTSolver" title="qom.solvers.stochastic.MCQTSolver"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.solvers.stochastic.MCQTSolver</span></code></a> for their implementations.</p></li>
+<li><p><strong>params</strong> (<em>dict</em>) – Parameters of the solver. Refer to <strong>Notes</strong> of <a class="reference internal" href="qom.solvers.stochastic.html#qom.solvers.stochastic.MCQTSolver" title="qom.solvers.stochastic.MCQTSolver"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.solvers.stochastic.MCQTSolver</span></code></a> for all available options.</p></li>
+<li><p><strong>num_trajs</strong> (<em>int</em><em>, </em><em>default=1000</em>) – Number of trajectories.</p></li>
+<li><p><strong>plot</strong> (<em>bool</em><em>, </em><em>default=False</em>) – Option to plot the results of the main process.</p></li>
+<li><p><strong>subplots</strong> (<em>bool</em><em>, </em><em>default=False</em>) – Option to plot the results of each subprocesses.</p></li>
+<li><p><strong>params_plotter</strong> (<em>dict</em><em>, </em><em>optional</em>) – Parameters of the plotter.</p></li>
+<li><p><strong>max_processes</strong> (<em>int</em><em>, </em><em>optional</em>) – Maximum number of solvers to run in parallel. The number of slices is decided by the dimensionality of the Hilbert space and the number of trajectories. For smaller number of trajectories, a single process is run without parallelization. Default value of dimension is <span class="math notranslate nohighlight">\(5 \times 10^{4} / N\)</span>, where <span class="math notranslate nohighlight">\(N\)</span> is the dimension of the combined Hilbert space.</p></li>
+<li><p><strong>cb_update</strong> (<em>callable</em>) – Callback function to update status and progress, formatted as <code class="docutils literal notranslate"><span class="pre">cb_update(status,</span> <span class="pre">progress,</span> <span class="pre">reset)</span></code>, where <code class="docutils literal notranslate"><span class="pre">status</span></code> is a string, <code class="docutils literal notranslate"><span class="pre">progress</span></code> is a float and <code class="docutils literal notranslate"><span class="pre">reset</span></code> is a boolean.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>solver</strong> – Instance of the solver.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="qom.solvers.stochastic.html#qom.solvers.stochastic.MCQTSolver" title="qom.solvers.stochastic.MCQTSolver"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.solvers.stochastic.MCQTSolver</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qom.utils.solvers.wrap_mcqt_solver">
+<span class="sig-prename descclassname"><span class="pre">qom.utils.solvers.</span></span><span class="sig-name descname"><span class="pre">wrap_mcqt_solver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">system</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_trajs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_plotter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cb_update</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parallel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_start</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.utils.solvers.wrap_mcqt_solver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to wrap MCQTSolver.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>system</strong> (<a class="reference internal" href="qom.systems.base.html#module-qom.systems.base" title="qom.systems.base"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.systems.base</span></code></a>) – Instance of the system. Requires predefined system methods <code class="docutils literal notranslate"><span class="pre">get_ops_collapse</span></code>, <code class="docutils literal notranslate"><span class="pre">get_ops_expect</span></code>, <code class="docutils literal notranslate"><span class="pre">get_H_0</span></code> and <code class="docutils literal notranslate"><span class="pre">get_ivc</span></code>. For time-dependent Hamiltonians, the method <code class="docutils literal notranslate"><span class="pre">get_H_t</span></code> should also be defined. Refer to <strong>Notes</strong> of <a class="reference internal" href="qom.solvers.stochastic.html#qom.solvers.stochastic.MCQTSolver" title="qom.solvers.stochastic.MCQTSolver"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.solvers.stochastic.MCQTSolver</span></code></a> for their implementations.</p></li>
+<li><p><strong>params</strong> (<em>dict</em>) – Parameters of the solver. Refer to <strong>Notes</strong> of <a class="reference internal" href="qom.solvers.stochastic.html#qom.solvers.stochastic.MCQTSolver" title="qom.solvers.stochastic.MCQTSolver"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.solvers.stochastic.MCQTSolver</span></code></a> for all available options.</p></li>
+<li><p><strong>num_trajs</strong> (<em>int</em><em>, </em><em>default=1000</em>) – Number of trajectories.</p></li>
+<li><p><strong>plot</strong> (<em>bool</em><em>, </em><em>default=False</em>) – Option to plot the results of the main process.</p></li>
+<li><p><strong>params_plotter</strong> (<em>dict</em><em>, </em><em>optional</em>) – Parameters of the plotter.</p></li>
+<li><p><strong>cb_update</strong> (<em>callable</em>) – Callback function to update status and progress, formatted as <code class="docutils literal notranslate"><span class="pre">cb_update(status,</span> <span class="pre">progress,</span> <span class="pre">reset)</span></code>, where <code class="docutils literal notranslate"><span class="pre">status</span></code> is a string, <code class="docutils literal notranslate"><span class="pre">progress</span></code> is a float and <code class="docutils literal notranslate"><span class="pre">reset</span></code> is a boolean.</p></li>
+<li><p><strong>parallel</strong> (<em>bool</em><em>, </em><em>default=False</em>) – Option to format outputs when running in parallel.</p></li>
+<li><p><strong>p_index</strong> (<em>int</em><em>, </em><em>default=0</em>) – Index of the process.</p></li>
+<li><p><strong>p_start</strong> (<em>float</em><em>, </em><em>optional</em>) – Time at which the process was started. If not provided, the value is initialized to current time.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>solver</strong> – Instance of the solver.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="qom.solvers.stochastic.html#qom.solvers.stochastic.MCQTSolver" title="qom.solvers.stochastic.MCQTSolver"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.solvers.stochastic.MCQTSolver</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>

@@ -1,0 +1,649 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>qom.ui.plotters.base module &#8212; The Quantum Optomechanics Toolbox  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/nature.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="qom.ui.plotters.matplotlib module" href="qom.ui.plotters.matplotlib.html" />
+    <link rel="prev" title="qom.ui.plotters subpackage" href="qom.ui.plotters.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="qom.ui.plotters.matplotlib.html" title="qom.ui.plotters.matplotlib module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="qom.ui.plotters.html" title="qom.ui.plotters subpackage"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">The Quantum Optomechanics Toolbox  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="qom.ui.html" >qom.ui package</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="qom.ui.plotters.html" accesskey="U">qom.ui.plotters subpackage</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">qom.ui.plotters.base module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-qom.ui.plotters.base">
+<span id="qom-ui-plotters-base-module"></span><h1>qom.ui.plotters.base module<a class="headerlink" href="#module-qom.ui.plotters.base" title="Permalink to this heading">¶</a></h1>
+<p>Module to interface plotters.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="qom.ui.plotters.base.BaseAxis">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qom.ui.plotters.base.</span></span><span class="sig-name descname"><span class="pre">BaseAxis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_plotter</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.plotters.base.BaseAxis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class to interface axes.</p>
+<p>Initializes <code class="docutils literal notranslate"><span class="pre">bound</span></code>, <code class="docutils literal notranslate"><span class="pre">dim</span></code>, <code class="docutils literal notranslate"><span class="pre">label</span></code>, <code class="docutils literal notranslate"><span class="pre">label_color</span></code>, <code class="docutils literal notranslate"><span class="pre">label_pad</span></code>, <code class="docutils literal notranslate"><span class="pre">limits</span></code>, <code class="docutils literal notranslate"><span class="pre">name</span></code>, <code class="docutils literal notranslate"><span class="pre">scale</span></code>, <code class="docutils literal notranslate"><span class="pre">tick_dim</span></code>, <code class="docutils literal notranslate"><span class="pre">tick_labels</span></code>, <code class="docutils literal notranslate"><span class="pre">tick_pad</span></code>, <code class="docutils literal notranslate"><span class="pre">tick_position</span></code>, <code class="docutils literal notranslate"><span class="pre">ticks</span></code>, <code class="docutils literal notranslate"><span class="pre">ticks_minor</span></code>, <code class="docutils literal notranslate"><span class="pre">unit</span></code> and <code class="docutils literal notranslate"><span class="pre">val</span></code>. Inherited objects need to set the other properties individually.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>axis</strong> ({<code class="docutils literal notranslate"><span class="pre">'X'</span></code>, <code class="docutils literal notranslate"><span class="pre">'Y'</span></code>, <code class="docutils literal notranslate"><span class="pre">'Z'</span></code>, <code class="docutils literal notranslate"><span class="pre">'V'</span></code>, <code class="docutils literal notranslate"><span class="pre">'V_twin'</span></code>}) – Name of the axis.</p></li>
+<li><p><strong>params</strong> (<em>dict</em><em> or </em><em>list</em>) – Parameters of the axis as a list of values, or a dictionary. Refer to <a class="reference internal" href="#qom.ui.plotters.base.BasePlotter" title="qom.ui.plotters.base.BasePlotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.ui.plotters.base.BasePlotter</span></code></a> for currently supported keys.</p></li>
+<li><p><strong>params_plotter</strong> (<em>dict</em>) – Parameters for the plotter. Refer to <strong>Notes</strong> of <a class="reference internal" href="#qom.ui.plotters.base.BasePlotter" title="qom.ui.plotters.base.BasePlotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.ui.plotters.base.BasePlotter</span></code></a> for all available options.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.ui.plotters.base.BaseAxis._init_array">
+<span class="sig-name descname"><span class="pre">_init_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mini</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dim</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.plotters.base.BaseAxis._init_array" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to initialize an array given a range and number of elements.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mini</strong> (<em>int</em>) – Minimum value of the range.</p></li>
+<li><p><strong>maxi</strong> (<em>int</em>) – Maximum value of the range.</p></li>
+<li><p><strong>dim</strong> (<em>int</em>) – Number of elements to consider.</p></li>
+<li><p><strong>scale</strong> ({<code class="docutils literal notranslate"><span class="pre">'linear'</span></code>, <code class="docutils literal notranslate"><span class="pre">'log'</span></code>}) – Step scale for the values.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>values</strong> – Initialized array.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qom.ui.plotters.base.BaseAxis.axis_defaults">
+<span class="sig-name descname"><span class="pre">axis_defaults</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'label':</span> <span class="pre">'',</span> <span class="pre">'label_color':</span> <span class="pre">'k',</span> <span class="pre">'label_pad':</span> <span class="pre">4,</span> <span class="pre">'limits':</span> <span class="pre">None,</span> <span class="pre">'name':</span> <span class="pre">'',</span> <span class="pre">'scale':</span> <span class="pre">'linear',</span> <span class="pre">'tick_color':</span> <span class="pre">'k',</span> <span class="pre">'tick_dim':</span> <span class="pre">5,</span> <span class="pre">'tick_labels':</span> <span class="pre">None,</span> <span class="pre">'tick_pad':</span> <span class="pre">8,</span> <span class="pre">'tick_position':</span> <span class="pre">'both-in',</span> <span class="pre">'ticks':</span> <span class="pre">[],</span> <span class="pre">'ticks_minor':</span> <span class="pre">None,</span> <span class="pre">'unit':</span> <span class="pre">''}</span></em><a class="headerlink" href="#qom.ui.plotters.base.BaseAxis.axis_defaults" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default parameters of the axis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="qom.ui.plotters.base.BasePlotter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qom.ui.plotters.base.</span></span><span class="sig-name descname"><span class="pre">BasePlotter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cb_update</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.plotters.base.BasePlotter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class to interface plotters.</p>
+<p>Initializes <code class="docutils literal notranslate"><span class="pre">axes</span></code>, <code class="docutils literal notranslate"><span class="pre">bins</span></code>, <code class="docutils literal notranslate"><span class="pre">params</span></code> and <code class="docutils literal notranslate"><span class="pre">updater</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>axes</strong> (<em>dict</em>) – <dl>
+<dt>Axes for the plot containing one or more keys for the axes (<code class="docutils literal notranslate"><span class="pre">'X'</span></code>, ‘Y’ or ‘Z’), each either a list of values, or dictionary containing the following keys (arranged in the descending order of their priorities):</dt><dd><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>key</p></th>
+<th class="head"><p>value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>’var’</p></td>
+<td><p>(<em>str</em>) name of the parameter to loop. Its value defaults to the axis name in lower case if the axis is a sequence of values and not a dictionary.</p></td>
+</tr>
+<tr class="row-odd"><td><p>’val’</p></td>
+<td><p>(<em>list</em> or <em>numpy.ndarray</em>) values of the parameter. The remaining keys are not checked if its value is given. Otherwise, the values of <code class="docutils literal notranslate"><span class="pre">'min'</span></code>, <code class="docutils literal notranslate"><span class="pre">'max'</span></code>, <code class="docutils literal notranslate"><span class="pre">'dim'</span></code> and <code class="docutils literal notranslate"><span class="pre">'scale'</span></code> are used to obtain <code class="docutils literal notranslate"><span class="pre">'val'</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p>’min’</p></td>
+<td><p>(<em>float</em>) minimum value of the parameter. Default is <code class="docutils literal notranslate"><span class="pre">-5.0</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p>’max’</p></td>
+<td><p>(<em>float</em>) maximum value of the parameter. Default is <code class="docutils literal notranslate"><span class="pre">5.0</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p>’dim’</p></td>
+<td><p>(<em>int</em>) number of values from ‘min’ to ‘max’, both inclusive. Default is <code class="docutils literal notranslate"><span class="pre">101</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p>’scale’</p></td>
+<td><p>(<em>str</em>) step scale of the values. Options are <code class="docutils literal notranslate"><span class="pre">'log'</span></code> for logarithmic and <code class="docutils literal notranslate"><span class="pre">'linear'</span></code> for linear. Default is <code class="docutils literal notranslate"><span class="pre">'linear'</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</p></li>
+<li><p><strong>params</strong> (<em>dict</em>) – <dl>
+<dt>Parameters of the plot. Currently supported keys are:</dt><dd><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>key</p></th>
+<th class="head"><p>value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>’annotations’</p></td>
+<td><p>(<em>list</em>) annotation dictionaries for the plot. Refer to <strong>Notes</strong> below for currently supported keys.</p></td>
+</tr>
+<tr class="row-odd"><td><p>’bins’</p></td>
+<td><p>(<em>int</em>) number of colors for the plot. Default is <code class="docutils literal notranslate"><span class="pre">11</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p>’cbar_position’</p></td>
+<td><p>(<em>str</em>) position of the color bar. Options are <code class="docutils literal notranslate"><span class="pre">'top'</span></code>, <code class="docutils literal notranslate"><span class="pre">'right'</span></code>, <code class="docutils literal notranslate"><span class="pre">'bottom'</span></code> and <code class="docutils literal notranslate"><span class="pre">'left'</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">'right'</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p>’cbar_tick_labels’</p></td>
+<td><p>(<em>list</em>) tick labels of the color bar.</p></td>
+</tr>
+<tr class="row-even"><td><p>’cbar_ticks’</p></td>
+<td><p>(<em>list</em>) ticks of the color bar.</p></td>
+</tr>
+<tr class="row-odd"><td><p>’cbar_title’</p></td>
+<td><p>(<em>str</em>) title of the color bar. Default is <code class="docutils literal notranslate"><span class="pre">''</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p>’cbar_x_label’</p></td>
+<td><p>(<em>str</em>) X-axis label of the color bar. Default is <code class="docutils literal notranslate"><span class="pre">''</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p>’cbar_y_label’</p></td>
+<td><p>(<em>str</em>) Y-axis label of the color bar. Default is <code class="docutils literal notranslate"><span class="pre">''</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p>’colors’</p></td>
+<td><p>(<em>list</em>) colors of the 1D plots. If not provided, the palette colors are used.</p></td>
+</tr>
+<tr class="row-odd"><td><p>’component’</p></td>
+<td><p>(<em>str</em>) component of complex value. Options are <code class="docutils literal notranslate"><span class="pre">'real'</span></code> or <code class="docutils literal notranslate"><span class="pre">'imag'</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">'real'</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p>’font_math’</p></td>
+<td><p>(<em>str</em>) math renderer for fonts. Options are <code class="docutils literal notranslate"><span class="pre">'dejavusans'</span></code>, <code class="docutils literal notranslate"><span class="pre">'dejavuserif'</span></code>, <code class="docutils literal notranslate"><span class="pre">'cm'</span></code>, <code class="docutils literal notranslate"><span class="pre">'stix'</span></code> and <code class="docutils literal notranslate"><span class="pre">'stixsans'</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">'cm'</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p>’height’</p></td>
+<td><p>(<em>float</em>) height of the plot. Default is <code class="docutils literal notranslate"><span class="pre">5.0</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p>’legend_labels’</p></td>
+<td><p>(<em>list</em>) labels of the legend. If a twin axis exists, the legend is not displayed.</p></td>
+</tr>
+<tr class="row-odd"><td><p>’legend_location’</p></td>
+<td><p>(<em>bool</em>) location of the legend. Options are <code class="docutils literal notranslate"><span class="pre">'best'</span></code>, <code class="docutils literal notranslate"><span class="pre">'center'</span></code>, <code class="docutils literal notranslate"><span class="pre">'center</span> <span class="pre">left'</span></code>, <code class="docutils literal notranslate"><span class="pre">'center</span> <span class="pre">right'</span></code>, <code class="docutils literal notranslate"><span class="pre">'lower</span> <span class="pre">center'</span></code>, <code class="docutils literal notranslate"><span class="pre">'lower</span> <span class="pre">left'</span></code>, <code class="docutils literal notranslate"><span class="pre">'lower</span> <span class="pre">right'</span></code>, <code class="docutils literal notranslate"><span class="pre">'right'</span></code>, <code class="docutils literal notranslate"><span class="pre">'upper</span> <span class="pre">center'</span></code>, <code class="docutils literal notranslate"><span class="pre">'upper</span> <span class="pre">left'</span></code> and <code class="docutils literal notranslate"><span class="pre">'upper</span> <span class="pre">right'</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">'best'</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p>’palette’</p></td>
+<td><p>(<em>str</em>) color palette of the plot. Refer to <code class="docutils literal notranslate"><span class="pre">default_palettes</span></code> attribute for available options. Default is <code class="docutils literal notranslate"><span class="pre">'RdBu_r'</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p>’show_cbar’</p></td>
+<td><p>(<em>bool</em>) option to show the color bar. Default is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p>’show_legend’</p></td>
+<td><p>(<em>bool</em>) option to show the legend. Default is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p>’sizes’</p></td>
+<td><p>(<em>list</em>) size values for 1D plots. If not provided, a default value of <code class="docutils literal notranslate"><span class="pre">1.0</span></code> is used for each plot.</p></td>
+</tr>
+<tr class="row-even"><td><p>’styles’</p></td>
+<td><p>(<em>list</em>) styles for 1D plots. If not provided, styles are set serially from <code class="docutils literal notranslate"><span class="pre">default_linestyles</span></code> (for line plots) and <code class="docutils literal notranslate"><span class="pre">default_markers</span></code> (for scatter plots) attributes.</p></td>
+</tr>
+<tr class="row-odd"><td><p>’type’</p></td>
+<td><p>(<em>str</em>) type of the plot. Refer to <strong>Notes</strong> below for all available options. Default is <code class="docutils literal notranslate"><span class="pre">'lines'</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p>’view_aspect’</p></td>
+<td><p>(<em>list</em>) aspect ratios of the 3D axes. Default is <code class="docutils literal notranslate"><span class="pre">[1.0,</span> <span class="pre">1.0,</span> <span class="pre">1.0]</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p>’view_elevation’</p></td>
+<td><p>(<em>float</em>) elevation for 3D view on Z-axis. Default is <code class="docutils literal notranslate"><span class="pre">32.0</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p>’view_rotation’</p></td>
+<td><p>(<em>float</em>) rotation for 3D view about Z-axis in degrees. Default is <code class="docutils literal notranslate"><span class="pre">215.0</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p>’vertical_spans’</p></td>
+<td><p>(<em>list</em>) vertical background spanning dictionaries for the plot. Refer to <strong>Notes</strong> below for currently supported keys.</p></td>
+</tr>
+<tr class="row-even"><td><p>’width’</p></td>
+<td><p>(<em>float</em>) width of the plot. Default is <code class="docutils literal notranslate"><span class="pre">'5.0'</span></code>.</p></td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</p></li>
+<li><p><strong>cb_update</strong> (<em>callable</em>) – Callback function to update status and progress, formatted as <code class="docutils literal notranslate"><span class="pre">cb_update(status,</span> <span class="pre">progress,</span> <span class="pre">reset)</span></code>, where <code class="docutils literal notranslate"><span class="pre">status</span></code> is a string, <code class="docutils literal notranslate"><span class="pre">progress</span></code> is a float and <code class="docutils literal notranslate"><span class="pre">reset</span></code> is a boolean.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<dl>
+<dt>Currently supported values of ‘type’ are:</dt><dd><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>value</p></th>
+<th class="head"><p>meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>‘contour’</p></td>
+<td><p>contour plot.</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘contourf’</p></td>
+<td><p>filled contour plot.</p></td>
+</tr>
+<tr class="row-even"><td><p>‘density’</p></td>
+<td><p>density plot.</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘density_unit’</p></td>
+<td><p>density plot with unit sphere.</p></td>
+</tr>
+<tr class="row-even"><td><p>‘line’</p></td>
+<td><p>single-line plot.</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘line_3d’</p></td>
+<td><p>single-line plot in 3D.</p></td>
+</tr>
+<tr class="row-even"><td><p>‘lines’</p></td>
+<td><p>multi-line plot.</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘lines_3d’</p></td>
+<td><p>multi-line plot in 3D.</p></td>
+</tr>
+<tr class="row-even"><td><p>‘pcolormesh’</p></td>
+<td><p>mesh color plot.</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘scatter’</p></td>
+<td><p>single-scatter plot.</p></td>
+</tr>
+<tr class="row-even"><td><p>‘scatter_3d’</p></td>
+<td><p>single-scatter plot in 3D.</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘scatters’</p></td>
+<td><p>multi-scatter plot.</p></td>
+</tr>
+<tr class="row-even"><td><p>‘scatters_3d’</p></td>
+<td><p>multi-scatter plot in 3D.</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘surface’</p></td>
+<td><p>surface plot.</p></td>
+</tr>
+<tr class="row-even"><td><p>‘surface_cx’</p></td>
+<td><p>surface plot with projection on X-axis.</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘surface_cy’</p></td>
+<td><p>surface plot with projection on Y-axis.</p></td>
+</tr>
+<tr class="row-even"><td><p>‘surface_cz’</p></td>
+<td><p>surface plot with projection on Z-axis.</p></td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>The properties of each axis (<code class="docutils literal notranslate"><span class="pre">'X'</span></code>, <code class="docutils literal notranslate"><span class="pre">'Y'</span></code>, <code class="docutils literal notranslate"><span class="pre">'Z'</span></code>, <code class="docutils literal notranslate"><span class="pre">'V'</span></code> and <code class="docutils literal notranslate"><span class="pre">'V_twin'</span></code>) can be set by prefixing the specific property with the lower-case name of the axis and an underscore, e.g. <code class="docutils literal notranslate"><span class="pre">'v_label'</span></code>. Currently supported keys are:</dt><dd><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>key</p></th>
+<th class="head"><p>value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>‘label’</p></td>
+<td><p>(<em>str</em>) text of the axis label. If not provided, the values of <code class="docutils literal notranslate"><span class="pre">'name'</span></code> and <code class="docutils literal notranslate"><span class="pre">'unit'</span></code> are used for the label.</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘label_color’</p></td>
+<td><p>(<em>str</em> or <em>int</em>) color of the axis label as an index from the color palette or a supported color string. Default is <code class="docutils literal notranslate"><span class="pre">'k'</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p>‘label_pad’</p></td>
+<td><p>(<em>int</em>) padding of the axis label. Default is <code class="docutils literal notranslate"><span class="pre">4</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘limits’</p></td>
+<td><p>(<em>list</em>) minimum and maximum limits for the axis.</p></td>
+</tr>
+<tr class="row-even"><td><p>‘name’</p></td>
+<td><p>(<em>str</em>) display name of the axis.</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘scale’</p></td>
+<td><p>(<em>str</em>) step scale for the values. Options are <code class="docutils literal notranslate"><span class="pre">'linear'</span></code> (fallback) and <code class="docutils literal notranslate"><span class="pre">'log'</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">'linear'</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p>‘tick_color’</p></td>
+<td><p>(<em>str</em> or <em>int</em>) color of the axis label as an index from the color palette or a supported color string. Default is <code class="docutils literal notranslate"><span class="pre">'k'</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘tick_dim’</p></td>
+<td><p>(<em>float</em>) dimension of the ticks. Default is <code class="docutils literal notranslate"><span class="pre">'5'</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p>‘tick_labels’</p></td>
+<td><p>(<em>list</em>) tick labels of the plots.</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘tick_pad’</p></td>
+<td><p>(<em>int</em>) padding of the tick labels. Default is <code class="docutils literal notranslate"><span class="pre">'8'</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p>‘tick_position’</p></td>
+<td><p>(<em>str</em>) position of ticks on the plot. Options are <code class="docutils literal notranslate"><span class="pre">'both-in'</span></code>, <code class="docutils literal notranslate"><span class="pre">'both-out'</span></code>, <code class="docutils literal notranslate"><span class="pre">'bottom-in'</span></code>, <code class="docutils literal notranslate"><span class="pre">'bottom-out'</span></code>, <code class="docutils literal notranslate"><span class="pre">'left-in'</span></code>, <code class="docutils literal notranslate"><span class="pre">'left-out'</span></code>, <code class="docutils literal notranslate"><span class="pre">'right-in'</span></code>, <code class="docutils literal notranslate"><span class="pre">'right-out'</span></code>, <code class="docutils literal notranslate"><span class="pre">'top-in'</span></code> and <code class="docutils literal notranslate"><span class="pre">'top-out'</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">'both-in'</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘ticks’</p></td>
+<td><p>(<em>list</em>) ticks of the plots.</p></td>
+</tr>
+<tr class="row-even"><td><p>‘ticks_minor’</p></td>
+<td><p>(<em>list</em>) positions of minor ticks of the plots.</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘unit’</p></td>
+<td><p>(<em>str</em>) unit of the plots.</p></td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>The font properties of each text type (<code class="docutils literal notranslate"><span class="pre">'label'</span></code>, <code class="docutils literal notranslate"><span class="pre">legend'</span></code>, <code class="docutils literal notranslate"><span class="pre">'tick'</span></code> and <code class="docutils literal notranslate"><span class="pre">'title'</span></code>) can be set by prefixing the specific property with the lower-case name of the type and an underscore, e.g. <code class="docutils literal notranslate"><span class="pre">'label_font_family'</span></code>. Currently supported keys are:</dt><dd><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>key</p></th>
+<th class="head"><p>value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>‘font_family’</p></td>
+<td><p>(<em>str</em>) font family for the labels. Default is <code class="docutils literal notranslate"><span class="pre">'Times</span> <span class="pre">New</span> <span class="pre">Roman'</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘font_size’</p></td>
+<td><p>(<em>float</em>) font size for the labels. Default is <code class="docutils literal notranslate"><span class="pre">20.0</span></code> for <code class="docutils literal notranslate"><span class="pre">'label'</span></code> and <code class="docutils literal notranslate"><span class="pre">'title'</span></code> and <code class="docutils literal notranslate"><span class="pre">16.0</span></code> for <code class="docutils literal notranslate"><span class="pre">'legend'</span></code> and <code class="docutils literal notranslate"><span class="pre">'tick'</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p>‘font_stretch’</p></td>
+<td><p>(<em>int</em>) font stretch for the labels. Default is <code class="docutils literal notranslate"><span class="pre">500</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘font_style’</p></td>
+<td><p>(<em>str</em>) font style for the labels. Default is <code class="docutils literal notranslate"><span class="pre">'normal'</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p>‘font_variant’</p></td>
+<td><p>(<em>str</em>) font variant for the labels. Default is <code class="docutils literal notranslate"><span class="pre">'normal'</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘font_weight’</p></td>
+<td><p>(<em>int</em>) font weightt for the labels. Default is <code class="docutils literal notranslate"><span class="pre">500</span></code>.</p></td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>The <code class="docutils literal notranslate"><span class="pre">'annotations'</span></code> array currently supports dictionaries with the following keys:</dt><dd><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>key</p></th>
+<th class="head"><p>value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>‘text’</p></td>
+<td><p>(<em>str</em>) the text. Default is <code class="docutils literal notranslate"><span class="pre">''</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘xy’</p></td>
+<td><p>(<em>tuple</em>) tuple of positions of the text on the figure in fractions. Default is <code class="docutils literal notranslate"><span class="pre">(0.2,</span> <span class="pre">0.8)</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p>‘color’</p></td>
+<td><p>(<em>str</em> or <em>int</em>) color of the axis label as an index from the color palette or a supported color string. Default is <code class="docutils literal notranslate"><span class="pre">'k'</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘font_dict_type’</p></td>
+<td><p>(<em>str</em>) the type of font dictionary. Options are <code class="docutils literal notranslate"><span class="pre">'label'</span></code>, <code class="docutils literal notranslate"><span class="pre">'legend'</span></code>, <code class="docutils literal notranslate"><span class="pre">'tick'</span></code> and <code class="docutils literal notranslate"><span class="pre">'title'</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">'label'</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p>‘orientation’</p></td>
+<td><p>(<em>str</em>) the orientation of the text. Options are <code class="docutils literal notranslate"><span class="pre">'horizontal'</span></code> and <code class="docutils literal notranslate"><span class="pre">'vertical'</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">'horizontal'</span></code>.</p></td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>The <code class="docutils literal notranslate"><span class="pre">'vertical_spans'</span></code> array currently supports dictionaries with the following keys:</dt><dd><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>key</p></th>
+<th class="head"><p>value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>‘limits’</p></td>
+<td><p>(<em>list</em>) the minimum and maximum X-axis values as a tuple. Default is <code class="docutils literal notranslate"><span class="pre">(0.0,</span> <span class="pre">0.0)</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘color’</p></td>
+<td><p>(<em>str</em> or <em>int</em>) color of the axis label as an index from the color palette or a supported color string. Default is <code class="docutils literal notranslate"><span class="pre">'k'</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p>‘alpha’</p></td>
+<td><p>(<em>float</em>) the opacity value. Default is <code class="docutils literal notranslate"><span class="pre">0.25</span></code>.</p></td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Color palettes and font properties are currently backed by <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>.</p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.ui.plotters.base.BasePlotter._get_font_dict">
+<span class="sig-name descname"><span class="pre">_get_font_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">font_dict_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.plotters.base.BasePlotter._get_font_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to generate a dictionary of font properties for a given type of text.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>params</strong> (<em>dict</em>) – Plot parameters passed.</p></li>
+<li><p><strong>font_dict_type</strong> ({<code class="docutils literal notranslate"><span class="pre">'label'</span></code>, <code class="docutils literal notranslate"><span class="pre">legend'</span></code>, <code class="docutils literal notranslate"><span class="pre">'tick'</span></code>, <code class="docutils literal notranslate"><span class="pre">'title'</span></code>}) – Type of font dictionary.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>font_dict</strong> – Dictionary of font properties.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qom.ui.plotters.base.BasePlotter.custom_palettes">
+<span class="sig-name descname"><span class="pre">custom_palettes</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'blr':</span> <span class="pre">['Blues_r',</span> <span class="pre">'Reds'],</span> <span class="pre">'glr':</span> <span class="pre">['Greens_r',</span> <span class="pre">'Reds'],</span> <span class="pre">'rlb':</span> <span class="pre">['Reds_r',</span> <span class="pre">'Blues']}</span></em><a class="headerlink" href="#qom.ui.plotters.base.BasePlotter.custom_palettes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Custom diverging palettes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qom.ui.plotters.base.BasePlotter.default_linestyles">
+<span class="sig-name descname"><span class="pre">default_linestyles</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['-',</span> <span class="pre">'--',</span> <span class="pre">'-.',</span> <span class="pre">':']</span></em><a class="headerlink" href="#qom.ui.plotters.base.BasePlotter.default_linestyles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default linestyles for line plots.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qom.ui.plotters.base.BasePlotter.default_markers">
+<span class="sig-name descname"><span class="pre">default_markers</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['.',</span> <span class="pre">',',</span> <span class="pre">'o',</span> <span class="pre">'v',</span> <span class="pre">'^',</span> <span class="pre">'&lt;',</span> <span class="pre">'&gt;',</span> <span class="pre">'1',</span> <span class="pre">'2',</span> <span class="pre">'3',</span> <span class="pre">'4',</span> <span class="pre">'8',</span> <span class="pre">'s',</span> <span class="pre">'p',</span> <span class="pre">'*',</span> <span class="pre">'h',</span> <span class="pre">'H',</span> <span class="pre">'+',</span> <span class="pre">'x',</span> <span class="pre">'X',</span> <span class="pre">'D',</span> <span class="pre">'d',</span> <span class="pre">'|',</span> <span class="pre">'_']</span></em><a class="headerlink" href="#qom.ui.plotters.base.BasePlotter.default_markers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default markers for scatter plots.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qom.ui.plotters.base.BasePlotter.default_palettes">
+<span class="sig-name descname"><span class="pre">default_palettes</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['Accent',</span> <span class="pre">'Accent_r',</span> <span class="pre">'Blues',</span> <span class="pre">'Blues_r',</span> <span class="pre">'BrBG',</span> <span class="pre">'BrBG_r',</span> <span class="pre">'BuGn',</span> <span class="pre">'BuGn_r',</span> <span class="pre">'BuPu',</span> <span class="pre">'BuPu_r',</span> <span class="pre">'CMRmap',</span> <span class="pre">'CMRmap_r',</span> <span class="pre">'Dark2',</span> <span class="pre">'Dark2_r',</span> <span class="pre">'GnBu',</span> <span class="pre">'GnBu_r',</span> <span class="pre">'Greens',</span> <span class="pre">'Greens_r',</span> <span class="pre">'Greys',</span> <span class="pre">'Greys_r',</span> <span class="pre">'OrRd',</span> <span class="pre">'OrRd_r',</span> <span class="pre">'Oranges',</span> <span class="pre">'Oranges_r',</span> <span class="pre">'PRGn',</span> <span class="pre">'PRGn_r',</span> <span class="pre">'Paired',</span> <span class="pre">'Paired_r',</span> <span class="pre">'Pastel1',</span> <span class="pre">'Pastel1_r',</span> <span class="pre">'Pastel2',</span> <span class="pre">'Pastel2_r',</span> <span class="pre">'PiYG',</span> <span class="pre">'PiYG_r',</span> <span class="pre">'PuBu',</span> <span class="pre">'PuBuGn',</span> <span class="pre">'PuBuGn_r',</span> <span class="pre">'PuBu_r',</span> <span class="pre">'PuOr',</span> <span class="pre">'PuOr_r',</span> <span class="pre">'PuRd',</span> <span class="pre">'PuRd_r',</span> <span class="pre">'Purples',</span> <span class="pre">'Purples_r',</span> <span class="pre">'RdBu',</span> <span class="pre">'RdBu_r',</span> <span class="pre">'RdGy',</span> <span class="pre">'RdGy_r',</span> <span class="pre">'RdPu',</span> <span class="pre">'RdPu_r',</span> <span class="pre">'RdYlBu',</span> <span class="pre">'RdYlBu_r',</span> <span class="pre">'RdYlGn',</span> <span class="pre">'RdYlGn_r',</span> <span class="pre">'Reds',</span> <span class="pre">'Reds_r',</span> <span class="pre">'Set1',</span> <span class="pre">'Set1_r',</span> <span class="pre">'Set2',</span> <span class="pre">'Set2_r',</span> <span class="pre">'Set3',</span> <span class="pre">'Set3_r',</span> <span class="pre">'Spectral',</span> <span class="pre">'Spectral_r',</span> <span class="pre">'Wistia',</span> <span class="pre">'Wistia_r',</span> <span class="pre">'YlGn',</span> <span class="pre">'YlGnBu',</span> <span class="pre">'YlGnBu_r',</span> <span class="pre">'YlGn_r',</span> <span class="pre">'YlOrBr',</span> <span class="pre">'YlOrBr_r',</span> <span class="pre">'YlOrRd',</span> <span class="pre">'YlOrRd_r',</span> <span class="pre">'afmhot',</span> <span class="pre">'afmhot_r',</span> <span class="pre">'autumn',</span> <span class="pre">'autumn_r',</span> <span class="pre">'binary',</span> <span class="pre">'binary_r',</span> <span class="pre">'bone',</span> <span class="pre">'bone_r',</span> <span class="pre">'brg',</span> <span class="pre">'brg_r',</span> <span class="pre">'bwr',</span> <span class="pre">'bwr_r',</span> <span class="pre">'cividis',</span> <span class="pre">'cividis_r',</span> <span class="pre">'cool',</span> <span class="pre">'cool_r',</span> <span class="pre">'coolwarm',</span> <span class="pre">'coolwarm_r',</span> <span class="pre">'copper',</span> <span class="pre">'copper_r',</span> <span class="pre">'cubehelix',</span> <span class="pre">'cubehelix_r',</span> <span class="pre">'flag',</span> <span class="pre">'flag_r',</span> <span class="pre">'gist_earth',</span> <span class="pre">'gist_earth_r',</span> <span class="pre">'gist_gray',</span> <span class="pre">'gist_gray_r',</span> <span class="pre">'gist_heat',</span> <span class="pre">'gist_heat_r',</span> <span class="pre">'gist_ncar',</span> <span class="pre">'gist_ncar_r',</span> <span class="pre">'gist_rainbow',</span> <span class="pre">'gist_rainbow_r',</span> <span class="pre">'gist_stern',</span> <span class="pre">'gist_stern_r',</span> <span class="pre">'gist_yarg',</span> <span class="pre">'gist_yarg_r',</span> <span class="pre">'gnuplot',</span> <span class="pre">'gnuplot2',</span> <span class="pre">'gnuplot2_r',</span> <span class="pre">'gnuplot_r',</span> <span class="pre">'gray',</span> <span class="pre">'gray_r',</span> <span class="pre">'hot',</span> <span class="pre">'hot_r',</span> <span class="pre">'hsv',</span> <span class="pre">'hsv_r',</span> <span class="pre">'icefire',</span> <span class="pre">'icefire_r',</span> <span class="pre">'inferno',</span> <span class="pre">'inferno_r',</span> <span class="pre">'magma',</span> <span class="pre">'magma_r',</span> <span class="pre">'mako',</span> <span class="pre">'mako_r',</span> <span class="pre">'nipy_spectral',</span> <span class="pre">'nipy_spectral_r',</span> <span class="pre">'ocean',</span> <span class="pre">'ocean_r',</span> <span class="pre">'pink',</span> <span class="pre">'pink_r',</span> <span class="pre">'plasma',</span> <span class="pre">'plasma_r',</span> <span class="pre">'prism',</span> <span class="pre">'prism_r',</span> <span class="pre">'rainbow',</span> <span class="pre">'rainbow_r',</span> <span class="pre">'rocket',</span> <span class="pre">'rocket_r',</span> <span class="pre">'seismic',</span> <span class="pre">'seismic_r',</span> <span class="pre">'spring',</span> <span class="pre">'spring_r',</span> <span class="pre">'summer',</span> <span class="pre">'summer_r',</span> <span class="pre">'tab10',</span> <span class="pre">'tab10_r',</span> <span class="pre">'tab20',</span> <span class="pre">'tab20_r',</span> <span class="pre">'tab20b',</span> <span class="pre">'tab20b_r',</span> <span class="pre">'tab20c',</span> <span class="pre">'tab20c_r',</span> <span class="pre">'terrain',</span> <span class="pre">'terrain_r',</span> <span class="pre">'twilight',</span> <span class="pre">'twilight_r',</span> <span class="pre">'twilight_shifted',</span> <span class="pre">'twilight_shifted_r',</span> <span class="pre">'viridis',</span> <span class="pre">'viridis_r',</span> <span class="pre">'vlag',</span> <span class="pre">'vlag_r',</span> <span class="pre">'winter',</span> <span class="pre">'winter_r']</span></em><a class="headerlink" href="#qom.ui.plotters.base.BasePlotter.default_palettes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default <code class="docutils literal notranslate"><span class="pre">seaborn</span></code> palettes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.ui.plotters.base.BasePlotter.get_colors">
+<span class="sig-name descname"><span class="pre">get_colors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">palette</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'RdBu_r'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bins</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">11</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.plotters.base.BasePlotter.get_colors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to obtain the colors in a color palette.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>palette</strong> (<em>str</em><em> or </em><em>list</em>) – Default or diverging color palette.</p></li>
+<li><p><strong>bins</strong> (<em>int</em>) – Number of bins.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>colors</strong> – Colors in the palette.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.ui.plotters.base.BasePlotter.get_limits">
+<span class="sig-name descname"><span class="pre">get_limits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mini</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxi</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">res</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.plotters.base.BasePlotter.get_limits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to get limits from the minimum and maximum values of an array upto a certain resolution.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mini</strong> (<em>float</em>) – Minimum value of the array.</p></li>
+<li><p><strong>maxi</strong> (<em>float</em>) – Maximum value of the array.</p></li>
+<li><p><strong>res</strong> (<em>int</em>) – Resolution after the first significant digit in the decimal number system. Default is 2.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>mini</strong> (<em>float</em>) – Formatted minimum value.</p></li>
+<li><p><strong>maxi</strong> (<em>float</em>) – Formatted maximum value.</p></li>
+<li><p><strong>prec</strong> (<em>int</em>) – Precision of rounding off.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qom.ui.plotters.base.BasePlotter.plotter_defaults">
+<span class="sig-name descname"><span class="pre">plotter_defaults</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'annotations':</span> <span class="pre">[],</span> <span class="pre">'bins':</span> <span class="pre">11,</span> <span class="pre">'cbar_position':</span> <span class="pre">'right',</span> <span class="pre">'cbar_tick_labels':</span> <span class="pre">None,</span> <span class="pre">'cbar_ticks':</span> <span class="pre">None,</span> <span class="pre">'cbar_title':</span> <span class="pre">'',</span> <span class="pre">'cbar_x_label':</span> <span class="pre">'',</span> <span class="pre">'cbar_y_label':</span> <span class="pre">'',</span> <span class="pre">'colors':</span> <span class="pre">None,</span> <span class="pre">'component':</span> <span class="pre">'real',</span> <span class="pre">'font_family':</span> <span class="pre">'Times</span> <span class="pre">New</span> <span class="pre">Roman',</span> <span class="pre">'font_math':</span> <span class="pre">'cm',</span> <span class="pre">'font_size_large':</span> <span class="pre">20.0,</span> <span class="pre">'font_size_small':</span> <span class="pre">16.0,</span> <span class="pre">'font_stretch':</span> <span class="pre">500,</span> <span class="pre">'font_style':</span> <span class="pre">'normal',</span> <span class="pre">'font_variant':</span> <span class="pre">'normal',</span> <span class="pre">'font_weight':</span> <span class="pre">500,</span> <span class="pre">'height':</span> <span class="pre">5.0,</span> <span class="pre">'legend_labels':</span> <span class="pre">[],</span> <span class="pre">'legend_location':</span> <span class="pre">'best',</span> <span class="pre">'palette':</span> <span class="pre">'RdBu_r',</span> <span class="pre">'show_cbar':</span> <span class="pre">False,</span> <span class="pre">'show_legend':</span> <span class="pre">False,</span> <span class="pre">'sizes':</span> <span class="pre">None,</span> <span class="pre">'styles':</span> <span class="pre">None,</span> <span class="pre">'title':</span> <span class="pre">'',</span> <span class="pre">'type':</span> <span class="pre">'lines',</span> <span class="pre">'vertical_spans':</span> <span class="pre">[],</span> <span class="pre">'view_aspect':</span> <span class="pre">[1.0,</span> <span class="pre">1.0,</span> <span class="pre">1.0],</span> <span class="pre">'view_elevation':</span> <span class="pre">32.0,</span> <span class="pre">'view_rotation':</span> <span class="pre">215.0,</span> <span class="pre">'width':</span> <span class="pre">5.0}</span></em><a class="headerlink" href="#qom.ui.plotters.base.BasePlotter.plotter_defaults" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default parameters of the plotter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qom.ui.plotters.base.BasePlotter.required_params">
+<span class="sig-name descname"><span class="pre">required_params</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'contour':</span> <span class="pre">['bins',</span> <span class="pre">'cbar_position',</span> <span class="pre">'cbar_title',</span> <span class="pre">'height',</span> <span class="pre">'palette',</span> <span class="pre">'show_cbar',</span> <span class="pre">'title',</span> <span class="pre">'width',</span> <span class="pre">'x_label',</span> <span class="pre">'x_scale',</span> <span class="pre">'y_label',</span> <span class="pre">'y_scale'],</span> <span class="pre">'contourf':</span> <span class="pre">['bins',</span> <span class="pre">'cbar_position',</span> <span class="pre">'cbar_title',</span> <span class="pre">'height',</span> <span class="pre">'palette',</span> <span class="pre">'show_cbar',</span> <span class="pre">'title',</span> <span class="pre">'width',</span> <span class="pre">'x_label',</span> <span class="pre">'x_scale',</span> <span class="pre">'y_label',</span> <span class="pre">'y_scale'],</span> <span class="pre">'line':</span> <span class="pre">['bins',</span> <span class="pre">'height',</span> <span class="pre">'palette',</span> <span class="pre">'title',</span> <span class="pre">'v_label',</span> <span class="pre">'v_scale',</span> <span class="pre">'width',</span> <span class="pre">'x_label',</span> <span class="pre">'x_scale'],</span> <span class="pre">'lines':</span> <span class="pre">['bins',</span> <span class="pre">'height',</span> <span class="pre">'legend_location',</span> <span class="pre">'palette',</span> <span class="pre">'show_legend',</span> <span class="pre">'title',</span> <span class="pre">'v_label',</span> <span class="pre">'v_scale',</span> <span class="pre">'width',</span> <span class="pre">'x_label',</span> <span class="pre">'x_scale',</span> <span class="pre">'y_label',</span> <span class="pre">'y_legend',</span> <span class="pre">'y_scale'],</span> <span class="pre">'pcolormesh':</span> <span class="pre">['bins',</span> <span class="pre">'cbar_position',</span> <span class="pre">'cbar_title',</span> <span class="pre">'height',</span> <span class="pre">'palette',</span> <span class="pre">'show_cbar',</span> <span class="pre">'title',</span> <span class="pre">'width',</span> <span class="pre">'x_label',</span> <span class="pre">'x_scale',</span> <span class="pre">'y_label',</span> <span class="pre">'y_scale'],</span> <span class="pre">'scatter':</span> <span class="pre">['bins',</span> <span class="pre">'height',</span> <span class="pre">'palette',</span> <span class="pre">'title',</span> <span class="pre">'v_label',</span> <span class="pre">'v_scale',</span> <span class="pre">'width',</span> <span class="pre">'x_label',</span> <span class="pre">'x_scale'],</span> <span class="pre">'scatters':</span> <span class="pre">['bins',</span> <span class="pre">'height',</span> <span class="pre">'legend_location',</span> <span class="pre">'palette',</span> <span class="pre">'show_legend',</span> <span class="pre">'title',</span> <span class="pre">'v_label',</span> <span class="pre">'v_scale',</span> <span class="pre">'width',</span> <span class="pre">'x_label',</span> <span class="pre">'x_scale',</span> <span class="pre">'y_label',</span> <span class="pre">'y_legend',</span> <span class="pre">'y_scale'],</span> <span class="pre">'surface':</span> <span class="pre">['bins',</span> <span class="pre">'cbar_position',</span> <span class="pre">'cbar_title',</span> <span class="pre">'height',</span> <span class="pre">'palette',</span> <span class="pre">'show_cbar',</span> <span class="pre">'title',</span> <span class="pre">'v_label',</span> <span class="pre">'v_scale',</span> <span class="pre">'width',</span> <span class="pre">'x_label',</span> <span class="pre">'x_scale',</span> <span class="pre">'y_label',</span> <span class="pre">'y_scale'],</span> <span class="pre">'surface_cx':</span> <span class="pre">['bins',</span> <span class="pre">'cbar_position',</span> <span class="pre">'cbar_title',</span> <span class="pre">'height',</span> <span class="pre">'palette',</span> <span class="pre">'show_cbar',</span> <span class="pre">'title',</span> <span class="pre">'v_label',</span> <span class="pre">'v_scale',</span> <span class="pre">'width',</span> <span class="pre">'x_label',</span> <span class="pre">'x_scale',</span> <span class="pre">'y_label',</span> <span class="pre">'y_scale'],</span> <span class="pre">'surface_cy':</span> <span class="pre">['bins',</span> <span class="pre">'cbar_position',</span> <span class="pre">'cbar_title',</span> <span class="pre">'height',</span> <span class="pre">'palette',</span> <span class="pre">'show_cbar',</span> <span class="pre">'title',</span> <span class="pre">'v_label',</span> <span class="pre">'v_scale',</span> <span class="pre">'width',</span> <span class="pre">'x_label',</span> <span class="pre">'x_scale',</span> <span class="pre">'y_label',</span> <span class="pre">'y_scale'],</span> <span class="pre">'surface_cz':</span> <span class="pre">['bins',</span> <span class="pre">'cbar_position',</span> <span class="pre">'cbar_title',</span> <span class="pre">'height',</span> <span class="pre">'palette',</span> <span class="pre">'show_cbar',</span> <span class="pre">'title',</span> <span class="pre">'v_label',</span> <span class="pre">'v_scale',</span> <span class="pre">'width',</span> <span class="pre">'x_label',</span> <span class="pre">'x_scale',</span> <span class="pre">'y_label',</span> <span class="pre">'y_scale']}</span></em><a class="headerlink" href="#qom.ui.plotters.base.BasePlotter.required_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Required parameter keys for each type of plot.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qom.ui.plotters.base.BasePlotter.types_1D">
+<span class="sig-name descname"><span class="pre">types_1D</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['line',</span> <span class="pre">'lines',</span> <span class="pre">'scatter',</span> <span class="pre">'scatters']</span></em><a class="headerlink" href="#qom.ui.plotters.base.BasePlotter.types_1D" title="Permalink to this definition">¶</a></dt>
+<dd><p>Types of 1D plots.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qom.ui.plotters.base.BasePlotter.types_2D">
+<span class="sig-name descname"><span class="pre">types_2D</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['contour',</span> <span class="pre">'contourf',</span> <span class="pre">'pcolormesh']</span></em><a class="headerlink" href="#qom.ui.plotters.base.BasePlotter.types_2D" title="Permalink to this definition">¶</a></dt>
+<dd><p>Types of 2D plots.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qom.ui.plotters.base.BasePlotter.types_3D">
+<span class="sig-name descname"><span class="pre">types_3D</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['density',</span> <span class="pre">'density_unit',</span> <span class="pre">'line_3d',</span> <span class="pre">'lines_3d',</span> <span class="pre">'scatter_3d',</span> <span class="pre">'scatters_3d',</span> <span class="pre">'surface',</span> <span class="pre">'surface_cx',</span> <span class="pre">'surface_cy',</span> <span class="pre">'surface_cz']</span></em><a class="headerlink" href="#qom.ui.plotters.base.BasePlotter.types_3D" title="Permalink to this definition">¶</a></dt>
+<dd><p>Types of 3D plots.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="qom.ui.plotters.html"
+                          title="previous chapter">qom.ui.plotters subpackage</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="qom.ui.plotters.matplotlib.html"
+                          title="next chapter">qom.ui.plotters.matplotlib module</a></p>
+  </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="qom.ui.plotters.matplotlib.html" title="qom.ui.plotters.matplotlib module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="qom.ui.plotters.html" title="qom.ui.plotters subpackage"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">The Quantum Optomechanics Toolbox  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="qom.ui.html" >qom.ui package</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="qom.ui.plotters.html" >qom.ui.plotters subpackage</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">qom.ui.plotters.base module</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2023, Sampreet Kalita.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
+    </div>
+  </body>
+</html>

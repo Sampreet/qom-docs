@@ -445,7 +445,7 @@
 key                 value
 ================    ====================================================
 ‘show_progress’     (<em>bool</em>) option to display the progress of the solver. Default is <code class="docutils literal notranslate"><span class="pre">False</span></code>.
-‘indices’           (<em>list</em> or <em>tuple</em>) indices of the modes as a list, or a tuple of two integers. Default is <code class="docutils literal notranslate"><span class="pre">[0]</span></code>.
+‘indices’           (<em>list</em> or <em>tuple</em>) indices of the modes as a list. Default is <code class="docutils literal notranslate"><span class="pre">[0]</span></code>.
 ‘wigner_xs’         (<em>list</em>) X-axis values.
 ‘wigner_ys’         (<em>list</em>) Y-axis values.
 ================    ====================================================</p></li>
@@ -454,6 +454,35 @@ key                 value
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>Wigners</strong> – Single-mode Wigner distributions of shape <code class="docutils literal notranslate"><span class="pre">(dim_1,</span> <span class="pre">dim_0,</span> <span class="pre">p_dim,</span> <span class="pre">q_dim)</span></code>, where <code class="docutils literal notranslate"><span class="pre">dim_1</span></code> and <code class="docutils literal notranslate"><span class="pre">dim_0</span></code> are the first dimensions of the correlations and the indices respectively.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qom.solvers.measure.get_Wigner_distributions_two_mode">
+<span class="sig-prename descclassname"><span class="pre">qom.solvers.measure.</span></span><span class="sig-name descname"><span class="pre">get_Wigner_distributions_two_mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Corrs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cb_update</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.measure.get_Wigner_distributions_two_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to obtain two-mode Wigner distribitions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Corrs</strong> (<em>numpy.ndarray</em>) – Quadrature quadrature correlations with shape <code class="docutils literal notranslate"><span class="pre">(dim,</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">num_modes,</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">num_modes)</span></code>.</p></li>
+<li><p><strong>params</strong> (<em>dict</em>) – Parameters of the solver. Available options are:
+================    ====================================================
+key                 value
+================    ====================================================
+‘show_progress’     (<em>bool</em>) option to display the progress of the solver. Default is <code class="docutils literal notranslate"><span class="pre">False</span></code>.
+‘indices’           (<em>list</em> or <em>tuple</em>) list of indices of the modes and their quadratures as tuples or lists. Default is <code class="docutils literal notranslate"><span class="pre">[(0,</span> <span class="pre">0),</span> <span class="pre">(1,</span> <span class="pre">0)]</span></code>.
+‘wigner_xs’         (<em>list</em>) X-axis values.
+‘wigner_ys’         (<em>list</em>) Y-axis values.
+================    ====================================================</p></li>
+<li><p><strong>cb_update</strong> (<em>callable</em><em>, </em><em>optional</em>) – Callback function to update status and progress, formatted as <code class="docutils literal notranslate"><span class="pre">cb_update(status,</span> <span class="pre">progress,</span> <span class="pre">reset)</span></code>, where <code class="docutils literal notranslate"><span class="pre">status</span></code> is a string, <code class="docutils literal notranslate"><span class="pre">progress</span></code> is a float and <code class="docutils literal notranslate"><span class="pre">reset</span></code> is a boolean.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Wigners</strong> – Two-mode Wigner distributions of shape <code class="docutils literal notranslate"><span class="pre">(dim_0,</span> <span class="pre">p_dim,</span> <span class="pre">q_dim)</span></code>, where <code class="docutils literal notranslate"><span class="pre">dim_0</span></code> is the first dimension of the correlations.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>numpy.ndarray</p>

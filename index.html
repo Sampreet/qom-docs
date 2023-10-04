@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Welcome to the qom-v1.0.0 Documentation! &#8212; The Quantum Optomechanics Toolbox  documentation</title>
+    <title>Welcome to the qom-v1.0.1 Documentation! &#8212; The Quantum Optomechanics Toolbox  documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/nature.css" />
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
@@ -31,7 +31,7 @@
           <a href="qom.loopers.html" title="qom.loopers package"
              accesskey="N">next</a> |</li>
         <li class="nav-item nav-item-0"><a href="#">The Quantum Optomechanics Toolbox  documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Welcome to the <code class="docutils literal notranslate"><span class="pre">qom-v1.0.0</span></code> Documentation!</a></li> 
+        <li class="nav-item nav-item-this"><a href="">Welcome to the <code class="docutils literal notranslate"><span class="pre">qom-v1.0.1</span></code> Documentation!</a></li> 
       </ul>
     </div>  
 
@@ -40,8 +40,8 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="welcome-to-the-qom-v1-0-0-documentation">
-<h1>Welcome to the <code class="docutils literal notranslate"><span class="pre">qom-v1.0.0</span></code> Documentation!<a class="headerlink" href="#welcome-to-the-qom-v1-0-0-documentation" title="Permalink to this heading">¶</a></h1>
+  <section id="welcome-to-the-qom-v1-0-1-documentation">
+<h1>Welcome to the <code class="docutils literal notranslate"><span class="pre">qom-v1.0.1</span></code> Documentation!<a class="headerlink" href="#welcome-to-the-qom-v1-0-1-documentation" title="Permalink to this heading">¶</a></h1>
 <p>The Quantum Optomechanics Toolbox (packaged as <code class="docutils literal notranslate"><span class="pre">qom</span></code>) is a wrapper-styled, scalable toolbox featuring multiple modules for the calculation of stationary as well as dynamical properties of many-body quantum optomechanical systems.
 Backed by numerical libraries like NumPy and SciPy, and featuring the highly customizable visualizations offered by Matplotlib and Seaborn APIs, the toolbox aims to serve as an easy-to-use alternative to writing code explicitly and avoiding repetitive exercises for presentable visuals.</p>
 <section id="key-features">
@@ -80,9 +80,9 @@ Backed by numerical libraries like NumPy and SciPy, and featuring the highly cus
 </tr>
 </tbody>
 </table>
-</section>
-<section id="up-next">
-<h2>Up Next!<a class="headerlink" href="#up-next" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Faster Monte-Carlo quantum trajectories solver for low-dimensional Hilbert spaces.</p></li>
+</ul>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 100%" />
@@ -95,7 +95,7 @@ Backed by numerical libraries like NumPy and SciPy, and featuring the highly cus
 <tr class="row-even"><td><img alt="_images/00_02_mcqt.png" src="_images/00_02_mcqt.png" />
 </td>
 </tr>
-<tr class="row-odd"><td><p>Comparison of runtimes for the Jaynes-Cummings Hamiltonian.</p></td>
+<tr class="row-odd"><td><p>Comparison of runtimes for the Jaynes-Cummings Hamiltonian with Hilbert space dimension of 10.</p></td>
 </tr>
 </tbody>
 </table>
@@ -207,7 +207,7 @@ Backed by numerical libraries like NumPy and SciPy, and featuring the highly cus
 </tr>
 </tbody>
 </table>
-<p>A set of notebooks and scripts to demonstrate the usage of the toolbox can be found <a class="reference external" href="https://github.com/sampreet/qom-examples">here</a>.</p>
+<p>A set of notebooks and scripts to demonstrate the usage of the toolbox can be found in the <a class="reference external" href="https://github.com/sampreet/qom-examples">examples repository</a>.</p>
 </section>
 </section>
 <section id="installation">
@@ -229,7 +229,8 @@ These libraries can be installed using:</p>
 <p class="admonition-title">Note</p>
 <p>To run the GUI modules, <code class="docutils literal notranslate"><span class="pre">pyqt</span></code> should be installed separately.</p>
 </div>
-<p>Once the dependencies are installed, the toolbox can be installed via PyPI (last release: v0.9.0) or locally (latest version: v1.0.0).</p>
+<p>Once the dependencies are installed, the toolbox can be installed via PyPI or locally.</p>
+<p>The documentation of the latest release is available <a class="reference external" href="https://sampreet.github.io/qom-docs">here</a>.</p>
 </section>
 <section id="installing-via-pypi">
 <h2>Installing via PyPI<a class="headerlink" href="#installing-via-pypi" title="Permalink to this heading">¶</a></h2>
@@ -237,16 +238,14 @@ These libraries can be installed using:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-i<span class="w"> </span>https://test.pypi.org/simple/<span class="w"> </span>qom
 </pre></div>
 </div>
-<p>The corresponding documentation is available <a class="reference external" href="https://sampreet.github.io/qom-docs/v0.9.0">here</a>.</p>
 </section>
 <section id="installing-locally">
 <h2>Installing Locally<a class="headerlink" href="#installing-locally" title="Permalink to this heading">¶</a></h2>
 <p>To install the package locally, download <a class="reference external" href="https://github.com/sampreet/qom">the repository</a> as <code class="docutils literal notranslate"><span class="pre">.zip</span></code> and extract the contents.
-Now, execute the following from <em>outside</em> the top-level directory, <code class="docutils literal notranslate"><span class="pre">ROOT_DIR</span></code>, inside which <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> is located (refer to the file structure <a class="reference external" href="https://github.com/sampreet/qom/blob/master/CONTRIBUTING.md">here</a>):</p>
+Now, execute the following from <em>outside</em> the top-level directory, <code class="docutils literal notranslate"><span class="pre">ROOT_DIR</span></code>, inside which <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> is located (refer to the <a class="reference external" href="https://github.com/sampreet/qom/blob/master/CONTRIBUTING.md">file structure</a>):</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>ROOT_DIR
 </pre></div>
 </div>
-<p>The corresponding documentation is available <a class="reference external" href="https://sampreet.github.io/qom-docs">here</a>.</p>
 </section>
 </section>
 <section id="citing">
@@ -268,6 +267,7 @@ Now, execute the following from <em>outside</em> the top-level directory, <code 
 <li class="toctree-l2"><a class="reference internal" href="qom.solvers.differential.html">qom.solvers.differential module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="qom.solvers.measure.html">qom.solvers.measure module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="qom.solvers.stability.html">qom.solvers.stability module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qom.solvers.stochastic.html">qom.solvers.stochastic module</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="qom.systems.html">qom.systems package</a><ul>
@@ -311,10 +311,9 @@ Now, execute the following from <em>outside</em> the top-level directory, <code 
   <div>
     <h3><a href="#">Table of Contents</a></h3>
     <ul>
-<li><a class="reference internal" href="#">Welcome to the <code class="docutils literal notranslate"><span class="pre">qom-v1.0.0</span></code> Documentation!</a><ul>
+<li><a class="reference internal" href="#">Welcome to the <code class="docutils literal notranslate"><span class="pre">qom-v1.0.1</span></code> Documentation!</a><ul>
 <li><a class="reference internal" href="#key-features">Key Features</a></li>
 <li><a class="reference internal" href="#what-s-new-in-v1-0">What’s New in v1.0!</a></li>
-<li><a class="reference internal" href="#up-next">Up Next!</a></li>
 <li><a class="reference internal" href="#examples">Examples</a></li>
 </ul>
 </li>
@@ -362,7 +361,7 @@ Now, execute the following from <em>outside</em> the top-level directory, <code 
           <a href="qom.loopers.html" title="qom.loopers package"
              >next</a> |</li>
         <li class="nav-item nav-item-0"><a href="#">The Quantum Optomechanics Toolbox  documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Welcome to the <code class="docutils literal notranslate"><span class="pre">qom-v1.0.0</span></code> Documentation!</a></li> 
+        <li class="nav-item nav-item-this"><a href="">Welcome to the <code class="docutils literal notranslate"><span class="pre">qom-v1.0.1</span></code> Documentation!</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
