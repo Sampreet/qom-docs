@@ -1,0 +1,316 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>qom.solvers.differential module &#8212; The Quantum Optomechanics Toolbox  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/nature.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="qom.solvers.measure module" href="qom.solvers.measure.html" />
+    <link rel="prev" title="qom.solvers.deterministic module" href="qom.solvers.deterministic.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="qom.solvers.measure.html" title="qom.solvers.measure module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="qom.solvers.deterministic.html" title="qom.solvers.deterministic module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">The Quantum Optomechanics Toolbox  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="qom.solvers.html" accesskey="U">qom.solvers package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">qom.solvers.differential module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-qom.solvers.differential">
+<span id="qom-solvers-differential-module"></span><h1>qom.solvers.differential module<a class="headerlink" href="#module-qom.solvers.differential" title="Permalink to this heading">¶</a></h1>
+<p>Module to solve ordinary differential equations.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="qom.solvers.differential.ODESolver">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qom.solvers.differential.</span></span><span class="sig-name descname"><span class="pre">ODESolver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cb_update</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.differential.ODESolver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class to solve ordinary differential equations using <code class="xref py py-class docutils literal notranslate"><span class="pre">scipy.integrate</span></code>.</p>
+<p>Initializes <code class="docutils literal notranslate"><span class="pre">solver_methods</span></code>, <code class="docutils literal notranslate"><span class="pre">func</span></code>, <code class="docutils literal notranslate"><span class="pre">params</span></code>, <code class="docutils literal notranslate"><span class="pre">integrator</span></code> and <code class="docutils literal notranslate"><span class="pre">updater</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>func</strong> (<em>callable</em>) – Function returning the rate equations of the input variables, formatted as <code class="docutils literal notranslate"><span class="pre">func(t,</span> <span class="pre">v,</span> <span class="pre">c)</span></code>, where <code class="docutils literal notranslate"><span class="pre">t</span></code> is the time at which the integration is performed, <code class="docutils literal notranslate"><span class="pre">v</span></code> is a list of variables and <code class="docutils literal notranslate"><span class="pre">c</span></code> is a list of constants. The output should match the dimension of <code class="docutils literal notranslate"><span class="pre">v</span></code>.</p></li>
+<li><p><strong>params</strong> (<em>dict</em>) – Parameters for the solver. Refer to <strong>Notes</strong> below for all available options.</p></li>
+<li><p><strong>cb_update</strong> (<em>callable</em><em>, </em><em>optional</em>) – Callback function to update status and progress, formatted as <code class="docutils literal notranslate"><span class="pre">cb_update(status,</span> <span class="pre">progress,</span> <span class="pre">reset)</span></code>, where <code class="docutils literal notranslate"><span class="pre">status</span></code> is a string, <code class="docutils literal notranslate"><span class="pre">progress</span></code> is a float and <code class="docutils literal notranslate"><span class="pre">reset</span></code> is a boolean.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<dl>
+<dt>The <code class="docutils literal notranslate"><span class="pre">params</span></code> dictionary currently supports the following keys:</dt><dd><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>key</p></th>
+<th class="head"><p>value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>‘show_progress’</p></td>
+<td><p>(<em>bool</em>) option to display the progress of the integration. Default is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘ode_method’</p></td>
+<td><p>(<em>str</em>) method used to solve the ODEs. Available options are <code class="docutils literal notranslate"><span class="pre">'BDF'</span></code>, <code class="docutils literal notranslate"><span class="pre">'DOP853'</span></code>, <code class="docutils literal notranslate"><span class="pre">'LSODA'</span></code>, <code class="docutils literal notranslate"><span class="pre">'Radau'</span></code>, <code class="docutils literal notranslate"><span class="pre">'RK23'</span></code>, <code class="docutils literal notranslate"><span class="pre">'RK45'</span></code> (fallback), <code class="docutils literal notranslate"><span class="pre">'dop853'</span></code>, <code class="docutils literal notranslate"><span class="pre">'dopri5'</span></code>, <code class="docutils literal notranslate"><span class="pre">'lsoda'</span></code>, <code class="docutils literal notranslate"><span class="pre">'vode'</span></code> and <code class="docutils literal notranslate"><span class="pre">'zvode'</span></code> (refer to <code class="xref py py-class docutils literal notranslate"><span class="pre">qom.solvers.ODESolver</span></code>). Default is <code class="docutils literal notranslate"><span class="pre">'RK45'</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p>‘ode_is_stiff’</p></td>
+<td><p>(<em>bool</em>) option to select whether the integration is a stiff problem or a non-stiff one. Default is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘ode_atol’</p></td>
+<td><p>(<em>float</em>) absolute tolerance of the integrator. Default is <code class="docutils literal notranslate"><span class="pre">1e-12</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p>‘ode_rtol’</p></td>
+<td><p>(<em>float</em>) relative tolerance of the integrator. Default is <code class="docutils literal notranslate"><span class="pre">1e-6</span></code>.</p></td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>Currently available Python-based methods are:</dt><dd><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>value</p></th>
+<th class="head"><p>meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>‘BDF’</p></td>
+<td><p>backward-differentiation formulas.</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘DOP853’</p></td>
+<td><p>explicit Runge-Kutta method of order 8(5, 3).</p></td>
+</tr>
+<tr class="row-even"><td><p>‘LSODA’</p></td>
+<td><p>Adams/BDF method with automatic stiffness detection and switching.</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘Radau’</p></td>
+<td><p>implicit Runge-Kutta of Radau IIA family of order 5.</p></td>
+</tr>
+<tr class="row-even"><td><p>‘RK23’</p></td>
+<td><p>explicit Runge-Kutta method of order 3(2).</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘RK45’</p></td>
+<td><p>explicit Runge-Kutta method of order 5(4) (fallback).</p></td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>Currently available FORTRAN-based are:</dt><dd><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>value</p></th>
+<th class="head"><p>meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>‘dop853’</p></td>
+<td><p>explicit Runge-Kutta method of order 8(5, 3).</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘dopri5’</p></td>
+<td><p>explicit Runge-Kutta method of order 5(4).</p></td>
+</tr>
+<tr class="row-even"><td><p>‘lsoda’</p></td>
+<td><p>real-valued Adams/BDF method with automatic stiffness detection and switching.</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘vode’</p></td>
+<td><p>real-valued implicit Adams/BDF methods.</p></td>
+</tr>
+<tr class="row-even"><td><p>‘zvode’</p></td>
+<td><p>complex-valued implicit Adams/BDF methods.</p></td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qom.solvers.differential.ODESolver.desc">
+<span class="sig-name descname"><span class="pre">desc</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Ordinary</span> <span class="pre">Differential</span> <span class="pre">Equations</span> <span class="pre">Solver'</span></em><a class="headerlink" href="#qom.solvers.differential.ODESolver.desc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Description of the solver.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qom.solvers.differential.ODESolver.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'ODESolver'</span></em><a class="headerlink" href="#qom.solvers.differential.ODESolver.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the solver.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qom.solvers.differential.ODESolver.new_api_methods">
+<span class="sig-name descname"><span class="pre">new_api_methods</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['BDF',</span> <span class="pre">'DOP853',</span> <span class="pre">'LSODA',</span> <span class="pre">'Radau',</span> <span class="pre">'RK23',</span> <span class="pre">'RK45']</span></em><a class="headerlink" href="#qom.solvers.differential.ODESolver.new_api_methods" title="Permalink to this definition">¶</a></dt>
+<dd><p>New Python-based methods availabile in <code class="xref py py-class docutils literal notranslate"><span class="pre">scipy.integrate</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qom.solvers.differential.ODESolver.old_api_methods">
+<span class="sig-name descname"><span class="pre">old_api_methods</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['dop853',</span> <span class="pre">'dopri5',</span> <span class="pre">'lsoda',</span> <span class="pre">'vode',</span> <span class="pre">'zvode']</span></em><a class="headerlink" href="#qom.solvers.differential.ODESolver.old_api_methods" title="Permalink to this definition">¶</a></dt>
+<dd><p>Old FORTRAN-based methods availabile in <code class="xref py py-class docutils literal notranslate"><span class="pre">scipy.integrate</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.solvers.differential.ODESolver.set_params">
+<span class="sig-name descname"><span class="pre">set_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.differential.ODESolver.set_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to set the solver parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>params</strong> (<em>dict</em>) – Parameters of the solver.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.solvers.differential.ODESolver.solve">
+<span class="sig-name descname"><span class="pre">solve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">T</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func_c</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.differential.ODESolver.solve" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to obtain the solutions of the ODE at all times.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>T</strong> (<em>numpy.ndarray</em>) – Times at which the values are calculated.</p></li>
+<li><p><strong>iv</strong> (<em>numpy.ndarray</em>) – Initial values for the integration.</p></li>
+<li><p><strong>c</strong> (<em>numpy.ndarray</em>) – Constants of the integration.</p></li>
+<li><p><strong>func_c</strong> (<em>callable</em><em>, </em><em>optional</em>) – Function returning the time-dependent constants of the integration, formatted as <code class="docutils literal notranslate"><span class="pre">func_c(i)</span></code>, where <code class="docutils literal notranslate"><span class="pre">i</span></code> is the <em>i</em>-th step of integration.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>vs</strong> – Values of the variables at all times.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qom.solvers.differential.ODESolver.solve_new">
+<span class="sig-name descname"><span class="pre">solve_new</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">T</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.differential.ODESolver.solve_new" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to integrate with the new API methods.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>T</strong> (<em>float</em>) – Times at which the values are obtained.</p></li>
+<li><p><strong>iv</strong> (<em>numpy.ndarray</em>) – Initial values of the variables.</p></li>
+<li><p><strong>c</strong> (<em>numpy.ndarray</em>) – Constants of the integration.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>vs</strong> – Values of the variables.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qom.solvers.differential.ODESolver.solver_defaults">
+<span class="sig-name descname"><span class="pre">solver_defaults</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'ode_atol':</span> <span class="pre">1e-12,</span> <span class="pre">'ode_is_stiff':</span> <span class="pre">False,</span> <span class="pre">'ode_method':</span> <span class="pre">'RK45',</span> <span class="pre">'ode_rtol':</span> <span class="pre">1e-06,</span> <span class="pre">'show_progress':</span> <span class="pre">False}</span></em><a class="headerlink" href="#qom.solvers.differential.ODESolver.solver_defaults" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default parameters of the solver.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="qom.solvers.deterministic.html"
+                          title="previous chapter">qom.solvers.deterministic module</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="qom.solvers.measure.html"
+                          title="next chapter">qom.solvers.measure module</a></p>
+  </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="qom.solvers.measure.html" title="qom.solvers.measure module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="qom.solvers.deterministic.html" title="qom.solvers.deterministic module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">The Quantum Optomechanics Toolbox  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="qom.solvers.html" >qom.solvers package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">qom.solvers.differential module</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2023, Sampreet Kalita.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
+    </div>
+  </body>
+</html>
