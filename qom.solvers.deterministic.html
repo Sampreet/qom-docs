@@ -312,6 +312,17 @@
 </dl>
 </dd></dl>
 
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qom.solvers.deterministic.HLESolver.required_params">
+<span class="sig-name descname"><span class="pre">required_params</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['t_min',</span> <span class="pre">'t_max',</span> <span class="pre">'t_dim']</span></em><a class="headerlink" href="#qom.solvers.deterministic.HLESolver.required_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Required parameters of the solver.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="qom.solvers.deterministic.HLESolver.set_params">
 <span class="sig-name descname"><span class="pre">set_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.HLESolver.set_params" title="Permalink to this definition">¶</a></dt>
@@ -387,7 +398,28 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>system</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">qom.systems.*</span></code>) – Instance of the system. Requires predefined system methods for certain solver methods.</p></li>
-<li><p><strong>params</strong> (<em>dict</em>) – Parameters for the solver. Refer to <strong>Notes</strong> below for all available options.</p></li>
+<li><p><strong>params</strong> (<em>dict</em>) – <dl>
+<dt>Parameters for the solver. Refer to <strong>Notes</strong> below for all available options. Required options are:</dt><dd><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>key</p></th>
+<th class="head"><p>value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>’t_min’</p></td>
+<td><p>(<em>float</em>) minimum time at which the method starts.</p></td>
+</tr>
+<tr class="row-odd"><td><p>’t_max’</p></td>
+<td><p>(<em>float</em>) maximum time at which the method stops.</p></td>
+</tr>
+<tr class="row-even"><td><p>’t_dim’</p></td>
+<td><p>(<em>int</em>) number of values from <code class="docutils literal notranslate"><span class="pre">'t_max'</span></code> to <code class="docutils literal notranslate"><span class="pre">'t_min'</span></code>, both inclusive.</p></td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</p></li>
 <li><p><strong>cb_update</strong> (<em>callable</em><em>, </em><em>optional</em>) – Callback function to update status and progress, formatted as <code class="docutils literal notranslate"><span class="pre">cb_update(status,</span> <span class="pre">progress,</span> <span class="pre">reset)</span></code>, where <code class="docutils literal notranslate"><span class="pre">status</span></code> is a string, <code class="docutils literal notranslate"><span class="pre">progress</span></code> is a float and <code class="docutils literal notranslate"><span class="pre">reset</span></code> is a boolean.</p></li>
 </ul>
 </dd>
@@ -485,6 +517,17 @@
 </dl>
 </dd></dl>
 
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qom.solvers.deterministic.LLESolver.required_params">
+<span class="sig-name descname"><span class="pre">required_params</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['t_min',</span> <span class="pre">'t_max',</span> <span class="pre">'t_dim']</span></em><a class="headerlink" href="#qom.solvers.deterministic.LLESolver.required_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Required parameters of the solver.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="qom.solvers.deterministic.LLESolver.set_params">
 <span class="sig-name descname"><span class="pre">set_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.LLESolver.set_params" title="Permalink to this definition">¶</a></dt>
@@ -519,7 +562,28 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>system</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">qom.systems.*</span></code>) – Instance of the system. Requires predefined system methods for certain solver methods.</p></li>
-<li><p><strong>params</strong> (<em>dict</em>) – Parameters for the solver. Refer to <strong>Notes</strong> below for all available options.</p></li>
+<li><p><strong>params</strong> (<em>dict</em>) – <dl>
+<dt>Parameters for the solver. Refer to <strong>Notes</strong> below for all available options.Required options are:</dt><dd><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>key</p></th>
+<th class="head"><p>value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>’t_min’</p></td>
+<td><p>(<em>float</em>) minimum time at which the method starts.</p></td>
+</tr>
+<tr class="row-odd"><td><p>’t_max’</p></td>
+<td><p>(<em>float</em>) maximum time at which the method stops.</p></td>
+</tr>
+<tr class="row-even"><td><p>’t_dim’</p></td>
+<td><p>(<em>int</em>) number of values from <code class="docutils literal notranslate"><span class="pre">'t_max'</span></code> to <code class="docutils literal notranslate"><span class="pre">'t_min'</span></code>, both inclusive.</p></td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</p></li>
 <li><p><strong>cb_update</strong> (<em>callable</em><em>, </em><em>optional</em>) – Callback function to update status and progress, formatted as <code class="docutils literal notranslate"><span class="pre">cb_update(status,</span> <span class="pre">progress,</span> <span class="pre">reset)</span></code>, where <code class="docutils literal notranslate"><span class="pre">status</span></code> is a string, <code class="docutils literal notranslate"><span class="pre">progress</span></code> is a float and <code class="docutils literal notranslate"><span class="pre">reset</span></code> is a boolean.</p></li>
 </ul>
 </dd>
@@ -634,6 +698,17 @@
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qom.solvers.deterministic.NLSESolver.required_params">
+<span class="sig-name descname"><span class="pre">required_params</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['t_min',</span> <span class="pre">'t_max',</span> <span class="pre">'t_dim']</span></em><a class="headerlink" href="#qom.solvers.deterministic.NLSESolver.required_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Required parameters of the solver.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
 </dd>
 </dl>
 </dd></dl>
@@ -831,6 +906,17 @@
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qom.solvers.deterministic.SSHLESolver.required_params">
+<span class="sig-name descname"><span class="pre">required_params</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#qom.solvers.deterministic.SSHLESolver.required_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Required parameters of the solver.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
 </dd>
 </dl>
 </dd></dl>

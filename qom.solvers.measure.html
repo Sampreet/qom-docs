@@ -440,15 +440,31 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>Corrs</strong> (<em>numpy.ndarray</em>) – Quadrature quadrature correlations with shape <code class="docutils literal notranslate"><span class="pre">(dim,</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">num_modes,</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">num_modes)</span></code>.</p></li>
-<li><p><strong>params</strong> (<em>dict</em>) – Parameters of the solver. Available options are:
-================    ====================================================
-key                 value
-================    ====================================================
-‘show_progress’     (<em>bool</em>) option to display the progress of the solver. Default is <code class="docutils literal notranslate"><span class="pre">False</span></code>.
-‘indices’           (<em>list</em> or <em>tuple</em>) indices of the modes as a list. Default is <code class="docutils literal notranslate"><span class="pre">[0]</span></code>.
-‘wigner_xs’         (<em>list</em>) X-axis values.
-‘wigner_ys’         (<em>list</em>) Y-axis values.
-================    ====================================================</p></li>
+<li><p><strong>params</strong> (<em>dict</em>) – <dl>
+<dt>Parameters of the solver. Available options are:</dt><dd><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>key</p></th>
+<th class="head"><p>value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>’show_progress’</p></td>
+<td><p>(<em>bool</em>) option to display the progress of the solver. Default is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p>’indices’</p></td>
+<td><p>(<em>list</em> or <em>tuple</em>) indices of the modes as a list. Default is <code class="docutils literal notranslate"><span class="pre">[0]</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p>’wigner_xs’</p></td>
+<td><p>(<em>list</em>) X-axis values.</p></td>
+</tr>
+<tr class="row-odd"><td><p>’wigner_ys’</p></td>
+<td><p>(<em>list</em>) Y-axis values.</p></td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</p></li>
 <li><p><strong>cb_update</strong> (<em>callable</em><em>, </em><em>optional</em>) – Callback function to update status and progress, formatted as <code class="docutils literal notranslate"><span class="pre">cb_update(status,</span> <span class="pre">progress,</span> <span class="pre">reset)</span></code>, where <code class="docutils literal notranslate"><span class="pre">status</span></code> is a string, <code class="docutils literal notranslate"><span class="pre">progress</span></code> is a float and <code class="docutils literal notranslate"><span class="pre">reset</span></code> is a boolean.</p></li>
 </ul>
 </dd>
@@ -469,15 +485,31 @@ key                 value
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>Corrs</strong> (<em>numpy.ndarray</em>) – Quadrature quadrature correlations with shape <code class="docutils literal notranslate"><span class="pre">(dim,</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">num_modes,</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">num_modes)</span></code>.</p></li>
-<li><p><strong>params</strong> (<em>dict</em>) – Parameters of the solver. Available options are:
-================    ====================================================
-key                 value
-================    ====================================================
-‘show_progress’     (<em>bool</em>) option to display the progress of the solver. Default is <code class="docutils literal notranslate"><span class="pre">False</span></code>.
-‘indices’           (<em>list</em> or <em>tuple</em>) list of indices of the modes and their quadratures as tuples or lists. Default is <code class="docutils literal notranslate"><span class="pre">[(0,</span> <span class="pre">0),</span> <span class="pre">(1,</span> <span class="pre">0)]</span></code>.
-‘wigner_xs’         (<em>list</em>) X-axis values.
-‘wigner_ys’         (<em>list</em>) Y-axis values.
-================    ====================================================</p></li>
+<li><p><strong>params</strong> (<em>dict</em>) – <dl>
+<dt>Parameters of the solver. Available options are:</dt><dd><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>key</p></th>
+<th class="head"><p>value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>’show_progress’</p></td>
+<td><p>(<em>bool</em>) option to display the progress of the solver. Default is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p>’indices’</p></td>
+<td><p>(<em>list</em> or <em>tuple</em>) list of indices of the modes and their quadratures as tuples or lists. Default is <code class="docutils literal notranslate"><span class="pre">[(0,</span> <span class="pre">0),</span> <span class="pre">(1,</span> <span class="pre">0)]</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p>’wigner_xs’</p></td>
+<td><p>(<em>list</em>) X-axis values.</p></td>
+</tr>
+<tr class="row-odd"><td><p>’wigner_ys’</p></td>
+<td><p>(<em>list</em>) Y-axis values.</p></td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</p></li>
 <li><p><strong>cb_update</strong> (<em>callable</em><em>, </em><em>optional</em>) – Callback function to update status and progress, formatted as <code class="docutils literal notranslate"><span class="pre">cb_update(status,</span> <span class="pre">progress,</span> <span class="pre">reset)</span></code>, where <code class="docutils literal notranslate"><span class="pre">status</span></code> is a string, <code class="docutils literal notranslate"><span class="pre">progress</span></code> is a float and <code class="docutils literal notranslate"><span class="pre">reset</span></code> is a boolean.</p></li>
 </ul>
 </dd>
