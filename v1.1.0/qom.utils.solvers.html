@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>qom.utils.solvers module &#8212; The Quantum Optomechanics Toolbox  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=362ab14a" />
+    <link rel="stylesheet" type="text/css" href="_static/nature.css?v=0f882399" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.1.2/es5/tex-mml-chtml.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="qom.io module" href="qom.io.html" />
+    <link rel="prev" title="qom.utils.loopers module" href="qom.utils.loopers.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="qom.io.html" title="qom.io module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="qom.utils.loopers.html" title="qom.utils.loopers module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">The Quantum Optomechanics Toolbox  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="qom.utils.html" accesskey="U">qom.utils package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">qom.utils.solvers module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-qom.utils.solvers">
+<span id="qom-utils-solvers-module"></span><h1>qom.utils.solvers module<a class="headerlink" href="#module-qom.utils.solvers" title="Link to this heading">¶</a></h1>
+<p>Module containing utility functions for solvers.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="qom.utils.solvers.get_func_Lyapunov_exponents">
+<span class="sig-prename descclassname"><span class="pre">qom.utils.solvers.</span></span><span class="sig-name descname"><span class="pre">get_func_Lyapunov_exponents</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">SystemClass</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">steady_state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cb_update</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.utils.solvers.get_func_Lyapunov_exponents" title="Link to this definition">¶</a></dt>
+<dd><p>Function to get the function to obtain the Lyapunov exponents.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>SystemClass</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">qom.systems.*</span></code>) – Uninitialized system class. Requires predefined system methods for certain solver methods.</p></li>
+<li><p><strong>params</strong> (<em>dict</em><em>, </em><em>optional</em>) – Parameters for the solver. Refer to <a class="reference internal" href="qom.solvers.deterministic.html#qom.solvers.deterministic.HLESolver" title="qom.solvers.deterministic.HLESolver"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.solvers.deterministic.HLESolver</span></code></a>, <a class="reference internal" href="qom.solvers.deterministic.html#qom.solvers.deterministic.SSHLESolver" title="qom.solvers.deterministic.SSHLESolver"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.solvers.deterministic.SSHLESolver</span></code></a> and <cite>qom.solvers.measure.get_Lyapunov_exponents</cite> for available parameters.</p></li>
+<li><p><strong>steady_state</strong> (<em>bool</em><em>, </em><em>default=True.</em>) – Whether the calculated modes and correlations are steady state values or time series.</p></li>
+<li><p><strong>cb_update</strong> (<em>callable</em><em>, </em><em>optional</em>) – Callback function to update status and progress, formatted as <code class="docutils literal notranslate"><span class="pre">cb_update(status,</span> <span class="pre">progress,</span> <span class="pre">reset)</span></code>, where <code class="docutils literal notranslate"><span class="pre">status</span></code> is a string, <code class="docutils literal notranslate"><span class="pre">progress</span></code> is a float and <code class="docutils literal notranslate"><span class="pre">reset</span></code> is a boolean.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>get_le</strong> – Function to obtain the Lyapunov exponents. Returns a <code class="docutils literal notranslate"><span class="pre">numpy.ndarray</span></code> with shape <code class="docutils literal notranslate"><span class="pre">(2</span> <span class="pre">*</span> <span class="pre">num_modes,</span> <span class="pre">)</span></code>.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>callable</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qom.utils.solvers.get_func_quantum_correlation_measures">
+<span class="sig-prename descclassname"><span class="pre">qom.utils.solvers.</span></span><span class="sig-name descname"><span class="pre">get_func_quantum_correlation_measures</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">SystemClass</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">steady_state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cb_update</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.utils.solvers.get_func_quantum_correlation_measures" title="Link to this definition">¶</a></dt>
+<dd><p>Function to get the function to obtain the quantum correlation measures.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>SystemClass</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">qom.systems.*</span></code>) – Uninitialized system class. Requires predefined system methods for certain solver methods.</p></li>
+<li><p><strong>params</strong> (<em>dict</em><em>, </em><em>optional</em>) – Parameters for the solver. Refer to <a class="reference internal" href="qom.solvers.deterministic.html#qom.solvers.deterministic.HLESolver" title="qom.solvers.deterministic.HLESolver"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.solvers.deterministic.HLESolver</span></code></a>, <a class="reference internal" href="qom.solvers.deterministic.html#qom.solvers.deterministic.SSHLESolver" title="qom.solvers.deterministic.SSHLESolver"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.solvers.deterministic.SSHLESolver</span></code></a> and <a class="reference internal" href="qom.solvers.measure.html#qom.solvers.measure.QCMSolver" title="qom.solvers.measure.QCMSolver"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.solvers.measure.QCMSolver</span></code></a> for available parameters.</p></li>
+<li><p><strong>steady_state</strong> (<em>bool</em><em>, </em><em>default=True.</em>) – Whether the calculated modes and correlations are steady state values or time series.</p></li>
+<li><p><strong>cb_update</strong> (<em>callable</em><em>, </em><em>optional</em>) – Callback function to update status and progress, formatted as <code class="docutils literal notranslate"><span class="pre">cb_update(status,</span> <span class="pre">progress,</span> <span class="pre">reset)</span></code>, where <code class="docutils literal notranslate"><span class="pre">status</span></code> is a string, <code class="docutils literal notranslate"><span class="pre">progress</span></code> is a float and <code class="docutils literal notranslate"><span class="pre">reset</span></code> is a boolean.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>get_qcm</strong> – Function to obtain the quantum correlation measures. Returns a <code class="docutils literal notranslate"><span class="pre">numpy.ndarray</span></code> with shape <code class="docutils literal notranslate"><span class="pre">(dim,</span> <span class="pre">num_measure_codes)</span></code>.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>callable</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qom.utils.solvers.get_func_stability_zone">
+<span class="sig-prename descclassname"><span class="pre">qom.utils.solvers.</span></span><span class="sig-name descname"><span class="pre">get_func_stability_zone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">SystemClass</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">steady_state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_rhc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cb_update</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.utils.solvers.get_func_stability_zone" title="Link to this definition">¶</a></dt>
+<dd><p>Function to get the function to obtain the stability zone.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>SystemClass</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">qom.systems.*</span></code>) – Uninitialized system class. Requires predefined system methods for certain solver methods.</p></li>
+<li><p><strong>params</strong> (<em>dict</em><em>, </em><em>optional</em>) – Parameters for the solver. Refer to <a class="reference internal" href="qom.solvers.deterministic.html#qom.solvers.deterministic.HLESolver" title="qom.solvers.deterministic.HLESolver"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.solvers.deterministic.HLESolver</span></code></a>, <a class="reference internal" href="qom.solvers.deterministic.html#qom.solvers.deterministic.SSHLESolver" title="qom.solvers.deterministic.SSHLESolver"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.solvers.deterministic.SSHLESolver</span></code></a> and <a class="reference internal" href="qom.solvers.stability.html#qom.solvers.stability.RHCSolver" title="qom.solvers.stability.RHCSolver"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.solvers.stability.RHCSolver</span></code></a> for available parameters. If the value of key <code class="docutils literal notranslate"><span class="pre">&quot;system_measure_name&quot;</span></code> is <code class="docutils literal notranslate"><span class="pre">&quot;coeffs_A&quot;</span></code>, the stability is calculated using the coefficients, else the drift matrices are used (fallback).</p></li>
+<li><p><strong>steady_state</strong> (<em>bool</em><em>, </em><em>default=True.</em>) – Whether the calculated modes and correlations are steady state values or time series.</p></li>
+<li><p><strong>use_rhc</strong> (<em>bool</em><em>, </em><em>default=False</em>) – Option to use the Routh-Hurwitz criteria to calculate the counts for the unstable eigenvalues.</p></li>
+<li><p><strong>cb_update</strong> (<em>callable</em><em>, </em><em>optional</em>) – Callback function to update status and progress, formatted as <code class="docutils literal notranslate"><span class="pre">cb_update(status,</span> <span class="pre">progress,</span> <span class="pre">reset)</span></code>, where <code class="docutils literal notranslate"><span class="pre">status</span></code> is a string, <code class="docutils literal notranslate"><span class="pre">progress</span></code> is a float and <code class="docutils literal notranslate"><span class="pre">reset</span></code> is a boolean.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>get_sz</strong> – Function to obtain the stability zone. Returns a <code class="docutils literal notranslate"><span class="pre">numpy.ndarray</span></code> with shape <code class="docutils literal notranslate"><span class="pre">(dim,</span> <span class="pre">)</span></code>. If <code class="docutils literal notranslate"><span class="pre">steady_state</span></code> is set to <code class="docutils literal notranslate"><span class="pre">True</span></code>, the array contains a single element denoting the multi-stability indicator. Refer to <code class="docutils literal notranslate"><span class="pre">qom.solvers.measure.get_stability_zone</span></code> function for the meaning of indicators.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>callable</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qom.utils.solvers.get_func_system_measures">
+<span class="sig-prename descclassname"><span class="pre">qom.utils.solvers.</span></span><span class="sig-name descname"><span class="pre">get_func_system_measures</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">SystemClass</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">steady_state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cb_update</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.utils.solvers.get_func_system_measures" title="Link to this definition">¶</a></dt>
+<dd><p>Function to get the function to obtain the system measures.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>SystemClass</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">qom.systems.*</span></code>) – Uninitialized system class. Requires predefined system methods for certain solver methods.</p></li>
+<li><p><strong>params</strong> (<em>dict</em><em>, </em><em>optional</em>) – Parameters for the solver. Refer to <a class="reference internal" href="qom.solvers.deterministic.html#qom.solvers.deterministic.HLESolver" title="qom.solvers.deterministic.HLESolver"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.solvers.deterministic.HLESolver</span></code></a> and <a class="reference internal" href="qom.solvers.deterministic.html#qom.solvers.deterministic.SSHLESolver" title="qom.solvers.deterministic.SSHLESolver"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.solvers.deterministic.SSHLESolver</span></code></a> and <cite>qom.solvers.measure.get_system_measures</cite> for available parameters.</p></li>
+<li><p><strong>steady_state</strong> (<em>bool</em><em>, </em><em>default=True.</em>) – Whether the calculated modes and correlations are steady state values or time series.</p></li>
+<li><p><strong>cb_update</strong> (<em>callable</em><em>, </em><em>optional</em>) – Callback function to update status and progress, formatted as <code class="docutils literal notranslate"><span class="pre">cb_update(status,</span> <span class="pre">progress,</span> <span class="pre">reset)</span></code>, where <code class="docutils literal notranslate"><span class="pre">status</span></code> is a string, <code class="docutils literal notranslate"><span class="pre">progress</span></code> is a float and <code class="docutils literal notranslate"><span class="pre">reset</span></code> is a boolean.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>get_sm</strong> – Function to obtain the system measures. Returns a <code class="docutils literal notranslate"><span class="pre">numpy.ndarray</span></code> with shape <code class="docutils literal notranslate"><span class="pre">(dim,</span> <span class="pre">)</span></code> plus the shape of each measure.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>callable</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qom.utils.solvers.plot_mcqt_solver_results">
+<span class="sig-prename descclassname"><span class="pre">qom.utils.solvers.</span></span><span class="sig-name descname"><span class="pre">plot_mcqt_solver_results</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">solver</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_plotter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.utils.solvers.plot_mcqt_solver_results" title="Link to this definition">¶</a></dt>
+<dd><p>Helper function to plot results.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>solver</strong> (<a class="reference internal" href="qom.solvers.stochastic.html#qom.solvers.stochastic.MCQTSolver" title="qom.solvers.stochastic.MCQTSolver"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.solvers.stochastic.MCQTSolver</span></code></a>) – Instance of the solver.</p></li>
+<li><p><strong>params_plotter</strong> (<em>dict</em>) – Parameters of the plotter. Refer to <strong>Notes</strong> of <a class="reference internal" href="qom.ui.plotters.base.html#qom.ui.plotters.base.BasePlotter" title="qom.ui.plotters.base.BasePlotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.ui.plotters.base.BasePlotter</span></code></a> for all available parameters.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qom.utils.solvers.run_mcqt_solver_instance">
+<span class="sig-prename descclassname"><span class="pre">qom.utils.solvers.</span></span><span class="sig-name descname"><span class="pre">run_mcqt_solver_instance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.utils.solvers.run_mcqt_solver_instance" title="Link to this definition">¶</a></dt>
+<dd><p>Function to run a single instance of <code class="docutils literal notranslate"><span class="pre">wrap_mcqt_solver</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>args</strong> (<em>list</em>) – Arguments of the <code class="docutils literal notranslate"><span class="pre">wrap_mcqt_solver</span></code> function.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>solver</strong> – Instance of the solver.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="qom.solvers.stochastic.html#qom.solvers.stochastic.MCQTSolver" title="qom.solvers.stochastic.MCQTSolver"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.solvers.stochastic.MCQTSolver</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qom.utils.solvers.run_mcqt_solvers_in_parallel">
+<span class="sig-prename descclassname"><span class="pre">qom.utils.solvers.</span></span><span class="sig-name descname"><span class="pre">run_mcqt_solvers_in_parallel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">system</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_trajs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subplots</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_plotter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_processes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cb_update</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.utils.solvers.run_mcqt_solvers_in_parallel" title="Link to this definition">¶</a></dt>
+<dd><p>Function to run multiple MCQTSolver in parallel processes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>system</strong> (<a class="reference internal" href="qom.systems.base.html#module-qom.systems.base" title="qom.systems.base"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.systems.base</span></code></a>) – Instance of the system. Requires predefined system methods <code class="docutils literal notranslate"><span class="pre">get_ops_collapse</span></code>, <code class="docutils literal notranslate"><span class="pre">get_ops_expect</span></code>, <code class="docutils literal notranslate"><span class="pre">get_H_0</span></code> and <code class="docutils literal notranslate"><span class="pre">get_ivc</span></code>. For time-dependent Hamiltonians, the method <code class="docutils literal notranslate"><span class="pre">get_H_t</span></code> should also be defined. Refer to <strong>Notes</strong> of <a class="reference internal" href="qom.solvers.stochastic.html#qom.solvers.stochastic.MCQTSolver" title="qom.solvers.stochastic.MCQTSolver"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.solvers.stochastic.MCQTSolver</span></code></a> for their implementations.</p></li>
+<li><p><strong>params</strong> (<em>dict</em>) – Parameters of the solver. Refer to <strong>Notes</strong> of <a class="reference internal" href="qom.solvers.stochastic.html#qom.solvers.stochastic.MCQTSolver" title="qom.solvers.stochastic.MCQTSolver"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.solvers.stochastic.MCQTSolver</span></code></a> for all available options.</p></li>
+<li><p><strong>num_trajs</strong> (<em>int</em><em>, </em><em>default=1000</em>) – Number of trajectories.</p></li>
+<li><p><strong>plot</strong> (<em>bool</em><em>, </em><em>default=False</em>) – Option to plot the results of the main process.</p></li>
+<li><p><strong>subplots</strong> (<em>bool</em><em>, </em><em>default=False</em>) – Option to plot the results of each subprocesses.</p></li>
+<li><p><strong>params_plotter</strong> (<em>dict</em><em>, </em><em>optional</em>) – Parameters of the plotter.</p></li>
+<li><p><strong>max_processes</strong> (<em>int</em><em>, </em><em>optional</em>) – Maximum number of solvers to run in parallel. The number of slices is decided by the dimensionality of the Hilbert space and the number of trajectories. For smaller number of trajectories, a single process is run without parallelization. Default value of dimension is <span class="math notranslate nohighlight">\(5 \times 10^{4} / N\)</span>, where <span class="math notranslate nohighlight">\(N\)</span> is the dimension of the combined Hilbert space.</p></li>
+<li><p><strong>cb_update</strong> (<em>callable</em>) – Callback function to update status and progress, formatted as <code class="docutils literal notranslate"><span class="pre">cb_update(status,</span> <span class="pre">progress,</span> <span class="pre">reset)</span></code>, where <code class="docutils literal notranslate"><span class="pre">status</span></code> is a string, <code class="docutils literal notranslate"><span class="pre">progress</span></code> is a float and <code class="docutils literal notranslate"><span class="pre">reset</span></code> is a boolean.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>solver</strong> – Instance of the solver.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="qom.solvers.stochastic.html#qom.solvers.stochastic.MCQTSolver" title="qom.solvers.stochastic.MCQTSolver"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.solvers.stochastic.MCQTSolver</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qom.utils.solvers.wrap_mcqt_solver">
+<span class="sig-prename descclassname"><span class="pre">qom.utils.solvers.</span></span><span class="sig-name descname"><span class="pre">wrap_mcqt_solver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">system</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_trajs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_plotter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cb_update</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parallel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_start</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.utils.solvers.wrap_mcqt_solver" title="Link to this definition">¶</a></dt>
+<dd><p>Function to wrap MCQTSolver.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>system</strong> (<a class="reference internal" href="qom.systems.base.html#module-qom.systems.base" title="qom.systems.base"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.systems.base</span></code></a>) – Instance of the system. Requires predefined system methods <code class="docutils literal notranslate"><span class="pre">get_ops_collapse</span></code>, <code class="docutils literal notranslate"><span class="pre">get_ops_expect</span></code>, <code class="docutils literal notranslate"><span class="pre">get_H_0</span></code> and <code class="docutils literal notranslate"><span class="pre">get_ivc</span></code>. For time-dependent Hamiltonians, the method <code class="docutils literal notranslate"><span class="pre">get_H_t</span></code> should also be defined. Refer to <strong>Notes</strong> of <a class="reference internal" href="qom.solvers.stochastic.html#qom.solvers.stochastic.MCQTSolver" title="qom.solvers.stochastic.MCQTSolver"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.solvers.stochastic.MCQTSolver</span></code></a> for their implementations.</p></li>
+<li><p><strong>params</strong> (<em>dict</em>) – Parameters of the solver. Refer to <strong>Notes</strong> of <a class="reference internal" href="qom.solvers.stochastic.html#qom.solvers.stochastic.MCQTSolver" title="qom.solvers.stochastic.MCQTSolver"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.solvers.stochastic.MCQTSolver</span></code></a> for all available options.</p></li>
+<li><p><strong>num_trajs</strong> (<em>int</em><em>, </em><em>default=1000</em>) – Number of trajectories.</p></li>
+<li><p><strong>plot</strong> (<em>bool</em><em>, </em><em>default=False</em>) – Option to plot the results of the main process.</p></li>
+<li><p><strong>params_plotter</strong> (<em>dict</em><em>, </em><em>optional</em>) – Parameters of the plotter.</p></li>
+<li><p><strong>cb_update</strong> (<em>callable</em>) – Callback function to update status and progress, formatted as <code class="docutils literal notranslate"><span class="pre">cb_update(status,</span> <span class="pre">progress,</span> <span class="pre">reset)</span></code>, where <code class="docutils literal notranslate"><span class="pre">status</span></code> is a string, <code class="docutils literal notranslate"><span class="pre">progress</span></code> is a float and <code class="docutils literal notranslate"><span class="pre">reset</span></code> is a boolean.</p></li>
+<li><p><strong>parallel</strong> (<em>bool</em><em>, </em><em>default=False</em>) – Option to format outputs when running in parallel.</p></li>
+<li><p><strong>p_index</strong> (<em>int</em><em>, </em><em>default=0</em>) – Index of the process.</p></li>
+<li><p><strong>p_start</strong> (<em>float</em><em>, </em><em>optional</em>) – Time at which the process was started. If not provided, the value is initialized to current time.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>solver</strong> – Instance of the solver.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="qom.solvers.stochastic.html#qom.solvers.stochastic.MCQTSolver" title="qom.solvers.stochastic.MCQTSolver"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.solvers.stochastic.MCQTSolver</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">qom.utils.solvers module</a><ul>
+<li><a class="reference internal" href="#qom.utils.solvers.get_func_Lyapunov_exponents"><code class="docutils literal notranslate"><span class="pre">get_func_Lyapunov_exponents()</span></code></a></li>
+<li><a class="reference internal" href="#qom.utils.solvers.get_func_quantum_correlation_measures"><code class="docutils literal notranslate"><span class="pre">get_func_quantum_correlation_measures()</span></code></a></li>
+<li><a class="reference internal" href="#qom.utils.solvers.get_func_stability_zone"><code class="docutils literal notranslate"><span class="pre">get_func_stability_zone()</span></code></a></li>
+<li><a class="reference internal" href="#qom.utils.solvers.get_func_system_measures"><code class="docutils literal notranslate"><span class="pre">get_func_system_measures()</span></code></a></li>
+<li><a class="reference internal" href="#qom.utils.solvers.plot_mcqt_solver_results"><code class="docutils literal notranslate"><span class="pre">plot_mcqt_solver_results()</span></code></a></li>
+<li><a class="reference internal" href="#qom.utils.solvers.run_mcqt_solver_instance"><code class="docutils literal notranslate"><span class="pre">run_mcqt_solver_instance()</span></code></a></li>
+<li><a class="reference internal" href="#qom.utils.solvers.run_mcqt_solvers_in_parallel"><code class="docutils literal notranslate"><span class="pre">run_mcqt_solvers_in_parallel()</span></code></a></li>
+<li><a class="reference internal" href="#qom.utils.solvers.wrap_mcqt_solver"><code class="docutils literal notranslate"><span class="pre">wrap_mcqt_solver()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="qom.utils.loopers.html"
+                          title="previous chapter">qom.utils.loopers module</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="qom.io.html"
+                          title="next chapter">qom.io module</a></p>
+  </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="qom.io.html" title="qom.io module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="qom.utils.loopers.html" title="qom.utils.loopers module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">The Quantum Optomechanics Toolbox  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="qom.utils.html" >qom.utils package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">qom.utils.solvers module</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2023, Sampreet Kalita.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    </div>
+  </body>
+</html>

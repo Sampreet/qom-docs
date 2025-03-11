@@ -1,19 +1,16 @@
-
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>qom.solvers.stochastic module &#8212; The Quantum Optomechanics Toolbox  documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/nature.css" />
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=362ab14a" />
+    <link rel="stylesheet" type="text/css" href="_static/nature.css?v=0f882399" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="qom.systems package" href="qom.systems.html" />
@@ -46,11 +43,11 @@
           <div class="body" role="main">
             
   <section id="module-qom.solvers.stochastic">
-<span id="qom-solvers-stochastic-module"></span><h1>qom.solvers.stochastic module<a class="headerlink" href="#module-qom.solvers.stochastic" title="Permalink to this heading">¶</a></h1>
+<span id="qom-solvers-stochastic-module"></span><h1>qom.solvers.stochastic module<a class="headerlink" href="#module-qom.solvers.stochastic" title="Link to this heading">¶</a></h1>
 <p>Module to solve stochastic equations of motion.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="qom.solvers.stochastic.MCQTSolver">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qom.solvers.stochastic.</span></span><span class="sig-name descname"><span class="pre">MCQTSolver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">system</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_trajs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cb_update</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parallel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_start</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.stochastic.MCQTSolver" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qom.solvers.stochastic.</span></span><span class="sig-name descname"><span class="pre">MCQTSolver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">system</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_trajs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cb_update</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parallel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_start</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.stochastic.MCQTSolver" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Class to solve for the expectation values of operators using the Monte-Carlo quantum trajectories method.</p>
 <p>Initializes <code class="docutils literal notranslate"><span class="pre">system</span></code>, <code class="docutils literal notranslate"><span class="pre">num_trajs</span></code>, <code class="docutils literal notranslate"><span class="pre">T</span></code> and <code class="docutils literal notranslate"><span class="pre">updater</span></code>.</p>
@@ -152,7 +149,7 @@
 </dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="qom.solvers.stochastic.MCQTSolver.desc">
-<span class="sig-name descname"><span class="pre">desc</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Monte-Carlo</span> <span class="pre">Quantum</span> <span class="pre">Trajectories</span> <span class="pre">Solver'</span></em><a class="headerlink" href="#qom.solvers.stochastic.MCQTSolver.desc" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">desc</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Monte-Carlo</span> <span class="pre">Quantum</span> <span class="pre">Trajectories</span> <span class="pre">Solver'</span></em><a class="headerlink" href="#qom.solvers.stochastic.MCQTSolver.desc" title="Link to this definition">¶</a></dt>
 <dd><p>Description of the solver.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -163,7 +160,7 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="qom.solvers.stochastic.MCQTSolver.name">
-<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MCQTSolver'</span></em><a class="headerlink" href="#qom.solvers.stochastic.MCQTSolver.name" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MCQTSolver'</span></em><a class="headerlink" href="#qom.solvers.stochastic.MCQTSolver.name" title="Link to this definition">¶</a></dt>
 <dd><p>Name of the solver.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -174,7 +171,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="qom.solvers.stochastic.MCQTSolver.set_params">
-<span class="sig-name descname"><span class="pre">set_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.stochastic.MCQTSolver.set_params" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">set_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.stochastic.MCQTSolver.set_params" title="Link to this definition">¶</a></dt>
 <dd><p>Method to set the solver parameters.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -185,14 +182,14 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="qom.solvers.stochastic.MCQTSolver.solve">
-<span class="sig-name descname"><span class="pre">solve</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.stochastic.MCQTSolver.solve" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">solve</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.stochastic.MCQTSolver.solve" title="Link to this definition">¶</a></dt>
 <dd><p>Method to solve for the quantum trajectories.</p>
 <p>Sets the results with keys <code class="docutils literal notranslate"><span class="pre">'times'</span></code>, <code class="docutils literal notranslate"><span class="pre">'trajs'</span></code>, <code class="docutils literal notranslate"><span class="pre">'expects'</span></code> and <code class="docutils literal notranslate"><span class="pre">'runtimes'</span></code> for the time steps, individual trajectories of expectation values, pooled expectation values and execution times of each trajectory respectively.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="qom.solvers.stochastic.MCQTSolver.solver_defaults">
-<span class="sig-name descname"><span class="pre">solver_defaults</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'ode_atol':</span> <span class="pre">1e-08,</span> <span class="pre">'ode_is_stiff':</span> <span class="pre">False,</span> <span class="pre">'ode_method':</span> <span class="pre">'zvode',</span> <span class="pre">'ode_rtol':</span> <span class="pre">1e-06,</span> <span class="pre">'show_progress':</span> <span class="pre">False,</span> <span class="pre">'t_dim':</span> <span class="pre">10001,</span> <span class="pre">'t_max':</span> <span class="pre">1000.0,</span> <span class="pre">'t_min':</span> <span class="pre">0.0}</span></em><a class="headerlink" href="#qom.solvers.stochastic.MCQTSolver.solver_defaults" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">solver_defaults</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'ode_atol':</span> <span class="pre">1e-08,</span> <span class="pre">'ode_is_stiff':</span> <span class="pre">False,</span> <span class="pre">'ode_method':</span> <span class="pre">'zvode',</span> <span class="pre">'ode_rtol':</span> <span class="pre">1e-06,</span> <span class="pre">'show_progress':</span> <span class="pre">False,</span> <span class="pre">'t_dim':</span> <span class="pre">10001,</span> <span class="pre">'t_max':</span> <span class="pre">1000.0,</span> <span class="pre">'t_min':</span> <span class="pre">0.0}</span></em><a class="headerlink" href="#qom.solvers.stochastic.MCQTSolver.solver_defaults" title="Link to this definition">¶</a></dt>
 <dd><p>Default parameters of the solver.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -213,6 +210,23 @@
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">qom.solvers.stochastic module</a><ul>
+<li><a class="reference internal" href="#qom.solvers.stochastic.MCQTSolver"><code class="docutils literal notranslate"><span class="pre">MCQTSolver</span></code></a><ul>
+<li><a class="reference internal" href="#qom.solvers.stochastic.MCQTSolver.desc"><code class="docutils literal notranslate"><span class="pre">MCQTSolver.desc</span></code></a></li>
+<li><a class="reference internal" href="#qom.solvers.stochastic.MCQTSolver.name"><code class="docutils literal notranslate"><span class="pre">MCQTSolver.name</span></code></a></li>
+<li><a class="reference internal" href="#qom.solvers.stochastic.MCQTSolver.set_params"><code class="docutils literal notranslate"><span class="pre">MCQTSolver.set_params()</span></code></a></li>
+<li><a class="reference internal" href="#qom.solvers.stochastic.MCQTSolver.solve"><code class="docutils literal notranslate"><span class="pre">MCQTSolver.solve()</span></code></a></li>
+<li><a class="reference internal" href="#qom.solvers.stochastic.MCQTSolver.solver_defaults"><code class="docutils literal notranslate"><span class="pre">MCQTSolver.solver_defaults</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
     <h4>Previous topic</h4>
     <p class="topless"><a href="qom.solvers.stability.html"
                           title="previous chapter">qom.solvers.stability module</a></p>
@@ -222,7 +236,7 @@
     <p class="topless"><a href="qom.systems.html"
                           title="next chapter">qom.systems package</a></p>
   </div>
-<div id="searchbox" style="display: none" role="search">
+<search id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
@@ -230,7 +244,7 @@
       <input type="submit" value="Go" />
     </form>
     </div>
-</div>
+</search>
 <script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
@@ -257,8 +271,8 @@
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2023, Sampreet Kalita.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
+    &#169; Copyright 2023, Sampreet Kalita.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
     </div>
   </body>
 </html>

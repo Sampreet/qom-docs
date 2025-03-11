@@ -1,19 +1,16 @@
-
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>qom.solvers.deterministic module &#8212; The Quantum Optomechanics Toolbox  documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/nature.css" />
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=362ab14a" />
+    <link rel="stylesheet" type="text/css" href="_static/nature.css?v=0f882399" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="qom.solvers.differential module" href="qom.solvers.differential.html" />
@@ -46,11 +43,11 @@
           <div class="body" role="main">
             
   <section id="module-qom.solvers.deterministic">
-<span id="qom-solvers-deterministic-module"></span><h1>qom.solvers.deterministic module<a class="headerlink" href="#module-qom.solvers.deterministic" title="Permalink to this heading">¶</a></h1>
+<span id="qom-solvers-deterministic-module"></span><h1>qom.solvers.deterministic module<a class="headerlink" href="#module-qom.solvers.deterministic" title="Link to this heading">¶</a></h1>
 <p>Module to solve deterministic equations of motion.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="qom.solvers.deterministic.HLESolver">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qom.solvers.deterministic.</span></span><span class="sig-name descname"><span class="pre">HLESolver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">system</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cb_update</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.HLESolver" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qom.solvers.deterministic.</span></span><span class="sig-name descname"><span class="pre">HLESolver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">system</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cb_update</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.HLESolver" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Class to solve the Heisenberg-Langevin equations for classical mode amplitudes and quantum quadrature correlations.</p>
 <p>Initializes <code class="docutils literal notranslate"><span class="pre">system</span></code>, <code class="docutils literal notranslate"><span class="pre">params</span></code>, <code class="docutils literal notranslate"><span class="pre">T</span></code>, <code class="docutils literal notranslate"><span class="pre">Modes</span></code>, <code class="docutils literal notranslate"><span class="pre">Corrs</span></code>, <code class="docutils literal notranslate"><span class="pre">Measures</span></code> and <code class="docutils literal notranslate"><span class="pre">updater</span></code>.</p>
@@ -144,7 +141,7 @@
 </dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="qom.solvers.deterministic.HLESolver.desc">
-<span class="sig-name descname"><span class="pre">desc</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Heisenberg-Langevin</span> <span class="pre">Equations</span> <span class="pre">Solver'</span></em><a class="headerlink" href="#qom.solvers.deterministic.HLESolver.desc" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">desc</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Heisenberg-Langevin</span> <span class="pre">Equations</span> <span class="pre">Solver'</span></em><a class="headerlink" href="#qom.solvers.deterministic.HLESolver.desc" title="Link to this definition">¶</a></dt>
 <dd><p>Description of the solver.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -155,7 +152,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="qom.solvers.deterministic.HLESolver.get_all_corrs">
-<span class="sig-name descname"><span class="pre">get_all_corrs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.HLESolver.get_all_corrs" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_all_corrs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.HLESolver.get_all_corrs" title="Link to this definition">¶</a></dt>
 <dd><p>Method to obtain all the correlations.</p>
 <p>Requires predefined system callables <code class="docutils literal notranslate"><span class="pre">get_ivc</span></code> and <code class="docutils literal notranslate"><span class="pre">func_ode_modes_corrs</span></code>. Alternatively, if the system inherits <a class="reference internal" href="qom.systems.base.html#qom.systems.base.BaseSystem" title="qom.systems.base.BaseSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.systems.base.BaseSystem</span></code></a>, <code class="docutils literal notranslate"><span class="pre">get_mode_rates</span></code> may be defined along with <code class="docutils literal notranslate"><span class="pre">get_A</span></code> and <code class="docutils literal notranslate"><span class="pre">get_D</span></code> if correlations are present. Additionally, <code class="docutils literal notranslate"><span class="pre">func_ode_corrs</span></code> may be defined for dynamical values (refer to the <code class="docutils literal notranslate"><span class="pre">solve</span></code> method). Refer to <a class="reference internal" href="qom.systems.base.html#qom.systems.base.BaseSystem" title="qom.systems.base.BaseSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.systems.base.BaseSystem</span></code></a> for their implementations.</p>
 <dl class="field-list simple">
@@ -170,7 +167,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="qom.solvers.deterministic.HLESolver.get_all_modes">
-<span class="sig-name descname"><span class="pre">get_all_modes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.HLESolver.get_all_modes" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_all_modes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.HLESolver.get_all_modes" title="Link to this definition">¶</a></dt>
 <dd><p>Method to obtain all the modes.</p>
 <p>Requires predefined system callables <code class="docutils literal notranslate"><span class="pre">get_ivc</span></code> and <code class="docutils literal notranslate"><span class="pre">func_ode_modes_corrs</span></code>. Alternatively, if the system inherits <a class="reference internal" href="qom.systems.base.html#qom.systems.base.BaseSystem" title="qom.systems.base.BaseSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.systems.base.BaseSystem</span></code></a>, <code class="docutils literal notranslate"><span class="pre">get_mode_rates</span></code> may be defined along with <code class="docutils literal notranslate"><span class="pre">get_A</span></code> and <code class="docutils literal notranslate"><span class="pre">get_D</span></code> if correlations are present. Additionally, <code class="docutils literal notranslate"><span class="pre">func_ode_corrs</span></code> may be defined for dynamical values (refer to the <code class="docutils literal notranslate"><span class="pre">solve</span></code> method). Refer to <a class="reference internal" href="qom.systems.base.html#qom.systems.base.BaseSystem" title="qom.systems.base.BaseSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.systems.base.BaseSystem</span></code></a> for their implementations.</p>
 <dl class="field-list simple">
@@ -185,7 +182,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="qom.solvers.deterministic.HLESolver.get_all_modes_corrs">
-<span class="sig-name descname"><span class="pre">get_all_modes_corrs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.HLESolver.get_all_modes_corrs" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_all_modes_corrs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.HLESolver.get_all_modes_corrs" title="Link to this definition">¶</a></dt>
 <dd><p>Method to obtain all the modes and correlations.</p>
 <p>Requires predefined system callables <code class="docutils literal notranslate"><span class="pre">get_ivc</span></code> and <code class="docutils literal notranslate"><span class="pre">func_ode_modes_corrs</span></code>. Alternatively, if the system inherits <a class="reference internal" href="qom.systems.base.html#qom.systems.base.BaseSystem" title="qom.systems.base.BaseSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.systems.base.BaseSystem</span></code></a>, <code class="docutils literal notranslate"><span class="pre">get_mode_rates</span></code> may be defined along with <code class="docutils literal notranslate"><span class="pre">get_A</span></code> and <code class="docutils literal notranslate"><span class="pre">get_D</span></code> if correlations are present. Additionally, <code class="docutils literal notranslate"><span class="pre">func_ode_corrs</span></code> may be defined for dynamical values (refer to the <code class="docutils literal notranslate"><span class="pre">solve</span></code> method). Refer to <a class="reference internal" href="qom.systems.base.html#qom.systems.base.BaseSystem" title="qom.systems.base.BaseSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.systems.base.BaseSystem</span></code></a> for their implementations.</p>
 <dl class="field-list simple">
@@ -201,7 +198,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="qom.solvers.deterministic.HLESolver.get_corr_indices">
-<span class="sig-name descname"><span class="pre">get_corr_indices</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.HLESolver.get_corr_indices" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_corr_indices</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.HLESolver.get_corr_indices" title="Link to this definition">¶</a></dt>
 <dd><p>Method to obtain the specific correlations in a given range of time.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -215,7 +212,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="qom.solvers.deterministic.HLESolver.get_corrs">
-<span class="sig-name descname"><span class="pre">get_corrs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.HLESolver.get_corrs" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_corrs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.HLESolver.get_corrs" title="Link to this definition">¶</a></dt>
 <dd><p>Method to obtain the dynamics of the correlations in a given range of time.</p>
 <p>Requires predefined system callables <code class="docutils literal notranslate"><span class="pre">get_ivc</span></code> and <code class="docutils literal notranslate"><span class="pre">func_ode_modes_corrs</span></code>. Alternatively, if the system inherits <a class="reference internal" href="qom.systems.base.html#qom.systems.base.BaseSystem" title="qom.systems.base.BaseSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.systems.base.BaseSystem</span></code></a>, <code class="docutils literal notranslate"><span class="pre">get_mode_rates</span></code> may be defined along with <code class="docutils literal notranslate"><span class="pre">get_A</span></code> and <code class="docutils literal notranslate"><span class="pre">get_D</span></code> if correlations are present. Additionally, <code class="docutils literal notranslate"><span class="pre">func_ode_corrs</span></code> may be defined for dynamical values (refer to the <code class="docutils literal notranslate"><span class="pre">solve</span></code> method). Refer to <a class="reference internal" href="qom.systems.base.html#qom.systems.base.BaseSystem" title="qom.systems.base.BaseSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.systems.base.BaseSystem</span></code></a> for their implementations.</p>
 <dl class="field-list simple">
@@ -230,7 +227,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="qom.solvers.deterministic.HLESolver.get_mode_indices">
-<span class="sig-name descname"><span class="pre">get_mode_indices</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.HLESolver.get_mode_indices" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_mode_indices</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.HLESolver.get_mode_indices" title="Link to this definition">¶</a></dt>
 <dd><p>Method to obtain the specific modes in a given range of time.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -244,7 +241,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="qom.solvers.deterministic.HLESolver.get_mode_intensities">
-<span class="sig-name descname"><span class="pre">get_mode_intensities</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.HLESolver.get_mode_intensities" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_mode_intensities</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.HLESolver.get_mode_intensities" title="Link to this definition">¶</a></dt>
 <dd><p>Method to obtain the intensities of specific modes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -258,7 +255,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="qom.solvers.deterministic.HLESolver.get_modes">
-<span class="sig-name descname"><span class="pre">get_modes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.HLESolver.get_modes" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_modes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.HLESolver.get_modes" title="Link to this definition">¶</a></dt>
 <dd><p>Method to obtain the dynamics of the modes in a given range of time.</p>
 <p>Requires predefined system callables <code class="docutils literal notranslate"><span class="pre">get_ivc</span></code> and <code class="docutils literal notranslate"><span class="pre">func_ode_modes_corrs</span></code>. Alternatively, if the system inherits <a class="reference internal" href="qom.systems.base.html#qom.systems.base.BaseSystem" title="qom.systems.base.BaseSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.systems.base.BaseSystem</span></code></a>, <code class="docutils literal notranslate"><span class="pre">get_mode_rates</span></code> may be defined along with <code class="docutils literal notranslate"><span class="pre">get_A</span></code> and <code class="docutils literal notranslate"><span class="pre">get_D</span></code> if correlations are present. Additionally, <code class="docutils literal notranslate"><span class="pre">func_ode_corrs</span></code> may be defined for dynamical values (refer to the <code class="docutils literal notranslate"><span class="pre">solve</span></code> method). Refer to <a class="reference internal" href="qom.systems.base.html#qom.systems.base.BaseSystem" title="qom.systems.base.BaseSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.systems.base.BaseSystem</span></code></a> for their implementations.</p>
 <dl class="field-list simple">
@@ -273,7 +270,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="qom.solvers.deterministic.HLESolver.get_modes_corrs">
-<span class="sig-name descname"><span class="pre">get_modes_corrs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.HLESolver.get_modes_corrs" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_modes_corrs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.HLESolver.get_modes_corrs" title="Link to this definition">¶</a></dt>
 <dd><p>Method to obtain the dynamics of the modes and correlations in a given range of time.</p>
 <p>Requires predefined system callables <code class="docutils literal notranslate"><span class="pre">get_ivc</span></code> and <code class="docutils literal notranslate"><span class="pre">func_ode_modes_corrs</span></code>. Alternatively, if the system inherits <a class="reference internal" href="qom.systems.base.html#qom.systems.base.BaseSystem" title="qom.systems.base.BaseSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.systems.base.BaseSystem</span></code></a>, <code class="docutils literal notranslate"><span class="pre">get_mode_rates</span></code> may be defined along with <code class="docutils literal notranslate"><span class="pre">get_A</span></code> and <code class="docutils literal notranslate"><span class="pre">get_D</span></code> if correlations are present. Additionally, <code class="docutils literal notranslate"><span class="pre">func_ode_corrs</span></code> may be defined for dynamical values (refer to the <code class="docutils literal notranslate"><span class="pre">solve</span></code> method). Refer to <a class="reference internal" href="qom.systems.base.html#qom.systems.base.BaseSystem" title="qom.systems.base.BaseSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.systems.base.BaseSystem</span></code></a> for their implementations.</p>
 <dl class="field-list simple">
@@ -289,7 +286,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="qom.solvers.deterministic.HLESolver.get_times">
-<span class="sig-name descname"><span class="pre">get_times</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.HLESolver.get_times" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_times</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.HLESolver.get_times" title="Link to this definition">¶</a></dt>
 <dd><p>Method to obtain the times in the given range.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -303,7 +300,7 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="qom.solvers.deterministic.HLESolver.name">
-<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'HLESolver'</span></em><a class="headerlink" href="#qom.solvers.deterministic.HLESolver.name" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'HLESolver'</span></em><a class="headerlink" href="#qom.solvers.deterministic.HLESolver.name" title="Link to this definition">¶</a></dt>
 <dd><p>Name of the solver.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -314,7 +311,7 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="qom.solvers.deterministic.HLESolver.required_params">
-<span class="sig-name descname"><span class="pre">required_params</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['t_min',</span> <span class="pre">'t_max',</span> <span class="pre">'t_dim']</span></em><a class="headerlink" href="#qom.solvers.deterministic.HLESolver.required_params" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">required_params</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['t_min',</span> <span class="pre">'t_max',</span> <span class="pre">'t_dim']</span></em><a class="headerlink" href="#qom.solvers.deterministic.HLESolver.required_params" title="Link to this definition">¶</a></dt>
 <dd><p>Required parameters of the solver.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -325,7 +322,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="qom.solvers.deterministic.HLESolver.set_params">
-<span class="sig-name descname"><span class="pre">set_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.HLESolver.set_params" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">set_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.HLESolver.set_params" title="Link to this definition">¶</a></dt>
 <dd><p>Method to validate and set the solver parameters, cache options and times.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -336,7 +333,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="qom.solvers.deterministic.HLESolver.set_results">
-<span class="sig-name descname"><span class="pre">set_results</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func_ode_modes_corrs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iv_modes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iv_corrs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func_ode_corrs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.HLESolver.set_results" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">set_results</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func_ode_modes_corrs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iv_modes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iv_corrs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func_ode_corrs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.HLESolver.set_results" title="Link to this definition">¶</a></dt>
 <dd><p>Method to solve the ODEs and update the results.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -353,7 +350,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="qom.solvers.deterministic.HLESolver.solve">
-<span class="sig-name descname"><span class="pre">solve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func_ode_modes_corrs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iv_modes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iv_corrs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func_ode_corrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.HLESolver.solve" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">solve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func_ode_modes_corrs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iv_modes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iv_corrs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func_ode_corrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.HLESolver.solve" title="Link to this definition">¶</a></dt>
 <dd><p>Method to solve the HLEs.</p>
 <p>Loads solutions if disk cache is found, else solves and saves the solutions to disk cache.</p>
 <dl class="field-list simple">
@@ -377,7 +374,7 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="qom.solvers.deterministic.HLESolver.solver_defaults">
-<span class="sig-name descname"><span class="pre">solver_defaults</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'cache':</span> <span class="pre">True,</span> <span class="pre">'cache_dir':</span> <span class="pre">'cache',</span> <span class="pre">'cache_file':</span> <span class="pre">'V',</span> <span class="pre">'indices':</span> <span class="pre">[0],</span> <span class="pre">'ode_atol':</span> <span class="pre">1e-12,</span> <span class="pre">'ode_is_stiff':</span> <span class="pre">False,</span> <span class="pre">'ode_method':</span> <span class="pre">'RK45',</span> <span class="pre">'ode_rtol':</span> <span class="pre">1e-06,</span> <span class="pre">'show_progress':</span> <span class="pre">False,</span> <span class="pre">'t_dim':</span> <span class="pre">10001,</span> <span class="pre">'t_index_delay':</span> <span class="pre">0,</span> <span class="pre">'t_index_max':</span> <span class="pre">None,</span> <span class="pre">'t_index_min':</span> <span class="pre">None,</span> <span class="pre">'t_max':</span> <span class="pre">1000.0,</span> <span class="pre">'t_min':</span> <span class="pre">0.0}</span></em><a class="headerlink" href="#qom.solvers.deterministic.HLESolver.solver_defaults" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">solver_defaults</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'cache':</span> <span class="pre">True,</span> <span class="pre">'cache_dir':</span> <span class="pre">'cache',</span> <span class="pre">'cache_file':</span> <span class="pre">'V',</span> <span class="pre">'indices':</span> <span class="pre">[0],</span> <span class="pre">'ode_atol':</span> <span class="pre">1e-12,</span> <span class="pre">'ode_is_stiff':</span> <span class="pre">False,</span> <span class="pre">'ode_method':</span> <span class="pre">'RK45',</span> <span class="pre">'ode_rtol':</span> <span class="pre">1e-06,</span> <span class="pre">'show_progress':</span> <span class="pre">False,</span> <span class="pre">'t_dim':</span> <span class="pre">10001,</span> <span class="pre">'t_index_delay':</span> <span class="pre">0,</span> <span class="pre">'t_index_max':</span> <span class="pre">None,</span> <span class="pre">'t_index_min':</span> <span class="pre">None,</span> <span class="pre">'t_max':</span> <span class="pre">1000.0,</span> <span class="pre">'t_min':</span> <span class="pre">0.0}</span></em><a class="headerlink" href="#qom.solvers.deterministic.HLESolver.solver_defaults" title="Link to this definition">¶</a></dt>
 <dd><p>Default parameters of the solver.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -390,7 +387,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="qom.solvers.deterministic.LLESolver">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qom.solvers.deterministic.</span></span><span class="sig-name descname"><span class="pre">LLESolver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">system</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cb_update</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.LLESolver" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qom.solvers.deterministic.</span></span><span class="sig-name descname"><span class="pre">LLESolver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">system</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cb_update</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.LLESolver" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Method to solve the Lugiato-Lefever equation (LLE) for classical mode amplitudes using the split-step Fourier method.</p>
 <p>Initializes <code class="docutils literal notranslate"><span class="pre">system</span></code>, <code class="docutils literal notranslate"><span class="pre">params</span></code>, <code class="docutils literal notranslate"><span class="pre">T</span></code>, <code class="docutils literal notranslate"><span class="pre">Modes</span></code> and <code class="docutils literal notranslate"><span class="pre">updater</span></code>.</p>
@@ -454,7 +451,7 @@
 </dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="qom.solvers.deterministic.LLESolver.desc">
-<span class="sig-name descname"><span class="pre">desc</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Lugiato-Lefever</span> <span class="pre">Equation</span> <span class="pre">Solver'</span></em><a class="headerlink" href="#qom.solvers.deterministic.LLESolver.desc" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">desc</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Lugiato-Lefever</span> <span class="pre">Equation</span> <span class="pre">Solver'</span></em><a class="headerlink" href="#qom.solvers.deterministic.LLESolver.desc" title="Link to this definition">¶</a></dt>
 <dd><p>Description of the solver.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -465,7 +462,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="qom.solvers.deterministic.LLESolver.get_all_modes">
-<span class="sig-name descname"><span class="pre">get_all_modes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.LLESolver.get_all_modes" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_all_modes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.LLESolver.get_all_modes" title="Link to this definition">¶</a></dt>
 <dd><p>Method to obtain all the modes.</p>
 <p>Requires predefined system callables <code class="docutils literal notranslate"><span class="pre">get_ivc</span></code>, <code class="docutils literal notranslate"><span class="pre">get_coeffs_dispersion</span></code>, <code class="docutils literal notranslate"><span class="pre">get_nonlinearities</span></code> and <code class="docutils literal notranslate"><span class="pre">get_sources</span></code>. Refer to <a class="reference internal" href="qom.systems.base.html#qom.systems.base.BaseSystem" title="qom.systems.base.BaseSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.systems.base.BaseSystem</span></code></a> for their implementations.</p>
 <dl class="field-list simple">
@@ -480,7 +477,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="qom.solvers.deterministic.LLESolver.get_mode_indices">
-<span class="sig-name descname"><span class="pre">get_mode_indices</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.LLESolver.get_mode_indices" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_mode_indices</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.LLESolver.get_mode_indices" title="Link to this definition">¶</a></dt>
 <dd><p>Method to obtain the specific modes in a given range of time.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -494,7 +491,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="qom.solvers.deterministic.LLESolver.get_mode_intensities">
-<span class="sig-name descname"><span class="pre">get_mode_intensities</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.LLESolver.get_mode_intensities" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_mode_intensities</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.LLESolver.get_mode_intensities" title="Link to this definition">¶</a></dt>
 <dd><p>Method to obtain the intensities of specific modes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -508,7 +505,7 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="qom.solvers.deterministic.LLESolver.name">
-<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'LLESolver'</span></em><a class="headerlink" href="#qom.solvers.deterministic.LLESolver.name" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'LLESolver'</span></em><a class="headerlink" href="#qom.solvers.deterministic.LLESolver.name" title="Link to this definition">¶</a></dt>
 <dd><p>Name of the solver.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -519,7 +516,7 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="qom.solvers.deterministic.LLESolver.required_params">
-<span class="sig-name descname"><span class="pre">required_params</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['t_min',</span> <span class="pre">'t_max',</span> <span class="pre">'t_dim']</span></em><a class="headerlink" href="#qom.solvers.deterministic.LLESolver.required_params" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">required_params</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['t_min',</span> <span class="pre">'t_max',</span> <span class="pre">'t_dim']</span></em><a class="headerlink" href="#qom.solvers.deterministic.LLESolver.required_params" title="Link to this definition">¶</a></dt>
 <dd><p>Required parameters of the solver.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -530,7 +527,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="qom.solvers.deterministic.LLESolver.set_params">
-<span class="sig-name descname"><span class="pre">set_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.LLESolver.set_params" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">set_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.LLESolver.set_params" title="Link to this definition">¶</a></dt>
 <dd><p>Method to validate and set the solver parameters and times.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -541,7 +538,7 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="qom.solvers.deterministic.LLESolver.solver_defaults">
-<span class="sig-name descname"><span class="pre">solver_defaults</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'indices':</span> <span class="pre">[0],</span> <span class="pre">'show_progress':</span> <span class="pre">False,</span> <span class="pre">'t_dim':</span> <span class="pre">10001,</span> <span class="pre">'t_max':</span> <span class="pre">1000.0,</span> <span class="pre">'t_min':</span> <span class="pre">0.0}</span></em><a class="headerlink" href="#qom.solvers.deterministic.LLESolver.solver_defaults" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">solver_defaults</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'indices':</span> <span class="pre">[0],</span> <span class="pre">'show_progress':</span> <span class="pre">False,</span> <span class="pre">'t_dim':</span> <span class="pre">10001,</span> <span class="pre">'t_max':</span> <span class="pre">1000.0,</span> <span class="pre">'t_min':</span> <span class="pre">0.0}</span></em><a class="headerlink" href="#qom.solvers.deterministic.LLESolver.solver_defaults" title="Link to this definition">¶</a></dt>
 <dd><p>Default parameters of the solver.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -554,7 +551,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="qom.solvers.deterministic.NLSESolver">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qom.solvers.deterministic.</span></span><span class="sig-name descname"><span class="pre">NLSESolver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">system</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cb_update</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.NLSESolver" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qom.solvers.deterministic.</span></span><span class="sig-name descname"><span class="pre">NLSESolver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">system</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cb_update</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.NLSESolver" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Method to solve the non-linear Schrodinger equation (NLSE) using the split-step Fourier method.</p>
 <p>Initializes <code class="docutils literal notranslate"><span class="pre">system</span></code>, <code class="docutils literal notranslate"><span class="pre">params</span></code>, <code class="docutils literal notranslate"><span class="pre">T</span></code>, <code class="docutils literal notranslate"><span class="pre">Modes</span></code> and <code class="docutils literal notranslate"><span class="pre">updater</span></code>.</p>
@@ -639,7 +636,7 @@
 </dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="qom.solvers.deterministic.NLSESolver.desc">
-<span class="sig-name descname"><span class="pre">desc</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Non-linear</span> <span class="pre">Schrodinger</span> <span class="pre">Equation</span> <span class="pre">Solver'</span></em><a class="headerlink" href="#qom.solvers.deterministic.NLSESolver.desc" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">desc</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Non-linear</span> <span class="pre">Schrodinger</span> <span class="pre">Equation</span> <span class="pre">Solver'</span></em><a class="headerlink" href="#qom.solvers.deterministic.NLSESolver.desc" title="Link to this definition">¶</a></dt>
 <dd><p>Description of the solver.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -650,7 +647,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="qom.solvers.deterministic.NLSESolver.get_all_modes">
-<span class="sig-name descname"><span class="pre">get_all_modes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.NLSESolver.get_all_modes" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_all_modes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.NLSESolver.get_all_modes" title="Link to this definition">¶</a></dt>
 <dd><p>Method to obtain all the modes.</p>
 <p>Requires predefined system callables <code class="docutils literal notranslate"><span class="pre">get_ivc</span></code>, <code class="docutils literal notranslate"><span class="pre">get_coeffs_dispersion</span></code> and <code class="docutils literal notranslate"><span class="pre">get_nonlinearities</span></code>. Either one of the callables <code class="docutils literal notranslate"><span class="pre">get_beta_rates</span></code> or <code class="docutils literal notranslate"><span class="pre">get_betas</span></code> may also be defined to update the mechanical mode rates. Additionally <code class="docutils literal notranslate"><span class="pre">get_sources</span></code> may be defined to include source terms. Refer to <a class="reference internal" href="qom.systems.base.html#qom.systems.base.BaseSystem" title="qom.systems.base.BaseSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">qom.systems.base.BaseSystem</span></code></a> for their implementations.</p>
 <dl class="field-list simple">
@@ -665,7 +662,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="qom.solvers.deterministic.NLSESolver.get_mode_indices">
-<span class="sig-name descname"><span class="pre">get_mode_indices</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.NLSESolver.get_mode_indices" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_mode_indices</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.NLSESolver.get_mode_indices" title="Link to this definition">¶</a></dt>
 <dd><p>Method to obtain the specific modes in a given range of time.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -679,7 +676,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="qom.solvers.deterministic.NLSESolver.get_mode_intensities">
-<span class="sig-name descname"><span class="pre">get_mode_intensities</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.NLSESolver.get_mode_intensities" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_mode_intensities</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.NLSESolver.get_mode_intensities" title="Link to this definition">¶</a></dt>
 <dd><p>Method to obtain the intensities of specific modes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -693,7 +690,7 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="qom.solvers.deterministic.NLSESolver.name">
-<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'NLSESolver'</span></em><a class="headerlink" href="#qom.solvers.deterministic.NLSESolver.name" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'NLSESolver'</span></em><a class="headerlink" href="#qom.solvers.deterministic.NLSESolver.name" title="Link to this definition">¶</a></dt>
 <dd><p>Name of the solver.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -704,7 +701,7 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="qom.solvers.deterministic.NLSESolver.required_params">
-<span class="sig-name descname"><span class="pre">required_params</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['t_min',</span> <span class="pre">'t_max',</span> <span class="pre">'t_dim']</span></em><a class="headerlink" href="#qom.solvers.deterministic.NLSESolver.required_params" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">required_params</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['t_min',</span> <span class="pre">'t_max',</span> <span class="pre">'t_dim']</span></em><a class="headerlink" href="#qom.solvers.deterministic.NLSESolver.required_params" title="Link to this definition">¶</a></dt>
 <dd><p>Required parameters of the solver.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -715,7 +712,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="qom.solvers.deterministic.NLSESolver.set_params">
-<span class="sig-name descname"><span class="pre">set_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.NLSESolver.set_params" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">set_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.NLSESolver.set_params" title="Link to this definition">¶</a></dt>
 <dd><p>Method to validate and set the solver parameters and times.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -726,7 +723,7 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="qom.solvers.deterministic.NLSESolver.solver_defaults">
-<span class="sig-name descname"><span class="pre">solver_defaults</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'indices':</span> <span class="pre">[0],</span> <span class="pre">'ode_atol':</span> <span class="pre">1e-12,</span> <span class="pre">'ode_is_stiff':</span> <span class="pre">False,</span> <span class="pre">'ode_method':</span> <span class="pre">'RK45',</span> <span class="pre">'ode_rtol':</span> <span class="pre">1e-06,</span> <span class="pre">'show_progress':</span> <span class="pre">False,</span> <span class="pre">'t_dim':</span> <span class="pre">10001,</span> <span class="pre">'t_div':</span> <span class="pre">1,</span> <span class="pre">'t_max':</span> <span class="pre">1000.0,</span> <span class="pre">'t_min':</span> <span class="pre">0.0,</span> <span class="pre">'update_betas':</span> <span class="pre">True,</span> <span class="pre">'use_sources':</span> <span class="pre">False}</span></em><a class="headerlink" href="#qom.solvers.deterministic.NLSESolver.solver_defaults" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">solver_defaults</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'indices':</span> <span class="pre">[0],</span> <span class="pre">'ode_atol':</span> <span class="pre">1e-12,</span> <span class="pre">'ode_is_stiff':</span> <span class="pre">False,</span> <span class="pre">'ode_method':</span> <span class="pre">'RK45',</span> <span class="pre">'ode_rtol':</span> <span class="pre">1e-06,</span> <span class="pre">'show_progress':</span> <span class="pre">False,</span> <span class="pre">'t_dim':</span> <span class="pre">10001,</span> <span class="pre">'t_div':</span> <span class="pre">1,</span> <span class="pre">'t_max':</span> <span class="pre">1000.0,</span> <span class="pre">'t_min':</span> <span class="pre">0.0,</span> <span class="pre">'update_betas':</span> <span class="pre">True,</span> <span class="pre">'use_sources':</span> <span class="pre">False}</span></em><a class="headerlink" href="#qom.solvers.deterministic.NLSESolver.solver_defaults" title="Link to this definition">¶</a></dt>
 <dd><p>Default parameters of the solver.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -739,7 +736,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="qom.solvers.deterministic.SSHLESolver">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qom.solvers.deterministic.</span></span><span class="sig-name descname"><span class="pre">SSHLESolver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">system</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cb_update</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.SSHLESolver" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qom.solvers.deterministic.</span></span><span class="sig-name descname"><span class="pre">SSHLESolver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">system</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cb_update</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.SSHLESolver" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Class to solve the steady state Heisenberg-Langevin equations for classical mode amplitudes and quantum quadrature correlations.</p>
 <p>Initializes <code class="docutils literal notranslate"><span class="pre">system</span></code>, <code class="docutils literal notranslate"><span class="pre">params</span></code>, <code class="docutils literal notranslate"><span class="pre">Modes</span></code>, <code class="docutils literal notranslate"><span class="pre">Corrs</span></code>, <code class="docutils literal notranslate"><span class="pre">As</span></code>, <code class="docutils literal notranslate"><span class="pre">Ds</span></code>, <code class="docutils literal notranslate"><span class="pre">Measures</span></code> and <code class="docutils literal notranslate"><span class="pre">updater</span></code>.</p>
@@ -776,7 +773,7 @@
 </dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="qom.solvers.deterministic.SSHLESolver.desc">
-<span class="sig-name descname"><span class="pre">desc</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Steady</span> <span class="pre">State</span> <span class="pre">Heisenberg-Langevin</span> <span class="pre">Equations</span> <span class="pre">Solver'</span></em><a class="headerlink" href="#qom.solvers.deterministic.SSHLESolver.desc" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">desc</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Steady</span> <span class="pre">State</span> <span class="pre">Heisenberg-Langevin</span> <span class="pre">Equations</span> <span class="pre">Solver'</span></em><a class="headerlink" href="#qom.solvers.deterministic.SSHLESolver.desc" title="Link to this definition">¶</a></dt>
 <dd><p>Description of the solver.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -787,7 +784,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="qom.solvers.deterministic.SSHLESolver.get_As">
-<span class="sig-name descname"><span class="pre">get_As</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.SSHLESolver.get_As" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_As</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.SSHLESolver.get_As" title="Link to this definition">¶</a></dt>
 <dd><p>Method to obtain the steady state drift matrices.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -801,7 +798,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="qom.solvers.deterministic.SSHLESolver.get_Ds">
-<span class="sig-name descname"><span class="pre">get_Ds</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.SSHLESolver.get_Ds" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_Ds</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.SSHLESolver.get_Ds" title="Link to this definition">¶</a></dt>
 <dd><p>Method to obtain the steady state noise matrices.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -815,7 +812,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="qom.solvers.deterministic.SSHLESolver.get_corr_indices">
-<span class="sig-name descname"><span class="pre">get_corr_indices</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.SSHLESolver.get_corr_indices" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_corr_indices</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.SSHLESolver.get_corr_indices" title="Link to this definition">¶</a></dt>
 <dd><p>Method to obtain the steady states of specific correlations.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -829,7 +826,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="qom.solvers.deterministic.SSHLESolver.get_corrs">
-<span class="sig-name descname"><span class="pre">get_corrs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.SSHLESolver.get_corrs" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_corrs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.SSHLESolver.get_corrs" title="Link to this definition">¶</a></dt>
 <dd><p>Method to obtain the steady state correlations.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -843,7 +840,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="qom.solvers.deterministic.SSHLESolver.get_mode_indices">
-<span class="sig-name descname"><span class="pre">get_mode_indices</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.SSHLESolver.get_mode_indices" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_mode_indices</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.SSHLESolver.get_mode_indices" title="Link to this definition">¶</a></dt>
 <dd><p>Method to obtain the steady states of specific modes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -857,7 +854,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="qom.solvers.deterministic.SSHLESolver.get_mode_intensities">
-<span class="sig-name descname"><span class="pre">get_mode_intensities</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.SSHLESolver.get_mode_intensities" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_mode_intensities</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.SSHLESolver.get_mode_intensities" title="Link to this definition">¶</a></dt>
 <dd><p>Method to obtain the intensities of specific modes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -871,7 +868,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="qom.solvers.deterministic.SSHLESolver.get_modes">
-<span class="sig-name descname"><span class="pre">get_modes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.SSHLESolver.get_modes" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_modes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.SSHLESolver.get_modes" title="Link to this definition">¶</a></dt>
 <dd><p>Method to obtain the steady state modes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -885,7 +882,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="qom.solvers.deterministic.SSHLESolver.get_modes_corrs">
-<span class="sig-name descname"><span class="pre">get_modes_corrs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.SSHLESolver.get_modes_corrs" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_modes_corrs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.SSHLESolver.get_modes_corrs" title="Link to this definition">¶</a></dt>
 <dd><p>Method to obtain the steady states of the modes and correlations.</p>
 <p>Requires system method predefined system callables <code class="docutils literal notranslate"><span class="pre">get_ivc</span></code>. To calculate the modes, either <code class="docutils literal notranslate"><span class="pre">get_modes_steady_state</span></code> or <code class="docutils literal notranslate"><span class="pre">get_mode_rates</span></code> should be defined. Priority is given to <code class="docutils literal notranslate"><span class="pre">get_modes_steady_state</span></code>. The correlations are calculated by solving the Lyapunov equation. For this, the <code class="docutils literal notranslate"><span class="pre">get_A</span></code> and <code class="docutils literal notranslate"><span class="pre">get_D</span></code> methods should be defined along with the method required to calculate the modes.</p>
 <dl class="field-list simple">
@@ -901,7 +898,7 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="qom.solvers.deterministic.SSHLESolver.name">
-<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'SSHLESolver'</span></em><a class="headerlink" href="#qom.solvers.deterministic.SSHLESolver.name" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'SSHLESolver'</span></em><a class="headerlink" href="#qom.solvers.deterministic.SSHLESolver.name" title="Link to this definition">¶</a></dt>
 <dd><p>Name of the solver.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -912,7 +909,7 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="qom.solvers.deterministic.SSHLESolver.required_params">
-<span class="sig-name descname"><span class="pre">required_params</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#qom.solvers.deterministic.SSHLESolver.required_params" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">required_params</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#qom.solvers.deterministic.SSHLESolver.required_params" title="Link to this definition">¶</a></dt>
 <dd><p>Required parameters of the solver.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -923,7 +920,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="qom.solvers.deterministic.SSHLESolver.set_params">
-<span class="sig-name descname"><span class="pre">set_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.SSHLESolver.set_params" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">set_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.solvers.deterministic.SSHLESolver.set_params" title="Link to this definition">¶</a></dt>
 <dd><p>Method to validate and set the solver parameters.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -934,7 +931,7 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="qom.solvers.deterministic.SSHLESolver.solver_defaults">
-<span class="sig-name descname"><span class="pre">solver_defaults</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'indices':</span> <span class="pre">[0],</span> <span class="pre">'show_progress':</span> <span class="pre">False,</span> <span class="pre">'use_system_method':</span> <span class="pre">True}</span></em><a class="headerlink" href="#qom.solvers.deterministic.SSHLESolver.solver_defaults" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">solver_defaults</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'indices':</span> <span class="pre">[0],</span> <span class="pre">'show_progress':</span> <span class="pre">False,</span> <span class="pre">'use_system_method':</span> <span class="pre">True}</span></em><a class="headerlink" href="#qom.solvers.deterministic.SSHLESolver.solver_defaults" title="Link to this definition">¶</a></dt>
 <dd><p>Default parameters of the solver.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -955,6 +952,73 @@
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">qom.solvers.deterministic module</a><ul>
+<li><a class="reference internal" href="#qom.solvers.deterministic.HLESolver"><code class="docutils literal notranslate"><span class="pre">HLESolver</span></code></a><ul>
+<li><a class="reference internal" href="#qom.solvers.deterministic.HLESolver.desc"><code class="docutils literal notranslate"><span class="pre">HLESolver.desc</span></code></a></li>
+<li><a class="reference internal" href="#qom.solvers.deterministic.HLESolver.get_all_corrs"><code class="docutils literal notranslate"><span class="pre">HLESolver.get_all_corrs()</span></code></a></li>
+<li><a class="reference internal" href="#qom.solvers.deterministic.HLESolver.get_all_modes"><code class="docutils literal notranslate"><span class="pre">HLESolver.get_all_modes()</span></code></a></li>
+<li><a class="reference internal" href="#qom.solvers.deterministic.HLESolver.get_all_modes_corrs"><code class="docutils literal notranslate"><span class="pre">HLESolver.get_all_modes_corrs()</span></code></a></li>
+<li><a class="reference internal" href="#qom.solvers.deterministic.HLESolver.get_corr_indices"><code class="docutils literal notranslate"><span class="pre">HLESolver.get_corr_indices()</span></code></a></li>
+<li><a class="reference internal" href="#qom.solvers.deterministic.HLESolver.get_corrs"><code class="docutils literal notranslate"><span class="pre">HLESolver.get_corrs()</span></code></a></li>
+<li><a class="reference internal" href="#qom.solvers.deterministic.HLESolver.get_mode_indices"><code class="docutils literal notranslate"><span class="pre">HLESolver.get_mode_indices()</span></code></a></li>
+<li><a class="reference internal" href="#qom.solvers.deterministic.HLESolver.get_mode_intensities"><code class="docutils literal notranslate"><span class="pre">HLESolver.get_mode_intensities()</span></code></a></li>
+<li><a class="reference internal" href="#qom.solvers.deterministic.HLESolver.get_modes"><code class="docutils literal notranslate"><span class="pre">HLESolver.get_modes()</span></code></a></li>
+<li><a class="reference internal" href="#qom.solvers.deterministic.HLESolver.get_modes_corrs"><code class="docutils literal notranslate"><span class="pre">HLESolver.get_modes_corrs()</span></code></a></li>
+<li><a class="reference internal" href="#qom.solvers.deterministic.HLESolver.get_times"><code class="docutils literal notranslate"><span class="pre">HLESolver.get_times()</span></code></a></li>
+<li><a class="reference internal" href="#qom.solvers.deterministic.HLESolver.name"><code class="docutils literal notranslate"><span class="pre">HLESolver.name</span></code></a></li>
+<li><a class="reference internal" href="#qom.solvers.deterministic.HLESolver.required_params"><code class="docutils literal notranslate"><span class="pre">HLESolver.required_params</span></code></a></li>
+<li><a class="reference internal" href="#qom.solvers.deterministic.HLESolver.set_params"><code class="docutils literal notranslate"><span class="pre">HLESolver.set_params()</span></code></a></li>
+<li><a class="reference internal" href="#qom.solvers.deterministic.HLESolver.set_results"><code class="docutils literal notranslate"><span class="pre">HLESolver.set_results()</span></code></a></li>
+<li><a class="reference internal" href="#qom.solvers.deterministic.HLESolver.solve"><code class="docutils literal notranslate"><span class="pre">HLESolver.solve()</span></code></a></li>
+<li><a class="reference internal" href="#qom.solvers.deterministic.HLESolver.solver_defaults"><code class="docutils literal notranslate"><span class="pre">HLESolver.solver_defaults</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#qom.solvers.deterministic.LLESolver"><code class="docutils literal notranslate"><span class="pre">LLESolver</span></code></a><ul>
+<li><a class="reference internal" href="#qom.solvers.deterministic.LLESolver.desc"><code class="docutils literal notranslate"><span class="pre">LLESolver.desc</span></code></a></li>
+<li><a class="reference internal" href="#qom.solvers.deterministic.LLESolver.get_all_modes"><code class="docutils literal notranslate"><span class="pre">LLESolver.get_all_modes()</span></code></a></li>
+<li><a class="reference internal" href="#qom.solvers.deterministic.LLESolver.get_mode_indices"><code class="docutils literal notranslate"><span class="pre">LLESolver.get_mode_indices()</span></code></a></li>
+<li><a class="reference internal" href="#qom.solvers.deterministic.LLESolver.get_mode_intensities"><code class="docutils literal notranslate"><span class="pre">LLESolver.get_mode_intensities()</span></code></a></li>
+<li><a class="reference internal" href="#qom.solvers.deterministic.LLESolver.name"><code class="docutils literal notranslate"><span class="pre">LLESolver.name</span></code></a></li>
+<li><a class="reference internal" href="#qom.solvers.deterministic.LLESolver.required_params"><code class="docutils literal notranslate"><span class="pre">LLESolver.required_params</span></code></a></li>
+<li><a class="reference internal" href="#qom.solvers.deterministic.LLESolver.set_params"><code class="docutils literal notranslate"><span class="pre">LLESolver.set_params()</span></code></a></li>
+<li><a class="reference internal" href="#qom.solvers.deterministic.LLESolver.solver_defaults"><code class="docutils literal notranslate"><span class="pre">LLESolver.solver_defaults</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#qom.solvers.deterministic.NLSESolver"><code class="docutils literal notranslate"><span class="pre">NLSESolver</span></code></a><ul>
+<li><a class="reference internal" href="#qom.solvers.deterministic.NLSESolver.desc"><code class="docutils literal notranslate"><span class="pre">NLSESolver.desc</span></code></a></li>
+<li><a class="reference internal" href="#qom.solvers.deterministic.NLSESolver.get_all_modes"><code class="docutils literal notranslate"><span class="pre">NLSESolver.get_all_modes()</span></code></a></li>
+<li><a class="reference internal" href="#qom.solvers.deterministic.NLSESolver.get_mode_indices"><code class="docutils literal notranslate"><span class="pre">NLSESolver.get_mode_indices()</span></code></a></li>
+<li><a class="reference internal" href="#qom.solvers.deterministic.NLSESolver.get_mode_intensities"><code class="docutils literal notranslate"><span class="pre">NLSESolver.get_mode_intensities()</span></code></a></li>
+<li><a class="reference internal" href="#qom.solvers.deterministic.NLSESolver.name"><code class="docutils literal notranslate"><span class="pre">NLSESolver.name</span></code></a></li>
+<li><a class="reference internal" href="#qom.solvers.deterministic.NLSESolver.required_params"><code class="docutils literal notranslate"><span class="pre">NLSESolver.required_params</span></code></a></li>
+<li><a class="reference internal" href="#qom.solvers.deterministic.NLSESolver.set_params"><code class="docutils literal notranslate"><span class="pre">NLSESolver.set_params()</span></code></a></li>
+<li><a class="reference internal" href="#qom.solvers.deterministic.NLSESolver.solver_defaults"><code class="docutils literal notranslate"><span class="pre">NLSESolver.solver_defaults</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#qom.solvers.deterministic.SSHLESolver"><code class="docutils literal notranslate"><span class="pre">SSHLESolver</span></code></a><ul>
+<li><a class="reference internal" href="#qom.solvers.deterministic.SSHLESolver.desc"><code class="docutils literal notranslate"><span class="pre">SSHLESolver.desc</span></code></a></li>
+<li><a class="reference internal" href="#qom.solvers.deterministic.SSHLESolver.get_As"><code class="docutils literal notranslate"><span class="pre">SSHLESolver.get_As()</span></code></a></li>
+<li><a class="reference internal" href="#qom.solvers.deterministic.SSHLESolver.get_Ds"><code class="docutils literal notranslate"><span class="pre">SSHLESolver.get_Ds()</span></code></a></li>
+<li><a class="reference internal" href="#qom.solvers.deterministic.SSHLESolver.get_corr_indices"><code class="docutils literal notranslate"><span class="pre">SSHLESolver.get_corr_indices()</span></code></a></li>
+<li><a class="reference internal" href="#qom.solvers.deterministic.SSHLESolver.get_corrs"><code class="docutils literal notranslate"><span class="pre">SSHLESolver.get_corrs()</span></code></a></li>
+<li><a class="reference internal" href="#qom.solvers.deterministic.SSHLESolver.get_mode_indices"><code class="docutils literal notranslate"><span class="pre">SSHLESolver.get_mode_indices()</span></code></a></li>
+<li><a class="reference internal" href="#qom.solvers.deterministic.SSHLESolver.get_mode_intensities"><code class="docutils literal notranslate"><span class="pre">SSHLESolver.get_mode_intensities()</span></code></a></li>
+<li><a class="reference internal" href="#qom.solvers.deterministic.SSHLESolver.get_modes"><code class="docutils literal notranslate"><span class="pre">SSHLESolver.get_modes()</span></code></a></li>
+<li><a class="reference internal" href="#qom.solvers.deterministic.SSHLESolver.get_modes_corrs"><code class="docutils literal notranslate"><span class="pre">SSHLESolver.get_modes_corrs()</span></code></a></li>
+<li><a class="reference internal" href="#qom.solvers.deterministic.SSHLESolver.name"><code class="docutils literal notranslate"><span class="pre">SSHLESolver.name</span></code></a></li>
+<li><a class="reference internal" href="#qom.solvers.deterministic.SSHLESolver.required_params"><code class="docutils literal notranslate"><span class="pre">SSHLESolver.required_params</span></code></a></li>
+<li><a class="reference internal" href="#qom.solvers.deterministic.SSHLESolver.set_params"><code class="docutils literal notranslate"><span class="pre">SSHLESolver.set_params()</span></code></a></li>
+<li><a class="reference internal" href="#qom.solvers.deterministic.SSHLESolver.solver_defaults"><code class="docutils literal notranslate"><span class="pre">SSHLESolver.solver_defaults</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
     <h4>Previous topic</h4>
     <p class="topless"><a href="qom.solvers.base.html"
                           title="previous chapter">qom.solvers.base module</a></p>
@@ -964,7 +1028,7 @@
     <p class="topless"><a href="qom.solvers.differential.html"
                           title="next chapter">qom.solvers.differential module</a></p>
   </div>
-<div id="searchbox" style="display: none" role="search">
+<search id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
@@ -972,7 +1036,7 @@
       <input type="submit" value="Go" />
     </form>
     </div>
-</div>
+</search>
 <script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
@@ -999,8 +1063,8 @@
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2023, Sampreet Kalita.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
+    &#169; Copyright 2023, Sampreet Kalita.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
     </div>
   </body>
 </html>

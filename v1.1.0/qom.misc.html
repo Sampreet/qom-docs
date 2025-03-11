@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>qom.misc module &#8212; The Quantum Optomechanics Toolbox  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=362ab14a" />
+    <link rel="stylesheet" type="text/css" href="_static/nature.css?v=0f882399" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="qom.io module" href="qom.io.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="qom.io.html" title="qom.io module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">The Quantum Optomechanics Toolbox  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">qom.misc module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-qom.misc">
+<span id="qom-misc-module"></span><h1>qom.misc module<a class="headerlink" href="#module-qom.misc" title="Link to this heading">¶</a></h1>
+<p>Module containing different operators.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="qom.misc.dagger">
+<span class="sig-prename descclassname"><span class="pre">qom.misc.</span></span><span class="sig-name descname"><span class="pre">dagger</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.misc.dagger" title="Link to this definition">¶</a></dt>
+<dd><p>Function to obtain the Hermitian conjugate of an operator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>A</strong> (<em>numpy.ndarray</em>) – Operator for which the Hermitian conjugate is to be obtained.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>op</strong> – Hermitian conjugate of the operator.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qom.misc.expect">
+<span class="sig-prename descclassname"><span class="pre">qom.misc.</span></span><span class="sig-name descname"><span class="pre">expect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psi</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.misc.expect" title="Link to this definition">¶</a></dt>
+<dd><p>Function to obtain the expectation value of an operator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>A</strong> (<em>numpy.ndarray</em>) – Operator for which the expectation value is to be obtained.</p></li>
+<li><p><strong>psi</strong> (<em>numpy.ndarray</em>) – State vector for the operator.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>expect</strong> – Expectation value of the operator.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qom.misc.op_annihilation">
+<span class="sig-prename descclassname"><span class="pre">qom.misc.</span></span><span class="sig-name descname"><span class="pre">op_annihilation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">N</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.misc.op_annihilation" title="Link to this definition">¶</a></dt>
+<dd><p>Function to obtain an annihilation operator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>N</strong> (<em>int</em>) – Dimension of the Hilbert space.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>op</strong> – Annihilation operator.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qom.misc.op_creation">
+<span class="sig-prename descclassname"><span class="pre">qom.misc.</span></span><span class="sig-name descname"><span class="pre">op_creation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">N</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.misc.op_creation" title="Link to this definition">¶</a></dt>
+<dd><p>Function to obtain a creation operator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>N</strong> (<em>int</em>) – Dimension of the Hilbert space.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>op</strong> – Creation operator.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qom.misc.op_identity">
+<span class="sig-prename descclassname"><span class="pre">qom.misc.</span></span><span class="sig-name descname"><span class="pre">op_identity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">N</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.misc.op_identity" title="Link to this definition">¶</a></dt>
+<dd><p>Function to obtain an identity operator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>N</strong> (<em>int</em>) – Dimension of the Hilbert space.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>op</strong> – Identity operator.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qom.misc.op_sigma_x">
+<span class="sig-prename descclassname"><span class="pre">qom.misc.</span></span><span class="sig-name descname"><span class="pre">op_sigma_x</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.misc.op_sigma_x" title="Link to this definition">¶</a></dt>
+<dd><p>Function to obtain the Pauli-X operator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>A</strong> (<em>numpy.ndarray</em>) – Operator for which the Hermitian conjugate is to be obtained.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>op</strong> – Pauli-X operator.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qom.misc.op_sigma_y">
+<span class="sig-prename descclassname"><span class="pre">qom.misc.</span></span><span class="sig-name descname"><span class="pre">op_sigma_y</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.misc.op_sigma_y" title="Link to this definition">¶</a></dt>
+<dd><p>Function to obtain the Pauli-Y operator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>A</strong> (<em>numpy.ndarray</em>) – Operator for which the Hermitian conjugate is to be obtained.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>op</strong> – Pauli-Y operator.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qom.misc.op_sigma_z">
+<span class="sig-prename descclassname"><span class="pre">qom.misc.</span></span><span class="sig-name descname"><span class="pre">op_sigma_z</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.misc.op_sigma_z" title="Link to this definition">¶</a></dt>
+<dd><p>Function to obtain the Pauli-Z operator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>A</strong> (<em>numpy.ndarray</em>) – Operator for which the Hermitian conjugate is to be obtained.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>op</strong> – Pauli-Z operator.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qom.misc.state_fock">
+<span class="sig-prename descclassname"><span class="pre">qom.misc.</span></span><span class="sig-name descname"><span class="pre">state_fock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">N</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.misc.state_fock" title="Link to this definition">¶</a></dt>
+<dd><p>Function to obtain a Fock state with an initial number of quanta.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>N</strong> (<em>int</em>) – Dimension of the Hilbert space.</p></li>
+<li><p><strong>n</strong> (<em>int</em>) – Initial number of quanta in the state.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>fock</strong> – Fock state with given quanta.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qom.misc.tensor">
+<span class="sig-prename descclassname"><span class="pre">qom.misc.</span></span><span class="sig-name descname"><span class="pre">tensor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.misc.tensor" title="Link to this definition">¶</a></dt>
+<dd><p>Function to obtain the tensor product of two operators.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>A</strong> (<em>numpy.ndarray</em>) – First operator.</p></li>
+<li><p><strong>B</strong> (<em>numpy.ndarray</em>) – Second operator.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>op</strong> – Tensor product of the operators.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">qom.misc module</a><ul>
+<li><a class="reference internal" href="#qom.misc.dagger"><code class="docutils literal notranslate"><span class="pre">dagger()</span></code></a></li>
+<li><a class="reference internal" href="#qom.misc.expect"><code class="docutils literal notranslate"><span class="pre">expect()</span></code></a></li>
+<li><a class="reference internal" href="#qom.misc.op_annihilation"><code class="docutils literal notranslate"><span class="pre">op_annihilation()</span></code></a></li>
+<li><a class="reference internal" href="#qom.misc.op_creation"><code class="docutils literal notranslate"><span class="pre">op_creation()</span></code></a></li>
+<li><a class="reference internal" href="#qom.misc.op_identity"><code class="docutils literal notranslate"><span class="pre">op_identity()</span></code></a></li>
+<li><a class="reference internal" href="#qom.misc.op_sigma_x"><code class="docutils literal notranslate"><span class="pre">op_sigma_x()</span></code></a></li>
+<li><a class="reference internal" href="#qom.misc.op_sigma_y"><code class="docutils literal notranslate"><span class="pre">op_sigma_y()</span></code></a></li>
+<li><a class="reference internal" href="#qom.misc.op_sigma_z"><code class="docutils literal notranslate"><span class="pre">op_sigma_z()</span></code></a></li>
+<li><a class="reference internal" href="#qom.misc.state_fock"><code class="docutils literal notranslate"><span class="pre">state_fock()</span></code></a></li>
+<li><a class="reference internal" href="#qom.misc.tensor"><code class="docutils literal notranslate"><span class="pre">tensor()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="qom.io.html"
+                          title="previous chapter">qom.io module</a></p>
+  </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="qom.io.html" title="qom.io module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">The Quantum Optomechanics Toolbox  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">qom.misc module</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2023, Sampreet Kalita.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    </div>
+  </body>
+</html>

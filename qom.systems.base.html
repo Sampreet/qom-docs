@@ -1,19 +1,16 @@
-
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>qom.systems.base module &#8212; The Quantum Optomechanics Toolbox  documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/nature.css" />
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=362ab14a" />
+    <link rel="stylesheet" type="text/css" href="_static/nature.css?v=0f882399" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.1.2/es5/tex-mml-chtml.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -47,18 +44,20 @@
           <div class="body" role="main">
             
   <section id="module-qom.systems.base">
-<span id="qom-systems-base-module"></span><h1>qom.systems.base module<a class="headerlink" href="#module-qom.systems.base" title="Permalink to this heading">¶</a></h1>
+<span id="qom-systems-base-module"></span><h1>qom.systems.base module<a class="headerlink" href="#module-qom.systems.base" title="Link to this heading">¶</a></h1>
 <p>Module to interface QOM systems.</p>
 <p class="rubric">References</p>
+<aside class="footnote-list brackets">
 <aside class="footnote brackets" id="id1" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
 <ol class="upperalpha simple" start="13">
 <li><p>Aspelmeyer, T. J. Kippenberg, and F. Marquardt, <em>Cavity Optomechanics</em>, Review of Modern Physics <strong>86</strong>, 1931 (2014).</p></li>
 </ol>
 </aside>
+</aside>
 <dl class="py class">
 <dt class="sig sig-object py" id="qom.systems.base.BaseSystem">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qom.systems.base.</span></span><span class="sig-name descname"><span class="pre">BaseSystem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Sys_00'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">desc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Base</span> <span class="pre">System'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_modes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cb_update</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.systems.base.BaseSystem" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qom.systems.base.</span></span><span class="sig-name descname"><span class="pre">BaseSystem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Sys_00'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">desc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Base</span> <span class="pre">System'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_modes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cb_update</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.systems.base.BaseSystem" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Class to interface QOM systems.</p>
 <p>Requires <code class="docutils literal notranslate"><span class="pre">system_defaults</span></code> attribute before initializing parent.</p>
@@ -131,7 +130,7 @@
 </dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="qom.systems.base.BaseSystem.func_ode_modes_corrs">
-<span class="sig-name descname"><span class="pre">func_ode_modes_corrs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.systems.base.BaseSystem.func_ode_modes_corrs" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">func_ode_modes_corrs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.systems.base.BaseSystem.func_ode_modes_corrs" title="Link to this definition">¶</a></dt>
 <dd><p>Wrapper function for the rates of change of the real-valued modes and correlations.</p>
 <p>Requires system method <code class="docutils literal notranslate"><span class="pre">get_mode_rates</span></code>. Additionally, <code class="docutils literal notranslate"><span class="pre">get_A</span></code> should be defined for the correlations. Optionally, <code class="docutils literal notranslate"><span class="pre">get_D</span></code> may be defined for correlations. Refer to <strong>Notes</strong> for their implementations.</p>
 <p>The variables are casted to real-valued.</p>
@@ -154,7 +153,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="qom.systems.base.BaseSystem.func_ode_modes_deviations">
-<span class="sig-name descname"><span class="pre">func_ode_modes_deviations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.systems.base.BaseSystem.func_ode_modes_deviations" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">func_ode_modes_deviations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.systems.base.BaseSystem.func_ode_modes_deviations" title="Link to this definition">¶</a></dt>
 <dd><p>Wrapper function for the rates of change of the real-valued modes and flattened deviations.</p>
 <p>Requires system method <code class="docutils literal notranslate"><span class="pre">get_mode_rates</span></code>. Additionally, <code class="docutils literal notranslate"><span class="pre">get_A</span></code> should be defined for the deviations. Refer to <strong>Notes</strong> for their implementations.</p>
 <p>The variables are casted to real-valued.</p>
@@ -177,7 +176,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="qom.systems.base.BaseSystem.get_mean_optical_occupancies">
-<span class="sig-name descname"><span class="pre">get_mean_optical_occupancies</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.systems.base.BaseSystem.get_mean_optical_occupancies" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_mean_optical_occupancies</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.systems.base.BaseSystem.get_mean_optical_occupancies" title="Link to this definition">¶</a></dt>
 <dd><p>Method to obtain the mean optical occupancies.</p>
 <p>Requires system methods <code class="docutils literal notranslate"><span class="pre">get_ivc</span></code> and <code class="docutils literal notranslate"><span class="pre">get_coeffs_N_o</span></code>. Refer to <strong>Notes</strong> for their implementations.</p>
 <p>For example, the mean optical occupancy of a simple end-mirror optomechanical system can be written as <a class="footnote-reference brackets" href="#id1" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>,</p>
@@ -196,7 +195,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="qom.systems.base.BaseSystem.get_mode_rates_real">
-<span class="sig-name descname"><span class="pre">get_mode_rates_real</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">modes_real</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.systems.base.BaseSystem.get_mode_rates_real" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_mode_rates_real</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">modes_real</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.systems.base.BaseSystem.get_mode_rates_real" title="Link to this definition">¶</a></dt>
 <dd><p>Method to obtain the real-valued mode rates from real-valued modes.</p>
 <p>Requires the system method <code class="docutils literal notranslate"><span class="pre">get_mode_rates</span></code>. Refer to <strong>Notes</strong> for its implementation.</p>
 <dl class="field-list simple">
@@ -218,13 +217,13 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="qom.systems.base.BaseSystem.init_A_D">
-<span class="sig-name descname"><span class="pre">init_A_D</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.systems.base.BaseSystem.init_A_D" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">init_A_D</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qom.systems.base.BaseSystem.init_A_D" title="Link to this definition">¶</a></dt>
 <dd><p>Method to initialize the drift matrix and the noise matrix of the system.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="qom.systems.base.BaseSystem.set_params">
-<span class="sig-name descname"><span class="pre">set_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.systems.base.BaseSystem.set_params" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">set_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.systems.base.BaseSystem.set_params" title="Link to this definition">¶</a></dt>
 <dd><p>Method to validate and set the system parameters.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -235,7 +234,7 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="qom.systems.base.BaseSystem.system_defaults">
-<span class="sig-name descname"><span class="pre">system_defaults</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#qom.systems.base.BaseSystem.system_defaults" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">system_defaults</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#qom.systems.base.BaseSystem.system_defaults" title="Link to this definition">¶</a></dt>
 <dd><p>Default parameters of the system.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -256,6 +255,25 @@
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">qom.systems.base module</a><ul>
+<li><a class="reference internal" href="#qom.systems.base.BaseSystem"><code class="docutils literal notranslate"><span class="pre">BaseSystem</span></code></a><ul>
+<li><a class="reference internal" href="#qom.systems.base.BaseSystem.func_ode_modes_corrs"><code class="docutils literal notranslate"><span class="pre">BaseSystem.func_ode_modes_corrs()</span></code></a></li>
+<li><a class="reference internal" href="#qom.systems.base.BaseSystem.func_ode_modes_deviations"><code class="docutils literal notranslate"><span class="pre">BaseSystem.func_ode_modes_deviations()</span></code></a></li>
+<li><a class="reference internal" href="#qom.systems.base.BaseSystem.get_mean_optical_occupancies"><code class="docutils literal notranslate"><span class="pre">BaseSystem.get_mean_optical_occupancies()</span></code></a></li>
+<li><a class="reference internal" href="#qom.systems.base.BaseSystem.get_mode_rates_real"><code class="docutils literal notranslate"><span class="pre">BaseSystem.get_mode_rates_real()</span></code></a></li>
+<li><a class="reference internal" href="#qom.systems.base.BaseSystem.init_A_D"><code class="docutils literal notranslate"><span class="pre">BaseSystem.init_A_D()</span></code></a></li>
+<li><a class="reference internal" href="#qom.systems.base.BaseSystem.set_params"><code class="docutils literal notranslate"><span class="pre">BaseSystem.set_params()</span></code></a></li>
+<li><a class="reference internal" href="#qom.systems.base.BaseSystem.system_defaults"><code class="docutils literal notranslate"><span class="pre">BaseSystem.system_defaults</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
     <h4>Previous topic</h4>
     <p class="topless"><a href="qom.systems.html"
                           title="previous chapter">qom.systems package</a></p>
@@ -265,7 +283,7 @@
     <p class="topless"><a href="qom.ui.html"
                           title="next chapter">qom.ui package</a></p>
   </div>
-<div id="searchbox" style="display: none" role="search">
+<search id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
@@ -273,7 +291,7 @@
       <input type="submit" value="Go" />
     </form>
     </div>
-</div>
+</search>
 <script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
@@ -300,8 +318,8 @@
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2023, Sampreet Kalita.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
+    &#169; Copyright 2023, Sampreet Kalita.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
     </div>
   </body>
 </html>

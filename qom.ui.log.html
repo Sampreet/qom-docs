@@ -1,19 +1,16 @@
-
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>qom.ui.log module &#8212; The Quantum Optomechanics Toolbox  documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/nature.css" />
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=362ab14a" />
+    <link rel="stylesheet" type="text/css" href="_static/nature.css?v=0f882399" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="qom.utils package" href="qom.utils.html" />
@@ -46,17 +43,17 @@
           <div class="body" role="main">
             
   <section id="module-qom.ui.log">
-<span id="qom-ui-log-module"></span><h1>qom.ui.log module<a class="headerlink" href="#module-qom.ui.log" title="Permalink to this heading">¶</a></h1>
+<span id="qom-ui-log-module"></span><h1>qom.ui.log module<a class="headerlink" href="#module-qom.ui.log" title="Link to this heading">¶</a></h1>
 <p>UI module to format logging.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="qom.ui.log.FullFormatter">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qom.ui.log.</span></span><span class="sig-name descname"><span class="pre">FullFormatter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fmt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datefmt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">style</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'%'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">validate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">defaults</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.log.FullFormatter" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qom.ui.log.</span></span><span class="sig-name descname"><span class="pre">FullFormatter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fmt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datefmt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">style</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'%'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">validate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">defaults</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.log.FullFormatter" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Formatter</span></code></p>
 <p>Class to customize logging format.</p>
 <p>The class inherits <code class="xref py py-class docutils literal notranslate"><span class="pre">logging.Formatter</span></code>.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="qom.ui.log.FullFormatter.formatTime">
-<span class="sig-name descname"><span class="pre">formatTime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datefmt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.log.FullFormatter.formatTime" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">formatTime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datefmt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.log.FullFormatter.formatTime" title="Link to this definition">¶</a></dt>
 <dd><p>Overriding method to display milliseconds in the time format.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -78,7 +75,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="qom.ui.log.get_formatter">
-<span class="sig-prename descclassname"><span class="pre">qom.ui.log.</span></span><span class="sig-name descname"><span class="pre">get_formatter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">log_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'full'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.log.get_formatter" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">qom.ui.log.</span></span><span class="sig-name descname"><span class="pre">get_formatter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">log_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'full'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.log.get_formatter" title="Link to this definition">¶</a></dt>
 <dd><p>Function to obtain the formatter for stream handler.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -95,7 +92,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="qom.ui.log.get_handler">
-<span class="sig-prename descclassname"><span class="pre">qom.ui.log.</span></span><span class="sig-name descname"><span class="pre">get_handler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">formatter</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.log.get_handler" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">qom.ui.log.</span></span><span class="sig-name descname"><span class="pre">get_handler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">formatter</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.log.get_handler" title="Link to this definition">¶</a></dt>
 <dd><p>Function to obtain the stream handler for console logger.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -112,7 +109,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="qom.ui.log.init_log">
-<span class="sig-prename descclassname"><span class="pre">qom.ui.log.</span></span><span class="sig-name descname"><span class="pre">init_log</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">log_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'full'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parallel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.log.init_log" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">qom.ui.log.</span></span><span class="sig-name descname"><span class="pre">init_log</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">log_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'full'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parallel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qom.ui.log.init_log" title="Link to this definition">¶</a></dt>
 <dd><p>Function to initialize the logger for the package.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -141,6 +138,22 @@
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">qom.ui.log module</a><ul>
+<li><a class="reference internal" href="#qom.ui.log.FullFormatter"><code class="docutils literal notranslate"><span class="pre">FullFormatter</span></code></a><ul>
+<li><a class="reference internal" href="#qom.ui.log.FullFormatter.formatTime"><code class="docutils literal notranslate"><span class="pre">FullFormatter.formatTime()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#qom.ui.log.get_formatter"><code class="docutils literal notranslate"><span class="pre">get_formatter()</span></code></a></li>
+<li><a class="reference internal" href="#qom.ui.log.get_handler"><code class="docutils literal notranslate"><span class="pre">get_handler()</span></code></a></li>
+<li><a class="reference internal" href="#qom.ui.log.init_log"><code class="docutils literal notranslate"><span class="pre">init_log()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
     <h4>Previous topic</h4>
     <p class="topless"><a href="qom.ui.plotters.matplotlib.html"
                           title="previous chapter">qom.ui.plotters.matplotlib module</a></p>
@@ -150,7 +163,7 @@
     <p class="topless"><a href="qom.utils.html"
                           title="next chapter">qom.utils package</a></p>
   </div>
-<div id="searchbox" style="display: none" role="search">
+<search id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
@@ -158,7 +171,7 @@
       <input type="submit" value="Go" />
     </form>
     </div>
-</div>
+</search>
 <script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
@@ -185,8 +198,8 @@
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2023, Sampreet Kalita.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
+    &#169; Copyright 2023, Sampreet Kalita.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
     </div>
   </body>
 </html>
